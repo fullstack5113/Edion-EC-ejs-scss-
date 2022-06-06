@@ -1,0 +1,276 @@
+@import '../config';
+@import '../mixins/**';
+
+.breadcrumb{
+    margin-bottom: 40px;
+    @include media-sp {
+        margin-bottom: 18px;
+    }
+}
+
+.favorite-store{
+    .inner{
+        max-width: 648px;
+    }
+    &-block{
+        margin-bottom: 35px;
+        &.primary{
+            margin-top: -4px;
+        }
+    }
+    &-heading{
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        margin-bottom: 27px;
+        &.shop{
+            margin-bottom: 12px;
+        }
+    }
+    &-shop{
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        @include media-sp {
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        &-name{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #F5F5F5;
+            padding: 8px 16px;
+            width: 370px;
+            @include media-sp {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            .btn{
+                width: 106px;
+                height: 33px;
+                
+            }
+        }
+        &-edit{
+            margin: 0 10px;
+            @include media-sp {
+                margin-left: 0px;
+            }
+            .btn{
+                width: 82px;
+                height: 33px;
+                font-weight: 600;
+                letter-spacing: 0;
+            }
+        }
+        &-delete{
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: underline !important;
+            background-image: url(../img/common/icon-close.svg);
+            background-repeat: no-repeat;
+            background-position: right top;
+            line-height: 15px;
+            padding-right: 23px;
+        }
+        &.empty{
+            background-color: #F5F5F5;
+            padding: 21px 24px;
+            font-size: 11px;
+            font-weight: 600;
+            @include media-sp {
+                font-weight: 400;
+            }
+        }
+    }
+    .account-btn{
+        margin: 0;
+        &.wide{
+            max-width: 324px;
+            @include media-sp {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    &-modal{
+        width: 612px;
+        @include media-sp {
+            width: calc(100% - 60px);
+        }
+        .modal-block{
+            &-inner{
+                padding: 36px 30px 24px;
+                @include media-sp {
+                    padding: 36px 15px 20px;
+                }
+                &-head{
+                    text-align: center;
+                    &-heading{
+                        font-size: 20px;
+                        letter-spacing: 0.1em;
+                        margin-bottom: 28px;
+                        @include media-sp {
+                            font-size: 16px;
+                            margin-bottom: 11px;
+                        }
+                    }
+                }
+                &-content{
+                    padding: 0 90px 0 76px;
+                    min-height: 337px;
+                    @include media-sp {
+                        padding: 0;
+                        margin-right: 0;
+                        min-height: 310px;
+                    }
+                    .form-block.general .form-block-select select{
+                        box-sizing: border-box;
+                    }
+                    dl{
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        margin-bottom: 0px;
+                        dt{
+                            width: 88px;
+                            font-size: 15px;
+                            font-weight: 600;
+                            margin: 0 0 16px;
+                            letter-spacing: 0.08em;
+                            @include media-sp {
+                                font-size: 14px;
+                                width: 70px;
+                            }
+                            &.area{
+                                @include media-sp {
+                                    padding-bottom: 56px;
+                                }
+                            }
+                        }
+                        dd{
+                            width: calc(100% - 88px);
+                            display: flex;
+                            margin: 0 0 16px;
+                            @include media-sp {
+                                display: block;
+                            }
+                            input{
+                                margin-bottom: 0px !important;
+                            }
+                            .form-block-select{
+                                width: 120px;
+                                margin-right: 10px;
+                                @include media-sp {
+                                    width: 100%;
+                                    margin-bottom: 8px;
+                                }
+                            }
+                            &.area{
+                                input{
+                                    width: 192px;
+                                    @include media-sp {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .result-head{
+                        text-align: center;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 17px;
+                        margin: 16px 0;
+                        @include media-sp {
+                            margin-bottom: 8px;
+                            font-size: 13px;
+                            line-height: 19px;
+                        }
+                        span{
+                            font-weight: 600;
+                            line-height: 17px;
+                            @include media-sp {
+                                line-height: 19px;
+                            }
+                        }
+                    }
+                    &-resultwrap{
+                        border-top: 1px solid #CCCCCC;
+                        border-bottom: 1px solid #CCCCCC;
+                        padding: 8px 0 8px;
+                        margin: 0 0 24px;
+                        @include media-sp {
+                            margin-bottom: 19px;
+                        }
+                    }
+                    &-result{
+                        display: flex;
+                        justify-content: center;
+                        max-height: calc(100vh - 400px);
+                        height: 149px;
+                        overflow-y: scroll;
+                        padding: 16px 0 16px;
+                        box-sizing: border-box;
+                        @include _scrollbar();
+                        @include media-sp {
+                            justify-content: flex-start;
+                            max-height: calc(100vh - 506px);
+                            min-height: auto;
+                            padding-top: 11px;
+                            height: 134px;
+                        }
+                        > .form-block{
+                            @include media-is-pc {
+                                flex-basis: min-content;
+                            }
+                        }
+                        input[type=radio]{
+                            display: none;
+                        }
+                        label{
+                            letter-spacing: 0.08em;
+                            margin-bottom: 21px;
+                            min-width: 283px;
+                            @include media-sp {
+                                min-width: auto;
+                                margin-bottom: 18px;
+                            }
+                            > div{
+                                line-height: 16px;
+                                @include media-sp {
+                                    font-size: 12px;
+                                }
+                                &.shop-name{
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                }
+                                &.shop-address{
+                                    font-size: 12px;
+                                    font-weight: 400;
+                                    margin-top: 5px;
+                                    @include media-sp {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-foot{
+                    &-btns{
+                        .red-btn2{
+                            margin-bottom: 16px;
+                            @include media-sp {
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

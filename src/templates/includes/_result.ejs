@@ -1,0 +1,265 @@
+<section>
+    <div class="inner inner-large">
+        <div class="form-block">
+            <form action="">
+                <div class="form-block-sort">
+                    <div class="form-block-sort-unit">
+                        <label>在庫：</label>
+                        <div class="form-block-select">
+                            <select name="" id="">
+                                <option value="">すべて</option>
+                                <option value="">あり</option>
+                                <option value="">店舗展示有</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-block-sort-unit is-pc">
+                        <label>商品タイプ：</label>
+                        <div class="form-block-select">
+                            <select name="" id="">
+                                <option value="">すべて</option>
+                                <option value="">お買い得</option>
+                                <option value="">人気の品</option>
+                                <option value="">推奨品</option>
+                                <option value="">新製品</option>
+                                <option value="">予約商品</option>
+                                <option value="">分割無金利対象商品</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-block-sort-unit is-pc">
+                        <label>店舗受取：</label>
+                        <div class="form-block-select">
+                            <select name="" id="">
+                                <option value="">すべて</option>
+                                <option value="">店舗受取可</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-block-sort-unit">
+                        <div>
+                            <label>並べ替え</label>
+                            <div class="form-block-select">
+                                <select name="" id="">
+                                    <option value="">おすすめ順</option>
+                                    <option value="">価格（安い順）</option>
+                                    <option value="">価格（高い順）</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-block-sort-icons">
+                            <button class="icon showgrid <% if (result_style == 'grid') { %>is-active<% } %>"></button>
+                            <button class="icon showlist <% if (result_style == 'list') { %>is-active<% } %>"></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="item-compar">
+            <div class="item-compar-text"><img class="checkbox" src="./assets/img/common/checkbox-1.svg" alt="">
+                <span class="is-pc">チェックを入れて、【比較する】ボタンをクリックすると、気になる商品を比較できます。　※最大15点まで比較できます。</span>
+                <span class="is-sp">を入れ「比較」クリックで一覧表示<br>※最大15点まで比較できます。</span>
+            </div>
+            <button class="btn blue-btn medium-btn">比較する</button>
+            <div class="item-compar-search is-sp">
+                <button class="btn btn-white medium-btn">絞り込み</button>
+            </div>
+        </div>
+
+        <div class="basicgrid basicgrid-four cotegorylist-result <%- result_style %>">
+            <% for (var i = 0; i < 4; i++){ %>
+            <div class="item">
+                <div class="cotegorylist-result-inner">
+                    <div class="form-block-check">
+                        <input type="checkbox" id="compar<%- i %>_1">
+                        <label for="compar<%- i %>_1"><p class="tooltiptext">削除</p></label>
+                    </div>
+                    
+                    <div class="cotegorylist-result-inner-left">
+                        <div class="cotegorylist-result-inner-left-img">
+                             <span class="icon-favorite js-add-favorite"></span>
+                            <div class="cotegorylist-result-tag01 grid">只今、高額ポイント進呈中！</div>
+                            <div class="cotegorylist-result-head">
+                                <div class="cotegorylist-result-label">
+                                    <img class="" src="./assets/img/category/category-list-label01.png" alt="NEW">
+                                    <img class="" src="./assets/img/category/category-list-label02.png" alt="予約商品">
+                                </div>
+                            </div>
+                        
+                            <a href="" class="itemcard-img"><img src="./assets/img/category/category-list-grid-img01.jpg" alt=""></a>
+                        </div>
+                        
+                        <div class="cotegorylist-result-icons icon4">
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                        </div>
+                    </div>
+                    
+                    <div class="cotegorylist-result-inner-right">
+                        <% if (result_style == 'list') { %>
+                            <div class="cotegorylist-result-tag01 list">只今、高額ポイント進呈中！</div>
+                        <% } %>
+                        <div class="cotegorylist-result-tag02">エディオンカード<% if ( result_style == 'grid') { %><br class="is-sp"><% } %>長期修理保証5年</div>
+                        <% if (result_style == 'list') { %>
+                            <div class="itemcard-copy">汚れが付きにくい「防汚フロントパネル」。</div>
+                        <% } %>
+
+
+                        <h3 class="itemcard-heading"><a href="">パナソニック 「標準工事費サービス」 18畳向け 自動お掃除付き<span class="itemcard-serial">RASWM56K2E8WS</span></a></h3>
+                        
+                        <div class="itemcard-star"><span class="review-star star5"></span>(6)</div>
+                        <div class="itemcard-price">￥12,980(税込)</div>
+                        
+                        <div class="itemcard-info">
+                            <div class="itemcard-info-discount">
+                                当社クレジットカード会員
+                                <% if ( result_style == 'grid') { %>
+                                    <br>
+                                <% }else{ %>
+                                    <span class="colon">：</span><br class="is-sp">
+                                <% } %>
+                                504ポイント進呈
+                            </div>
+                            <div class="itemcard-info-stock stock2">在庫あり</div>
+                            <div class="itemcard-info-shipping">翌日出荷<span class="itemcard-info-shipping-sm">（大型品は別途ご案内）</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cotegorylist-result-inner">
+                    <div class="form-block-check">
+                        <input type="checkbox" id="compar<%- i %>_2">
+                        <label for="compar<%- i %>_2"><p class="tooltiptext">削除</p></label>
+                    </div>
+                    <div class="cotegorylist-result-inner-left">
+                        <div class="cotegorylist-result-inner-left-img">
+                             <span class="icon-favorite js-add-favorite"></span>
+                            <div class="cotegorylist-result-head">
+                                <div class="cotegorylist-result-label">
+                                    <img class="" src="./assets/img/category/category-list-label03.png" alt="推商品">
+                                    <img class="" src="./assets/img/category/category-list-label04.png" alt="お買得品">
+                                    <img class="" src="./assets/img/category/category-list-label05.png" alt="Kual">
+                                </div>
+                            </div>
+                            
+                            <a href="" class="itemcard-img"><img src="./assets/img/category/category-list-grid-img01.jpg" alt=""></a>
+                        </div>
+                        
+                        <div class="cotegorylist-result-icons icon5">
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                        </div>
+                    </div>
+                    
+                    <div class="cotegorylist-result-inner-right">
+                        <div class="cotegorylist-result-tag02">エディオンカード<% if ( result_style == 'grid') { %><br class="is-sp"><% } %>長期修理保証5年</div>
+                        <% if (result_style == 'list') { %>
+                            <div class="itemcard-copy">汚れが付きにくい「防汚フロントパネル」。</div>
+                        <% } %>
+
+                        <h3 class="itemcard-heading"><a href="">パナソニック 「標準工事費サービス」 18畳向け 自動お掃除付き<span class="itemcard-serial">DSFTS12</span></a></h3>
+                        <div class="itemcard-star"><span class="review-star star5"></span>(6)</div>
+                        <div class="itemcard-price">￥12,980(税込)</div>
+                        
+                        <div class="itemcard-info">
+                            <div class="itemcard-info-discount">
+                                当社クレジットカード会員
+                                <% if ( result_style == 'grid') { %>
+                                    <br>
+                                <% }else{ %>
+                                    <span class="colon">：</span><br class="is-sp">
+                                <% } %>
+                                504ポイント進呈
+                            </div>
+                            <div class="itemcard-info-stock stock2">在庫あり</div>
+                            <div class="itemcard-info-shipping">翌日出荷<span class="itemcard-info-shipping-sm">（大型品は別途ご案内）</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="cotegorylist-result-inner">
+                    <div class="form-block-check">
+                        <input type="checkbox" id="compar<%- i %>_3">
+                        <label for="compar<%- i %>_3"><p class="tooltiptext">削除</p></label>
+                    </div>
+                    <div class="cotegorylist-result-inner-left">
+                        <div class="cotegorylist-result-inner-left-img">
+                             <span class="icon-favorite js-add-favorite is-active"></span>
+                            <div class="cotegorylist-result-tag01 grid">只今、高額ポイント進呈中！</div>
+                            
+                            <div class="cotegorylist-result-head">
+                                <div class="cotegorylist-result-label">
+                                    <img class="" src="./assets/img/category/category-list-label06.png" alt="e angle">
+                                </div>
+                            </div>
+                            
+                            <a href="" class="itemcard-img"><img src="./assets/img/category/category-list-grid-img01.jpg" alt=""></a>
+                        </div>
+                        
+                        <div class="cotegorylist-result-icons icon6">
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                            <div class="cotegorylist-result-icons-box"><div>icon</div></div>
+                        </div>
+                    </div>
+                    
+                    <div class="cotegorylist-result-inner-right">
+                        <% if (result_style == 'list') { %>
+                            <div class="cotegorylist-result-tag01 list">只今、高額ポイント進呈中！</div>
+                        <% } %>
+                        <div class="cotegorylist-result-tag02">エディオンカード<% if ( result_style == 'grid') { %><br class="is-sp"><% } %>長期修理保証5年</div>
+                        <% if (result_style == 'list') { %>
+                            <div class="itemcard-copy">汚れが付きにくい「防汚フロントパネル」。</div>
+                        <% } %>
+                        <h3 class="itemcard-heading"><a href="">パナソニック 「標準工事費サービス」 18畳向け 自動お掃除付き<span class="itemcard-serial">RASWM56K2E8WS</span></a></h3>
+                        <div class="itemcard-star"><span class="review-star star5"></span>(6)</div>
+                        <div class="itemcard-price">￥12,980(税込)</div>
+                        
+                        <div class="itemcard-info">
+                            <div class="itemcard-info-discount">
+                                当社クレジットカード会員
+                                <% if ( result_style == 'grid') { %>
+                                    <br>
+                                <% }else{ %>
+                                    <span class="colon">：</span><br class="is-sp">
+                                <% } %>
+                                504ポイント進呈
+                            </div>
+                            <div class="itemcard-info-stock stock2">在庫あり</div>
+                            <div class="itemcard-info-shipping">翌日出荷<span class="itemcard-info-shipping-sm">（大型品は別途ご案内）</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        
+        <div class="pager-wrapper category-list">
+            <a href="" class="pager-wrapper-link prev">前へ</a>
+            <div class="pager-wrapper-num">
+                <span>1</span>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a class="is-pc" href="">4</a>
+                <a class="is-pc" href="">5</a>
+                ・・・
+                <a href="">20</a>
+            </div>
+            <a href="" class="pager-wrapper-link next">次へ</a>
+        </div>
+
+        
+        
+    </div>
+</section>

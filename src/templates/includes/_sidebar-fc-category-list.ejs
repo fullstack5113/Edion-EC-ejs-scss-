@@ -1,0 +1,11 @@
+<aside class="sidebar sidebar-fc-category-list">
+<% if(locals.hierarchy == '2'){ %>
+    <%- include('../components/_c-sidebar-fc-category-list02') _%>
+<% }else if(locals.hierarchy == '3'){ %>
+    <%- include('../components/_c-sidebar-fc-category-list03') _%>
+<% }else if(locals.hierarchy == '4'){ %>
+    <%- include('../components/_c-sidebar-fc-category-list04') _%>
+<% }else{ %>
+    <%- include('../components/_c-sidebar-fc-category-list') _%>
+<% } %>
+</aside>

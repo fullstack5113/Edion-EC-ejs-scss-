@@ -1,0 +1,55 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'code-input';
+_%>
+<%- include('../includes/_header-nomenu') %>
+<main id="main-content" class="main-content">
+    
+    <section class="code-input">
+        <div class="inner inner-small">
+            <div class="register-step-num is-sp">STEP 2/5</div>
+            <h1 class="page-title">認証コード入力</h1>
+            
+            <div class="register-step s02">
+                <ul>
+                    <li>新規ご利用登録</li>
+                    <li class="current">認証コード入力</li>
+                    <li>お客様情報入力</li>
+                    <li>登録情報確認</li>
+                    <li>登録完了</li>
+                </ul>
+            </div>
+            
+            <div class="page-title-lead">
+                認証コードを通知しました。<br>
+                認証コードを入力し<br class="is-sp">「次へ」ボタンをクリックしてください。<br>
+                <small>※有効時間は15分です。15分以上経過した場合は、再度認証用電話番号登録からのご登録となります。</small>
+            </div>
+            
+            <div class="linebox linebox-blue">
+                <form action="">
+                    <div class="form-block general">
+                    
+                        <label>認証コード</label>
+                        <input type="number" placeholder="1234">
+                        
+                    </div>
+
+                        
+                    <a href="" class="btn red-btn2 account-btn">次へ</a>
+                                    
+                    <a href="" class="btn lined-blue account-btn">再度受け取る</a>
+                    
+                    
+                </form>
+            </div>
+            
+        </div>
+    </section>
+    
+</main>
+<%- include('../includes/_footer'); %>

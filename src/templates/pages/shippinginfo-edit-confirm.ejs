@@ -1,0 +1,77 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'shippinginfo-edit';
+_%>
+<%- include('../includes/_header-login') %>
+
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; <a href="">お届け先情報</a> &gt; お届け先情報の変更の確認
+</div>
+
+<main id="main-content" class="main-content">
+    
+    <div class="container container-addressee">
+
+        <%- include('../includes/_sidebar-account-info', { status: 'login' }); %>
+    
+        <div class="container-right">
+            
+            <section class="account">
+                <div class="inner inner-large">
+                    <h2 class="section-heading">お届け先情報の変更の確認</h2>
+                    <div class="section-heading-subtext">以下の内容でよろしければ「変更する」をクリックしてください。</div>
+                    
+                    <div class="addressee-box">
+                        お届け先がエディオンカード、IDカード、あんしん保証会員のご登録情報（お名前・ご住所・お電話番号）以外の場合は、長期修理保証対象外となります。あらかじめご了承ください。
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section class="shippinginfo-register-confirm">
+                <div class="inner inner-large">
+                    
+                    <table class="account-info-table">
+                        <tbody>
+                            <tr><th>グループ</th>
+                            <td>グループなし</td></tr>
+                            <tr><th>お名前</th>
+                            <td>山田 太郎</td></tr>
+                            <tr><th>お名前（フリガナ）</th>
+                            <td>ヤマダ タロウ</td></tr>
+                            <tr><th>郵便番号</th>
+                            <td>〒xxx-xxxx</td></tr>
+                            <tr><th>都道府県</th>
+                            <td>東京都</td></tr>
+                            <tr><th>市区町村</th>
+                            <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td></tr>
+                            <tr><th>番地</th>
+                            <td>XXXXXXX</td></tr>
+                            <tr><th>建物名・部屋番号</th>
+                            <td>&nbsp;</td></tr>
+                            <tr><th>電話番号</th>
+                            <td>080XXXXXXXX</td></tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </section>
+            
+            <div class="shippinginfo-register-foot-btn confirm">
+                <a href="" class="btn red-btn2 account-btn wide">変更する</a>
+                <a href="" class="btn lined-blue account-btn medium2">修正する</a>
+                <a href="" class="btn grey-btn2 account-btn medium">登録中止</a>
+            </div>
+        
+        </div>
+    
+    </div>
+</main>
+
+
+
+<%- include('../includes/_footer'); %>

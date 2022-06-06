@@ -1,0 +1,74 @@
+/**
+* @file pager.scss
+**/
+
+.pager-wrapper{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 50px;
+    @include media-sp {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 18px;
+        margin-bottom: 0;
+    }
+
+    &-link{
+        line-height: 36px;
+        background-repeat: no-repeat;
+        padding-bottom: 2px;
+        @include media-sp {
+            background-color: #F5F5F5;
+            font-size: 12px;
+            width: 100px;
+            display: inline-block;
+            padding: 0;
+            line-height: 30px;
+        }
+        &.prev{
+            background-image: url(../img/common/arrow-black-bold-left.svg);
+            background-position: left center;
+            padding-left: 20px;
+            @include media-sp {
+                padding: 0;
+                background-position: left 10px center;
+            }
+        }
+        &.next{
+            background-image: url(../img/common/arrow-black-bold-right.svg);
+            background-position: right center;
+            padding-right: 20px;
+            @include media-sp {
+                padding: 0;
+                background-position: right 10px center;
+            }
+        }
+    }
+
+    &-num{
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 14px;
+        @include media-sp {
+            display: none;
+        }
+        span, a{
+            display: inline-block;
+            min-width: 36px;
+            height: 36px;
+            line-height: 33px;
+            background-color: #fff;
+            text-align: center;
+            padding: 0 8px;
+            margin: 0 8px;
+            border: 1px solid #707070;
+            vertical-align: baseline;
+            font-size: 15px;
+        }
+        span{
+          background-color: #333333;
+          color: #fff;
+        }
+    }
+}

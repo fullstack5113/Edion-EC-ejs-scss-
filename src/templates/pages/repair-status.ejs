@@ -1,0 +1,114 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'repair-status';
+_%>
+    <%- include('../includes/_header-login') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; エディオンカード会員登録申込み
+        </div>
+
+        <main id="main-content" class="main-content inquiry">
+
+            <div class="container container-sidebar_show">
+
+                <%- include('../includes/_sidebar-account-info'); %>
+
+                <div class="container-right">
+                    <div class="repair">
+                        <div class="repair-ttl">
+                            <h4>修理状況一覧</h4>
+                            <p class="des01">
+                                お持ち込み及びお引き取り小型家電修理品の修理状況です。
+                            </p>
+                            <p class="des02">
+                                ※前日までの状況を表示しております。ご了承ください。<br>
+                                ※お見積ご回答待ちの商品についても「修理中」と表示されます。<br>
+                                ※「お引渡し準備完了」は、修理不能及び修理キャンセルでの返却も含まれます。
+                            </p>
+                        </div>
+                        <div class="repair-ctn">
+                            <div class="repair-ctn-wrap">
+                                <div class="repair-ctn-wrap-img">
+                                    <div>
+                                        <figure>
+                                            <img src="./assets/img/repair-status/reception.svg" alt="">
+                                        </figure>
+                                        <p>受付</p>
+                                    </div>
+                                </div>
+                                <div class="repair-ctn-wrap-txt">
+                                    <div class="flex-inner">
+                                        <div>
+                                            <p class="mb-pc15 mb-sp10">商品名：BD／DVD</p>
+                                            <p class="mb-pc15 mb-sp10">メーカー：東芝</p>
+                                            <p class="mb-sp10">型番：RDE303</p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-pc15 mb-sp10">受付日：2021/09/06</p>
+                                            <p>受付店舗：みてじま店</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-ctn-wrap">
+                                <div class="repair-ctn-wrap-img">
+                                    <div>
+                                        <figure>
+                                            <img src="./assets/img/repair-status/repair.svg" alt="">
+                                        </figure>
+                                        <p>修理中</p>
+                                    </div>
+                                </div>
+                                <div class="repair-ctn-wrap-txt">
+                                    <div class="flex-inner">
+                                        <div>
+                                            <p class="mb-pc15 mb-sp10">商品名：BD／DVD</p>
+                                            <p class="mb-pc15 mb-sp10">メーカー：東芝</p>
+                                            <p class="mb-sp10">型番：RDE303</p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-pc15 mb-sp10">受付日：2021/09/06</p>
+                                            <p>受付店舗：みてじま店</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repair-ctn-wrap">
+                                <div class="repair-ctn-wrap-img">
+                                    <div>
+                                        <figure>
+                                            <img src="./assets/img/repair-status/delivery.svg" alt="">
+                                        </figure>
+                                        <p>お引渡し準備完了</p>
+                                    </div>
+                                </div>
+                                <div class="repair-ctn-wrap-txt">
+                                    <div class="flex-inner">
+                                        <div>
+                                            <p class="mb-pc15 mb-sp10">商品名：BD／DVD</p>
+                                            <p class="mb-pc15 mb-sp10">メーカー：東芝</p>
+                                            <p class="mb-sp10">型番：RDE303</p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-pc15 mb-sp10">受付日：2021/09/06</p>
+                                            <p>受付店舗：みてじま店</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%- include('../components/_c-pager'); %>
+                </div>
+
+            </div>
+        </main>
+
+
+
+    <%- include('../includes/_footer'); %>

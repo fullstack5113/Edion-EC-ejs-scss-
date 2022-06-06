@@ -1,0 +1,855 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'purchase-history';
+_%>
+    <%- include('../includes/_header') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; 商品レビュー
+        </div>
+
+        <main id="main-content" class="main-content">
+
+            <div class="container container-sidebar_show">
+
+                <%- include('../includes/_sidebar-account-info'); %>
+
+                    <div class="container-right">
+                        <div class="purchase-history">
+                            <div class="purchase-history-ttl">
+                                <h4>ご購入履歴</h4>
+                                <div class="accordion-inner">
+                                    <h5 class="accordion-inner-ttl js-accordion-btn">ご購入履歴について</h5>
+                                    <p class="accordion-inner-ctn">
+                                        ご購入いただいた履歴をこちらで確認することができます。<br>
+                                        「ネットショップご購入分」に表示されている保証特典、付与予定ポイントはご注文時点の会員状況での購入履歴情報です。ご購入後にカード会員入会や会員カード登録、または各種カード会員を退会後もこの表示内容は変更されませんのでご了承ください。<br>
+                                        保証特典については「長期修理保証の対象商品はこちらへ」から、付与ポイントについてはマイページの「ポイント残高照会」からご確認ください。「ネットショップご購入分」では配送状況確認の他、レビューの登録や再購入が可能です。<br><br>
+
+                                        ※ご購入履歴は2009年11月4日以降の履歴を掲載しております。<br>
+                                        ※修理など一部表示から除外されるものがあり、明細と合計が不一致で表示される場合がございます。<br>
+                                        ※履歴表示は、ご本人名義のご購入分のみとなります。<br>
+                                        ※保証特典の記載につきましては、ご購入時の情報を表示しております。長期修理保証期間が終了している場合や、カードを解約された場合にも表示されておりますのでご了承下さい。<br>
+                                        尚、長期修理保証期間のご確認は、マイページの「長期修理保証対商品」にてご確認いただけます。<br><br>
+
+                                        店舗でご購入分の付与ポイントの表記はございません。お買い上げ時のレシートにてご確認ください。<br>
+                                        ネットショップでご購入分の付与ポイントは「ネットショップご購入分」ページにてご確認ください。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="purchase-history-ctn">
+                            <div class="tabs-wrapper-all">
+                                <div class="tabs">
+                                    <div class="d-flex">
+                                        <div class="tab"><p>ネットショップ<br class="is-sp">ご注文履歴</p></div>
+                                        <div class="tab"><p>ご購入履歴</p></div>
+                                    </div>
+                                    <a href="" class="">
+                                        長期修理保証の対象商品はこちらへ
+                                    </a>
+                                </div>
+                                <div class="tabs-content">
+                                    <div class="tab-item">
+                                        <div class="filter">
+                                            <div class="filter-inner">
+                                                <label>ご購入履歴：</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="filter-inner mr-sp0">
+                                                <label>カテゴリで絞り込む：</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="filter-inner">
+                                                <label>表示件数：</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="5">5件</option>
+                                                        <option value="10">10件</option>
+                                                        <option value="15">15件</option>
+                                                        <option value="20">20件</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="purchase">
+                                            <div class="purchase-ttl">
+                                                <div class="purchase-ttl-first">
+                                                    <p class="is-pc">注文日：2020/04/30　　出荷日：2020/04/30　　購入日：2020/04/30    </p>
+                                                    <p class="is-pc">注文番号：XXXXXXX</p>
+                                                    <p class="is-sp">
+                                                        注文日：2020/04/30<br>
+                                                        購入日：2020/04/30
+                                                    </p>
+                                                    <p class="is-sp">
+                                                        出荷日：2020/04/30<br>
+                                                        注文番号：XXXXXXXXX
+                                                    </p>
+                                                </div>
+                                                <div class="purchase-ttl-second flex-sp-between">
+                                                    <a class="btn radius-btn lined-btn white-btn" href="">領収書発行</a>
+                                                    <button class="accept-order is-pc">注文受付中</button>
+                                                    <button class="accept-order is-sp">配送完了<br>
+                                                        2020/05/07</button>
+                                                </div>
+                                            </div>
+                                            <div class="purchase-ctn">
+                                                <div class="purchase-ctn-img">
+                                                    <img src="./assets/img/purchase-history/product_default.jpg" alt="">
+                                                </div>
+                                                <div class="purchase-ctn-txt">
+                                                    <p class="ttl">TOSHIBA/REGZA 1TB HDD内蔵ブルーレイレコーダー DBRシリーズ<br>
+                                                        <span>RASWM56K2E8WS</span>
+                                                    </p>
+                                                    <p class="price">￥59,800(税込)</p>
+                                                    <div class="d-pc-flex">
+                                                        <p class="count">数量：1</p>
+                                                        <p class="benefit">保証特典：長期修理保証5年</p>
+                                                    </div>
+                                                    <div class="is-pc">
+                                                        <div class="fn-wrap">
+                                                            <div class="fn-wrap-btn">
+                                                                <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                            </div>
+                                                            <div class="fn-wrap-link">
+                                                                <div class="d-flex mt-pc5">
+                                                                    <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                </div>
+                                                                <div class="d-flex mt-pc5">
+                                                                    <a class="arrow-inner" href="">設置チェックシート確認</a>
+                                                                    <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル依頼</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="is-sp">
+                                                    <div class="fn-wrap">
+                                                        <div class="fn-wrap-btn">
+                                                            <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                            <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                        </div>
+                                                        <div style="width: 100%;">
+                                                            <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                        </div>
+                                                        <div class="fn-wrap-link">
+                                                            <div class="d-flex mt-pc5">
+                                                                <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル依頼</button>
+                                                            </div>
+                                                            <div class="d-flex mt-pc5 mt-sp10">
+                                                                <a class="arrow-inner" href="">設置チェックシート確認</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="purchase-ctn">
+                                                <div class="purchase-ctn-img">
+                                                    <img src="./assets/img/purchase-history/product.jpg" alt="">
+                                                </div>
+                                                <div class="purchase-ctn-txt">
+                                                    <p class="ttl second mb-sp15">メガソフト 3D住宅リフォームデザイナー2 3Dジユウタクリフオ-ムデザイナ-2WD<br>
+                                                        【Win ダウンロード版】
+                                                    </p>
+                                                    <p class="price mb-sp5">￥59,800(税込)</p>
+                                                    <div class="d-pc-flex">
+                                                        <p class="count">数量：1</p>
+                                                        <p class="benefit">保証特典：長期修理保証5年</p>
+                                                    </div>
+                                                    <div class="is-pc">
+                                                        <div class="fn-wrap">
+                                                            <div class="fn-wrap-btn">
+                                                                <a class="btn blue-btn radius-btn" href="">ダウンロード</a>
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                            </div>
+                                                            <div class="fn-wrap-link">
+                                                                <div class="d-flex mt-pc5">
+                                                                    <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                </div>
+                                                                <div class="d-flex mt-pc5">
+                                                                    <a class="arrow-inner" href="">設置チェックシート確認</a>
+                                                                    <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル依頼</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="is-sp">
+                                                    <div class="fn-wrap">
+                                                        <div class="fn-wrap-btn">
+                                                            <a class="btn blue-btn radius-btn" href="">ダウンロード</a>
+                                                            <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                        </div>
+                                                        <div style="width: 100%;">
+                                                            <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                        </div>
+                                                        <div class="fn-wrap-link">
+                                                            <div class="d-flex mt-pc5">
+                                                                <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル依頼</button>
+                                                            </div>
+                                                            <div class="d-flex mt-pc5 mt-sp10">
+                                                                <a class="arrow-inner" href="">設置チェックシート確認</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="purchase-ft">
+                                                <div class="purchase-ft-first">
+                                                    <p class="ttl">お届け先</p>
+                                                    <p class="des_01">
+                                                        山田太郎
+                                                    </p>
+                                                    <div class="d-flex">
+                                                        <p class="des_01 max-content">住所　　　　　：</p>
+                                                        <p class="des_01">〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX</p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <p class="des_01">電話　　　　　：</p>
+                                                        <p class="des_01">080XXXXXXXX</p>
+                                                    </div>
+                                                </div>
+                                                <div class="purchase-ft-second">
+                                                    <p class="ttl mb-sp20">注文内容</p>
+                                                    <div class="d-flex flex-between flex-rowwrap">
+                                                        <div class="flex-inner">
+                                                            <div class="flex-wrap">
+                                                                <div class="d-flex flex-between"  style="width: 100%;">
+                                                                    <p class="des_02">商品計：</p>
+                                                                    <p class="des_03">2点	￥119,600<span>（税込）</span></p>
+                                                                </div>
+                                                                <div class="d-flex flex-between" style="width: 100%;">
+                                                                    <p class="des_02">送料：</p>
+                                                                    <p class="des_03">￥800</p>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="flex-wrap">
+                                                                <p class="des_02">合計</p>
+                                                                <p class="des_03">￥119,600<span>（税込）</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-inner">
+                                                            <div class="flex-wrap">
+                                                                <div>
+                                                                    <p class="des_04">お支払い</p>
+                                                                    <p class="des_02">銀行振込</p>
+                                                                </div>
+                                                                <p class="des_03">￥119,600<span>（税込）</span></p>
+                                                            </div>
+                                                            <div class="flex-wrap no-border mb-sp0">
+                                                                <div>
+                                                                    <p class="des_04">付与予定ポイント</p>
+                                                                    <p class="des_02 mb-sp0">エディオンポイント</p>    
+                                                                </div>
+                                                                <p class="des_03">0<span>ポイント</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="purchase mt-pc45 mt-sp30">
+                                            <div class="purchase-ttl mt-sp0">
+                                                <div class="purchase-ttl-first">
+                                                    <p class="is-pc">注文日：2020/04/30　　出荷日：2020/04/30　　購入日：2020/04/30    </p>
+                                                    <p class="is-pc">注文番号：XXXXXXX</p>
+                                                    <p class="is-sp">
+                                                        注文日：2020/04/30<br>
+                                                        購入日：2020/04/30
+                                                    </p>
+                                                    <p class="is-sp">
+                                                        出荷日：2020/04/30<br>
+                                                        注文番号：XXXXXXXXX
+                                                    </p>
+                                                </div>
+                                                <div class="purchase-ttl-second flex-sp-end">
+                                                    <a class="btn radius-btn lined-btn white-btn mr10 ml0" href="">配送状況を見る</a>
+                                                    <a class="btn radius-btn lined-btn white-btn mr-pc15 mr-sp20 ml0" href="">領収書発行</a>
+                                                    <button class="accept-order finish">受取完了<br>2020/05/07</button>
+                                                </div>
+                                            </div>
+                                            <% for (var i = 0 ; i < 2 ; i++){ %> 
+                                                <div class="purchase-ctn">
+                                                    <div class="purchase-ctn-img">
+                                                        <img src="./assets/img/purchase-history/product_default.jpg" alt="">
+                                                    </div>
+                                                    <div class="purchase-ctn-txt">
+                                                        <p class="ttl">TOSHIBA/REGZA 1TB HDD内蔵ブルーレイレコーダー DBRシリーズ<br>
+                                                            <span>RASWM56K2E8WS</span>
+                                                        </p>
+                                                        <p class="price">￥59,800(税込)</p>
+                                                        <div class="d-pc-flex">
+                                                            <p class="count">数量：1</p>
+                                                            <p class="benefit">保証特典：長期修理保証5年</p>
+                                                        </div>
+                                                        <div class="is-pc">
+                                                            <div class="fn-wrap">
+                                                                <div class="fn-wrap-btn">
+                                                                    <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                    <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                                    <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                                </div>
+                                                                <div class="fn-wrap-link">
+                                                                    <div class="d-flex mt-pc5">
+                                                                        <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                    </div>
+                                                                    <div class="d-flex mt-pc5">
+                                                                        <a class="arrow-inner" href="">設置チェックシート確認</a>
+                                                                        <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル依頼</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="is-sp">
+                                                        <div class="fn-wrap">
+                                                            <div class="fn-wrap-btn">
+                                                                <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                            </div>
+                                                            <div style="width: 100%;">
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                            </div>
+                                                            <div class="fn-wrap-link">
+                                                                <div class="d-flex mt-pc5">
+                                                                    <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                    <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル依頼</button>
+                                                                </div>
+                                                                <div class="d-flex mt-pc5 mt-sp10">
+                                                                    <a class="arrow-inner" href="">設置チェックシート確認</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <% } %> 
+                                            <div class="purchase-ft">
+                                                <div class="purchase-ft-first">
+                                                    <p class="ttl">お届け先</p>
+                                                    <div class="d-flex align-center">
+                                                        <p class="des_01">店舗名　　　　：</p>
+                                                        <p class="des_01">JR尼崎駅店</p>
+                                                        <a class="btn grey-btn3 lined-btn radius-btn ml-pc50 ml-sp15" ref="">受取店情報</a>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="purchase-ft-second">
+                                                    <p class="ttl mb-sp20">注文内容</p>
+                                                    <div class="d-flex flex-between flex-rowwrap">
+                                                        <div class="flex-inner">
+                                                            <div class="flex-wrap">
+                                                                <div class="d-flex flex-between"  style="width: 100%;">
+                                                                    <p class="des_02">商品計：</p>
+                                                                    <p class="des_03">2点	￥119,600<span>（税込）</span></p>
+                                                                </div>
+                                                                <div class="d-flex flex-between" style="width: 100%;">
+                                                                    <p class="des_02">送料：</p>
+                                                                    <p class="des_03">￥800</p>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="flex-wrap">
+                                                                <p class="des_02">合計</p>
+                                                                <p class="des_03">￥119,600<span>（税込）</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-inner">
+                                                            <div class="flex-wrap">
+                                                                <div>
+                                                                    <p class="des_04">お支払い</p>
+                                                                    <p class="des_02">銀行振込</p>
+                                                                </div>
+                                                                <p class="des_03">￥119,600<span>（税込）</span></p>
+                                                            </div>
+                                                            <div class="flex-wrap no-border mb-sp0">
+                                                                <div>
+                                                                    <p class="des_04">付与予定ポイント</p>
+                                                                    <p class="des_02 mb-sp0">エディオンポイント</p>    
+                                                                </div>
+                                                                <p class="des_03">0<span>ポイント</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="purchase mt-pc45 mt-sp30">
+                                            <div class="purchase-ttl mt-sp0">
+                                                <div class="purchase-ttl-first">
+                                                    <p class="is-pc">注文日：2020/04/30　　出荷日：2020/04/30　　購入日：2020/04/30    </p>
+                                                    <p class="is-pc">注文番号：XXXXXXX</p>
+                                                    <p class="is-sp">
+                                                        注文日：2020/04/30<br>
+                                                        購入日：2020/04/30
+                                                    </p>
+                                                    <p class="is-sp">
+                                                        出荷日：2020/04/30<br>
+                                                        注文番号：XXXXXXXXX
+                                                    </p>
+                                                </div>
+                                                <div class="purchase-ttl-second flex-sp-end">
+                                                    <a class="btn radius-btn lined-btn white-btn mr10 ml0" href="">配送状況を見る</a>
+                                                    <a class="btn radius-btn lined-btn white-btn mr-pc15 mr-sp20 ml0" href="">領収書発行</a>
+                                                    <button class="accept-order finish">商品配達中</button>
+                                                </div>
+                                            </div>
+                                            <% for (var i = 0 ; i < 2 ; i++){ %> 
+                                                <div class="purchase-ctn">
+                                                    <div class="purchase-ctn-img">
+                                                        <img src="./assets/img/purchase-history/product_default.jpg" alt="">
+                                                    </div>
+                                                    <div class="purchase-ctn-txt">
+                                                        <p class="ttl">TOSHIBA/REGZA 1TB HDD内蔵ブルーレイレコーダー DBRシリーズ<br>
+                                                            <span>RASWM56K2E8WS</span>
+                                                        </p>
+                                                        <p class="price">￥59,800(税込)</p>
+                                                        <div class="d-pc-flex">
+                                                            <p class="count">数量：1</p>
+                                                            <p class="benefit">保証特典：長期修理保証5年</p>
+                                                        </div>
+                                                        <div class="is-pc">
+                                                            <div class="fn-wrap">
+                                                                <div class="fn-wrap-btn">
+                                                                    <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                    <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                                    <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                                </div>
+                                                                <div class="fn-wrap-link">
+                                                                    <div class="d-flex mt-pc5">
+                                                                        <button class="arrow-inner js-modal" modal-id="modal_02">配達工事日時変更はこちら</button>
+                                                                    </div>
+                                                                    <div class="d-flex mt-pc5">
+                                                                        <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                        <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル依頼</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="is-sp">
+                                                        <div class="fn-wrap">
+                                                            <div class="fn-wrap-btn">
+                                                                <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                            </div>
+                                                            <div style="width: 100%;">
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                            </div>
+                                                            <div class="fn-wrap-link">
+                                                                <div class="d-flex mt-pc5">
+                                                                    <button class="arrow-inner js-modal" modal-id="modal_02">配達工事日時変更はこちら</button>
+                                                                    <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル依頼</button>
+                                                                </div>
+                                                                <div class="d-flex mt-pc5 mt-sp10">
+                                                                    <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <% } %> 
+                                            <div class="purchase-ft">
+                                                <div class="purchase-ft-first">
+                                                    <p class="ttl">お届け先</p>
+                                                    <p class="des_01">
+                                                        山田太郎
+                                                    </p>
+                                                    <div class="d-flex">
+                                                        <p class="des_01  max-content">住所　　　　　：</p>
+                                                        <p class="des_01">〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX</p>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <p class="des_01">電話　　　　　：</p>
+                                                        <p class="des_01">080XXXXXXXX</p>
+                                                    </div>
+                                                </div>
+                                                <div class="purchase-ft-second">
+                                                    <p class="ttl mb-sp20">注文内容</p>
+                                                    <div class="d-flex flex-between flex-rowwrap">
+                                                        <div class="flex-inner">
+                                                            <div class="flex-wrap">
+                                                                <div class="d-flex flex-between"  style="width: 100%;">
+                                                                    <p class="des_02">商品計：</p>
+                                                                    <p class="des_03">2点	￥119,600<span>（税込）</span></p>
+                                                                </div>
+                                                                <div class="d-flex flex-between" style="width: 100%;">
+                                                                    <p class="des_02">送料：</p>
+                                                                    <p class="des_03">￥800</p>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="flex-wrap">
+                                                                <p class="des_02">合計</p>
+                                                                <p class="des_03">￥119,600<span>（税込）</span></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-inner">
+                                                            <div class="flex-wrap">
+                                                                <div>
+                                                                    <p class="des_04">お支払い</p>
+                                                                    <p class="des_02">銀行振込</p>
+                                                                </div>
+                                                                <p class="des_03">￥119,600<span>（税込）</span></p>
+                                                            </div>
+                                                            <div class="flex-wrap no-border mb-sp0">
+                                                                <div>
+                                                                    <p class="des_04">付与予定ポイント</p>
+                                                                    <p class="des_02 mb-sp0">エディオンポイント</p>    
+                                                                </div>
+                                                                <p class="des_03">0<span>ポイント</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-item">
+                                        <div class="filter">
+                                            <div class="filter-inner">
+                                                <label>ご購入履歴：</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="filter-inner mr-sp0">
+                                                <label>カテゴリで絞り込む：</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="filter-inner">
+                                                <label>表示件数：</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="5">5件</option>
+                                                        <option value="10">10件</option>
+                                                        <option value="15">15件</option>
+                                                        <option value="20">20件</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="purchase">
+                                            <div class="purchase-ttl mt-sp0 ">
+                                                <div class="purchase-ttl-first pt-pc15 pb-pc15">
+                                                    <p class="ml-pc25 mr-pc30">購入日：2020/04/30</p>
+                                                    <p>伝票番号：XXXXXXXXX</p>
+                                                </div>
+                                            </div>
+                                            <% for (var i = 0 ; i < 2 ; i++){ %> 
+                                                <div class="purchase-ctn">
+                                                    <div class="purchase-ctn-img">
+                                                        <img src="./assets/img/purchase-history/product_default.jpg" alt="">
+                                                    </div>
+                                                    <div class="purchase-ctn-txt">
+                                                        <p class="ttl">TOSHIBA/REGZA 1TB HDD内蔵ブルーレイレコーダー DBRシリーズ<br>
+                                                            <span>RASWM56K2E8WS</span>
+                                                        </p>
+                                                        <p class="price">￥59,800(税込)</p>
+                                                        <div class="d-pc-flex">
+                                                            <p class="count">数量：1</p>
+                                                            <p class="benefit">保証特典：長期修理保証5年</p>
+                                                        </div>
+                                                        <div class="is-pc">
+                                                            <div class="fn-wrap">
+                                                                <div class="fn-wrap-btn">
+                                                                    <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                    <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                                    <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                                </div>
+                                                                <div class="fn-wrap-link">
+                                                                    <p>
+                                                                        商品の返品・交換・キャンセルについては<br>ご購入店舗にお問い合わせください
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="is-sp">
+                                                        <div class="fn-wrap">
+                                                            <div class="fn-wrap-btn">
+                                                                <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                            </div>
+                                                            <div style="width: 100%;">
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                            </div>
+                                                            <div class="fn-wrap-link">
+                                                                <p>
+                                                                    商品の返品・交換・キャンセルについては<br>ご購入店舗にお問い合わせください
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <% } %> 
+                                            <div class="purchase-ftn">
+                                                <div class="purchase-ftn-first">
+                                                    <p>
+                                                        購入店舗：エディオンネットショップ  
+                                                    </p>
+                                                    <a class="btn grey-btn3 lined-btn radius-btn" href="">購入店情報</a>
+                                                </div>
+                                                <div class="purchase-ftn-second">
+                                                    <p class="ttl">合計</p>
+                                                    <p class="price">￥119,600<span>（税込）</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="purchase mt-pc40 mt-sp20">
+                                            <div class="purchase-ttl mt-sp0">
+                                                <div class="purchase-ttl-first pt-pc15 pb-pc15 flex-sp-start">
+                                                    <p class="ml-pc25 mr-pc30">購入日：2020/04/30</p>
+                                                    <p>伝票番号：XXXXXXXXX</p>
+                                                </div>
+                                                <div class="purchase-ttl-second flex-sp-end">
+                                                    <button class="accept-order finish">注文受付中</button>
+                                                </div>
+                                            </div>
+                                            <% for (var i = 0 ; i < 2 ; i++){ %> 
+                                                <div class="purchase-ctn">
+                                                    <div class="purchase-ctn-img">
+                                                        <img src="./assets/img/purchase-history/product_default.jpg" alt="">
+                                                    </div>
+                                                    <div class="purchase-ctn-txt">
+                                                        <p class="ttl">TOSHIBA/REGZA 1TB HDD内蔵ブルーレイレコーダー DBRシリーズ<br>
+                                                            <span>RASWM56K2E8WS</span>
+                                                        </p>
+                                                        <p class="price">￥59,800(税込)</p>
+                                                        <div class="d-pc-flex">
+                                                            <p class="count">数量：1</p>
+                                                            <p class="benefit">保証特典：長期修理保証5年</p>
+                                                        </div>
+                                                        <div class="is-pc">
+                                                            <div class="fn-wrap">
+                                                                <div class="fn-wrap-btn">
+                                                                    <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                    <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                                    <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                                </div>
+                                                                <div class="fn-wrap-link">
+                                                                    <div class="d-flex mt-pc5">
+                                                                        <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                        <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="is-sp">
+                                                        <div class="fn-wrap">
+                                                            <div class="fn-wrap-btn">
+                                                                <a class="btn blue-btn radius-btn" href="">もう一度購入する</a>
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">商品レビューを書く</a>
+                                                            </div>
+                                                            <div style="width: 100%;">
+                                                                <a class="btn lined-btn white-btn radius-btn" href="">関連商品</a>
+                                                            </div>
+                                                            <div class="fn-wrap-link">
+                                                                <div class="d-flex mt-pc5">
+                                                                    <a class="arrow-inner" href="">商品の返品・交換はこちら</a>
+                                                                    <button class="cancel-inner js-modal" modal-id="modal_01">キャンセル</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <% } %> 
+                                            <div class="purchase-ftn">
+                                                <div class="purchase-ftn-first">
+                                                    <p>
+                                                        購入店舗：エディオンネットショップ  
+                                                    </p>
+                                                    <a class="btn grey-btn3 lined-btn radius-btn" href="">購入店情報</a>
+                                                </div>
+                                                <div class="purchase-ftn-second">
+                                                    <p class="ttl">合計</p>
+                                                    <p class="price">￥119,600<span>（税込）</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pager-wrapper mt-pc40 mt-sp30 purchase-history">
+                            <a href="" class="pager-wrapper-link prev">前へ</a>
+                            <div class="pager-wrapper-num">
+                                <span>1</span>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a class="is-pc" href="">4</a>
+                                <a class="is-pc" href="">5</a>
+                                ・・・
+                                <a href="">20</a>
+                            </div>
+                            <a href="" class="pager-wrapper-link next">次へ</a>
+                        </div>
+                        <div id="modal_01" class="modal-block wide">
+                            <div class="modal-block-inner01">
+                                <span class="close-btn js-close"></span>
+            
+                                <p class="modal-block-inner01-ttl">
+                                    対象注文番号：XXXXXXXX
+                                </p>
+            
+                                <div class="modal-block-inner01-ctn">
+                                    <p class="des_01">
+                                        ※ご注文いただいた商品の発送手続き状況を確認いたします。<br>
+                                        別途、お送りするキャンセル処理の完了メールをお送りした時点でキャンセルとなります。<br>
+                                        手続きの状況によりましては、キャンセルに伴い配送料の費用が発生する場合がございます。
+                                    </p>
+                                    <div class="form-block-select">
+                                        <select name="" id="">
+                                            <option value="キャンセル理由選択">キャンセル理由選択</option>
+                                            <option value="キャンセル理由選択">キャンセル理由選択</option>
+                                            <option value="キャンセル理由選択">キャンセル理由選択</option>
+                                            <option value="キャンセル理由選択">キャンセル理由選択</option>
+                                            <option value="キャンセル理由選択">キャンセル理由選択</option>
+                                        </select>
+                                    </div>
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="詳細（400字以内）" maxlength="400"></textarea>
+                                </div>
+                                <div class="modal-block-ft">
+                                    <button class="close">閉じる</button>
+                                    <button class="cancel">キャンセル依頼する</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div id="modal_02" class="modal-block wide">
+                            <div class="modal-block-inner02">
+                                <span class="close-btn js-close"></span>
+            
+                                <h3 class="modal-block-inner02-ttl">
+                                    配送工事日時変更
+                                </h3>
+
+                                <p class="des_01 mb-pc25">
+                                    ネットショップ・店舗でご購入いただいた商品の配送（工事）の日時の変更が可能です。<br><br>
+                                    ※ご変更は延期のみ可能です。<br>
+                                    ※翌日配達のものは時間によって変更ができない場合があります。
+                                </p>
+            
+                                <div class="modal-block-inner02-content">
+                                    <div class="group-wrap">
+                                        <div class="group-inner">
+                                            <h5 class="mb-sp10">グループA</h5>
+                                        </div>
+                                        <div class="group-inner">
+                                            <p class="des_02">
+                                                山田太郎<br>
+                                                住所<span class="is-pc">　　　　　</span>：〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX<br>
+                                                電話<span class="is-pc">　　　　　</span>：080XXXXXXXX<br>
+                                                メールアドレス：XXXXXXXXXX@gmail.com
+                                            </p>
+                                        </div>
+                                        <div class="group-inner">
+                                            <button>変更する</button>
+                                        </div>
+                                    </div>
+                                    <h6>配送日時設定</h6>
+                                    <div class="calendar-wrap">
+                                        <div class="calendar-container">
+                                        </div>
+                                        <div class="calendar-wrap-time">
+                                            <h5 class="ttl">時間帯指定</h5>
+                                            <div class="d-flex flex-between">
+                                                <div class="flex-inner">
+                                                    <div class="form-block">
+                                                        <input onclick="deliverTime('empty')" type="radio" name="delivery-time" id="empty">
+                                                        <label for="empty">指定なし</label>
+                                                    </div>
+                                                    <div class="form-block">
+                                                        <input onclick="deliverTime('8-12')" type="radio" name="delivery-time" id="morning">
+                                                        <label class="d-flex" for="morning">午前中<span class="is-sp">（8時～12時）</span></label>
+                                                    </div>
+                                                    <div class="form-block">
+                                                        <input onclick="deliverTime('12-14')" type="radio" name="delivery-time" id="12-14">
+                                                        <label for="12-14">12時～14時</label>
+                                                    </div>
+                                                    <div class="form-block mb-sp0">
+                                                        <input onclick="deliverTime('14-16')" type="radio" name="delivery-time" id="14-16">
+                                                        <label for="14-16">14時～16時</label>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-inner">
+                                                    <div class="form-block">
+                                                        <input onclick="deliverTime('16-18')" type="radio" name="delivery-time" id="16-18">
+                                                        <label for="16-18">16時～18時</label>
+                                                    </div>
+                                                    <div class="form-block">
+                                                        <input onclick="deliverTime('18-20')" type="radio" name="delivery-time" id="18-20">
+                                                        <label for="18-20">18時～20時</label>
+                                                    </div>
+                                                    <div class="form-block mb-sp0">
+                                                        <input onclick="deliverTime('19-21')" type="radio" name="delivery-time" id="19-21">
+                                                        <label for="19-21">19時～21時</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                function deliverTime(selected_time){
+                                                    $("#selected-deliver-time").attr('value',selected_time );
+                                                }
+                                            </script> 
+                                        </div>
+                                        <input id="selected-deliver-day" type="hidden" value="">
+                                        <input id="selected-deliver-time" type="hidden" value="">
+                                    </div>
+                                    <p class="des_03">
+                                        ご注文いただきました商品の発送手続きの状態を確認いたします。<br>
+                                        別途、お送りする配達工事日時変更完了メールをお送りした時点で完了となります。<br>
+                                        手続きの状況によりましては、配達工事日時の変更ができない可能性がございますのでご了承ください。
+                                    </p>
+                                </div>
+                                <div class="modal-block-ft mt-pc50 mt-sp30">
+                                    <button class="close">閉じる</button>
+                                    <button class="change">変更依頼</button>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+            </div>
+        </main>
+
+
+
+        <%- include('../includes/_footer'); %>

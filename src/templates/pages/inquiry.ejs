@@ -1,0 +1,186 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'inquiry';
+_%>
+<%- include('../includes/_header-nomenu') %>
+<main id="main-content" class="main-content">
+    
+    
+    <section class="inquiry-form">
+        <div class="inner inner-small">
+            <h1 class="page-title">エディオンネットショップ・アプリ<br class="is-sp">に関するお問い合わせ</h1>
+            
+            <div class="register-step inquiry s01">
+                <ul>
+                    <li class="current">お客様情報入力</li>
+                    <li>登録情報確認</li>
+                    <li>ご登録完了</li>
+                </ul>
+            </div>
+            
+            <div class="page-title-lead">
+                お問い合わせいただきました内容には、迅速にお答えできるよう努めますが、<br class="is-pc">
+                ご返答までにお時間をいただく場合や、お答えできない場合がございます。<br>
+                また、お問い合わせ内容によっては、お電話にてご連絡させていただく場合もございますので、あらかじめご了承ください。
+            </div>
+            
+            <div class="linebox linebox-blue">
+                
+                <form action="">
+                    <div class="inquiry-form-heading">お客様情報</div>
+                    <div class="inquiry-form-block">
+                        <div class="form-block general">
+                            <label class="require">お名前</label>
+                            <div class="form-block-name">
+                                <div class="familyname-kanji"><input type="text" name="family-name" placeholder="山田"></div>
+                                <div class="firstname-kanji"><input type="text" name="given-name" placeholder="太郎"></div>
+                            </div>
+                        
+                            <label class="require">フリガナ<span class="small-font">（全角カタカナ）</span></label>
+                            <div class="form-block-name">
+                                <div class="familyname-kana"><input type="text" name="family-name-kana" placeholder="ヤマダ"></div>
+                                <div class="firstname-kana"><input type="text" name="given-name-kana" placeholder="タロウ"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="inquiry-form-heading">メールアドレス</div>
+                    
+                    <div class="inquiry-form-block">
+                        <div class="form-block general">
+                            <label class="require">メールアドレス<span class="small-font">（半角）</span></label>
+                            <input type="email" placeholder="email@sample.com">
+                            
+                            <label class="require">メールアドレス確認</label>
+                            <input type="email" placeholder="">
+                            <div class="inquiry-form-block-subtext">
+                                <a href="" class="text-link" style="vertical-align: baseline;">フリーメール（@hotmail,@msn,@yahoo）での登録について</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="inquiry-form-heading">電話番号</div>
+                    
+                    <div class="inquiry-form-block">
+                        <div class="form-block general">
+                            <label class="require">電話番号1<span class="small-font">（半角数字）</span></label>
+                            <div class="inquiry-form-block-tel">
+                                <input type="radio" name="tel01" id="tel01_1">
+                                <label for="tel01_1">ご自宅</label>
+                                <input type="radio" name="tel01" id="tel01_2">
+                                <label for="tel01_2">携帯電話</label>
+                                <input type="text" name="" placeholder="08012345678">
+                            </div>
+                            
+                            <label class="optional">電話番号2<span class="small-font">（半角数字）</span></label>
+                            <div class="inquiry-form-block-tel">
+                                <input type="radio" name="tel02" id="tel02_1">
+                                <label for="tel02_1">ご自宅</label>
+                                <input type="radio" name="tel02" id="tel02_2">
+                                <label for="tel02_2">携帯電話</label>
+                                <input type="text" name="" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="inquiry-form-heading">お問い合わせ情報</div>
+                    
+                    <div class="inquiry-form-block mb-0">
+                        <div class="form-block general">
+                            <label class="require">お問い合わせの種類</label>
+                            <div class="form-block-select">
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class="inquiry-form-block-subtext">・該当するお問い合わせ項目を選択してください。</div>
+                            
+                            <label class="optional">注文番号</label>
+                            <input type="text" name="" placeholder="000000000000">
+                            <div class="inquiry-form-block-subtext">
+                                <div class="indent">・ご注文商品についてのお問い合わせの場合は注文番号を入力してください。</div>
+                                <div class="indent">・納品書および注文受付メール、または<a href="">購入履歴</a>に記載の12桁の注文番号を入力してください。</div>
+                            </div>
+                            
+                            <label class="require">お問合せ内容<span class="small-font">（4000字以内）</span></label>
+                            <textarea name="" id="" rows="6"></textarea>
+                            <div class="inquiry-form-block-subtext">・お問合せ内容を具体的にご記入願います。</div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="inquiry-form-heading2">個人情報保護方針</div>
+                    
+                    <div class="inquiry-form-text01">以下の個人情報保護方針・ご利用規約をご確認いただき、「同意する」にチェックを入れてください。</div>
+                    
+<div class="inquiry-form-terms bg-grey">
+<div class="inquiry-form-terms-inner">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+</div>
+</div>
+
+                    <div class="form-block form-block-check general form-block-check-agree">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">同意する</label>
+                    </div>
+                    
+                    <div class="inquiry-form-box">
+                        <div class="inquiry-form-box-heading">メール受信設定について</div>
+                        返信メールを受信していただくためにドメイン指定受信を設定されている場合は、edion.comのドメインからのメールを許可してください。アドレス指定受信を設定されている場合は、以下のアドレスからメールの許可をしてください。<br>
+                        「info@edion.com」「shop@edion.com」
+                    </div>
+
+                    <div class="inquiry-form-btns">
+                        <a href="" class="btn red-btn2 account-btn wide">確認画面へ</a>
+                        <a href="" class="btn grey-btn2 account-btn medium">戻る</a>
+                    </div>
+
+                    
+                </form>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="inquiry-tel">
+        <div class="inner inner-small">
+            <div class="inquiry-tel-box">
+                <div class="inquiry-tel-box-head">
+                    <div class="inquiry-tel-box-heading">お電話でのお問い合わせ</div>
+                    <div class="inquiry-tel-box-text01">エディオンネットショップ/エディオンアプリ専用ダイヤル</div>
+                    <div class="inquiry-tel-box-telnum"><img src="./assets/img/inquiry/icon-tel.svg" alt="">0570-200-457</div>
+                    <div class="inquiry-tel-box-text02">（ナビダイヤル 有料）</div>
+                </div>
+                
+                
+                <div class="inquiry-tel-box-time">
+                    <div class="left">受付時間</div>
+                    <div class="right">
+                        ネットショップ　：9:00〜17:00<span class="primary">年末年始を除く</span><br class="is-pc">
+                        エディオンアプリ：10:00〜17:00<span>年末年始を除く</span>
+                    </div>
+                </div>
+                <div class="inquiry-tel-box-text03">
+                    ※お電話での「ネットショップ退会」の受付は承っておりません。<br>
+                    「退会」依頼は上記、お問い合わせの種類「ネットショップの退会を希望」をご選択いただき、メールフォームより依頼をお願いいたします。
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <div class="inquiry-chat js-inquiry-chat">
+        <a href="">
+            <div class="inquiry-chat-heading">チャットお問い合わせ窓口</div>
+            <div class="inquiry-chat-text01"><img src="./assets/img/inquiry/icon-chat.svg" alt="">自動応答で対応いたします</div>
+            <div class="inquiry-chat-text02">（有人チャット対応は10:00〜17:00）</div>
+        </a>
+    </div>
+
+    
+</main>
+<%- include('../includes/_footer'); %>

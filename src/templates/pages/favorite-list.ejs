@@ -1,0 +1,468 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'favorite-list';
+_%>
+    <%- include('../includes/_header-login') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a>  &gt; マイページ
+        </div>
+
+        <main id="main-content" class="main-content">
+
+            <div class="container container-sidebar_show">
+
+                <aside class="sidebar sidebar-account-info">
+                    <div class="sidebar-inner">
+                        <div class="sidebar-ttl js-sidebar-ttl">各種照会・登録・変更</div>
+                        <ul class="sidebar-category-list sidebar-category-list-4 js-sidebar-category-list">
+                            <li><span class="sidebar-category-list-link"><a href="">購入履歴</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">再び購入</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">工事見積書反映</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">ポイント照会</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">会員情報・メルマガ設定</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">友達/家族紹介</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">お届け先情報</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">家族登録一覧</a></span></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-inner">
+                        <div class="sidebar-ttl js-sidebar-ttl">セール・商品・店舗</div>
+                        <ul class="sidebar-category-list sidebar-category-list-4 js-sidebar-category-list">
+                            <li><span class="sidebar-category-list-link"><a href="">クーポン</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">メーカーキャンペーン</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">シークレットセール</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">お気に入り商品</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">商品レビュー</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">生活雑貨・くすり・お酒</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">よく利用する店舗</a></span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-inner">
+                        <div class="sidebar-ttl js-sidebar-ttl">サービス関連</div>
+                        <ul class="sidebar-category-list sidebar-category-list-4 js-sidebar-category-list">
+                            <li><span class="sidebar-category-list-link"><a href="">保証対象商品</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">修理状況</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">訪問修理</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">各種依頼</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">オンライン修理見積</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">小型家電修理品引き取り</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">家電トータルサポート</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">メモ帳</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">接客予約</a></span></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-account-box logout">
+                        <div class="head">
+                            <div class="date">前回ログイン日時<br>
+                            2022/01/06 13:30:50</div>
+                            <a href="" class="link">ログイン履歴はこちら</a>
+                        </div>
+                        <a href="" class="btn black-btn account-btn medium">ログアウト</a>
+                    </div>
+                    <div class="text-center">
+                        <a href="" class="link_confirm">認証デバイス一覧はこちら</a>
+                    </div>
+                </aside>
+                
+
+                <div class="container-right">
+                    <div class="favorite">
+                        <div class="favorite-ttl">
+                            <h4>お気に入り商品一覧</h4>
+                            <p>お勤め先、ご家族など、会員登録時にご登録いただいた住所以外のお届け先を複数登録可能です。</p>
+                        </div>
+                        <div class="favorite-ctn">
+                            <div class="favorite-list">
+                                <div class="favorite-list-ttl">
+                                    <img src="./assets/img/common/favorite-link.png" alt="">
+                                    <p>お気に入りリスト</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a class="list_add js-modal" href="javascript:void(0);" modal-id="favorite-list-new">リストを作成する</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="">全ての商品</a>
+                                    </li>
+                                    <li>
+                                        <a class="js-modal" href="javascript:void(0);" modal-id="favorite-list-edit">リストA</a>
+                                    </li>
+                                    <li>
+                                        <a href="">リストB</a>
+                                    </li>
+                                    <li>
+                                        <a href="">リストC</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="favorite-product">
+                                <div class="favorite-product-ttl">
+                                    <h5>全ての商品</h5>
+                                    <div class="filter-inner">
+                                        <label>並べ替え</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="5">すべて</option>
+                                                <option value="5">すべて</option>
+                                                <option value="5">すべて</option>
+                                                <option value="5">すべて</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favorite-product-select">
+                                    <div class="d-flex">
+                                        <div class="form-block-check">
+                                            <input type="checkbox" id="compar0_1">
+                                            <label for="compar0_1"></label>
+                                        </div>
+                                        <p>チェックを入れた商品を<br class="is-sp">別のリストへ移動</p>
+                                    </div>
+                                    <div class="form-block-select">
+                                        <select name="" id="">
+                                            <option value="5">移動する</option>
+                                            <option value="5">移動する</option>
+                                            <option value="5">移動する</option>
+                                            <option value="5">移動する</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="favorite-product-ctn">
+                                    <div class="favorite-product-ctn-first">
+                                        <div class="form-block-check">
+                                            <input type="checkbox" id="compar0_2">
+                                            <label for="compar0_2"></label>
+                                        </div>
+                                        <img class="is-pc" src="./assets/img/review/item.png" alt="">
+                                    </div>
+                                    <div class="favorite-product-ctn-second">
+                                        <div class="flex-inner mb-pc25 mb-sp10">
+                                            <div class="flex-inner-01">
+                                                <div class="is-pc">
+                                                    <div class="d-flex">
+                                                        <img class="mr10 cat" src="./assets/img/common/category-label01.png" alt="">
+                                                        <img class="cat" src="./assets/img/common/category-label02.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-inner-02">
+                                                <p class="date date_pc">登録日：2020/04/30 </p>
+                                            </div>
+                                        </div>
+                                        <div class="flex-inner">
+                                            <div class="flex-inner-01">
+                                                <div class="flex-inner-03">
+                                                    <img class="product-item" src="./assets/img/review/item.png" alt="">
+                                                    <div class="inner">
+                                                        <div class="d-flex">
+                                                            <img class="mr10 cat" src="./assets/img/common/category-label01.png" alt="">
+                                                            <img class="cat" src="./assets/img/common/category-label02.png" alt="">
+                                                        </div>
+                                                        <p class="point">只今、高額ポイント進呈中！</p>
+                                                        <p class="repair">エディオンカード長期修理保証5年</p>
+                                                    </div>
+                                                
+                                                </div>
+                                                <p class="point is-pc">只今、高額ポイント進呈中！</p>
+                                                <p class="repair is-pc">エディオンカード長期修理保証5年</p>
+                                                <p class="ttl">パナソニック 「標準工事費サービス」 18畳向け 自動お掃除付き</p>
+                                                <p class="des01">RASWM56K2E8WS</p>
+                                                <div class="postreviewitem-star"><span class="review-star star5"></span>(6)</div>
+                                                <p class="price">￥12,980(税込)</p>
+                                                <p class="refer refer_01">
+                                                    あんしん保証会員：129ポイント進呈<br>
+                                                    保証：あんしん修理保証3年
+                                                </p>
+                                                <p class="refer refer_02">在庫あり</p>
+                                                <p class="refer refer_03">翌日出荷（大型品は別途ご案内）</p>
+                                            </div>
+                                            <div class="flex-inner-02">
+                                                <a href="" class="purchase-btn btn">
+                                                    <img src="./assets/img/common/icon-cart.png" alt="">
+                                                    <p>カートに入れる</p>
+                                                </a>
+                                                <a class="btn radius-btn blue-btn" href="">店舗在庫を確認する</a>
+                                                <a class="btn lined-btn-grey radius-btn white-btn js-modal" modal-id="notification-setting-modal" href="javascript:void(0)">通知設定を行う</a>
+                                                <a class="btn grey-btn radius-btn white-btn" href="">お気に入り商品から削除</a>
+                                                <p class="des_02 mt-pc25 mt-sp20">通知設定状況</p>
+                                                <div class="d-flex mt5">
+                                                    <p class="des_03 mr10">━　値下げ通知</p>
+                                                    <p class="des_03">━　在庫通知</p>
+                                                </div>
+                                                <p class="des_03">━　再入荷通知</p>
+                                                <p class="date date_sp">登録日：2020/04/30 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favorite-product-ctn">
+                                    <div class="favorite-product-ctn-first">
+                                        <div class="form-block-check">
+                                            <input type="checkbox" id="compar0_3">
+                                            <label for="compar0_3"></label>
+                                        </div>
+                                        <img class="is-pc" src="./assets/img/review/item.png" alt="">
+                                    </div>
+                                    <div class="favorite-product-ctn-second">
+                                        <div class="flex-inner mb-pc25 mb-sp10">
+                                            <div class="flex-inner-01">
+                                                <div class="is-pc">
+                                                    <div class="d-flex">
+                                                        <img class="mr10 cat" src="./assets/img/common/category-label01.png" alt="">
+                                                        <img class="cat" src="./assets/img/common/category-label02.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-inner-02">
+                                                <p class="date date_pc">登録日：2020/04/30 </p>
+                                            </div>
+                                        </div>
+                                        <div class="flex-inner">
+                                            <div class="flex-inner-01">
+                                                <div class="flex-inner-03">
+                                                    <img class="product-item" src="./assets/img/review/item.png" alt="">
+                                                    <div class="inner">
+                                                        <div class="d-flex">
+                                                            <img class="mr10 cat" src="./assets/img/common/category-label01.png" alt="">
+                                                            <img class="cat" src="./assets/img/common/category-label02.png" alt="">
+                                                        </div>
+                                                        <p class="point">只今、高額ポイント進呈中！</p>
+                                                        <p class="repair">エディオンカード長期修理保証5年</p>
+                                                    </div>
+                                                
+                                                </div>
+                                                <p class="point is-pc">只今、高額ポイント進呈中！</p>
+                                                <p class="repair is-pc">エディオンカード長期修理保証5年</p>
+                                                <p class="ttl">パナソニック 「標準工事費サービス」 18畳向け 自動お掃除付き</p>
+                                                <p class="des01">RASWM56K2E8WS</p>
+                                                <div class="postreviewitem-star"><span class="review-star star5"></span>(6)</div>
+                                                <p class="price">￥12,980(税込)</p>
+                                                <p class="refer refer_01">
+                                                    あんしん保証会員：129ポイント進呈<br>
+                                                    保証：あんしん修理保証3年
+                                                </p>
+                                                <p class="refer refer_02 grey">在庫なし</p>
+                                                <p class="refer refer_03">入荷次第出荷</p>
+                                            </div>
+                                            <div class="flex-inner-02">
+                                                <a class="btn grey-btn2 radius-btn white-btn mt-pc0" href="">売り切れ</a>
+                                                <a class="btn radius-btn blue-btn" href="">店舗在庫を確認する</a>
+                                                <a class="btn lined-btn-grey radius-btn white-btn js-modal" modal-id="notification-setting-modal" href="javascript:void(0)">通知設定を行う</a>
+                                                <a class="btn grey-btn radius-btn white-btn" href="">お気に入り商品から削除</a>
+                                                <p class="des_02 mt-pc25 mt-sp20">通知設定状況</p>
+                                                <div class="d-flex mt5">
+                                                    <p class="des_04 mr10">〇　値下げ通知</p>
+                                                    <p class="des_04">〇　在庫通知</p>
+                                                </div>
+                                                <p class="des_03">━　再入荷通知</p>
+                                                <p class="date date_sp">登録日：2020/04/30 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="favorite-product-ctn">
+                                    <div class="favorite-product-ctn-first">
+                                        <div class="form-block-check">
+                                            <input type="checkbox" id="compar0_4">
+                                            <label for="compar0_4"></label>
+                                        </div>
+                                        <img class="is-pc" src="./assets/img/review/item.png" alt="">
+                                    </div>
+                                    <div class="favorite-product-ctn-second">
+                                        <div class="flex-inner mb-pc25 mb-sp10">
+                                            <div class="flex-inner-01" style="opacity: 0;">
+                                                <div class="is-pc">
+                                                    <div class="d-flex">
+                                                        <img class="mr10 cat" src="./assets/img/common/category-label01.png" alt="">
+                                                        <img class="cat" src="./assets/img/common/category-label02.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex-inner-02">
+                                                <p class="date date_pc">登録日：2020/04/30 </p>
+                                            </div>
+                                        </div>
+                                        <div class="flex-inner">
+                                            <div class="flex-inner-01">
+                                                <div class="flex-inner-03">
+                                                    <img class="product-item" src="./assets/img/review/item.png" alt="">
+                                                </div>
+                                                <p class="ttl">パナソニック 「標準工事費サービス」 18畳向け 自動お掃除付き</p>
+                                                <p class="des01">RASWM56K2E8WS</p>
+                                                <div class="postreviewitem-star"><span class="review-star star5"></span>(6)</div>
+                                                <p class="price">￥12,980(税込)</p>
+                                                
+                                            </div>
+                                            <div class="flex-inner-02">
+                                                <a class="btn grey-btn2 radius-btn white-btn mt-pc0" href="">販売終了</a>
+                                                <a class="btn grey-btn radius-btn white-btn" href="">お気に入り商品から削除</a>
+                                                <p class="date date_sp">登録日：2020/04/30 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="is-sp">
+                                    <div class="favorite-product-select mt-sp25 mb-sp0">
+                                        <div class="d-flex">
+                                            <div class="form-block-check">
+                                                <input type="checkbox" id="compar0_5">
+                                                <label for="compar0_5"></label>
+                                            </div>
+                                            <p>チェックを入れた商品を<br>別のリストへ移動</p>
+                                        </div>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="5">移動する</option>
+                                                <option value="5">移動する</option>
+                                                <option value="5">移動する</option>
+                                                <option value="5">移動する</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+
+            <div id="notification-setting-modal" class="modal-block wide">
+                <div class="modal-block-inner02">
+                    <span class="close-btn js-close"></span>
+
+                    <h3 class="modal-block-inner02-ttl">
+                        通知設定
+                    </h3>
+
+                    <p class="des_01">
+                        再入荷時・値下げ時に通知を行うかの設定を行えます。
+                    </p>
+
+                    <div class="modal-block-inner02-ctn">
+                        <div class="ctn-wrap">
+                            <p class="ctn-wrap-ttl">再入荷通知</p>
+                            <p class="des_02 mb-pc25 mb-sp15">商品が再入荷した場合にお知らせ</p>
+                            <div class="d-flex">
+                                <div class="form-block mr50">
+                                    <input  type="radio" name="restock" id="first">
+                                    <label for="first">希望する</label>
+                                </div>
+                                <div class="form-block">
+                                    <input  type="radio" name="restock" id="second">
+                                    <label for="second">希望しない</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ctn-wrap">
+                            <p class="ctn-wrap-ttl">値下げ通知</p>
+                            <p class="des_02 mb15">希望価格を下回った場合にお知らせ</p>
+                            <div class="input-inner">
+                                <p class="des_03 mr10">希望価格</p>
+                                <input type="text" placeholder="0000">
+                                <p class="des_03 ml10">円</p>
+                            </div>
+                            <div class="d-flex">
+                                <div class="form-block mr50">
+                                    <input  type="radio" name="price" id="third">
+                                    <label for="third">希望する</label>
+                                </div>
+                                <div class="form-block">
+                                    <input  type="radio" name="price" id="fourth">
+                                    <label for="fourth">希望しない</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ctn-wrap">
+                            <p class="ctn-wrap-ttl">在庫通知</p>
+                            <p class="des_02 mb-pc25 mb-sp15">在庫が残りわずかになった場合にお知らせ</p>
+                            <div class="d-flex">
+                                <div class="form-block mr50">
+                                    <input  type="radio" name="inventory" id="fifth">
+                                    <label for="fifth">希望する</label>
+                                </div>
+                                <div class="form-block">
+                                    <input  type="radio" name="inventory" id="sixth">
+                                    <label for="sixth">希望しない</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ctn-wrap">
+                            <p class="ctn-wrap-ttl mb-pc25 mb-sp15">通知受け取り方法<span>（複数選択可）</span></p>
+                            <div class="d-flex">
+                                <div class="form-block-check mr50">
+                                    <input type="checkbox" id="compar0_9">
+                                    <label for="compar0_9">&nbsp;&nbsp;&nbsp;サイト内お知らせ</label>
+                                </div>
+                                <div class="form-block-check">
+                                    <input type="checkbox" id="compar0_10">
+                                    <label class="refer" for="compar0_10">&nbsp;&nbsp;&nbsp;メール</label>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="des_04">※「メール」を選択された場合でもメールマガジン受信設定を「希望する」を選択していないと受信できません。</p>
+                    </div>
+                    <div class="modal-block-inner02-ft mt-pc40 mt-sp30">
+                        <button class="close js-close">閉じる</button>
+                        <button class="update">更新</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </main>
+
+        <div id="favorite-list-new" class="modal-block fixed-margin sp-maxheight favorite-list-modal">
+            <div class="modal-block-inner">
+                <span class="close-btn js-close"></span>
+                <div class="modal-block-inner-head">
+                    <h5 class="modal-block-inner-head-heading">新しいリストを作成する</h5>
+                </div>
+                
+                <div class="modal-block-inner-body">
+                    <div class="form-block general">
+                        <label for="">リストの名前</label>
+                        <input type="text">
+                    </div>
+                </div>
+        
+                <div class="modal-block-inner-foot">
+                    <div class="modal-block-inner-foot-btninline">
+                        <a href="" class="btn lined-black account-btn">キャンセル</a>
+                        <a href="" class="btn blue-btn account-btn">リストを作成する</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="favorite-list-edit" class="modal-block fixed-margin sp-maxheight favorite-list-modal">
+            <div class="modal-block-inner">
+                <span class="close-btn js-close"></span>
+                <div class="modal-block-inner-head">
+                    <h5 class="modal-block-inner-head-heading">リストの編集をする</h5>
+                </div>
+                
+                <div class="modal-block-inner-body">
+                    <div class="form-block general">
+                        <label for="">リストの名前</label>
+                        <input type="text" value="リストA">
+                    </div>
+                </div>
+        
+                <div class="modal-block-inner-foot">
+                    <div class="modal-block-inner-foot-btninline">
+                        <a href="" class="btn lined-black account-btn">リストを削除する</a>
+                        <a href="" class="btn blue-btn account-btn">変更を保存する</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <%- include('../includes/_footer'); %>

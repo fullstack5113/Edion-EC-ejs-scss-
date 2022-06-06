@@ -1,0 +1,222 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    <a href="javascript:void(0);" class="js-modal-order01 btn black-btn large-btn" modal-id="modal">Open Modal</a>
+
+
+    <div class="container" id="cartwrapping">
+        <section>
+            <div id="modal" class="modal-block wide" style="display: block">
+                <div class="modal-block-inner01">
+                    <div class="is-pc">
+                        <span class="close-btn js-close"></span>
+                    </div>
+                    <div class="is-sp modal-block-return">
+                        <span class="modal-block-returnbtn js-close">戻る</span>
+                    </div>
+
+                    <h2 class="modal-block-ttl">ラッピング・のしの設定</h2>
+                    <div class="form-sec">
+                        <form action="###" method="post">
+                            <div class="modal-block-inner-content">
+                                <div class="border-top border-bottom product-sec">
+                                    <div class="product-img">
+                                        <img class="img" src="./assets/img/review/item.png" alt="">
+                                    </div>
+                                    <div class="product-text">
+                                        <ul>
+                                            <li class="product-name"><span class="product-brand">パナソニック</span>セラミックファンヒーター オリジナル グレー <span class="product-type">DSFTS12E1H</span></li>
+                                            <li class="product-price">￥12,980(税込)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="border-bottom kind-sec">
+                                    <h3 class="kind-ttl">種類を選択してください。</h3>
+                                    <ul class="kind-notelist">
+                                        <li>※店舗受取の場合は、店舗により選択された包装紙が品切れの場合がございます。その際は、受取店舗にて別の包装紙に変更させていただきます。</li>
+                                        <li>※商品の形状・サイズにより１商品に対し複数枚使用し包装する場合や、完全包装できない場合は簡易包装となる場合がございます。</li>
+                                        <li>※クリスマスラッピング【お任せ】は、商品の形状により「袋」になる場合がございます。また、図柄や色はお選びいただけません。あらかじめご了承ください。</li>
+                                    </ul>
+
+                                    <div class="card-sec">
+                                        <% for (var i = 1; i <= 10; i++) { %>
+                                            <div class="card-item">
+                                                <input type="checkbox" name="check01" value="1" id="check01-<%=i%>">
+                                                <label for="check01-<%= i %>" class="check-label">
+                                                    <div class=" card-skin">
+                                                        <div class="card-img">
+                                                            <img src="./assets/img/cart/dummy.png" alt="">
+                                                        </div>
+                                                        <div class="card-text">
+                                                            <div class="card-desc">
+                                                                [無料] 包装紙：
+                                                                クリスマス【お任せ】ラッピング
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                <div class="noshi-sec">
+                                    <h3 class="noshi-ttl">のしを選択してください。</h3>
+                                    <p class="noshi-desc">※店舗受取の場合は受取店舗により、のし紙の種類・名入れの書体が異なります。　あらかじめご了承ください。</p>
+                                    <div class="noshi-inner">
+                                        <div class="row01 no-gutter mb-pc40 mb-sp15">
+                                            <div class="col-6 noshi-selectitem ptn01">
+                                                <input type="checkbox" name="check02" value="のし紙なし" id="check02-1">
+                                                <label for="check02-1" class="check-label">
+                                                のし紙なし
+                                            </div>
+                                            <div class="col-6 noshi-selectitem ptn01 active">
+                                                <input type="checkbox" name="check02" value="のし紙あり" id="check02-2" checked>
+                                                <label for="check02-2" class="check-label">
+                                                のし紙あり
+                                            </div>
+                                        </div>
+                                        <div class="noshi-subsec">
+                                            <h3>1.用途を選択してください。</h3>
+                                            <div class="row01 no-gutter">
+                                                <div class="col-6 col-pc-4 noshi-selectitem ptn02 active">
+                                                    <input type="checkbox" name="check03" value="内のし" id="check03-1" checked>
+                                                    <label for="check03-1" class="check-label">
+                                                    <img src="./assets/img/cart/item-86x86.png" alt="">
+                                                    <p>内のし</p>
+                                                </div>
+                                                <div class="col-6 col-pc-4 noshi-selectitem ptn02 mr0">
+                                                    <input type="checkbox" name="check03" value="外のし" id="check03-2">
+                                                    <label for="check03-2" class="check-label">
+                                                    <img src="./assets/img/cart/item-86x86.png" alt="">
+                                                    <p>外のし</p>
+                                                </div>
+                                                <div class="col-6 col-pc-4 is-pc"></div>
+                                            </div>
+                                        </div>
+                                        <div class="noshi-subsec">
+                                            <h3>2.水引を選択してください。</h3>
+                                            <div class="row01 no-gutter flex-sp-rowwrap">
+                                                <div class="col-6 col-pc-4 noshi-selectitem ptn02">
+                                                    <input type="checkbox" name="check04" value="花結び" id="check04-1">
+                                                    <label for="check04-1" class="check-label">
+                                                    <img src="./assets/img/cart/item-86x86.png" alt="">
+                                                    <p>花結び</p>
+                                                </div>
+                                                <div class="col-6 col-pc-4 noshi-selectitem ptn02">
+                                                    <input type="checkbox" name="check04" value="結び切り(赤)" id="check04-2">
+                                                    <label for="check04-2" class="check-label">
+                                                    <img src="./assets/img/cart/item-86x86.png" alt="">
+                                                    <p>結び切り(赤)</p>
+                                                </div>
+                                                <div class="col-6 col-pc-4 noshi-selectitem ptn02 active">
+                                                    <input type="checkbox" name="check04" value="結び切り(黒)" id="check04-3" checked>
+                                                    <label for="check04-3" class="check-label">
+                                                    <img src="./assets/img/cart/item-86x86.png" alt="">
+                                                    <p>結び切り(黒)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="noshi-subsec ptn03">
+                                            <h3>3.表書きを選択し、名入れを指定してください。</h3>
+                                            <div class="d-pc-flex flex-pc-row mb15">
+                                                <div class="l-item">
+                                                    <div class="l-item01">
+                                                        <h4>表書き</h4>
+                                                        <div class="select-wrap">
+                                                            <select name="select01">
+                                                                <option value="01">01</option>
+                                                                <option value="02">02</option>
+                                                                <option value="03">03</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="l-item02">
+                                                        <h4>表書き</h4>
+                                                        <div class="d-flex radio-wrap ptn01">
+                                                            <label class="radio-label">
+                                                                <input type="radio" name="addressing" value="指定しない" checked />
+                                                                <span class="radio-text">指定しない</span>
+                                                            </label>
+                                                            <label class="radio-label">
+                                                                <input type="radio" name="addressing" value="指定する" />
+                                                                <span class="radio-text">指定する</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="radio-wrap ptn02">
+                                                        <div class="d-flex flex-rowwrap mb-sp20">
+                                                            <label class="radio-label">
+                                                                <input type="radio" name="name" value="姓のみ">
+                                                                <span class="radio-text">姓のみ</span>
+                                                            </label>
+                                                            <label class="radio-label">
+                                                                <input type="radio" name="name" value="姓・名">
+                                                                <span class="radio-text">姓・名</span>
+                                                            </label>
+                                                            <label class="radio-label">
+                                                                <input type="radio" name="name" value="連名">
+                                                                <span class="radio-text">連名</span>
+                                                            </label>
+                                                            <label class="radio-label">
+                                                                <input type="radio" name="name" value="会社名">
+                                                                <span class="radio-text">会社名</span>
+                                                            </label>
+                                                            <label class="radio-label">
+                                                                <input type="radio" name="name" value="会社名・姓名">
+                                                                <span class="radio-text">会社名・姓名</span>
+                                                            </label>
+                                                            <label class="radio-label">
+                                                                <input type="radio" name="name" value="会社名・役職名・姓名">
+                                                                <span class="radio-text">会社名・役職名・姓名</span>
+                                                            </label>
+                                                        </div>
+                                                        <textarea name="name" rows="1" cols="10" placeholder="（入力例）エディオン"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="r-item">
+                                                    <picture>
+                                                        <source srcset="./assets/img/cart/pc-noshi.png" media="(min-width: 768px)" >
+                                                        <img class="img" src="./assets/img/cart/sp-noshi.png" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                                <h4>文字の色</h4>
+                                                <div class="d-flex radio-wrap ptn01">
+                                                    <label class="radio-label">
+                                                        <input type="radio" name="textcolor" value="薄墨を使用しない" />
+                                                        <span class="radio-text">薄墨を使用しない</span>
+                                                    </label>
+                                                    <label class="radio-label">
+                                                        <input type="radio" name="textcolor" value="薄墨を使用する" />
+                                                        <span class="radio-text">薄墨を使用する</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-block-btnwrap">
+                                <span class="modal-block-firstbtn js-close btn outline-btn radius-btn">閉じる</span>
+                                <button class="modal-block-lastbtn btn black-btn radius-btn" type="submit">更新</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <%-// include('../includes/_recommend', { maxitem: 'eight' }); %>
+
+</main>
+
+
+<%- include('../includes/_footer'); %>

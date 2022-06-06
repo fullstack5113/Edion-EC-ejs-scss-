@@ -1,0 +1,195 @@
+/**
+* @file _post-review-item.scss
+**/
+
+// 商品レビュー
+.postreviewitem {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    @include media-sp {
+        font-size: 14px;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 30px;
+        @include media-sp {
+            margin-bottom: 35px;
+        }
+    }
+
+    &:last-of-type {
+        margin-bottom: 110px;
+        @include media-sp {
+            margin-bottom: 35px;
+        }
+    }
+
+    @include media-sp {
+        flex-direction: column;
+    }
+
+    >div {
+        @include media-is-pc {
+            flex-shrink: 0;
+        }
+        @include media-sp {
+            width: 100%;
+        }
+    }
+
+    &-left {
+        padding: 30px 0 24px 0;
+        @include media-is-pc {
+            width: 16.881028938906753%;
+            border-right: 1px solid $bd-color1;
+        }
+        @include media-sp {
+            padding: 0 0 30px 0;
+        }
+    }
+    &-star {
+        margin-bottom: 24px;
+        font-weight: 500;
+        @include media-is-pc {
+            font-size: 15px;
+        }
+    }
+
+    &-poster {
+        margin-bottom: 14px;
+        @include media-is-pc {
+            font-size: 13px;
+        }
+        font-weight: 500;
+    }
+    &-postdate{
+        color: #707070;
+    }
+
+
+    &-center {
+        @include media-is-pc {
+            padding: 8px 40px 10px 40px;
+        }
+        @include media-is-pc {
+            width: 59.08360128617364%;
+        }
+    }
+    &-cmtttl {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        @include media-sp {
+            margin-bottom: 15px;
+        }
+    }
+    &-cmtdesc {
+        line-height: 1.47;
+    }
+
+
+    &-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 0 24px 0;
+
+        @include media-is-pc {
+            width: 23.79421221864952%;
+        }
+        @include media-sp {
+            padding: 40px 0 0 0;
+        }
+    }
+
+    &-helpful {
+        &list {
+            width: 100%;
+            text-align: center;
+        }
+        &link {
+            margin-bottom: 10px;
+            height: 48px;
+            width: 100%;
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            border: 1px solid $bd-color1;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include media-sp {
+                margin-bottom: 20px;
+                height: 50px;
+            }
+        }
+        &num {
+            font-weight: 500;
+            color: #707070;
+        }
+
+    }
+
+    &.reviewuser {
+        padding: 20px 0;
+        .postreviewitem {
+
+            &-left {
+                padding: 0 30px 10px;
+                @include media-sp {
+                    padding: 0 0 30px 0;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            &-name {
+                    line-height: 1.47;
+                >* {
+                    line-height: 1.47;
+                }
+                @include media-sp {
+                    padding: 1rem;
+                }
+                &brand {
+                    margin-right: .5em;
+                }
+
+                &type {
+                    display: block;
+                    @include media-sp {
+                        display: initial;
+                        margin-right: .5em;
+                    }
+                }
+            }
+
+
+            &-img {
+                max-width: 160px;
+                margin-bottom: 28px;
+                @include media-sp {
+                    max-width: 28.9855%;
+                    margin-bottom: 0px;
+                }
+            }
+
+            &-center {
+                padding: 8px 40px 20px 40px;
+                @include media-sp {
+                    padding: 0 0 0 0;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            &-postdate {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+// 商品レビュー /

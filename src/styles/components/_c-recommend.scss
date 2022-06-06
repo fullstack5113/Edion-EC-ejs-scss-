@@ -1,0 +1,127 @@
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+商品リスト
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+.itemcard{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #F5F5F5;
+    padding: 0 0 20px;
+    .item:last-child &{
+        @include media-sp {
+            border-bottom: none;
+        }
+    }
+    &-left{
+        width: 106px;
+        margin-right: 20px;
+    }
+    &-img{
+        display: block;
+    }
+    &-right{
+        width: calc(100% - 106px - 20px);
+    }
+    &-heading{
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.46;
+        margin: 0 0 8px;
+    }
+    &-serial{
+        font-size: 13px;
+        color: #707070;
+    }
+    &-price{
+        font-size: 13px;
+        color: #FF0000;
+        margin: 0 0 18px;
+    }
+    &-star{
+        margin: 0 0 18px;
+        font-size: 15px;
+    }
+    &.ranking{
+        .itemcard-star{
+            @include media-sp {
+                display: none;
+            }
+        }
+    }
+    &-info{
+        font-size: 12px;
+        margin: 10px 0 0;
+        *{
+            line-height: 1.5;
+        }
+        &-discount{
+            color: $accent-color2;
+            margin: 0 0 7px;
+            @include media-sp {
+                margin: 0;
+            }
+        }
+        &-stock{
+            margin: 0 0 7px;
+            @include media-sp {
+                margin: 0;
+            }
+
+            &.stock2{
+                color: $accent-color3;
+            }
+            &.stock1{
+                color: $accent-color4;
+                font-weight: 500;
+            }
+            &.stock0{
+                color: $default-color;
+            }
+
+        }
+        &-shipping{
+            @include media-sp {
+                display: none;
+            }
+
+        }
+    }
+
+    &-virtical{
+        &-img{
+            display: block;
+            margin: 0 0 12px;
+        }
+        &-heading{
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.46;
+            margin: 0 0 8px;
+        }
+        &-price{
+            font-size: 13px;
+            color: #FF0000;
+            margin: 0 0 15px;
+        }
+        &-info{
+            font-size: 12px;
+            margin: 10px 0 0;
+            letter-spacing: -0.075em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+
+           *{
+                line-height: 1.4;
+            }
+            &-cnt {
+                margin-left: -.5em;
+                font-size: 15px;
+                @include media-sp {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

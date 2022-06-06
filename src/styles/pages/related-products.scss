@@ -1,0 +1,326 @@
+@import '../config';
+@import '../mixins/media';
+@import '../mixins/others';
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+関連商品 検索 ページ
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+.related-products {
+    width: 100%;
+    .sidebar {
+        display: none;
+        @include media-sp {
+            display: block;
+        }
+    }
+    &-ttl {
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: $default-color;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            @include media-sp {
+                margin-bottom: 16px;
+            }
+        }
+        p {
+            &.des_01 {
+                font-size: 12px;
+                font-weight: 500;
+                color: $default-color;
+                line-height: 1.4;
+                margin-bottom: 40px;
+                @include media-sp {
+                    font-weight: bold;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    &-search {
+        background-color: #F5F5F5;
+        padding: 32px 0 40px 0;
+        width: 100%;
+        margin-bottom: 56px;
+        @include media-sp {
+            margin-bottom: 32px;
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            padding: 24px 30px;
+        }
+        p {
+            font-size: 12px;
+            font-weight: bold;
+            color: $default-color;
+            text-align: center;
+            margin-bottom: 24px;
+            line-height: 1.6;
+            @include media-sp {
+                margin-bottom: 16px;
+            }
+        }
+        &-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include media-sp {
+                flex-wrap: wrap;
+            }
+            input {
+                width: 400px;
+                height: 48px;
+                border: solid 1px #999999;
+                border-radius: 4px 0 0 4px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 2;
+                display: flex;
+                align-items: center;
+                padding-left: 16px;
+                background-color: white;
+                font-family: $body-font;
+                @include media-sp {
+                    width: 100%;
+                    border-radius: 4px;
+                }
+            }
+            .btn {
+                width: 200px;
+                height: 48px;
+                background-color: #235192;
+                border-radius: 0 4px 4px 0;
+                font-size: 13px;
+                font-weight: bold;
+                color: white;
+                font-family: $body-font;
+                @include media-sp {
+                    width: 80px;
+                    height: 32px;
+                    margin-top: 16px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+    &-ctn {
+        margin-bottom: 92px;
+        @include media-sp {
+            margin-bottom: 40px;
+        }
+        .filter-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-bottom: 8px;
+            border-bottom: solid 1px #707070;
+            @include media-sp {
+                padding-bottom: 0;
+                border: none;
+            }
+            h4 {
+                font-size: 16px;
+                font-weight: bold;
+                color: $default-color;
+                line-height: 1.4;
+                @include media-sp {
+                    width: 100%;
+                    border-bottom: solid 1px #707070;
+                    padding-bottom: 8px;
+                }
+            }
+            .filter-inner {
+                display: flex;
+                align-items: center;
+                @include media-sp {
+                    width: 100%;
+                    margin: 24px 0;
+                    justify-content: space-between;
+                }
+                label {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: $default-color;
+                    font-family: $body-font;
+                    margin-bottom: 0;
+                    margin-right: 12px;
+                }
+                .form-block-select {
+                    width: 166px;
+                    height: 24px;
+                    @include media-sp {
+                        width: 128px;
+                    }
+                    select {
+                        width: 100%;
+                        height: 100%;
+                        border: solid 1px $grey-color;
+                        border-radius: 2px;
+                        background-color: white;
+                    }
+                }
+                p {
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: $default-color;
+                    margin-left: 20px;
+                    @include media-sp {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .product-inner {
+            width: 100%;
+            padding: 32px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-bottom: solid 1px $grey-color;
+            @include media-sp {
+                padding: 24px 0;
+            }
+            &:nth-child(2) {
+                @include media-sp {
+                    border-top: solid 1px $grey-color;
+                }
+            }
+            &-img {
+                width: 296px;
+                height: 296px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include media-sp {
+                    width: 92px;
+                    height: 92px;
+                }
+                img {
+                    width: 262px;
+                    height: auto;
+                    @include media-sp {
+                        width: 100%;
+                    }
+                }
+            }
+            &-txt {
+                width: calc(100% - 296px - 296px - 40px);
+                @include media-sp {
+                    width: calc(100% - 108px);
+                }
+                .postreviewitem-star {
+                    margin-bottom: 14px;
+                    @include media-sp {
+                        margin-bottom: 12px;
+                    }
+                }
+                p {
+                    &.name {
+                        font-size: 10px;
+                        font-weight: bold;
+                        color: $default-color;
+                        line-height: 1.4;
+                        margin-bottom: 4px;
+                    }
+                    &.ttl {
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: $default-color;
+                        line-height: 1.4;
+                        &.code {
+                            color: #707070;
+                            line-height: 1.4;
+                            margin-top: 7px;
+                            margin-bottom: 27px;
+                            @include media-sp {
+                                margin-top: 9px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+                    &.price {
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: red;
+                        line-height: 1.4;
+                        margin-bottom: 12px;
+                        @include media-sp {
+                            margin-bottom: 14px;
+                        }
+                    }
+                    &.refer {
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 2;
+                        &_01 {
+                            color: $accent-color2;
+                        }
+                        &_02 {
+                            color: $accent-color3;
+                        }
+                        &_03 {
+                            color: $default-color;
+                            @include media-sp {
+                                margin-bottom: 24px;
+                            }
+                        }
+                        &_04 {
+                            color: $grey-color;
+                        }
+                    }
+                }
+            }
+            &-btn {
+                width: 296px;
+                @include media-sp {
+                    width: 100%;
+                    padding: 0 30px;
+                }
+                .btn {
+                    width: 270px;
+                    margin-left: auto;
+                    margin-right: 0;
+                    @include media-sp {
+                        margin: 0;
+                        width: 100%;
+                    }
+                    p {
+                        padding-left: 0;
+                    }
+                    img {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .pager-wrapper {
+        margin-bottom: 89px;
+        @include media-sp {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 24px;
+            margin-bottom: 25px;
+            border-bottom: solid 1px $grey-color;
+        }
+        &-link {
+            &.prev {
+                @include media-sp {
+                    background-position: left 20px center;
+                }
+            }
+            &.next {
+                @include media-sp {
+                    background-position: right 20px center;
+                }
+            }
+        }
+    }
+    .return {
+        &::before {
+            display: none;
+        }
+    }
+}

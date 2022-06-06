@@ -1,0 +1,102 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    <a href="javascript:void(0);" class="js-modal-order01 btn black-btn large-btn" modal-id="modal">Open Modal</a>
+
+    <div class="container" id="cartgiftcard">
+        <section>
+            <div id="modal" class="modal-block wide">
+                <div class="modal-block-inner01">
+                    <div class="is-pc">
+                        <span class="close-btn js-close"></span>
+                    </div>
+                    <div class="is-sp modal-block-return">
+                        <span class="modal-block-returnbtn js-close">戻る</span>
+                    </div>
+
+                    <h2 class="modal-block-ttl">電子ギフトカードまたはエディオン株主様ご優待ギフトカード</h2>
+                    <div class="form-sec">
+                        <form class="form" action="xxxxxx" method="post">
+                            <div class="modal-block-inner-content">
+                                <p class="modal-block-desc"">クーポンを利用することで、購入金額が変わるため、送料・設置料・長期保証適用などが変更になる場合がございます。</p>
+                                <div class="giftcard-content">
+                                    <p class="mb-pc30 mb-sp20">電子ギフトカードまたは株主様ご優待ギフトカードを追加</p>
+                                    <div class="inputlabel-pair">
+                                        <label class="inputlabel-label" for="cardnum">カード番号：</label>
+                                        <input class="inputlabel-input" type="text" id="cardnum" name="cardnum" required placeholder="半角英数">
+                                    </div>
+                                    <div class="inputlabel-pair">
+                                        <label class="inputlabel-label" for="pin">PIN：</label>
+                                        <input class="inputlabel-input" type="text" id="pin" name="pin" required placeholder="半角英数">
+                                    </div>
+                                    <div class="addcard">
+                                        <p class="addcard-desc">※PINコードのご入力を複数回誤りますとロックがかかりますのでご注意ください。</p>
+                                        <input class="addcard-submit btn black-btn" type="submit" value="カードを追加">
+                                    </div>
+
+
+                                    <div class="card-offront">
+                                        <p>【表面】</p>
+                                        <ul class="card-offrontlist">
+                                            <li class="card-offrontitem">
+                                                <picture>
+                                                    <source media="(min-width:768px)" srcset="./assets/img/cart/giftcard-item01.png">
+                                                    <img src="./assets/img/cart/sp-giftcard-item01.png" alt="">
+                                                </picture>
+                                            </li>
+                                            <li class="card-offrontitem">
+                                                <picture>
+                                                    <source media="(min-width:768px)" srcset="./assets/img/cart/giftcard-item02.png">
+                                                    <img src="./assets/img/cart/sp-giftcard-item02.png" alt="">
+                                                </picture>
+                                            </li>
+                                            <li class="card-offrontitem">
+                                                <picture>
+                                                    <source media="(min-width:768px)" srcset="./assets/img/cart/giftcard-item03.png">
+                                                    <img src="./assets/img/cart/sp-giftcard-item03.png" alt="">
+                                                </picture>
+                                            </li>
+                                            <li class="card-offrontitem">
+                                                <picture>
+                                                    <source media="(min-width:768px)" srcset="./assets/img/cart/giftcard-item04.png">
+                                                    <img src="./assets/img/cart/sp-giftcard-item04.png" alt="">
+                                                </picture>
+                                            </li>
+                                            <li class="card-offrontitem">
+                                                <picture>
+                                                    <source media="(min-width:768px)" srcset="./assets/img/cart/giftcard-item05.png">
+                                                    <img src="./assets/img/cart/sp-giftcard-item05.png" alt="">
+                                                </picture>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-ofback">
+                                        <p>【裏面】</p>
+                                        <picture class="">
+                                            <source media="(min-width:768px)" srcset="./assets/img/cart/giftcard-item06.png">
+                                            <img src="./assets/img/cart/sp-giftcard-item06.png" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-block-btnwrap">
+                                <span class="modal-block-firstbtn js-close btn outline-btn radius-btn">閉じる</span>
+                                <button class="modal-block-lastbtn btn black-btn radius-btn" type="submit">更新</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</main>
+<%- include('../includes/_footer'); %>

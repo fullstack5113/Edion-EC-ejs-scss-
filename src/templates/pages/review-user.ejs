@@ -1,0 +1,54 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false; // 下層ページは全てfalseにする
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'review';
+_%>
+<%- include('../includes/_header') %>
+
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; お客様別商品レビュー
+</div>
+
+<main id="main-content" class="main-content">
+    <div class="container">
+
+        <section>
+            <h2 class="section-heading">お客様別商品レビュー</h2>
+
+            <div class="searchuser-wrap">
+                <div class="searchuser-text">
+                    <ul class="searchuser-textlist">
+                        <li class="searchuser-name">あおいさん</li>
+                        <li class="searchuser-cnt">レビュー（1,234）</li>
+                    </ul>
+                </div>
+                <div class="searchuser-form">
+                    <span class="searchuser-formttl">ユーザーを探す</span>
+                    <form class="" action="index.html" method="post">
+                        <input type="text" name="username" placeholder="ニックネームを検索" value="">
+                        <button><img src="./assets/img/common/icon-search.png" alt="検索"></button>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="postreviewitem-wrap">
+                <%  for (var i = 0; i < 10; i++){ %>
+                <%- include('../components/_c-post-reviewuser-item'); %>
+                <%  } %>
+            </div>
+
+            <%- include('../components/_c-pager'); %>
+
+            <div class="return">
+                <a class="return-btn" href="#">戻る</a>
+            </div>
+        </section>
+    </div>
+    <%- include('../includes/_history', { maxitem: 'eight' }); %>
+
+</main>
+<%- include('../includes/_footer'); %>

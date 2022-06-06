@@ -1,0 +1,56 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'sms-setting';
+_%>
+<%- include('../includes/_header-nomenu') %>
+<main id="main-content" class="main-content">
+    
+    <section class="sms-setting">
+        <div class="inner inner-small">
+            <div class="register-step-num is-sp">STEP 1/5</div>
+            <h1 class="page-title">新規ご利用登録</h1>
+            
+            <div class="register-step s01">
+                <ul>
+                    <li class="current">新規ご利用登録</li>
+                    <li>認証コード入力</li>
+                    <li>お客様情報入力</li>
+                    <li>登録情報確認</li>
+                    <li>登録完了</li>
+                </ul>
+            </div>
+            
+            <div class="page-title-lead">認証コードを受け取る電話番号を入力してください。</div>
+            
+            <div class="linebox linebox-blue">
+                <form action="">
+                    <div class="form-block general">
+                        <label>電話番号</label>
+                        <input type="tel" placeholder="08012345678">
+                    </div>
+                        
+                        
+                    <a href="" class="btn orange-btn account-btn"><span class="icon"></span>SMSで受け取る</a>
+                                    
+                    <a href="" class="btn blue-btn account-btn"><span class="icon"></span>音声通話で受け取る</a>
+                    
+                    
+                </form>
+            </div>
+            
+            <div class="sms-setting-text01">
+                <a href="" class="text-link">ログイン認証とは <img src="./assets/img/common/icon-help.svg" alt=""></a>
+            </div>
+            
+            
+            <a href="" class="btn grey-btn2 account-btn medium">戻る</a>
+            
+        </div>
+    </section>
+    
+</main>
+<%- include('../includes/_footer'); %>

@@ -1,0 +1,88 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+
+    <div class="cart-btmborder" id="cartcomplete">
+        <div class="container">
+            <section class="cart-complete">
+                <div class="flow-wrap">
+                    <div class="flow-list">
+                        <div class="flow-item">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/cart/icon-cart.png" alt="カート">
+                            </div>
+                            <div class="flow-itemtext">
+                                カート
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/cart/icon-confirm.png" alt="確認">
+                            </div>
+                            <div class="flow-itemtext">
+                                確認
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/cart/icon-complete.png" alt="完了">
+                            </div>
+                            <div class="flow-itemtext">
+                                完了
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="thankstext">
+                    <li class="thankstext-message">ありがとうございました。<br> ご注文手続きが完了しました。</li>
+                    <li class="thankstext-order">注文番号：XXXXXXXXXXXXX</li>
+                </ul>
+
+                <div class="account">
+                    <div class="account-detail">
+                        <table>
+                            <tr><th>銀行名／支店名</th><td>東京三菱UFJ銀行　札幌支店</td></tr>
+                            <tr><th>口座番号</th><td>普通 12345678</td></tr>
+                            <tr><th>口座名義</th><td>カ）エディオン</td></tr>
+                            <tr><th>お振込金額</th><td>108,000円</td></tr>
+                            <tr><th>お振込期限</th><td>2016/09/16</td></tr>
+                        </table>
+                    </div>
+                    <div class="account-caution">
+                        <p>ご注意ください！<br> ※銀行はお客様自身で最寄りの金融機関またはATMから弊社指定の「特定口座番号」に振込をお願いします。</p>
+                    </div>
+                    <div class="account-note">
+                        <ul class="account-notelist">
+                            <li class="account-noteitem">※「特定口座番号」は注文完了後、サイトへ表示されます。<br class="is-sp">また、注文確定メールにも記載してござます。</li>
+                            <li class="account-noteitem">※振込手数料はお客様の負担になります。</li>
+                            <li class="account-noteitem">※商品の手配及び配送は、振込入金確認後となります。<br class="is-sp"> あらかじめご了承のほどお願いいたします。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="linkbtn-wrap">
+                    <div class="linkbtn-top">
+                        <a class="btn blue-btn radius-btn" href="">ダウンロード</a>
+                    </div>
+                    <div class="linkbtn-bottom">
+                        <a class="btn outline-btn radius-btn" href="#">マイページへ</a>
+                        <a class="btn outline-btn radius-btn" href="#">ショッピングカートへ</a>
+                        <a class="btn outline-btn radius-btn" href="#">トップページへ</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <%- include('../includes/_recommend', { maxitem: 'eight' }); %>
+
+</main>
+
+
+<%- include('../includes/_footer'); %>

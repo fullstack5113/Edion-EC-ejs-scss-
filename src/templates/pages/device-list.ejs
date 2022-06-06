@@ -1,0 +1,56 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'device-list';
+_%>
+<%- include('../includes/_header-nomenu') %>
+<main id="main-content" class="main-content">
+    
+    
+    <section class="device-list">
+        <div class="inner inner-small">
+            <h1 class="page-title">認証デバイス一覧</h1>
+            <div class="page-title-lead">
+                認証されたデバイス一覧は以下の通りとなります。
+            </div>
+            
+            <table class="list-table">
+                <thead>
+                    <tr>
+                        <th>アクセス機種</th>
+                        <th>ログイン<br class="is-sp">経路</th>
+                        <th>使用ブラウザ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (var i = 1; i < 7; i++){ %>
+                    <tr>
+                        <td>XXXXXXXXXX</td>
+                        <td>ECサイト<br class="is-sp">（PC）</td>
+                        <td>Chrome</td>
+                    </tr>
+                    <tr>
+                        <td>XXXXXXXXXX</td>
+                        <td>ECサイト<br class="is-sp">（スマホ）</td>
+                        <td>Safari</td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>          
+           
+            <div class="device-list-btns">
+                <a href="" class="btn grey-btn2 account-btn medium">戻る</a>
+            </div>
+
+            
+        </div>
+    </section>
+    
+    
+
+    
+</main>
+<%- include('../includes/_footer'); %>

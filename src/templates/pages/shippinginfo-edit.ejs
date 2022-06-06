@@ -1,0 +1,128 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'shippinginfo-edit';
+_%>
+<%- include('../includes/_header-login') %>
+
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; <a href="">お届け先情報</a> &gt; お届け先情報の変更
+</div>
+
+<main id="main-content" class="main-content">
+    
+    <div class="container container-addressee">
+
+        <%- include('../includes/_sidebar-account-info', { status: 'login' }); %>
+    
+        <div class="container-right">
+            
+            <section class="account">
+                <div class="inner inner-large">
+                    <h2 class="section-heading">お届け先情報の変更</h2>
+                    <div class="section-heading-subtext">以下の項目を編集し、「確認画面へ」を押して確認画面へお進みください。</div>
+                    
+                    <div class="addressee-box">
+                        お届け先がエディオンカード、IDカード、あんしん保証会員のご登録情報（お名前・ご住所・お電話番号）以外の場合は、長期修理保証対象外となります。あらかじめご了承ください。
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section class="shippinginfo-edit shippinginfo-register register account">
+                <div class="inner inner-large">
+                    
+                    <div class="register-block shippinginfo-register-block shippinginfo-edit-block">
+                        <form action="">
+                            <div class="form-block general">
+                                <label class="require">グループ</label>
+                                <div class="form-block-select">
+                                    <select name="" id="">
+                                        <option value="">グループなし</option>
+                                    </select>
+                                </div>
+                                <div class="shippinginfo-register-block-editgroup mb-32">
+                                    <a href="" class="link-more">グループを編集する</a>
+                                </div>
+
+                                <label class="require">お名前</label>
+                                <div class="form-block-name">
+                                    <div class="familyname-kanji"><input type="text" name="family-name" placeholder="山田"></div>
+                                    <div class="firstname-kanji"><input type="text" name="given-name" placeholder="太郎"></div>
+                                </div>
+                            
+                                <label class="require">フリガナ<span class="small-font">（全角カタカナ）</span></label>
+                                <div class="form-block-name">
+                                    <div class="familyname-kana"><input type="text" name="family-name-kana" placeholder="ヤマダ"></div>
+                                    <div class="firstname-kana"><input type="text" name="given-name-kana" placeholder="タロウ"></div>
+                                </div>
+                                
+                                <label class="require">郵便番号</label>
+                                <div class="form-block-zip wide-sp mb-32">
+                                    <div class="primary"><input type="number" name="" placeholder="000"></div>
+                                    <span class="zip-line"></span>
+                                    <div class=""><input type="number" name="" placeholder="0000"></div>
+                                    <button class="btn blue-btn account-btn medium inline zip-search-btn">検索</button>
+                                </div>
+                                
+                                <label>都道府県</label>
+                                <div class="shippinginfo-edit-block-text mb-32">
+                                    東京都
+                                </div>
+                                
+                                <label>市区町村</label>
+                                <div class="shippinginfo-edit-block-text mb-32">
+                                    〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+                                </div>
+                                
+                                <label class="require">番地<span class="small-font">（半角20文字以内）</span></label>
+                                <input type="text" name="" value="〇〇〇〇">
+                                <div class="register-block-subtext">・番地なしの方は入力欄に半角ハイフン（-）を入力してください。</div>
+                                
+                                <label class="optional">建物名・部屋番号<span class="small-font">（全角15文字以内）</span></label>
+                                <input type="text" name="" value="〇〇〇〇">
+                                <div class="register-block-subtext">
+                                ・マンション・アパート・ビルのお客様は建物名と部屋番号をご記入ください。<br>
+                                ・建物名が長い方は部屋番号のみご記入ください。
+                                </div>
+                            
+                                <label class="require">電話番号</label>
+                                <div class="register-block-tel">
+                                    <input type="text" name="" value="09000000000">
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+            
+            <div class="shippinginfo-edit-bottom">
+                <div class="addressee-box">
+                    現在ご注文の商品がある場合は、変更前のご住所に配送されます。<br class="is-pc">
+                    ご同意いただければ、「同意する」にチェックを入れて「確認画面へ」ボタンをクリックしてください。
+                </div>
+                <div class="form-block form-block-check general form-block-check-agree">
+                    <input type="checkbox" id="agree">
+                    <label for="agree">同意する</label>
+                </div>
+            </div>
+
+            
+            <div class="shippinginfo-register-foot-btn">
+                <a href="" class="btn red-btn2 account-btn wide">確認画面へ</a>
+                <a href="" class="btn grey-btn2 account-btn medium">戻る</a>
+            </div>
+        
+        </div>
+    
+    </div>
+</main>
+
+
+
+<%- include('../includes/_footer'); %>

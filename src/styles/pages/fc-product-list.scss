@@ -1,0 +1,187 @@
+@import '../config';
+@import '../mixins/**';
+@import '../layouts/l-fc';
+
+
+.fc-product-list{
+    @include media-sp {
+        padding-bottom: 64px;
+    }
+    .form-block-sort{
+        margin-bottom: 40px;
+        @include media-is-pc {
+            margin-top: -8px;
+        }
+        @include media-sp {
+            margin-bottom: 32px;
+            padding: 12px 15px;
+            display: flex;
+            .form-block-select select{
+                min-width: 73px;
+            }
+            &-icons{
+                display: flex;
+            }
+            &-unit{
+                margin-right: 0px;
+                label{
+                    margin: 0 0 4px;
+                }
+            }
+        }
+    }
+    .section-heading{
+        margin: 20px 0 48px;
+        @include media-sp {
+            margin: 12px 0 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-right: -15px;
+        }
+        &-2{
+            margin-bottom: 44px;
+            @include media-sp {
+                display: none;
+            }
+        }
+    }
+    
+    .cotegorylist-result{
+        margin-bottom: 30px;
+        .item{
+            .itemcard-heading{
+                padding-right: 0px;
+                @include media-sp {
+                    margin-top: 8px;
+                }
+            }
+            .itemcard-star{
+                font-size: 12px;
+                .review-star{
+                    vertical-align: text-bottom;
+                }
+            }
+            .itemcard-price{
+                margin-bottom: 12px;
+            }
+            .itemcard-info{
+                &-discount{
+                    margin-bottom: 0px;
+                }
+                &-rank{
+                    color: #0CB473;
+                }
+            }
+        }
+        &-inner-left{
+            @include media-sp {
+                //width: 150px;
+            }
+            &-img{
+                padding-top: 38px;
+                position: relative;
+            }
+        }
+        &-head{
+            margin-bottom: 0px;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+        }
+        &-label{
+            img{
+                margin-bottom: 6px;
+            }
+        }
+        
+        &.grid{
+            .item{
+                margin-bottom: 68px;
+                @include media-sp {
+                    margin-bottom: 6px;
+                    width: 50%;
+                    &:after{
+                        content: none;
+                    }
+                    .cotegorylist-result-tag02{
+                        margin-top: 5px;
+                    }
+                    .cotegorylist-result-inner{
+                        display: block;
+                        &-left{
+                            margin-right: 0px;
+                        }
+                        .itemcard-heading{
+                            font-size: 11px;
+                        }
+                    }
+                }
+                .itemcard-img{
+                    padding-bottom: 0px;
+                    img{
+                        @include media-is-pc {
+                            max-width: calc(100% - 12px);
+                        }
+                    }
+                }
+            }
+        }
+        &.list{
+            margin-bottom: 80px;
+            @include media-sp {
+                margin-bottom: 0px;
+            }
+            .item{
+                @include media-sp {
+                    padding-bottom: 21px;
+                    &:after{
+                        margin-top: 21px;
+                    }
+                }
+                .cotegorylist-result-tag02{
+                    margin-top: 0px;
+                }
+                .cotegorylist-result-inner{
+                    align-items: flex-start;
+                }
+                .itemcard-heading{
+                    @include media-sp {
+                        font-size: 12px;
+                    }
+                }
+                .itemcard-copy{
+                    font-size: 11px;
+                    color: #707070;
+                    line-height: 1.5;
+                    margin-top: 16px;
+                    margin-bottom: -10px;
+                    @include media-sp {
+                        display: none;
+                    }
+                }
+                .itemcard-info{
+                    > div{
+                        @include media-is-pc {
+                            line-height: 1.9;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    &-btn{
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid #E6E6E6;
+        .btn{
+            max-width: 100%;
+        }
+    }
+}
+
+.pager-wrapper{
+    @include media-sp {
+        padding: 0;
+    }
+}

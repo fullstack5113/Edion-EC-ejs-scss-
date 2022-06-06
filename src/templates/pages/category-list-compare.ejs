@@ -1,0 +1,170 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'category';
+_%>
+<%- include('../includes/_header') %>
+    
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; カテゴリー名
+</div>
+
+<main id="main-content" class="main-content">
+    
+    <section class="section-compare">
+        <div class="inner inner-large">
+            <div class="compare-head">
+                <h2 class="section-heading mt-sm">商品比較</h2>
+                <button class="btn account-btn blue-btn btn-add-compare">比較商品追加</button>
+            </div>
+            <div class="compare-container">
+            <% col = 10; %>
+            
+            <div class="compare-wrap" id="js-compare-wrap">
+
+                <table class="compare">
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td class="btnarea">
+                                <button class="btn medium-btn add-cart-btn inline-btn"><span class="icon"></span>カートに入れる</button>
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>商品情報</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                <div class="compare-wrap-imgbox">
+                                    <div class="form-block-check">
+                                        <input type="checkbox" id="compar<%- i %>_2">
+                                        <label for="compar<%- i %>_2"><p class="tooltiptext">削除</p></label>
+                                    </div>
+                                    <a href="" class="compare-wrap-img"><img src="./assets/img/category/category-list-grid-img01.jpg" alt=""></a>
+                                     <span class="icon-favorite js-add-favorite"></span>
+                                </div>
+                                <div class="compare-wrap-title">パナソニック 「標準工事費サービス」 18畳向け 自動お掃除付き</div>
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>商品レビュー</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                <div class="itemcard-star"><span class="review-star star4"></span>(6)</div>
+                                （5件のレビュー）
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>ポイント</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                XXXXXポイント
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>在庫</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td class="stock">
+                                在庫あり
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>メーカー</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                パナソニック
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>価格情報</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                ￥12,980(税込)
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>保証情報</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                当社クレジットカード長期修理保証5年
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>クーポンなど割引</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                XXXXXX
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>納期目安</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                3月8日（火）以降のお届け
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>本体サイズ<br><span class="small-sp">(幅×高さ×奥行)mm</span></th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                XXXX×XXXX×XXXXmm
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>本体重量</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td>
+                                約XXKg
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr>
+                            <th>付属品</th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td class="option">
+                                テキストテキストテキストテキストテキストテキストテキストテキスト
+                            </td>
+                            <% } %>
+                        </tr>
+                        <tr class="empty">
+                            <th></th>
+                            <% for (var i = 0; i < col; i++){ %>
+                            <td></td>
+                            <% } %>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="compare-wrap-arrow" id="js-compare-wrap-arrow" ></div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="sidebar"></div>
+        <div class="container-right">
+            <button class="btn account-btn blue-btn btn-add-compare bottom">比較する商品に加える</button>
+            <%- include('../includes/_history', { maxitem: 'six', type: 'recommend', checkbox: 'true', title: 'よく一緒に比較されている商品' }); %>
+        </div>
+    </div>
+    
+</main>
+
+
+<%- include('../includes/_footer'); %>

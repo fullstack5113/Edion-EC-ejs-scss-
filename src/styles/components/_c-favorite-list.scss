@@ -1,0 +1,99 @@
+.favoritelist {
+    @include media-sp {
+        margin-top: 33px;
+    }
+    &-slider {
+        padding-bottom: 32px;
+        border-bottom: 2px solid #e6e6e6;
+        @include media-sp {
+            border-bottom: none;
+        }
+    }
+
+    &-inner {
+        margin-bottom: 26px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-ttl {
+        margin: 0 0 30px;
+        padding-bottom: 8px;
+        font-size: 16px;
+        border-bottom: 2px solid #e6e6e6;
+        @include media-sp {
+            margin: 0 0 17px;
+            font-size: 20px;
+            border-bottom: none;
+        }
+    }
+    &-img {
+        width: calc(106 / 400 * 100%);
+        @include media-sp {
+            width: calc(300 / 690 * 100%);
+        }
+    }
+    &-text {
+        width: calc(274 / 400 * 100%);
+        @include media-sp {
+            width: calc(360 / 690 * 100%);
+        }
+        &top {
+            margin-bottom: 16px;
+        }
+        &bottom {
+            display: flex;
+            flex-direction: column;
+            span {
+                line-height: calc(24/12);
+                @include media-sp {
+                    font-size: 11.5px;
+                    line-height: calc(34/23);
+                }
+            }
+        }
+    }
+
+    &-creditstat { color: #EA8D3C; }
+    &-stockstat { color: #0776B1; }
+
+    &-price {
+        color: #f00;
+    }
+
+    &-name {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: calc(19/13);
+        @include media-sp {
+            font-size: 11.5px;
+            line-height: calc(34/23);
+        }
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        a {
+            text-align: center;
+            width: calc(180 / 400 * 100%);
+            height: 28px;
+            font-size: 12px;
+            border-radius: 4px;
+            background: #ea3c3c;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:first-of-type {
+              margin-right: calc(12/ 400 * 100%);
+            }
+
+            @include media-sp {
+                height: 50px;
+                font-size: 14px;
+                line-height: calc(36 / 28);
+            }
+        }
+    }
+}

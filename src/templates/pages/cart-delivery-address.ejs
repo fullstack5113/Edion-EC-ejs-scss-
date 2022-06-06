@@ -1,0 +1,324 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    <a href="javascript:void(0);" class="js-modal-order01 btn black-btn large-btn" modal-id="modal">Open Modal</a>
+
+    <div class="container" id="cartdeliveryaddress">
+        <section>
+            <div id="modal" class="modal-block wide" style="display: block">
+                <div class="modal-block-inner01">
+                    <div class="is-pc">
+                        <span class="close-btn js-close"></span>
+                    </div>
+                    <div class="is-sp modal-block-return">
+                        <span class="modal-block-returnbtn js-close">戻る</span>
+                    </div>
+
+                    <h2 class="modal-block-ttl">お届け先の設定</h2>
+                    <div class="form-sec">
+                        <form action="###" method="post" class="form-block">
+                            <div class="modal-block-inner-content">
+                                <div class="deliverydesc">
+                                    <h3 class="deliverydesc-ttl">【お届け先様情報について】</h3>
+                                    <p class="deliverydesc-desc">お届け先様情報が「エディオンカード」「あんしん保証カード」「IDカード」の登録情報（お名前・ご住所・お電話番号）と異なる場合は、長期修理保証対象外となります。<br>あらかじめご了承くださいますようお願いいたします。</p>
+                                </div>
+                                <div id="js-deliveryselect" class="deliveryselect">
+                                    <div class="deliveryselect-item">
+                                        <input type="checkbox" name="check01" value="1" id="check01-01">
+                                        <label for="check01-01" class="check-label">
+                                            会員登録<br class="is-sp">住所に送る
+                                        </label>
+                                    </div>
+                                    <div class="deliveryselect-item">
+                                        <input type="checkbox" name="check01" value="2" id="check01-02">
+                                        <label for="check01-02" class="check-label">
+                                            お届け先に登録<br class="is-sp">した<br class="is-pc">住所に送る
+                                        </label>
+                                    </div>
+                                    <div class="deliveryselect-item">
+                                        <input type="checkbox" name="check01" value="3" id="check01-03">
+                                        <label for="check01-03" class="check-label">
+                                            新しい<br class="is-sp">住所へ送る
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- ボーダー -->
+                                <div id="js-deliveryinfo" class="deliveryinfo">
+                                    <div class="deliveryinfo-detail">
+                                        <ul class="deliveryinfo-detaillist">
+                                            <li class="deliveryinfo-detailitem">山田太郎</li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    住所　　　　　：
+                                                </div>
+                                                <div class="value">
+                                                    〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX
+                                                </div>
+                                            </li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    電話　　　　　：
+                                                </div>
+                                                <div class="value">
+                                                    080XXXXXXXX
+                                                </div>
+                                            </li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    メールアドレス：
+                                                </div>
+                                                <div class="value">
+                                                    XXXXXXXXXX@gmail.com
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="deliveryinfo-desc">
+                                        <p>ご自宅以外の場所でもお受取りが可能です。</p>
+                                        <p>選択ボタンを押して一覧ページから最寄の受取り場所をご指定ください。<a class="deliveryinfo-desclink" href="xxxxx">詳細</a></p>
+                                    </div>
+                                    <div class="deliveryinfo-shippingmethod">
+                                        <div class="deliveryinfo-shippingmethoditem"><a class="deliveryinfo-shippingmethodlink" href="xxxxx">ヤマト営業所で受け取る</a></div>
+                                        <div class="deliveryinfo-shippingmethoditem"><a class="deliveryinfo-shippingmethodlink" href="xxxxx">コンビニで受け取る</a></div>
+                                        <div class="deliveryinfo-shippingmethoditem"><a class="deliveryinfo-shippingmethodlink" href="xxxxx">ロッカーで受け取る</a></div>
+                                        <div class="deliveryinfo-shippingmethoditem"><a class="deliveryinfo-shippingmethodlink" href="xxxxx">自宅外任意指定住所で受け取る</a></div>
+                                    </div>
+                                </div>
+
+                                <div id="js-deliverygroup" class="deliverygroup">
+                                    <div class="deliverygroup-select">
+                                        グループ：
+                                        <div class="form-block-select">
+                                            <select class="" name="">
+                                                <option value="0">A</option>
+                                                <option value="1">B</option>
+                                                <option value="2">C</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="scrollblock-desc">
+
+                                        <div class="scrollblock-inner">
+                                            <div class="deliverygroup-list">
+                                                <div class="deliverygroup-item">
+                                                    <div class="deliverygroup-itemgroup">
+                                                        グループA
+                                                    </div>
+                                                    <div class="deliverygroup-itemdetail">
+                                                        <ul class="deliverygroup-itemdetaillist">
+                                                            <li class="deliverygroup-itemdetailitem">山田太郎</li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    住所　　　　　：
+                                                                </div>
+                                                                <div class="value">
+                                                                    〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX
+                                                                </div>
+                                                            </li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    電話　　　　　：
+                                                                </div>
+                                                                <div class="value">
+                                                                    080XXXXXXXX
+                                                                </div>
+                                                            </li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    メールアドレス：
+                                                                </div>
+                                                                <div class="value">
+                                                                    XXXXXXXXXX@gmail.com
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="deliverygroup-itembtn">
+                                                        <button type="submit" name="button">登録内容を変更する</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="deliverygroup-list">
+                                                <div class="deliverygroup-item">
+                                                    <div class="deliverygroup-itemgroup">
+                                                        グループB
+                                                    </div>
+                                                    <div class="deliverygroup-itemdetail">
+                                                        <ul class="deliverygroup-itemdetaillist">
+                                                            <li class="deliverygroup-itemdetailitem">山田太郎</li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    住所　　　　　：
+                                                                </div>
+                                                                <div class="value">
+                                                                    〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX
+                                                                </div>
+                                                            </li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    電話　　　　　：
+                                                                </div>
+                                                                <div class="value">
+                                                                    080XXXXXXXX
+                                                                </div>
+                                                            </li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    メールアドレス：
+                                                                </div>
+                                                                <div class="value">
+                                                                    XXXXXXXXXX@gmail.com
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="deliverygroup-itembtn">
+                                                        <button type="submit" name="button">登録内容を変更する</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="deliverygroup-list">
+                                                <div class="deliverygroup-item">
+                                                    <div class="deliverygroup-itemgroup">
+                                                        グループC
+                                                    </div>
+                                                    <div class="deliverygroup-itemdetail">
+                                                        <ul class="deliverygroup-itemdetaillist">
+                                                            <li class="deliverygroup-itemdetailitem">山田太郎</li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    住所　　　　　：
+                                                                </div>
+                                                                <div class="value">
+                                                                    〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX
+                                                                </div>
+                                                            </li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    電話　　　　　：
+                                                                </div>
+                                                                <div class="value">
+                                                                    080XXXXXXXX
+                                                                </div>
+                                                            </li>
+                                                            <li class="deliverygroup-itemdetailitem multiple">
+                                                                <div class="item">
+                                                                    メールアドレス：
+                                                                </div>
+                                                                <div class="value">
+                                                                    XXXXXXXXXX@gmail.com
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="deliverygroup-itembtn">
+                                                        <button type="submit" name="button">登録内容を変更する</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="js-deliveryinput" class="deliveryinput">
+                                    <div class="deliveryinput-row input-row01">
+                                        <div class="deliveryinput-ttl">お名前</div>
+                                        <div class="deliveryinput-input">
+                                            <label class="inputlabel-label is-pc" for="input01">性</label>
+                                            <input class="inputlabel-input" type="text" id="input01" name="input01" placeholder="性" required >
+                                            <label class="inputlabel-label is-pc inputlabel02" for="input02">名</label>
+                                            <input class="inputlabel-input input02" type="text" id="input02" name="input02" placeholder="名" required >
+                                        </div>
+                                    </div>
+                                    <div class="deliveryinput-row input-row02">
+                                        <div class="deliveryinput-ttl">お名前（全角フリガナ）</div>
+                                        <div class="deliveryinput-input">
+                                            <label class="inputlabel-label is-pc" for="input03">セイ</label>
+                                            <input class="inputlabel-input" type="text" id="input03" name="input03" placeholder="セイ" required >
+                                            <label class="inputlabel-label is-pc inputlabel02" for="input04">メイ</label>
+                                            <input class="inputlabel-input input02" type="text" id="input04" name="input04" placeholder="メイ"required >
+                                        </div>
+                                    </div>
+                                    <div class="deliveryinput-row input-row03">
+                                        <div class="deliveryinput-ttl">郵便番号</div>
+                                        <div class="deliveryinput-input">
+                                            <label class="inputlabel-label is-pc" for="input05">〒</label>
+                                            <input class="inputlabel-input" type="text" id="input05" name="input05" required >
+                                            <span class="deliveryinput-inputhyphen">ー</span>
+
+                                            <input class="inputlabel-input" type="text" id="input06" name="input06" required >
+                                            <button class="btn black-btn" type="submit" name="button">検索</button>
+                                        </div>
+                                    </div>
+                                    <div class="deliveryinput-row input-row04">
+                                        <div class="deliveryinput-ttl">都道府県</div>
+                                        <div class="deliveryinput-input">
+                                            <div class="form-block-select">
+                                                <select name="input07">
+                                                    <option value="1"></option>
+                                                    <option value="2"></option>
+                                                    <option value="3"></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deliveryinput-row input-row05">
+                                        <div class="deliveryinput-ttl">市区町村</div>
+                                        <div class="deliveryinput-input">
+                                            <input class="inputlabel-input" type="text" id="input08" name="input08" required >
+                                        </div>
+                                    </div>
+                                    <div class="deliveryinput-row input-row06">
+                                        <div class="deliveryinput-ttl">番地</div>
+                                        <div class="deliveryinput-input">
+                                            <input class="inputlabel-input" type="text" id="input09" name="input09" required >
+                                            <span class="deliveryinput-inputnote">※番地なしの方は入力欄に半角ハイフン（-）を入力してください。</span>
+                                        </div>
+                                    </div>
+                                    <div class="deliveryinput-row input-row07">
+                                        <div class="deliveryinput-ttl">建物名・部屋番号</div>
+                                        <div class="deliveryinput-input">
+                                            <input class="inputlabel-input" type="text" id="input10" name="input10" required >
+                                            <span class="deliveryinput-inputnote">
+                                                ※建物名は必須ではございません。マンション・アパート・ビルのお客様は建物名と部屋番号をご記入ください。<br>
+                                                ※建物名が長い方は部屋番号のみご記入ください。
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="deliveryinput-row input-row08">
+                                        <div class="deliveryinput-ttl">電話番号</div>
+                                        <div class="deliveryinput-input">
+                                            <input class="inputlabel-input" type="text" id="input11" name="input11" required >
+                                        </div>
+                                    </div>
+                                    <div class="deliveryinput-row input-row09">
+                                        <div class="check-labelwrap">
+                                            <input type="checkbox" name="check01" value="1" id="check01" checked >
+                                            <label class="check-label02" for="check01">
+                                                <span class="">このお届け先をアドレス帳に登録する</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-block-btnwrap">
+                                <span class="modal-block-firstbtn js-close btn outline-btn radius-btn">閉じる</span>
+                                <button class="modal-block-lastbtn btn black-btn radius-btn" type="submit">更新</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<%- include('../includes/_footer'); %>

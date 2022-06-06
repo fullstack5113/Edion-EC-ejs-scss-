@@ -1,0 +1,524 @@
+@import '../mixins/**';
+@import '../config';
+
+// - Note
+// - deliverystatus-wrap = {
+    // common: {
+        // - 配送情報
+        // - お届先情報
+        // - ご購入店舗情報
+    // }
+    // wrap01: {}
+    // wrap02: {}
+    // wrap03: {
+        // - お問い合わせ番号
+        // - ご不在・ご住所不明の場合について
+        // - ヤマト
+    // }
+    // wrap04: {}
+    // wrap05: {
+        // - お問い合わせ番号
+    // }
+// }
+
+
+// - ご購入店舗情報
+// - ご不在・ご住所不明 (wrap03)
+@mixin _note01() {
+    font-size: 13px;
+    line-height: calc(20/13);
+    @include media-sp {
+        font-size: 12px;
+        line-height: calc(40/24);
+    }
+}
+
+// - 配送情報 下部
+// - ヤマト 下部 (wrap03)
+@mixin _note02() {
+    font-size: 13px;
+    line-height: calc(20/13);
+    @include media-sp {
+        font-size: 11px;
+        line-height: calc(40/22);
+    }
+}
+
+
+#deliverystatus {
+    .section-heading {
+        font-size: 20px;
+        margin-bottom: 30px;
+        @include media-sp {
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid $grey-color;
+        }
+    }
+
+    .deliverystatus {
+        &-wrap {
+            margin-bottom: 40px;
+            @include media-sp {
+                margin-bottom: 20px;
+
+            }
+            border: 1px solid $grey-color;
+
+            &.wrap03 {
+                .deliveryinfo-inquery {
+                    margin-bottom: 19px;
+                    @include media-sp {
+                        margin-bottom: 17px;
+                    }
+                }
+
+                // ヤマト
+                .deliveryinfo-inqueryyamato {
+                    .inqueryyamato-desc {
+                        margin-bottom: 29px;
+                        @include _note02();
+                    }
+                    .inqueryyamato-button {
+                        a {
+                            display: block;
+                            background: #F7F7F7;
+                            width: 160px;
+                            padding: 12px;
+                            text-align: center;
+                            font-size: 12px;
+                            border: 1px solid #e6e6e6;
+                            border-radius: 4px;
+                            @include media-sp {
+                                width: calc(340 / 690 * 100%);
+                                padding: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.wrap05 {
+                .deliveryinfo-inquery {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+
+        &-itemhead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f7f7f7;
+            padding: 10px 20px 10px 24px;
+            font-size: 12px;
+        }
+
+        &-managenumlist {
+            display: flex;
+            @include media-sp {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &-managenumitem {
+            @include media-sp {
+                line-height: calc(40/24);
+            }
+
+            &.ordernum {
+                @include media-is-pc {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &-itembody {
+            padding: 23px 20px 17px 20px;
+            @include media-sp {
+                padding: 20px 18px 15px 18px;
+            }
+            .info {
+                &:not(:last-child) {
+                  margin-bottom: 40px;
+                }
+            }
+
+            .info-ttl {
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 12px;
+                @include media-sp {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+            }
+
+
+            // テーブル共通
+            .info-table {
+                border: 1px solid #e6e6e6;
+                border-bottom: none;
+
+                th, td {
+                    border-bottom: 1px solid #e6e6e6;
+                }
+                th {
+                    width: calc(200 / 888 * 100%);
+                    padding-left: 17px;
+                    background: #f7f7f7;
+                    border-right: 1px solid #e6e6e6;
+                    font-size: 14px;
+                    font-weight: 400;
+                    @include media-sp {
+                        width: calc(200 / 620 * 100%);
+                        font-size: 13px;
+                        padding: 0;
+                    }
+                }
+                td {
+                    width: calc(688 / 888 * 100%);
+                    padding-left: 17px;
+                    padding-right: 17px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    @include media-sp {
+                        width: calc(420 / 620 * 100%);
+                        line-height: calc(40/28);
+                    }
+                }
+            }
+
+            .deliveryinfo {
+                // 上段テーブル（配送情報）
+                .deliveryinfo-table {
+                    margin-bottom: 16px;
+                    @include media-sp {
+                        margin-bottom: 12px;
+                    }
+                    th {
+                        padding-left: 0;
+                        @include media-sp {
+                            text-align: left;
+                            padding-left: 11px;
+                        }
+                    }
+                    td {
+                        @include media-sp {
+                            padding-right: 10px;
+                            padding-left: 9px;
+                        }
+                    }
+
+                    // 配送状況フロー
+                    .deliveryinfo-tableflow {
+                        .tableflow-flow {
+                            @include media-sp {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+                        }
+                        th {
+                            @include media-sp {
+                                padding-top: 16px;
+                                vertical-align: top;
+                            }
+                        }
+
+                        td {
+                            padding-top: 14px;
+                            @include media-sp {
+                                padding-top: 16px;
+                                padding-bottom: 26px;
+                            }
+
+                            .tableflow-ttl {
+                                margin-bottom: 23px;
+                            }
+                            .tableflow-flow {
+                                line-height: 2;
+                            }
+                        }
+
+                        span {
+                            vertical-align: baseline;
+                            display: inline-block;
+                            @include media-sp {
+                                margin-bottom: 29px;
+                            }
+                            @include media-sp {
+                                &:last-of-type {
+                                    margin-bottom: 0;
+                                }
+
+                            }
+                        }
+
+                        // 複数行対応
+                        @include media-sp {
+                            .multirow {
+                                margin-bottom: 15px
+                            }
+
+                            .add-indent {
+                                text-indent: 1.5rem;
+                                margin-bottom: -20px;
+                                @include media-sp {
+                                    display: block;
+                                }
+                            }
+                        }
+
+
+                        .add-checkbox {
+                            margin-right: 15px;
+                            @include media-is-pc {
+                                margin-bottom: 16px;
+                            }
+                            &:before  {
+                                display: inline-block;
+                                content: '';
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 8px;
+                                background-size: 100%;
+                                vertical-align: middle;
+                            }
+                            &.off {
+                                &:before  {
+                                    background-image: url('../img/common/checkbox3-0.svg');
+                                }
+                            }
+                            &.on {
+                                &:before  {
+                                    background-image: url('../img/common/checkbox3-1.svg');
+                                }
+                            }
+                        }
+
+                        .add-rightarrow {
+                            position: relative;
+                            @include media-is-pc {
+                                margin-left: 20px;
+                                padding-left: 15px;
+                            }
+                            &:after  {
+                                display: inline-block;
+                                content: '→';
+                                @include media-is-pc {
+                                    margin-left: 15px;
+                                    position: absolute;
+                                    top: 3px;
+                                    left: -35px;
+                                }
+
+                                @include media-sp {
+                                    position: absolute;
+                                    top: 27px;
+                                    left: 3px;
+                                    content: '↓';
+                                }
+                            }
+
+                            &:first-of-type {
+                                margin-left: 0px;
+                                padding-left: 0px;
+                                &:after {
+                                    @include media-is-pc {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            &:last-of-type {
+                                &:after {
+                                    @include media-sp {
+                                        display: none;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .deliveryinfo-tableshipment {
+                        height: 55px;
+                        td {
+                            line-height: calc(20/13);
+                            @include media-sp {
+                                padding-top: 18px;
+                                padding-bottom: 18px;
+                            }
+                        }
+                    }
+
+                    // 配送日時
+                    .deliveryinfo-tabledate {
+                        height: 60px;
+                    }
+                }
+
+                // 上段テーブル下部note
+                .deliveryinfo-note {
+                    @include _note02();
+                }
+
+                &-inquery {
+                    margin-top: 20px;
+                    border: 1px solid #e6e6e6;
+                    border-bottom: none;
+                    width: 100%;
+                    @include media-is-pc {
+                        display: table;
+                    }
+
+                    // 擬似テーブル共通
+                    &item {
+                        padding-left: 17px;
+                        text-align: left;
+                        vertical-align: middle;
+                        border-bottom: 1px solid #e6e6e6;
+                        @include media-is-pc {
+                            display: table-cell;
+                            height: 40px;
+                        }
+                        @include media-sp {
+                            width: 100% !important;
+                            font-size: 13px;
+                            padding-right: 13px;
+                            padding-left: 13px;
+                        }
+                    }
+
+                    // 擬似テーブル左側
+                    .inqueryttl {
+                        background: #f7f7f7;
+                        width: calc(200 / 888 * 100%);
+                        @include media-sp {
+                            padding-top: 14px;
+                            padding-bottom: 14px;
+                        }
+                    }
+
+                    // 擬似テーブル右側
+                    .inquerynum {
+                        width: calc(688 / 888 * 100%);
+                        @include media-sp {
+                            line-height: calc(40/28);
+                            padding-top: 23px;
+                            padding-bottom: 23px;
+                        }
+                    }
+
+                    th, td {
+                        @include media-sp {
+                            width: 100%;
+                        }
+                    }
+
+                }
+
+            }
+
+
+
+            // ご不在・ご住所不明の場合について
+            .absenceinfo {
+                &-item {
+                    @include _note01();
+                }
+            }
+
+            .sendinfo {
+                // 下段テーブル（お届先情報）
+                .sendinfo-table {
+                    th, td {
+                    }
+                    &name {
+                        th, td {
+                            @include media-sp {
+                                height: 50px;
+                            }
+                        }
+                    }
+                    &address {
+                        td {
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                            line-height: 1.5;
+                        }
+                        @include media-sp {
+                            height: 100px;
+                        }
+                    }
+                    &tel {
+                        @include media-sp {
+                            height: 50px;
+                        }
+                    }
+                    th {
+                        height: 40px;
+                        text-align: left;
+                        @include media-sp {
+                            padding-right: 13px;
+                            padding-left: 13px;
+                        }
+                    }
+                    td {
+                        @include media-sp {
+                            padding-right: 10px;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            // ご購入店舗情報
+            .shopinfo {
+                &-item {
+                    @include _note01();
+                }
+            }
+        }
+    }
+    .sendbtn {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &-send {
+            cursor: pointer;
+            margin-bottom: 28px;
+            height: 48px;
+            background: #ea3c3c;
+            color: #fff;
+            padding: 14px 0;
+            display: block;
+            width: 324px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 4px;
+            @include media-sp {
+                width: calc( 610 / 690 * 100%);
+                margin-bottom: 20px;
+            }
+        }
+        &-close {
+            padding: 9px 0;
+            display: block;
+            background: #999999;
+            color: #fff;
+            width: 200px;
+            height: 32px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 2px;
+            @include media-sp {
+                width: calc( 400 / 690 * 100%)
+            }
+        }
+    }
+
+}

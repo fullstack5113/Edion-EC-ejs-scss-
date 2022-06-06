@@ -1,0 +1,70 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'favorite-store';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    
+    <a href="javascript:void(0);" class="js-modal btn black-btn large-btn" modal-id="favorite-store-modal">Open Modal</a>
+
+    <div id="favorite-store-modal" class="modal-block favorite-store-modal">
+        <div class="modal-block-inner">
+            <span class="close-btn js-close"></span>
+            <div class="modal-block-inner-head">
+                <h5 class="modal-block-inner-head-heading">店舗検索</h5>
+            </div>
+            <div class="modal-block-inner-content">
+                
+                <div class="form-block general">
+                    <dl>
+                        <dt>店舗名</dt>
+                        <dd>
+                            <input type="text" name="" placeholder="〇〇〇店舗">
+                        </dd>
+                        <dt class="area">都道府県</dt>
+                        <dd class="area">
+                            <div class="form-block-select">
+                                <select name="" id="">
+                                    <option value="東京">東京</option>
+                                </select>
+                            </div>
+                            <input type="text" name="" placeholder="市区町村を入力">
+                        </dd>
+                    </dl>
+                    
+                    <button class="btn account-btn blue-btn medium">検索</button>
+                </div>
+                
+                <div class="result-head"><span>検索結果</span>　該当店舗  3件</div>
+                <div class="modal-block-inner-content-resultwrap">
+                <div class="modal-block-inner-content-result">
+                    <div class="form-block general">
+                        <% for (var i = 1; i < 4; i++){ %>
+                        <input type="radio" name="result" id="result0<%- i %>" <% if(i==1){%>checked=""<% } %>>
+                        <label for="result0<%- i %>">
+                            <div class="shop-name">〇〇〇店舗</div>
+                            <div class="shop-address">東京都 品川区 荏原 1丁目</div>
+                        </label>
+                        <% } %>
+                    </div>
+                </div>
+                </div>
+                
+                
+
+            </div>
+            <div class="modal-block-inner-foot">
+                <div class="modal-block-inner-foot-btns">
+                    <a href="" class="btn red-btn2 account-btn">選択する</a>
+                    <a href="" class="btn lined-blue account-btn medium2">キャンセル</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<%- include('../includes/_footer'); %>

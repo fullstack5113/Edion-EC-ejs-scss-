@@ -1,0 +1,171 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'receipt-register';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+
+    <div id="receiptregister-done">
+        <div class="container-sm">
+            <div class="flow-wrap" id="flow-wrap">
+                <div class="flow-list">
+                    <div class="flow-item">
+                        <div class="flow-itemicon">
+                            <img src="./assets/img/receipt-register/icon-input-on.png" alt="領収書発行入力">
+                        </div>
+                        <div class="flow-itemtext">
+                            領収書発行入力
+                        </div>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-itemicon">
+                            <img src="./assets/img/receipt-register/icon-confirm-on.png" alt="確認">
+                        </div>
+                        <div class="flow-itemtext">
+                            確認
+                        </div>
+                    </div>
+                    <div class="flow-item on complete">
+                        <div class="flow-itemicon">
+                            <img src="./assets/img/receipt-register/icon-complete-on.png" alt="完了">
+                        </div>
+                        <div class="flow-itemtext">
+                            完了
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="registerdesc">
+                <h3 class="registerdesc-ttl">領収書[WEB]発行</h3>
+            </div>
+            
+            <div class="print">
+                <div class="flex-inner-01">
+                    <div class="flex-inner-01-first">
+                        <p class="name">山下 国与&nbsp;&nbsp;<span class="is-pc">&nbsp;&nbsp;&nbsp;</span>様<span class="is-pc">&nbsp;&nbsp;&nbsp;</span></p>
+                        <div class="price-inner mb-pc10 mt-sp5">
+                            <p class="des_01">領収書金額：</p>
+                            <div>
+                                <p class="des_02 mb-sp10">¥34,800 -</p>
+                                <p class="des_03">上記には消費税等¥3,163-が含まれております。</p>
+                            </div>
+                        </div>
+                        <div class="price-inner mb-pc5 mt-sp5 pt-sp20 pb-sp10">
+                            <p class="des_01">但し　　　：</p>
+                            <div>
+                                <p class="des_02">商品代として</p>
+                            </div>
+                        </div>
+                        <p class="des_03 mt-sp10 mb-sp25 mb-pc10">上記金額正に領収いたしました。</p>
+                    </div>
+                    <div class="flex-inner-01-second">
+                        <div class="is-sp">
+                            <div class="d-flex flex-between">
+                                <figure>
+                                    <img src="./assets/img/receipt-register/print_logo_sp.png" alt="">
+                                </figure>
+                                <figure>
+                                    <img src="./assets/img/receipt-register/print_stamp_sp.png" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                        <p class="des_04 mb-pc10 mb-sp25">
+                            発行日：2022年02月10日<br>
+                            発行者：エディオンネットショップ<br>
+                            電話番号：0570-200-457
+                        </p>
+                        <div class="is-pc">
+                            <figure>
+                                <img src="./assets/img/receipt-register/print_logo_pc.png" alt="">
+                            </figure>
+                            <figure>
+                                <img src="./assets/img/receipt-register/print_stamp_pc.png" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <p class="des_04 mb-pc5 mb-sp10">お支払い内訳</p>
+                <div class="flex-inner-02">
+                    <div class="flex-inner-02-first">
+                        <table class="mt-pc5">
+                            <tr>
+                                <td>銀行振込</td>
+                                <td>¥0</td>
+                            </tr>
+                            <tr>
+                                <td>クレジット</td>
+                                <td>¥34,800</td>
+                            </tr>
+                            <tr>
+                                <td>モバイル決済<br>
+                                    （PayPay）</td>
+                                <td>¥0</td>
+                            </tr>
+                            <tr>
+                                <td>ポイント</td>
+                                <td>¥0</td>
+                            </tr>
+                            <tr>
+                                <td>電子ギフトカード</td>
+                                <td>¥0</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="flex-inner-02-second">
+                        <p class="des_04 mb-pc5 mt-sp20 mb-sp20">
+                            領収日：2022年01月24日<br>
+                            ご注文番号：222014181564
+                        </p>
+                        <p class="des_04">
+                            ※本紙は電子的に保持している領収書データを画面<br class="is-pc">
+                            <span class="is-pc">　</span>表示したものです。<br>
+                            ※発行後に宛名、金額、領収日を変更された場合、<br class="is-pc">
+                            <span class="is-pc">　</span>本領収書は無効になります。<br>
+                            ※再発行した場合、「再発行」表示と回数が印字されます。<br><br>
+
+                            領収書内訳：10%対象 ¥34,800 -<br>
+                            領収書内訳：10%対象 ¥3,163 -
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="purchase-detail">
+                <p class="purchase-detail-ttl">購入商品明細</p>
+                <table>
+                    <tr>
+                        <th>商品名</th>
+                        <th>数量</th>
+                        <th>金額(合計)</th>
+                    </tr>
+                    <tr>
+                        <td>TOSHIBA/REGZA 1TB HDD内蔵ブルーレイレコーダー DBRシリーズ</td>
+                        <td>1</td>
+                        <td>¥59,800</td>
+                    </tr>
+                    <tr>
+                        <td>送料</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="receiptregister-done-ft">
+                <div class="btn-wrap mt50">
+                    <button class="btn-wrap-print btn">印刷する</button>
+                    <a class="btn-wrap-back" href="xxx">戻る</a>
+                </div>
+                <p class="refer">※領収書[WEB]再発行画面で「戻る」ボタンを押下された回数ごとに再発行回数が増えます。</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<%- include('../includes/_footer'); %>

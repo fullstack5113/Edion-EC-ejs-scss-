@@ -1,0 +1,51 @@
+/**
+* @file _form.scss
+**/
+
+/* レビュー星 共通 */
+.review-star{
+    display: inline-block;
+    width: 75px;
+    height: 15px;
+    background-image: url(../img/common/review-star.png);
+    background-size: 75px auto;
+    background-repeat: no-repeat;
+    margin: 0 5px 0 0;
+    &.star5{
+        background-position: 0 0;
+    }
+    &.star4_5{
+        background-position: 0 -15px;
+    }
+    
+    &.star4{
+        background-position: 0 -30px;
+    }
+    &.star3_5{
+        background-position: 0 -45px;
+    }
+    
+    &.star3{
+        background-position: 0 -60px;
+    }
+    &.star2_5{
+        background-position: 0 -75px;
+    }
+    
+    &.star2{
+        background-position: 0 -90px;
+    }
+    &.star1_5{
+        background-position: 0 -105px;
+    }
+    
+    &.star1{
+        background-position: 0 -120px;
+    }
+    &.star0_5{
+        background-position: 0 -135px;
+    }
+    &.star0{
+        background-position: 0 -150px;
+    }
+}

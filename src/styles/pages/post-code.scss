@@ -1,0 +1,179 @@
+@import '../config';
+@import '../mixins/media';
+@import '../mixins/others';
+
+.post-code-modal{
+    width: 612px;
+    @include media-sp {
+        width: calc(100% - 60px);
+    }
+    .modal-block{
+        &-inner{
+            padding: 36px 30px 24px;
+            @include media-sp {
+                padding: 36px 15px 20px;
+            }
+            &-head{
+                text-align: center;
+                &-heading{
+                    font-size: 20px;
+                    letter-spacing: 0.1em;
+                    margin-bottom: 16px;
+                    @include media-sp {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+                }
+                &-subtext{
+                    font-size: 12px;
+                    letter-spacing: 0.1em;
+                    font-weight: 500;
+                }
+                &-radio{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 18px;
+                    margin-bottom: 20px;
+                    text-align: left;
+                    &-block{
+                        font-size: 0;
+                        label{
+                            margin: 0;
+                            letter-spacing: 0.08em;
+                            @include media-sp {
+                                margin-right: 0 !important;
+                                margin-bottom: 14px;
+                                font-size: 14px;
+                                white-space: nowrap;
+                                &:last-child{
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-content{
+                padding: 0 100px 0 76px;
+                min-height: 337px;
+                @include media-sp {
+                    padding: 0;
+                    margin-right: 0;
+                    min-height: 310px;
+                }
+                .form-block{
+                    display: none;
+                    &:first-child{
+                        display: block;
+                    }
+                }
+                &-zip{
+                    .zip-line{
+                        display: block;
+                        width: 16px;
+                        height: 1px;
+                        background-color: #333;
+                        @include media-sp {
+                            width: 8px;
+                        }
+                    }
+                }
+                .search-btn{
+                    margin: 0;
+                    width: 80px;
+                    padding: 0;
+                    @include media-sp {
+                        margin: 16px auto 0;
+                        display: block;
+                    }
+                }
+                &-city{
+                    padding-top: 5px;
+                    > div{
+                        display: flex;
+                        align-items: center;
+                        @include media-sp {
+                            display: block;
+                        }
+                    }
+                    input[type="text"]{
+                        margin-right: 16px;
+                        margin-bottom: 0px;
+                        @include media-sp {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                &-address1{
+                    .message{
+                        font-weight: 600;
+                        font-size: 16px;
+                        height: 313px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        letter-spacing: 0.1em;
+                        @include media-sp {
+                            height: 286px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &-address2{
+                    margin-top: -20px;
+                }
+
+                &-result{
+                    border-top: 1px solid #CCCCCC;
+                    border-bottom: 1px solid #CCCCCC;
+                    padding: 24px 0 0;
+                    margin: 24px 0;
+                    display: flex;
+                    justify-content: center;
+                    max-height: calc(100vh - 400px);
+                    min-height: 236px;
+                    overflow-y: scroll;
+                    @include media-sp {
+                        max-height: calc(100vh - 506px);
+                        min-height: auto;
+                    }
+                    input[type=radio]{
+                        display: inherit;
+                        
+                    }
+                    label{
+                        letter-spacing: 0.08em;
+                        display: flex !important;
+                        margin-bottom: 18px;
+                        
+                        &:last-child{
+                            padding-bottom: 24px;
+                            margin-bottom: 0;
+                        }
+                        > div{
+                            line-height: 16px;
+                            @include media-sp {
+                                font-size: 12px;
+                            }
+                            &.zip{
+                                margin-right: 16px;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+            &-foot{
+                &-btns{
+                    .red-btn2{
+                        margin-bottom: 16px;
+                        @include media-sp {
+                            margin-bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

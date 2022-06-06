@@ -1,0 +1,269 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'review';
+_%>
+    <%- include('../includes/_header-login') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; 商品レビュー
+        </div>
+
+        <main id="main-content" class="main-content">
+
+            <div class="container container-sidebar_show">
+
+                <%- include('../includes/_sidebar-account-info'); %>
+
+                    <div class="container-right">
+                        <div class="reviewhistory">
+                            <div class="reviewhistory-ttl">
+                                <h4>商品レビュー</h4>
+                                <p>ご購入商品のレビューの投稿や削除が行えます。</p>
+                            </div>
+                        </div>
+                        <div class="reviewhistory-user">
+                            <p class="reviewhistory-user-ttl">ニックネーム</p>
+                            <p class="reviewhistory-user-nickname">エディオンカスタマー </p>
+                            <p class="reviewhistory-user-des">
+                                商品レビュー時のニックネームを設定することが出来ます。<br>
+                                設定せずに利用する場合「エディオンカスタマー」と表示されます。
+                            </p>
+                            <a class="btn blue-btn radius-btn js-modal" href="javascript:void(0);" modal-id="review-history-profile-modal">編集</a>
+                        </div>
+                        <div class="reviewhistory-ctn">
+                            <div class="tabs-wrapper-all">
+                                <div class="tabs">
+                                    <div class="tab"><p>ネットショップ</p></div>
+                                    <div class="tab"><p>店舗・ネット</p></div>
+                                    <a href="javascript:void(0);" class="_publish js-modal" modal-id="review-history-list-modal">
+                                        投稿者レビューリスト設定：公開
+                                    </a>
+                                </div>
+                                <div class="tabs-content">
+                                    <div class="tab-item tabs-content-shop">
+                                        <div class="filter">
+                                            <div class="filter-inner">
+                                                <label>投稿日</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                        <option value="すべて">すべて</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="filter-inner">
+                                                <label>表示件数</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="5">5件</option>
+                                                        <option value="10">10件</option>
+                                                        <option value="15">15件</option>
+                                                        <option value="20">20件</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="review-wrap">
+                                            <div class="review-wrap-ttl">
+                                                <div class="img-inner">
+                                                    <img src="./assets/img/review/item.png" alt="">
+                                                </div>
+                                                <div class="txt-inner">
+                                                    <div class="d-pc-flex mb-pc15 mb-sp10">
+                                                        <p class="des01 mr-pc20 mb-sp10">購入日：2020/12/17</p>
+                                                        <p class="des01">注文番号：XXXXXXXXXX</p>
+                                                    </div>
+                                                    <p class="ttl">ハイセンス 「標準工事込み」 6畳向け 冷暖房インバーターエアコン KuaL Sシリーズ ホワイト <br>HAS22DE9WS</p>
+                                                    <p class="des02">型番：HA-S22DE9-WS</p>
+                                                </div>
+                                            </div>
+                                            <div class="review-wrap-ctn">
+                                                <div class="d-pc-flex flex-pc-between">
+                                                    <ul>
+                                                        <li class="review-wrap-ctn-star">
+                                                            <span class="review-star star5"></span>5
+                                                        </li>
+                                                        <li class="review-wrap-ctn-date">
+                                                            投稿日時：2020/12/17 15:25
+                                                        </li>
+                                                    </ul>
+                                                    <div class="is-pc">
+                                                        <div class="d-flex flex-sp-between">
+                                                            <a class="btn blue-btn radius-btn" href="">修正する</a>
+                                                            <a class="btn grey-btn2 radius-btn ml-pc15" href="">削除する</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p class="review-wrap-ctn-ttl">
+                                                    商品について
+                                                </p>
+                                                <p class="review-wrap-ctn-des">
+                                                    洗面所、キッチン用にと購入しました。<br>
+                                                    速暖です！200wと400wの切り替えがしたくてこちらにしました。<br>
+                                                    コンパクトサイズなので、置き場所を選びません。<br>
+                                                    色もアラジングリーンが可愛いです。<br>
+                                                    線が短めなのでコンセントが近くにない場合は困ります。それ以外は満足です。
+                                                </p>
+                                                <div class="is-sp">
+                                                    <div class="d-flex flex-sp-between mt-sp15">
+                                                        <a class="btn blue-btn radius-btn" href="">修正する</a>
+                                                        <a class="btn grey-btn2 radius-btn ml-pc15" href="">削除する</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="review-wrap-concern">858人が「参考になった！」と言っています。</p>
+                                        </div>
+                                        <% for (var i = 0; i< 4; i++){ %> 
+                                            <div class="review-wrap">
+                                                <div class="review-wrap-ttl">
+                                                    <div class="img-inner">
+                                                        <img src="./assets/img/review/item.png" alt="">
+                                                    </div>
+                                                    <div class="txt-inner">
+                                                        <div class="d-pc-flex mb-pc15 mb-sp10">
+                                                            <p class="des01 mr-pc20 mb-sp10">購入日：2020/12/17</p>
+                                                            <p class="des01">注文番号：XXXXXXXXXX</p>
+                                                        </div>
+                                                        <p class="ttl">ハイセンス 「標準工事込み」 6畳向け 冷暖房インバーターエアコン KuaL Sシリーズ ホワイト <br>HAS22DE9WS</p>
+                                                        <p class="des02">型番：HA-S22DE9-WS</p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-wrap-noctn">
+                                                    <div class="">
+                                                        <p class="review-wrap-noctn-ttl">
+                                                            商品について
+                                                        </p>
+                                                        <p class="review-wrap-noctn-des">
+                                                            商品レビューは投稿されていません
+                                                        </p>
+                                                    </div>
+                                                    <a class="btn radius-btn white-btn" href="">商品レビューを書く</a>
+                                                </div>
+                                            </div>
+                                        <% } %> 
+                                    </div>
+                                    <div class="tab-item tabs-content-net">
+                                        <div class="filter">
+                                            <div class="filter-inner">
+                                                <label>投稿日</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="セール">セール</option>
+                                                        <option value="セール">セール</option>
+                                                        <option value="セール">セール</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="filter-inner">
+                                                <label>表示件数</label>
+                                                <div class="form-block-select">
+                                                    <select name="" id="">
+                                                        <option value="5">5件</option>
+                                                        <option value="10">10件</option>
+                                                        <option value="15">15件</option>
+                                                        <option value="20">20件</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% for (var i = 0; i< 5; i++){ %> 
+                                            <div class="review-wrap">
+                                                <div class="review-wrap-ttl">
+                                                    <div class="img-inner">
+                                                        <img src="./assets/img/review/item.png" alt="">
+                                                    </div>
+                                                    <div class="txt-inner">
+                                                        <div class="d-pc-flex mb-pc15 mb-sp10">
+                                                            <p class="des01 mr-pc20 mb-sp10">購入日：2020/12/17</p>
+                                                            <p class="des01">伝票番号：XXXXXXXXXX</p>
+                                                        </div>
+                                                        <p class="ttl">ハイセンス 「標準工事込み」 6畳向け 冷暖房インバーターエアコン KuaL Sシリーズ ホワイト <br>HAS22DE9WS</p>
+                                                        <p class="des02">型番：HA-S22DE9-WS</p>
+                                                    </div>
+                                                </div>
+                                                <div class="review-wrap-noctn">
+                                                    <div class="">
+                                                        <p class="review-wrap-noctn-ttl">
+                                                            商品について
+                                                        </p>
+                                                        <p class="review-wrap-noctn-des">
+                                                            商品レビューは投稿されていません
+                                                        </p>
+                                                    </div>
+                                                    <a class="btn radius-btn white-btn" href="">商品レビューを書く</a>
+                                                </div>
+                                            </div>
+                                        <% } %> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pager-wrapper reviewhistory">
+                            <a href="" class="pager-wrapper-link prev">前へ</a>
+                            <div class="pager-wrapper-num">
+                                <span>1</span>
+                                <a href="">2</a>
+                                <a href="">3</a>
+                                <a class="is-pc" href="">4</a>
+                                <a class="is-pc" href="">5</a>
+                                ・・・
+                                <a href="">20</a>
+                            </div>
+                            <a href="" class="pager-wrapper-link next">次へ</a>
+                        </div>
+
+                        <div class="return reviewhistory">
+                            <a class="return-btn" href="#">戻る</a>
+                        </div>
+                    </div>
+                    
+            </div>
+            <div id="review-history-list-modal" class="modal-block fixed-margin sp-maxheight review-history-list-modal">
+                <div class="modal-block-inner">
+                    <span class="close-btn js-close"></span>
+                    <div class="modal-block-inner-head">
+                        <h5 class="modal-block-inner-head-heading">投稿者レビューリスト設定</h5>
+                        <div class="modal-block-inner-head-lead">レビューリストを公開するか非公開にするかを<br class="is-sp">選択できます。</div>
+                    </div>
+        
+                    <div class="modal-block-inner-foot">
+                        <div class="modal-block-inner-foot-btninline">
+                            <a href="" class="btn lined-black account-btn">非公開</a>
+                            <a href="" class="btn blue-btn account-btn">公開</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="review-history-profile-modal" class="modal-block fixed-margin sp-maxheight review-history-profile-modal">
+                <div class="modal-block-inner">
+                    <span class="close-btn js-close"></span>
+                    <div class="modal-block-inner-head">
+                        <h5 class="modal-block-inner-head-heading">ニックネーム設定</h5>
+                    </div>
+                    
+                    <div class="modal-block-inner-body">
+                        <div class="form-block general">
+                            <label for="">ニックネーム</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    
+                    <div class="modal-block-inner-foot">
+                        <div class="modal-block-inner-foot-btninline">
+                            <a href="" class="btn lined-black account-btn">キャンセル</a>
+                            <a href="" class="btn blue-btn account-btn">登録する</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+        <%- include('../includes/_footer'); %>

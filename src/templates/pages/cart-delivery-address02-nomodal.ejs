@@ -1,0 +1,128 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; カート
+</div>
+<main id="main-content" class="main-content">
+    <div id="cart" class="cartdeliveryaddress">
+
+        <div class="cart-container">
+            <div class="main-contentttl">
+                <h2 class="">ショッピングカート</h2>
+            </div>
+            <form class="form-block" action="" method="post">
+                <!-- 店舗アイテム  -->
+                <div class="cartblock js-cartblock">
+                    <div class="cartblock-ttl cartblock-ttl01">
+                        <div class="cartblock-ttlleft">
+                            <h3 class="cartblock-ttlheading">ネットショップで購入する商品<br class="is-sp"><span class="is-pc-inline">　</span>商品点数：２点</h3>
+                        </div>
+                    </div>
+                    <div class="cartblock-content">
+                        <!-- メインコンテンツ -->
+                        <div class="cartblock-contentleft cartblock-maincontent">
+                            <section>
+                                <div class="inner inner-large">
+                                    <div class="item-wrap">
+                                        <!-- 商品アイテム Ver02 -->
+                                        <%- include('../includes/_cart-item', {item: 2, delivery: true}); %>
+                                        <!-- 商品アイテム Ver02 -->
+
+
+
+                                        <!-- 商品アイテム Ver03 -->
+                                        <%-  include('../includes/_cart-item', {item: 3, delivery: true}); %>
+                                        <!-- 商品アイテム Ver03 -->
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
+                        <!-- メインコンテンツ -->
+                        <!-- サイドバー -->
+                        <%- include('../includes/_sidebar-cart', {ver: 1}); %>
+                        <!-- サイドバー -->
+                    </div>
+                    <!-- cartblock-content -->
+                </div>
+                <!-- 店舗アイテム  -->
+
+
+                <!-- 以下はcart-ejs 差分なし -->
+                <!-- 店舗アイテム  -->
+                <div class="cartblock js-cartblock">
+                    <div class="cartblock-ttl cartblock-ttl01">
+                        <div class="cartblock-ttlleft">
+                            <h3 class="cartblock-ttlheading">店舗で購入する商品（受取店舗：ＡＫＩＢＡ）<br class="is-sp"><span class="is-pc-inline">　</span>商品点数：１点</h3>
+                        </div>
+                    </div>
+                    <div class="cartblock-content">
+                        <!-- メインコンテンツ -->
+                        <div class="cartblock-contentleft cartblock-maincontent">
+                            <section>
+                                <div class="inner inner-large">
+                                    <div class="item-wrap">
+                                        <!-- 商品アイテム Ver04 -->
+                                        <%- include('../includes/_cart-item', {item: 4, delivery: false}); %>
+                                        <!-- 商品アイテム Ver04 -->
+                                    </div>
+
+                                    <div class="coupon">
+                                        <%- include('../components/_c-cart-coupon', { item: 4 }); %>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="emptybtn">
+                                <button type="submit" name="button">カード内を空にする</button>
+                            </div>
+                        </div>
+                        <!-- メインコンテンツ -->
+                        <!-- サイドバー -->
+                        <%- include('../includes/_sidebar-cart', {ver: 1}); %>
+                        <!-- サイドバー -->
+                    </div>
+                    <!-- cartblock-content -->
+                </div>
+                <!-- 店舗アイテム  -->
+                <!-- ここまでcart-ejs 差分なし -->
+
+            </form>
+        </div>
+        <!-- container cartblock -->
+    </div>
+
+
+    <%- include('../includes/_recommend', { maxitem: 'eight' }); %>
+    <%- include('../includes/_recommend', { maxitem: 'eight' }); %>
+    <%- include('../includes/_favorite-list'); %>
+
+</main>
+
+
+<%- include('../includes/_footer'); %>
+
+<script type="text/javascript">
+    $(function() {
+        $test = $('.add-numofitems');
+        console.log($test);
+        $test.each(function() {
+            const $numOfItem = $(this).find('.numofitems');
+            const $itemEmptyBtn = $(this).find('.item-emptybtn');
+            const $addtion = $(this).find('.addition');
+
+            $numOfItem.insertBefore($(this));
+            $itemEmptyBtn.insertAfter($(this));
+            $addtion.insertAfter($(this));
+        })
+
+    })
+
+</script>

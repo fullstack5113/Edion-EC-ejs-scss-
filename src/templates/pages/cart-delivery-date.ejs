@@ -1,0 +1,158 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    <a href="javascript:void(0);" class="js-modal-order01 btn black-btn large-btn" modal-id="modal">Open Modal</a>
+
+
+    <div class="container" id="cartdeliverydate">
+        <section>
+            <div id="modal" class="modal-block wide" style="display: block">
+                <div class="modal-block-inner01">
+                    <div class="is-pc">
+                        <span class="close-btn js-close"></span>
+                    </div>
+                    <div class="is-sp modal-block-return">
+                        <span class="modal-block-returnbtn js-close">戻る</span>
+                    </div>
+
+                    <h2 class="modal-block-ttl">お届け日時の設定</h2>
+                    <div class="form-sec">
+                        <form action="###" method="post">
+                            <div class="modal-block-inner-content">
+                                <div class="deliveryinfo">
+                                    <div class="deliveryinfo-group">
+                                        グループA
+                                    </div>
+                                    <div class="deliveryinfo-detail">
+                                        <ul class="deliveryinfo-detaillist">
+                                            <li class="deliveryinfo-detailitem">山田 太郎</li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    住所<span class="is-pc-inline">　　　　　</span>：
+                                                </div>
+                                                <div class="value">
+                                                    〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX
+                                                </div>
+                                            </li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    電話<span class="is-pc-inline">　　　　　</span>：
+                                                </div>
+                                                <div class="value">
+                                                    080XXXXXXXX
+                                                </div>
+                                            </li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    メールアドレス：
+                                                </div>
+                                                <div class="value">
+                                                    XXXXXXXXXX@gmail.com
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="deliveryinfo-btn">
+                                        <button type="submit" name="button">登録内容を変更する</button>
+                                    </div>
+                                </div>
+                                <!-- 日時設定 -->
+                                <div id="js-isdeliverydate" class="isdeliverydate">
+                                    <h3 class="isdeliverydate-ttl">配送日時設定</h3>
+
+                                    <div class="isdeliverydate-timeitem">
+                                        <label class="radio-label">
+                                            <input type="radio" name="radio01" value="1" checked>
+                                            <span class="radio-text">通常お届け予定日 2021年12月9日(木) 指定なし</span>
+                                        </label>
+                                    </div>
+                                    <div class="disdeliverydate-timeitem">
+                                        <label class="radio-label">
+                                            <input type="radio" name="radio01" value="2" >
+                                            <span class="radio-text">日時を指定する</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div id="js-deliverydate" class="deliverydate">
+                                    <!-- カレンダー -->
+                                    <div class="deliverydate-calender calendar-wrap">
+                                        <div class="calendar-container">
+                                        </div>
+                                    </div>
+
+                                    <!-- 配送時間設定 -->
+                                    <div class="deliverydate-time">
+                                        <h3 class="deliverydate-ttl">時間帯指定</h3>
+                                        <div class="deliverydate-timelist">
+                                            <div class="deliverydate-timeitem">
+                                                <label class="radio-label">
+                                                    <input onclick="deliverTime('empty')" type="radio" name="delivery-time" id="empty" checked>
+                                                    <span class="radio-text">指定しない</span>
+                                                </label>
+                                            </div>
+                                            <div class="deliverydate-timeitem">
+                                                <label class="radio-label">
+                                                    <input onclick="deliverTime('8-12')" type="radio" name="delivery-time" id="morning">
+                                                    <span class="radio-text">午前中（8時～12時）</span>
+                                                </label>
+                                            </div>
+                                            <div class="deliverydate-timeitem">
+                                                <label class="radio-label">
+                                                    <input onclick="deliverTime('14-16')" type="radio" name="delivery-time" id="14-16">
+                                                    <span class="radio-text">14時～16時</span>
+                                                </label>
+                                            </div>
+                                            <div class="deliverydate-timeitem">
+                                                <label class="radio-label">
+                                                    <input onclick="deliverTime('16-18')" type="radio" name="delivery-time" id="16-18">
+                                                    <span class="radio-text">16時～18時</span>
+                                                </label>
+                                            </div>
+                                            <div class="deliverydate-timeitem">
+                                                <label class="radio-label">
+                                                    <input onclick="deliverTime('18-20')" type="radio" name="delivery-time" id="18-20">
+                                                    <span class="radio-text">18時～20時</span>
+                                                </label>
+                                            </div>
+                                            <div class="deliverydate-timeitem">
+                                                <label class="radio-label">
+                                                    <input onclick="deliverTime('19-21')" type="radio" name="delivery-time" id="19-21">
+                                                    <span class="radio-text">19時～21時</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            function deliverTime(selected_time){
+                                                $("#selected-deliver-time").attr('value',selected_time );
+                                            }
+                                        </script>
+                                    </div>
+                                    <input id="selected-deliver-day" type="hidden" value="">
+                                    <input id="selected-deliver-time" type="hidden" value="">
+                                </div>
+
+                                <!-- 補足 -->
+                                <div class="addcomment">
+                                    配送コメントテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </div>
+                            </div>
+                            <div class="modal-block-btnwrap">
+                                <span class="modal-block-firstbtn js-close btn outline-btn radius-btn">閉じる</span>
+                                <button class="modal-block-lastbtn btn black-btn radius-btn" type="submit">更新</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<%- include('../includes/_footer'); %>

@@ -1,0 +1,556 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    <a href="javascript:void(0);" class="js-modal-order01 btn black-btn large-btn" modal-id="modal">Open Modal</a>
+
+    <div class="container" id="cartpayment">
+        <section>
+
+            <div id="modal" class="modal-block wide">
+                <div class="modal-block-inner01">
+                    <div class="is-pc">
+                        <span class="close-btn js-close"></span>
+                    </div>
+                    <div class="is-sp modal-block-return">
+                        <span class="modal-block-returnbtn js-close">戻る</span>
+                    </div>
+
+                    <h2 class="modal-block-ttl">お支払方法の設定</h2>
+
+                    <div class="form-sec">
+                        <form class="form-block" action="###" method="post">
+                            <div class="modal-block-inner-content cartpayment-content">
+                                <div class="methodselect">
+                                    <div class="methodselect-list">
+                                        <div class="methodselect-item">
+                                            <input type="checkbox" name="paymethod" value="無金利分割クレジットカード決済" id="paymethod-1" data-id="js-pay-method01">
+                                            <label for="paymethod-1" class="check-label">
+                                                <span>無金利分割クレジット<br class="is-sp">カード決済</span>
+                                            </label>
+                                        </div>
+                                        <div class="methodselect-item">
+                                            <input type="checkbox" name="paymethod" value="クレジットカード決済" id="paymethod-2" data-id="js-pay-method02" checked>
+                                            <label for="paymethod-2" class="check-label">
+                                                <span>クレジット<br class="is-sp">カード決済</span>
+                                            </label>
+                                        </div>
+                                        <div class="methodselect-item">
+                                            <input type="checkbox" name="paymethod" value="モバイル決済" id="paymethod-3" data-id="js-pay-method03">
+                                            <label for="paymethod-3" class="check-label">
+                                                <span>モバイル決済</span>
+                                            </label>
+                                        </div>
+                                        <div class="methodselect-item">
+                                            <input type="checkbox" name="paymethod" value="銀行振込(前払い)" id="paymethod-4" data-id="js-pay-method04">
+                                            <label for="paymethod-4" class="check-label">
+                                                <span>銀行振込(前払い)</span>
+                                            </label>
+                                        </div>
+                                        <div class="methodselect-item">
+                                            <input type="checkbox" name="paymethod" value="代金引換" id="paymethod-5" data-id="js-pay-method05">
+                                            <label for="paymethod-5" class="check-label">
+                                                <span>代金引換</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 無金利分割クレジットカード決済 -->
+                                <div class="methoditem methoditem01" id="js-pay-method01">
+                                    <h3 class="methoditem-ttl">利用可能なクレジットカード</h3>
+
+                                    <div class="methoditem-cardselect">
+                                        <div class="methoditem-cardselectitem">
+                                            <input type="checkbox" name="method1-2" value="1" id="method01-2-1">
+                                            <label for="method01-2-1" class="check-label">
+                                                <img src="./assets/img/cart/payment-item01.png" alt="エディオンカード">
+                                                <span>エディオンカード</span>
+                                            </label>
+                                        </div>
+                                        <div class="methoditem-cardselectitem">
+                                            <input type="checkbox" name="method01-2" value="2" id="method01-2-2">
+                                            <label for="method01-2-2" class="check-label">
+                                                <img src="./assets/img/cart/payment-item02.png" alt="100満ボルトカード">
+                                                <span>100満ボルトカード</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="methoditem-lastcardselect is-sp">
+                                        <div class="readbtnwrap">
+                                            <input class="btn grey-btn radius-btn" type="submit" value="カード番号読み取り">
+                                        </div>
+                                    </div>
+                                    <div class="js-methoditem-inputblock01 methoditem-inputblock">
+                                        <div class="methoditem-inputblockrow inputblockrow01">
+                                            <div class="methoditem-inputblockttl">
+                                                カード番号：
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <input class="inputlabel-input" type="text" id="method01-input01" name="method01-input01" required >
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-inputblockrow inputblockrow02">
+                                            <div class="methoditem-inputblockttl">
+                                                カード名義人：
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <input class="inputlabel-input" type="text" id="method01-input02" name="method01-input02" required >
+                                                <span class="methoditem-inputblockinputnote">半角ローマ字・姓と名の間にスペースをご入力ください</span>
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-inputblockrow inputblockrow03">
+                                            <div class="methoditem-inputblockttl">
+                                                セキュリティコード：
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <input class="inputlabel-input" type="text" id="method01-input03" name="method01-input03" required >
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-inputblockrow inputblockrow04">
+                                            <div class="methoditem-inputblockttl">
+                                                有効期限：
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <input class="inputlabel-input" type="text" id="method01-input04" name="method01-input04" placeholder="月" required >
+                                                <label class="inputlabel-label is-pc" for="method01-input04">月</label>
+                                                <input class="inputlabel-input input02" type="text" id="method01-input05" name="method01-input05" placeholder="年" required >
+                                                <label class="inputlabel-label is-pc inputlabel02" for="method01-input05">年</label>
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-inputblockrow inputblockrow05">
+                                            <div class="methoditem-inputblockttl">
+                                                支払方法： <span class="is-sp-inline">無金利分割払い</span>
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <div class="mr15 is-pc">
+                                                    無金利分割払い
+                                                </div>
+                                                <div class="item form-block-select">
+                                                    <select class="" name="method01-input06">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="methoditem-numofpayment">
+                                        <div class="methoditem-numofpaymentrow">
+                                            ※商品によって支払い回数上限が異なる場合がございます。<br>
+                                            一緒にご購入される商品によって、選択できる回数に限りがございます。
+                                        </div>
+                                        <div class="methoditem-numofpaymentrow">
+                                            <div class="row">
+                                                <div class="item">
+                                                    ・無金利対象商品A
+                                                </div>
+                                                <div class="value">
+                                                    <span class="sp-indent">2回、3回、6回、10回、12回</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="item">
+                                                    ・無金利対象商品B
+                                                </div>
+                                                <div class="value">
+                                                    <span class="sp-indent">2回、3回、6回、10回、12回、24回、36回</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-numofpaymentrow">
+                                            <div class="mb-sp20 fw-sp-medium">
+                                                上記の商品Aと商品Bを選択された場合
+                                            </div>
+                                            <div class="row">
+                                                <div class="item">
+                                                    ・支払方法選択では
+                                                </div>
+                                                <div class="value">
+                                                    <span class="sp-indent">2回、3回、6回、10回、12回</span><br class="is-sp"><span class="sp-indent mr-pc20">が選択可能</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="methoditem-note methoditem-personalinfo">
+                                        <h3 class="methoditem-noteitemttl">クレジットカードご利用時の個人情報利用について</h3>
+                                        <ul class="methoditem-noteitemlist">
+                                            <li class="methoditem-noteitemitem">ほげほげ</li>
+                                    </div>
+                                    <div class="methoditem-agreenotice">
+                                        <p> 上記内容にご同意のうえ更新ボタンを押してください </p>
+                                    </div>
+                                </div>
+                                <!-- 無金利分割クレジットカード決済 -->
+
+                                <!-- クレジットカード決済 -->
+                                <div class="methoditem methoditem02" id="js-pay-method02">
+                                    <div class="methoditem-lastcardselect">
+                                        <label class="radio-label">
+                                            <input type="radio" name="method02-1" value="1" checked >
+                                            <span class="radio-text">前回のお買い物で使用したクレジットカードを利用する</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="method02-1" value="2" >
+                                            <span class="radio-text">新しいクレジットカードを利用する</span>
+                                        </label>
+                                        <div class="readbtnwrap is-sp">
+                                            <input class="btn grey-btn radius-btn" type="submit" value="カード番号読み取り">
+                                        </div>
+                                    </div>
+
+                                    <div class="methoditem-cardselect">
+                                        <div class="methoditem-cardselectitem cardselectitem01">
+                                            <input type="checkbox" name="method02-2" value="1" id="method02-2-1">
+                                            <label for="method02-2-1" class="check-label">
+                                                <img src="./assets/img/cart/payment-item01.png" alt="">
+                                                <span>エディオンカード</span>
+                                            </label>
+                                        </div>
+                                        <div class="methoditem-cardselectitem cardselectitem02">
+                                            <input type="checkbox" name="method02-2" value="2" id="method02-2-2">
+                                            <label for="method02-2-2" class="check-label">
+                                                <img src="./assets/img/cart/payment-item02.png" alt="">
+                                                <span>100満ボルトカード</span>
+                                            </label>
+                                        </div>
+                                        <div class="methoditem-cardselectitem cardselectitem03 generalcard">
+                                            <input type="checkbox" name="method02-2" value="3" id="method02-2-3" >
+                                            <label for="method02-2-3" class="check-label generalcard-label">
+                                                <img class=" generalcard-img" src="./assets/img/cart/payment-item03.png" alt="">
+                                                <span>一般カード</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="methoditem-inputblock">
+                                        <div class="methoditem-inputblockrow inputblockrow01">
+                                            <div class="methoditem-inputblockttl">
+                                                カード番号：
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <input class="inputlabel-input" type="text" id="method02-input01" name="method02-input01" required >
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-inputblockrow inputblockrow02">
+                                            <div class="methoditem-inputblockttl">
+                                                カード名義人：
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <input class="inputlabel-input" type="text" id="method02-input02" name="method02-input02" required >
+                                                <span class="methoditem-inputblockinputnote">半角ローマ字・姓と名の間にスペースをご入力ください</span>
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-inputblockrow inputblockrow03">
+                                            <div class="methoditem-inputblockttl">
+                                                セキュリティコード：
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <input class="inputlabel-input" type="text" id="method02-input03" name="method02-input03" required >
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-inputblockrow inputblockrow04">
+                                            <div class="methoditem-inputblockttl">
+                                                有効期限：
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <input class="inputlabel-input" type="text" id="method02-input04" name="method02-input04" placeholder="月" required >
+                                                <label class="inputlabel-label is-pc" for="method02-input03">月</label>
+                                                <input class="inputlabel-input input02" type="text" id="method02-input04" name="method02-input04" placeholder="年" required >
+                                                <label class="inputlabel-label is-pc inputlabel02" for="method02-input04">年</label>
+                                            </div>
+                                        </div>
+                                        <div class="methoditem-inputblockrow inputblockrow05">
+                                            <div class="methoditem-inputblockttl">
+                                                支払方法： <span class="is-sp-inline">無金利分割払い</span>
+                                            </div>
+                                            <div class="methoditem-inputblockinput">
+                                                <label class="radio-label">
+                                                    <input type="radio" name="method02-input06" value="1" checked >
+                                                    <span class="radio-text">一括払い</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="method02-input06" value="2" >
+                                                    <span class="radio-text">リボ払い</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="method02-input06" value="3" >
+                                                    <span class="radio-text">ボーナス一括</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <input type="radio" name="method02-input06" value="4" >
+                                                    <span class="radio-text">分割払い</span>
+                                                </label>
+                                                <label class="radio-label">
+                                                    <div class="form-block-select">
+                                                        <select class="" name="method02-input07">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- 新しいクレジットカードを利用 -->
+
+                                    <div class="methoditem-note methoditem-note01">
+                                        <div class="methoditem-noteitem noteitem01">
+                                            <h3 class="methoditem-noteitemttl">エディオンカード、100満ボルトカードのお支払いについて</h3>
+                                            <ul class="methoditem-noteitemlist">
+                                                <li class="methoditem-noteitemitem">・分割払い月々2,000円からご利用いただけます。</li>
+                                                <li class="methoditem-noteitemitem">・ボーナス一括払い税込み1万円以上のお買物でご利用いただけます。</li>
+                                                <li class="methoditem-noteitemitem">※プリペイドカードでのお支払いはご利用いただけません。</li>
+                                                <li class="methoditem-noteitemitem">※エディオンカード会員様、100案ボルトカード会員様でも、一般カードでお支払いの場合はポイント付与はございません。</li>
+                                            </ul>
+                                        </div>
+                                        <div class="methoditem-noteitem noteitem02">
+                                            <h3 class="methoditem-noteitemttl">100満ボルトカードについて</h3>
+                                            <ul class="methoditem-noteitemlist">
+                                                <li class="methoditem-noteitemitem">100満ボルトカードの特典「分割金利0%」は、ネットショップではご利用いただけません。</li>
+                                                <li class="methoditem-noteitemitem">「ジャックス」発行の100満ボルトカードで、只今ボーナス一括払いがご利用いただけません。（近日ご利用可能予定）</li>
+                                            </ul>
+                                        </div>
+                                        <div class="methoditem-noteitem noteitem03">
+                                            <h3 class="methoditem-noteitemttl">ご利用可能なカードについて</h3>
+                                            <ul class="methoditem-noteitemlist">
+                                                <li class="methoditem-noteitemitem">ご利用可能なクレジットカードは3Dセキュア対応の「JCB、VISA、MASTER、アメリカンエキスプレス」4社のカードおよびエディオンカード・100満ボルトカードです。</li>
+                                            </ul>
+                                        </div>
+                                        <div class="methoditem-noteitem noteitem04">
+                                            <h3 class="methoditem-noteitemttl">ご注意</h3>
+                                            <ul class="methoditem-noteitemlist">
+                                                <li class="methoditem-noteitemitem">クレジットブランドのついたデビットカードでのお支払いは推奨しておりません。</li>
+                                                <li class="methoditem-noteitemitem">※ご使用の場合はご注文当日に口座から引き落としが実施されます。</li>
+                                                <li class="methoditem-noteitemitem indent">ご注文をキャンセルした場合のご返金には35日から最大60日必要となりますので、あらかじめご了承ください。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="methoditem-note methoditem-note02 methoditem-personalinfo">
+                                        <h3 class="methoditem-noteitemttl">クレジットカードご利用時の個人情報利用について</h3>
+                                        <ul class="methoditem-noteitemlist">
+                                            <li class="methoditem-noteitemitem">ほげほげ</li>
+                                    </div>
+                                    <div class="methoditem-checkbox">
+                                        <div class="check-labelwrap">
+                                            <input type="checkbox" name="check01" value="1" id="check01" checked >
+                                            <label class="check-label02" for="check01">
+                                                <span class="">次回のお買い物でこのクレジットカードを利用する</span>
+                                            </label>
+                                        </div>
+                                        次回のお買い物で同じクレジットカードをご利用になられる場合、カード番号、有効期限、セキュリティコードの入力を省略いただけます。
+                                    </div>
+                                    <div class="methoditem-agreenotice">
+                                        <p> 上記内容にご同意のうえ更新ボタンを押してください </p>
+                                    </div>
+
+                                </div>
+
+                                <!-- クレジットカード決済 -->
+
+                                <!-- モバイル決済 -->
+                                <div class="methoditem methoditem03" id="js-pay-method03">
+                                    <div class="methoditem-brandlogo">
+                                        <div class="methoditem-brandlogoitem brandlogoitem01" data-id="brandterms01">
+                                            <img src="./assets/img/cart/logo-paypay.png" alt="PayPay">
+                                        </div>
+                                        <div class="methoditem-brandlogoitem brandlogoitem02" data-id="brandterms02">
+                                            <img src="./assets/img/cart/logo-aupay.png" alt="auPAY">
+                                        </div>
+                                        <div class="methoditem-brandlogoitem brandlogoitem03" data-id="brandterms03">
+                                            <a href='https://checkout.rakuten.co.jp/' target='_blank'><img alt='楽天ペイ' src='https://checkout.rakuten.co.jp/rpay/logo/s_sb_20059.jpg' border='0' ></a>
+                                        </div>
+                                        <!-- <div class="methoditem-brandlogoitem brandlogoitem04" data-id="brandterms04">
+                                            <img src="./assets/img/cart/logo-dpay.png" alt="d払い">
+                                        </div> -->
+                                    </div>
+                                    <div class="methoditem-terms">
+                                        <!-- PayPay 規約 -->
+                                        <div id="brandterms01" class="methoditem-note brandterms">
+                                            <div class="methoditem-noteitem noteitem01">
+                                                <h3 class="methoditem-noteitemttl">PayPayオンライン決済</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li>PayPayオンライン決済は「PayPay残高からの支払い」のみご利用が可能です。（事前にPayPay残高にチャージしてからご利用下さい。）ご注文前にPayPay支払い内容のご確認をお願いいたします。</li>
+                                                </ul>
+                                            </div>
+                                            <div class="methoditem-noteitem noteitem02">
+                                                <h3 class="methoditem-noteitemttl">【ご注意】モバイル決済(PayPay）について必ずご確認ください。</h3>
+                                                <ul class="methoditem-noteitemlist list01">
+                                                    <li class="methoditem-noteitemitem">①PayPayオンライン決済は「残高からの支払い」のみご利用可能です。</li>
+                                                    <li class="methoditem-noteitemitem">②ご利用の端末のブラウザを「プライベートモード」「シークレットモード」でご利用の場合、PayPayアプリ経由で決済が完了せず、エラーとなります。 ブラウザのモードを解除してから、ご注文手続きをお願いします。</li>
+                                                </ul>
+                                                <ul class="methoditem-noteitemlist list02">
+                                                    <li class="methoditem-noteitemitem">◯次ページ「注文を確定する」ボタンクリックでモバイル決済ページへ遷移します。<br><span class="indent">遷移先ページでモバイル決済の手続きをお願いします。</span></li>
+                                                    <li class="methoditem-noteitemitem">◯モバイル決済の手続きが完了しても、注文は完了していません。<br> <span class="indent">エディオンネットショップのページに戻り「ご注文の完了」ページまでお進みください。</span></li>
+                                                    <li class="methoditem-noteitemitem"><span class="indent">※「ご注文完了」ページ表示まではブラウザを閉じずお待ちください。</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="methoditem-noteitem noteitem03">
+                                                <h3 class="methoditem-noteitemttl">各種キャンペーンについて</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">◯「店舗受取のご注文」は対象外です。</li>
+                                                    <li class="methoditem-noteitemitem">◯PayPayオンライン決済手続き完了後、エディオンネットショップの「ご注文完了」ページにお進みいただけなかった場合はキャンペーン対象外です。</li>
+                                                    <li class="methoditem-noteitemitem">◯PayPayオンライン決済手続き画面にて「当選」等の告知が出ても、エディオンネットショップの「ご注文完了」ページにお進みいただけなかった場合は、「当選」は取消しとなりますのでご注意ください。</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- PayPay 規約 -->
+                                        <!-- auPay 規約 -->
+                                        <div id="brandterms02" class="methoditem-note brandterms">
+                                            <div class="methoditem-noteitem noteitem01">
+                                                <h3 class="methoditem-noteitemttl">auPay</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                            <div class="methoditem-noteitem noteitem02">
+                                                <h3 class="methoditem-noteitemttl">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">①ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">②ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                            <div class="methoditem-noteitem noteitem03">
+                                                <h3 class="methoditem-noteitemttl">各種キャンペーンについて</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- auPay 規約 -->
+                                        <!-- 楽天Pay 規約 -->
+                                        <div id="brandterms03" class="methoditem-note brandterms">
+                                            <div class="methoditem-noteitem noteitem01">
+                                                <h3 class="methoditem-noteitemttl">楽天Pay</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                            <div class="methoditem-noteitem noteitem02">
+                                                <h3 class="methoditem-noteitemttl">【ご注意】モバイル決済(PayPay）について必ずご確認ください。</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">①ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">②ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                            <div class="methoditem-noteitem noteitem03">
+                                                <h3 class="methoditem-noteitemttl">各種キャンペーンについて</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- 楽天Pay 規約 -->
+                                        <!-- d払い 規約 -->
+                                        <div id="brandterms04" class="methoditem-note brandterms">
+                                            <div class="methoditem-noteitem noteitem01">
+                                                <h3 class="methoditem-noteitemttl">d払い</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                            <div class="methoditem-noteitem noteitem02">
+                                                <h3 class="methoditem-noteitemttl">【ご注意】モバイル決済(PayPay）について必ずご確認ください。</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">①ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">②ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                            <div class="methoditem-noteitem noteitem03">
+                                                <h3 class="methoditem-noteitemttl">各種キャンペーンについて</h3>
+                                                <ul class="methoditem-noteitemlist">
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                    <li class="methoditem-noteitemitem">◯ダミーテキストダミーテキストダミーテキストダミーテキスト</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- d払い 規約 -->
+                                    </div>
+                                </div>
+                                <!-- モバイル決済 -->
+
+                                <!-- 銀行振込(前払い) -->
+                                <div class="methoditem methoditem04" id="js-pay-method04">
+                                    <div class="methoditem-note">
+                                        <div class="methoditem-noteitem noteitem01">
+                                            <h3 class="methoditem-noteitemttl">銀行振込支払い時の商品の手配について</h3>
+                                            <ul class="methoditem-noteitemlist">
+                                                <li class="methoditem-noteitemitem">・ご注文時点で「在庫目安」が在庫有りの場合でも、入金確認後の商品手配時に在庫が無い場合は、<br><span class="indent">その時点からの在庫手配となります。商品によりましては、お時間をいただきますので予めご了承のほどお願いいたします。</span></li>
+                                                <li class="methoditem-noteitemitem">・ご入金の確認後から商品手配を行います。（ご注文の時点では、商品手配は完了しておりません。）</li>
+                                                <li class="methoditem-noteitemitem">・「出荷目安」はご入金の確認後からの出荷目安となります。（ご注文時点からの出荷目安ではございません。）</li>
+                                            </ul>
+                                        </div>
+                                        <div class="methoditem-noteitem noteitem02">
+                                            <ul class="methoditem-noteitemlist">
+                                                <li class="methoditem-noteitemitem">※お振り込みは、注文完了後、サイトおよび、注文受付メールに記載する三菱UFJ銀行の「特定口座番号」にお願いいたします。</li>
+                                                <li class="methoditem-noteitemitem">※振込手数料はお客様負担となります。</li>
+                                                <li class="methoditem-noteitemitem">※ご注文日より1週間以内（土日、祝日を含む7日間）にお支払い手続きをお願いいたします。</li>
+                                                <li class="methoditem-noteitemitem">※このお支払い方法では、配達の日時指定をご利用できません。</li>
+                                                <li class="methoditem-noteitemitem">※エディオン株主優待券のご利用については、こちらよりご確認をお願いいたします。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 銀行振込(前払い) -->
+
+                                <!-- 代金引換 -->
+                                <div class="methoditem methoditem05" id="js-pay-method05">
+                                    <div class="methoditem-note">
+                                        <h3 class="methoditem-noteitemttl">代金引換について</h3>
+                                        <div class="methoditem-noteitem">
+                                            <ul class="methoditem-noteitemlist">
+                                                <li class="methoditem-noteitemitem">代引手数料はお客様負担となります。一律550円（税込）です。</li>
+                                                <li class="methoditem-noteitemitem">※30万円（税込）以上のお買い上げは、代金着払いでの決済はできません。</li>
+                                                <li class="methoditem-noteitemitem">※代金引換でのお支払いの場合、ポスト投函の選択はできません。</li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 代金引換 -->
+
+                            </div>
+                            <div class="modal-block-btnwrap">
+                                <span class="modal-block-firstbtn js-close btn outline-btn radius-btn">閉じる</span>
+                                <button id="js-modal-block-lastbtn" class="modal-block-lastbtn btn black-btn radius-btn" type="submit">更新</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<%- include('../includes/_footer'); %>

@@ -1,0 +1,6056 @@
+@import '../mixins/**';
+@import '../config';
+
+$cart-blue: #235192;
+$radiobtn: #0776b1;
+
+.bg-grey { background: $grey-color; }
+
+.border-top { border-top: 1px solid $bd-color1; }
+.border-bottom { border-bottom: 1px solid $bd-color1; }
+
+
+$initType: 'normal';
+// normal => height: 40px
+// high => height: 48px
+// low => height: 36px
+@mixin _btn($type: $initType, $width, $sp-width: 100%){
+    @if( $type == 'normal'){
+        width: $width;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 500;
+        @include media-is-pc {
+            padding: 5px !important;
+        }
+        @include media-sp {
+            width: 100%;
+            padding: 11px !important;
+            height: 50px !important;
+        }
+    }
+
+    @else if( $type == 'high' ){
+        width: $width;
+        padding: 15.5px !important;
+        font-size: 12px;
+        font-weight: 700;
+        @include media-sp {
+            width: 100%;
+        }
+    }
+
+    @else if( $type == 'low' ){
+        width: $width;
+
+        padding: 5px !important;
+        font-size: 14px;
+        font-weight: 500;
+        @include media-is-pc {
+            height: 36px !important;
+        }
+        @include media-sp {
+            width: $sp-width !important;
+            height: 40px !important;
+        }
+    }
+
+}
+
+
+
+
+// -----------------------------------------------
+// Modal Start
+// -----------------------------------------------
+
+.modal-block {
+    // width: 90%;
+    width: 800px;
+    @include media-sp {
+        width: 100%;
+        top: 62px;
+        transform: translate(-50%, 0);
+        border-top: 1px solid $bd-color1;
+    }
+
+    .modal-block-inner01 {
+        padding: 42px 50px 48px;
+        z-index: 4;
+        background: #fff;
+        @include media-sp {
+            position: relative;
+            padding: 66px 9.333333% 44px;
+        }
+
+        // 上部 左戻るボタン
+        .modal-block-return {
+            position: absolute;
+            top: 12px;
+            left: calc(30 / 750 * 100%);
+
+            &btn {
+                position: relative;
+                display: block;
+                border: 1px solid #707070;
+                border-radius: 4px;
+                font-size: 13px;
+                font-weight: 500;
+                height: 26px;
+                padding: 4px 18px;
+                text-decoration: underline;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    left: 6px;
+                    transform: translate(0, -50%);
+                    border-style: solid;
+                    border-width: 4.5px 6px 4.5px 0;
+                    border-color: transparent #333 transparent transparent;
+                }
+            }
+        }
+
+
+        .modal-block-ttl {
+            margin-bottom: 28px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.45;
+            @include media-sp {
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-weight: 700;
+                text-align: left;
+            }
+        }
+
+        .modal-block-inner-content {
+            max-height: 62vh;
+            @include media-sp {
+                max-height: calc(100vh - 356px);
+
+            }
+        }
+
+        h3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            @include media-sp {
+                font-size: 14px;
+            }
+        }
+
+        p {
+            font-size: 13px;
+            @include media-sp {
+                font-size: 14px;
+            }
+        }
+
+
+        .modal-block-btnwrap {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            @include media-sp {
+                flex-direction: column-reverse;
+                margin-top: 32px;
+            }
+
+            >* {
+                cursor: pointer;
+                @include _btn($width: 180px);
+
+                @include media-is-pc {
+                    border-radius: 0 !important;
+                }
+
+                @include media-sp {
+                    width: 100%;
+                }
+
+                &.modal-block-firstbtn {
+                    padding: 8px !important;
+                    &:hover {
+                        opacity: .8;
+                    }
+                    @include media-is-pc {
+                        margin-right: 20px;
+                    }
+                }
+                &.modal-block-lastbtn {
+                    @include media-sp {
+                        margin-bottom: 20px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+// -----------------------------------------------
+// Modal End
+// -----------------------------------------------
+
+// -----------------------------------------------
+// CheckBox Start
+// ------------------------------
+input[type="checkbox"] {
+    display: none;
+}
+
+
+// チェックボックス01
+.check-label {
+    cursor: pointer;
+    display: flex;
+    border: 1px solid $bd-color1;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+input[type="checkbox"]:not(:checked) + .check-label {
+    border: 1px solid $bd-color1;
+}
+
+input[type="checkbox"]:checked + .check-label {
+    border: 1px solid #235192;
+}
+// チェックボックス01
+
+
+// チェックボックス02 Start
+.check-label02 {
+    position:relative;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    span {
+        margin-left: 12px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
+
+input[type="checkbox"]:not(:checked) + .check-label02:before {
+    background-image: url('../img/common/checkbox-0.svg');
+}
+
+
+input[type="checkbox"]:checked + .check-label02:before {
+    background-image: url('../img/common/checkbox-1.svg');
+}
+// チェックボックス02  End
+
+// -----------------------------------------------
+// CheckBox End
+// -----------------------------------------------
+
+// -----------------------------------------------
+// RadioButton Start
+// -----------------------------------------------
+input[type="radio"] {
+    display: none;
+}
+
+.radio-label {
+    display: block;
+}
+
+
+.radio-text {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    &:before {
+        content: "";
+        width: 17px;
+        height: 17px;
+        margin-right: 6px;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 3px;
+        background-color: #fff;
+    }
+}
+input[type="radio"]:not(:checked) + .radio-text:before {
+    border-color: #72767b;
+}
+
+input[type="radio"]:checked + .radio-text:before {
+    border-color: #707070;
+    background-color: $radiobtn;
+    background-clip: content-box;
+    border-width: 2px;
+}
+
+
+// -----------------------------------------------
+// RadioButton End
+// -----------------------------------------------
+
+// -----------------------------------------------
+// inputText Start
+// -----------------------------------------------
+
+// normal => height: 40px
+// high => height: 48px
+@mixin _inputtext($width, $sp-width: 100%) {
+    width: $width;
+    height: 36px;
+    padding: 4px 0 4px 1em;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px;
+    resize: none;
+    font-size: 14px;
+    font-weight: 500;
+    @include media-sp {
+        width: $sp-width;
+        height: 40px;
+        font-size: 13px;
+    }
+    &::placeholder {
+        color: $grey-color;
+    }
+}
+
+
+// -----------------------------------------------
+// inputText End
+// -----------------------------------------------
+
+
+// ------------------------------
+// No23.ショッピングカート Start
+// ------------------------------
+#cart {
+    .main-contentttl {
+        padding-bottom: 26px;
+        @include media-sp {
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    .cart-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        @include media-is-pc {
+            padding: 0 18px;
+        }
+        @include media-sp {
+            padding: 0 15px;
+        }
+    }
+
+    .cartblock {
+        @include media-is-pc {
+            margin-bottom: 40px;
+        }
+        @include media-sp {
+            border-top: 1px solid $bd-color1;
+        }
+
+        &:first-of-type {
+            @include media-is-pc {
+                border-bottom: 2px solid $bd-color1;
+                border-top: 1px solid $bd-color1;
+            }
+            margin-bottom: 0;
+        }
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+
+        @include media-sp {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+
+        &-ttl {
+            display: flex;
+            align-items: center;
+            @include media-is-pc {
+                height: 76px;
+            }
+
+            @include media-sp {
+                padding: 9px 0 20px 0;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &.cartblock-ttl02 {
+                @include media-sp {
+                    padding: 20px 0 20px 0;
+                }
+
+            }
+
+            &left {
+                width: calc(100% - 270px - 46px);
+                max-width: 964px;
+                margin-right: 20px;
+                @include media-sp {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+
+            &heading {
+                font-size: 15px;
+                font-weight: 500;
+                @include media-sp {
+                    font-size: 14px;
+                    line-height: calc(48/28);
+                }
+            }
+            &right {
+                max-width: 296px;
+                width: 100%;
+                &item {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        font-size: 15px;
+                        color: #007185;
+                        font-weight: 500;
+                        margin-right: 2px;
+                        &:after {
+                            display: block;
+                            content: "";
+                            width: 8px;
+                            height: 8px;
+                            border-right: 2px solid #007185;
+                            border-top: 2px solid #007185;
+                            display: inline-block;
+                            transform: rotate(45deg);
+                        }
+                        @include media-sp {
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &-content {
+            display: flex;
+            @include media-sp {
+                flex-direction: column;
+            }
+            // 商品ブロック
+            &left {
+                // display: none;
+                max-width: 964px;
+                width: calc(100% - 270px - 46px);
+                margin-right: 20px;
+                @include media-is-pc {
+                    // border-top: 1px solid $bd-color1;
+                }
+                @include media-sp {
+                    width: 100%;
+                    margin-right: 0;
+                }
+                section {
+                    margin-bottom: 0;
+                    padding: 0;
+                    @include media-sp {
+                        margin-left: -15px;
+                        margin-right: -15px;
+                    }
+                    .inner {
+                        padding-left: 0;
+                        padding-right: 0;
+                        @include media-sp {
+                            // padding-left: 15px;
+                            // padding-right: 15px;
+                        }
+                    }
+                }
+
+
+
+
+                .item-wrap {
+                    margin-bottom: 45px;
+                    border-radius: 4px;
+
+                    @include media-sp {
+                        margin-bottom: 0px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                }
+
+                // 各商品ブロック
+                .item {
+                    display: flex;
+                    background: #F7F7F7;
+                    padding: 42px 32px 39px 19px;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $bd-color1;
+                    }
+
+                    &.item-first {
+                        border-radius: 4px 4px 0 0 ;
+                    }
+                    &.item-last {
+                        border-radius: 0 0 4px 4px;
+                    }
+                    &.item-single {
+                        border-radius: 4px;
+                    }
+
+                    @include media-sp {
+                        background: #F7F7F7;
+                        padding: 19px 15px 20px 15px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+
+
+
+                    // - 商品画像
+                    // - アイコン
+                    &-left {
+                        @include media-is-pc {
+                            // width: 260px;
+                            width: calc(260 / 877 * 100%);
+                            margin-right: 37px;
+                        }
+                        @include media-sp {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-right: 0;
+                        }
+                        .item-sp-left {
+                            @include media-sp {
+                                width: calc(300 / 630 * 100%);
+                            }
+                        }
+                        &prodimg  {
+                            margin: 0 auto 17px;
+                            @include media-sp {
+                                margin: 0 auto ;
+                            }
+                            a {
+                                display: block;
+                            }
+                        }
+
+                        &icon {
+                            display: flex;
+                            width: calc(60 / 260 * 100%);
+                            @include media-sp {
+                                flex-wrap: wrap;
+                                width: calc(300 / 630 * 100%);
+                                margin-top: 9px;
+                                margin-bottom: 40px;
+                            }
+                            img {
+                                @include media-is-pc {
+                                    &:not(:last-child) {
+                                        margin-right: 7px;
+                                    }
+                                }
+                                @include media-sp {
+                                    width: calc(93 / 300 * 100%);
+                                    &:not(:last-child) {
+                                        margin-bottom: 7px;
+                                    }
+                                    &:nth-of-type(-n + 2) {
+                                        margin-right: calc(10 / 300 * 100%);
+                                    }
+                                }
+
+                            }
+                        }
+
+
+                        // JS動作後
+                        .item-rightproddetail {
+                            @include media-sp {
+                                width: calc(306 / 630 * 100%);
+                            }
+                        }
+                    }
+
+                    // - 商品詳細
+                    // - 保証詳細
+                    // - 小計
+                    // - 設置工事詳細
+                    // - 付属品
+                    &-right {
+                        @include media-is-pc {
+                            width: calc(580 / 877 * 100%);
+                        }
+
+                        @include media-sp {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                        }
+
+                        // 商品詳細
+                        &proddetail {
+                            @include media-is-pc {
+                                margin-bottom: 31px;
+                            }
+
+                            .name, .type {
+                                font-size: 15px;
+                                font-weight: 500;
+                                line-height: calc(21/15);
+                                @include media-sp {
+                                    font-size: 14px;
+                                    line-height: calc(48/28);
+                                }
+                            }
+                            .type {
+                                color: #707070;
+                                padding-top: 10px;
+                                @include media-is-pc {
+                                    margin-bottom: 15px;
+                                }
+                                @include media-sp {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            .price  {
+                                margin-bottom: 26px;
+                                color:red;
+                                font-size: 18px;
+                                @include media-sp {
+                                    font-size: 14px;
+                                    margin-bottom: 17px
+                                }
+                            }
+                            .quantity {
+                                * {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+
+                        // JSで要素移動のため親要素から除外
+                        .sp-quantity-wrap {
+                            @include media-sp {
+                                width: calc(306 / 630 * 100%);
+                            }
+                        }
+
+                        .quantity {
+                            display: flex;
+                            align-items: center;
+                            @include media-sp {
+                                flex-wrap: wrap;
+                            }
+                            .form-block-select {
+                                border: 1px solid #707070;
+                                @include media-is-pc {
+                                    margin-right: 14px;
+                                }
+
+                                select {
+                                    min-width: 80px;
+                                    height: 28px;
+                                    padding: 0 28px 0 8px;
+                                    @include media-sp {
+                                        min-width: 105px;
+                                        height: 40px;
+                                    }
+                                }
+                            }
+                            &-remove {
+                                @include media-sp {
+                                    margin: 9px 0 0 auto;
+                                }
+                                a {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+
+                        // 保証詳細
+                        &warranty {
+                            a {
+                                text-decoration: underline;
+                            }
+                            @include media-sp {
+                                width: 100%;
+
+                            }
+                            &row {
+                                display: flex;
+                                &:not(:last-child) {
+                                    margin-bottom: 25px;
+                                    @include media-sp {
+                                        margin-bottom: 19px;
+                                    }
+                                }
+                            }
+                            * {
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: calc(20/14);
+                                @include media-sp {
+                                    line-height: calc(48/28);
+                                }
+                            }
+                            .warranty,
+                            .point,
+                            .stock  {
+                                .ttl  {
+                                    @include media-sp {
+                                        width: calc(218 / 630 * 100%);
+                                    }
+                                }
+                                .value  {
+                                    @include media-sp {
+                                        width: calc(412 / 630 * 100%);
+                                    }
+                                }
+                            }
+                            .warranty, .point {
+                                .ttl {
+                                    font-size: 13px;
+                                    padding-left: 34px;
+                                    position: relative;
+                                    @include media-sp {
+                                        font-size: 14px;
+                                    }
+                                    &:before {
+                                        position: absolute;
+                                        top: -2px;
+                                        left: 0;
+                                        content: '';
+                                        background-repeat: no-repeat;
+                                        @include media-sp {
+                                            top: 0;
+                                        }
+                                    }
+                                }
+                                .value  {
+                                    @include media-is-pc {
+                                        margin-top: -2px;
+                                    }
+                                }
+                            }
+                            .warranty {
+                                .ttl {
+                                    &:before {
+                                        background-image: url('../img/cart/icon-security.png');
+                                        width: 24px;
+                                        height: 24px;
+                                        background-size: 100%;
+                                    }
+                                }
+                            }
+                            .point {
+                                .ttl {
+                                    &:before {
+                                        background-image: url('../img/cart/icon-point.png');
+                                        width: 22px;
+                                        height: 22px;
+                                        background-size: 100%;
+                                    }
+                                }
+                            }
+                            .stock {
+                                @include media-sp {
+                                    margin-bottom: 20px;
+                                }
+                                .ttl {
+                                    min-width: 99px;
+                                }
+                            }
+
+                            .favorite ,
+                            .checksheet {
+                                button {
+                                    font-size: 12px;
+                                }
+
+                            }
+
+                            .favorite {
+                                @include media-sp {
+                                    margin-bottom: 28px;
+                                }
+                                button {
+                                    width: 296px;
+                                    background: #e6e6e6;
+                                    height: 30px;
+                                    border-radius: 4px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    @include media-sp {
+                                        width: calc(380 / 630 * 100%);
+                                    }
+                                    &:before {
+                                        margin-right: 10px;
+                                        display: inline-block;
+                                        content: '';
+                                        background-image: url('../img/cart/icon-favorite.png');
+                                        background-repeat: no-repeat;
+                                        width: 18px;
+                                        height: 16px;
+                                        background-size: 100%;
+                                    }
+
+                                }
+
+                                &.favorite01 {
+                                    background: #7eaeed;
+                                    @include media-sp {
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                            }
+
+                            .checksheet {
+                                button {
+                                    width: 296px;
+                                    border: 1px solid $bd-color1;
+                                    border-radius: 4px;
+                                    background: #fff;
+                                    height: 48px;
+                                    @include media-sp {
+                                        width: 100%j;
+                                    }
+                                }
+                            }
+
+                            &.warranty02 {
+                                margin-bottom: 35px;
+                                .favorite {
+                                    @include media-sp {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+
+                            &.warranty03 ,
+                            &.warranty04 {
+                                .favorite {
+                                    @include media-sp {
+                                        margin-bottom: 0;
+                                    }
+                                    display: flex;
+                                    align-items: center;
+                                    @include media-sp {
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                    }
+
+                                    a {
+                                        text-decoration: underline;
+                                        font-size: 12px;
+                                        @include media-is-pc {
+                                            margin-right: 27px;
+                                        }
+                                        @include media-sp {
+                                            margin-bottom: 20px;
+                                        }
+                                    }
+
+                                    .favorite-wrapping,
+                                    .favorite-shop,
+                                    .favorite-editdelivery {
+                                        display: flex;
+                                        align-items: center;
+
+                                        &:before {
+                                            background-repeat: no-repeat;
+                                            content: '';
+                                            margin-right: 6px;
+                                            background-size: 100%;
+                                        }
+                                    }
+                                    .favorite-wrapping {
+                                        &:before {
+                                            width: 15px;
+                                            height: 18px;
+                                            background-image: url('../img/cart/icon-wrapping.png');
+                                        }
+                                    }
+                                    .favorite-shop {
+                                        &:before {
+                                            width: 15px;
+                                            height: 15px;
+                                            background-image: url('../img/cart/icon-store.png');
+                                        }
+                                    }
+                                    .favorite-editdelivery {
+                                        &:before {
+                                            width: 19px;
+                                            height: 15px;
+                                            background-image: url('../img/cart/icon-delivery.png');
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+                        // - 小計
+                        // - 設置工事詳細
+                        // - 付属品
+                        &settlement, &edit, &accessory {
+                            @include media-sp {
+                                width: 100%;
+                            }
+                            * {
+                                font-size: 14px;
+                                line-height: calc(40/14);
+                            }
+
+                            .tax {
+                                font-size: 10px;
+                                line-height: calc(40/10);
+                            }
+                            .settlement-row,
+                            .accessory-row {
+                                display: flex;
+                                justify-content: space-between;
+
+                            }
+                            .edit-row {
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                        }
+
+                        &settlement {
+                            margin-bottom: 25px;
+                            @include media-sp {
+                                margin-bottom: 15px;
+                            }
+                            padding: 9px 0;
+                            border-top: 1px solid #707070;
+                            border-bottom: 1px solid #707070;
+                            .settlement-construction {
+                                margin-bottom: 9px;
+
+                            }
+                            .settlement-total {
+                                border-top: 1px solid #e6e6e6;
+                                padding-top: 9px;
+                                .total {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        &edit {
+                            margin-bottom: 21px;
+                            @include media-sp {
+                                margin-bottom: 30px;
+                            }
+                            a {
+                                font-size: 12px;
+                                text-decoration: underline;
+                            }
+                            .edit-confirm,
+                            .edit-remove {
+                                display: flex;
+                                align-items: center;
+                                &:before {
+                                    margin-right: 6px;
+                                    content: '';
+                                }
+                            }
+                            .edit-confirm {
+                                &:before {
+                                    background-image: url('../img/cart/icon-edit.png');
+                                    width: 18px;
+                                    height: 18px;
+                                    background-size: 100%;
+                                }
+                            }
+                            .edit-remove {
+                                &:before {
+                                    background-image: url('../img/cart/icon-trash.png');
+                                    width: 12px;
+                                    height: 16px;
+                                    background-size: 100%;
+                                }
+                            }
+
+                        }
+
+                        &accessory {
+                            .accessory-row {
+                                * {
+                                    @include media-sp {
+                                        line-height: 1;
+                                    }
+                                }
+                                border: 1px solid $bd-color1;
+                                border-radius: 4px;
+                                background: #fff;
+
+                                @include media-is-pc {
+                                    padding: 9px  14px 9px 23px;
+                                }
+                                @include media-sp {
+                                    background: #fff;
+                                    padding: 14px 15px;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                }
+                                &:not(:last-child) {
+                                    margin-bottom: 19px;
+                                }
+                                .accessory-price {
+                                    @include media-is-pc {
+                                        margin-left: calc(46 / 449 * 100%);
+                                    }
+                                }
+
+                                @include media-sp {
+                                    .accessory-item {
+                                        order: 1;
+                                        margin-bottom: 10px;
+                                    }
+                                    .accessory-price {
+                                        order: 3;
+                                    }
+                                    .accessory-quantity {
+                                        order: 2;
+                                        margin-bottom: 15px;
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                    }
+                }
+                // 各商品ブロック
+            }
+
+
+            .coupon, .sidebar-item {
+                * {
+                    @include media-is-pc {
+                        font-size: 14px;
+                        line-height: 1;
+                        font-weight: 500;
+                    }
+                }
+                &-row {
+                    border-bottom: 1px solid $bd-color1;
+                    padding: 22px 28px 23px 23px;
+                    @include media-sp {
+                        padding: 20px 0 19px 0;
+                        border-top: none;
+                        border-left: none;
+                        border-right: none;
+                    }
+                    &:last-of-type {
+                        @include media-sp {
+                            border-bottom: none;
+                        }
+                    }
+
+                    &.coupon-row02 {
+                        .coupon-ttl {
+                            @include media-sp {
+                                margin-bottom: 24px;
+                            }
+                        }
+
+                        .giftcard {
+                            display: flex;
+                            align-items: center;
+                            * {
+                                @include media-sp {
+                                    font-size: 14px;
+                                }
+                            }
+
+                            &:not(:last-child) {
+                                margin-bottom: 17px;
+                            }
+
+                            @include media-sp {
+                                padding-bottom: 19px;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                border-bottom: 1px solid $bd-color1;
+                            }
+
+                            &num,
+                            &price,
+                            &date {
+                                @include media-is-pc {
+                                    margin-right: 32px;
+                                }
+                                @include media-sp {
+                                    margin-bottom: 19px;
+                                }
+                            }
+
+                            &input {
+                                @include media-is-pc {
+                                    margin-right: 14px;
+                                }
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                input {
+                                    width: 80px;
+                                    height: 28px;
+                                    margin-left: 8px;
+                                    border: 1px solid #707070;
+                                    @include media-sp {
+                                        width: 90px;
+                                        height: 34px;
+                                    }
+                                    ::placeholder {
+                                        @include media-sp {
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                            &remove {
+                                a{
+                                    text-decoration: underline;
+                                    @include media-sp {
+                                        font-size: 12px;
+                                    }
+                                }
+                                @include media-sp {
+                                    margin-left: 36px;
+                                }
+                            }
+                        }
+                    }
+
+                    &.coupon-row04 {
+                        .row-desc {
+                            &:first-of-type {
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 9px;
+                                @include media-sp {
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                }
+                            }
+                            .row-descttl {
+                                @include media-is-pc {
+                                    margin-right: 37px;
+                                }
+                                @include media-sp {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+
+                    }
+
+                    &.coupon-row06 {
+                        .coupon-ttl {
+                            @include media-is-pc {
+                                margin-bottom: 24px;
+                            }
+                        }
+
+                        .coupon-value {
+                            margin-bottom: 28px;
+                            display: flex;
+                            justify-content: space-between;
+                            @include media-sp {
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+
+                            .value-detail {
+                                @include media-is-pc {
+                                    width: calc(320 / 869 * 100%) ;
+                                }
+                                @include media-sp {
+                                    margin-bottom: 13px;
+                                    width: 100%;
+                                }
+                            }
+
+                            .value-link {
+                                @include media-is-pc {
+                                    width: calc(507 /869 * 100%);
+                                }
+
+                                a {
+                                    display: inline-block;
+                                    @include media-sp {
+                                        display: block;
+                                    }
+                                    &:not(:last-child) {
+                                        @include media-is-pc {
+                                            margin-right: 31px;
+                                        }
+                                        @include media-sp {
+                                            margin-bottom: 6px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .coupon-receive {
+                            a {
+                                text-decoration: underline;
+                            }
+                            &desc {
+                                margin-bottom: 25px;
+                                @include media-sp {
+                                    margin-bottom: 18px;
+                                }
+                                &ttl {
+                                    margin-bottom: 13px;
+                                }
+                                &desc {
+                                    span {
+                                        line-height: calc(11/24) ;
+
+                                    }
+                                }
+                            }
+                            &btn {
+                                display: flex;
+                                @include media-sp {
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                }
+                                &item {
+                                    padding: 9px 24px 10px 14px;
+                                    width: calc(255/877 * 100%);
+                                    display: flex;
+                                    justify-content: space-between;
+                                    border: 1px solid $bd-color1;
+                                    border-radius: 4px;
+                                    &:not(:last-child) {
+                                        @include media-is-pc {
+                                            margin-right: 17px;
+                                        }
+                                        @include media-sp {
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+                                    @include media-sp {
+                                        width: calc(463 / 690 * 100%);
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                        .accountdetail {
+                            &-row {
+                                line-height: calc(17 / 12);
+                                &:not(:last-child) {
+                                    margin-bottom: 16px;
+                                    @include media-sp {
+                                        margin-bottom: 5px;
+                                    }
+                                }
+                                * {
+                                    @include media-sp {
+                                        font-size: 12px;
+                                        line-height: calc(56/24);
+                                    }
+                                }
+                                &.accountdetail-row02,
+                                &.accountdetail-row03,
+                                &.accountdetail-row04 {
+                                    display: flex;
+                                    .accountdetail-item {
+                                        min-width: 96px;
+                                        @include media-sp {
+                                            min-width: calc(196 / 690 * 100%);
+                                        }
+                                    }
+                                    .accountdetail-value {
+                                        @include media-sp {
+                                            min-width: calc(494 / 690 * 100%);
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
+                    }
+
+
+                }
+
+                &-ttl {
+                    margin-bottom: 12px;
+                    @include media-sp {
+                        line-height: calc(50/28);
+                    }
+                }
+
+                &-link {
+                    a {
+                        text-decoration: underline;
+                        &:after {
+                            margin-left: 8px;
+                            display: inline-block;
+                            content: '';
+                            background-image: url('../img/common/icon-plus.svg');
+                            width: 15px;
+                            height: 15px;
+                            background-size: 100%;
+                            vertical-align: middle;
+                            margin-bottom: 2px;
+                        }
+                    }
+                    &lift {
+                        a {
+                            &:after {
+                                background-image: url('../img/common/icon-close.svg');
+                            }
+                        }
+                    }
+                    &.flex-end {
+                        @include media-is-pc {
+                            display: flex;
+                            justify-content: flex-end;
+                            @include media-is-pc {
+                                margin-top: -18px;
+                            }
+                        }
+                    }
+                }
+
+                .small {
+                    *  {
+                        font-size: 12px;
+                        line-height: 1;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+
+
+
+
+
+            // サイドバー
+            &right{
+                width: 100%;
+                section {
+                    margin-bottom: 0;
+                    padding: 0;
+                    @include media-sp {
+                        margin-left: -15px;
+                        margin-right: -15px;
+                    }
+                    .inner {
+
+                        padding-left: 0;
+                        padding-right: 0;
+                        @include media-sp {
+                            // padding-left: 15px;
+                            // padding-right: 15px;
+                        }
+                        @include media-sp {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+                @include media-is-pc {
+                    max-width: 296px;
+                }
+                @include media-sp {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+
+                .sidebar-item {
+                    border: 1px solid $bd-color1;
+                    border-radius: 4px;
+                    @include media-is-pc {
+                        margin-bottom: 20px;
+                        padding: 22px 20px 23px 23px;
+                    }
+                    @include media-sp {
+                        padding-top: 24px;
+                        padding-bottom: 24px;
+                        border-bottom: none;
+                        border-left: none;
+                        border-right: none;
+
+                    }
+                    &ttl {
+                        margin-bottom: 12px;
+                    }
+
+
+
+                    &.sidebar-item01 {
+                        @include media-sp {
+                            margin: 0 15px;
+                            padding: 20px 15px 22px 15px;
+                            border: 1px solid $bd-color1;
+                        }
+                    }
+
+                    &.sidebar-item02 {
+                        .sidebar-itemdesc {
+                            font-size: 12px;
+                            margin-bottom: 19px;
+                        }
+
+                        .coupon-link {
+                            &:first-of-type {
+                                margin-bottom: 13px;
+                            }
+                        }
+                    }
+
+                    &.sidebar-item04 ,
+                    &.sidebar-item06 {
+                        .sidebar-itemttl {
+                            margin-bottom: 20px;
+                        }
+                        .sidebar-itemtotalpoint {
+                            margin-bottom: 14px;
+                        }
+                        .sidebar-itemlist {
+                            padding-top: 18px;
+                            margin-bottom: 22px;
+                            border-top: 1px solid $bd-color1;
+                            * {
+                                font-size: 12px;
+                            }
+                            .sidebar-itemrow {
+                                &:not(:last-child) {
+                                    margin-bottom: 16px;
+                                }
+                            }
+
+                        }
+                    }
+                    &.sidebar-item07 {
+                        margin-bottom: 41px;
+                        * {
+                            font-size: 13px;
+                        }
+
+                        padding: 0;
+                        border: none;
+                        .sidebar-itemdesc {
+                            padding: 0 24px;
+                            margin-bottom: 20px;
+                            line-height: calc(27/13);
+                            a {
+                                color: #235192;
+                                line-height: calc(27/13);
+                            }
+                        }
+                        .sidebar-iteminput {
+                            margin-bottom: 17px;
+                        }
+
+                        .sidebar-itembtn {
+                            button {
+                                width: 100%;
+                                border-radius: 4px;
+                                height: 48px;
+                            }
+                            .sidebar-itembtnconfirm {
+                                margin-bottom: 20px;
+                                background: red;
+                                color: #fff;
+                            }
+                            .sidebar-itembtnreturn {
+                                background: #fff;
+                                border: 1px solid $bd-color1;
+                            }
+                        }
+                    }
+                }
+
+
+                .orderdetail {
+                    background: #f7f7f7;
+                    &-ttl {
+                        font-size: 18px;
+                        font-weight: 700;
+                        margin-bottom: 21px;
+                    }
+
+                    &-amount {
+                        margin-bottom: 17px;
+                        padding-bottom: 21px;
+                        border-bottom: 1px solid $bd-color1;
+                        &row {
+                            display: flex;
+                            justify-content: space-between;
+                            &:not(:last-child) {
+                                margin-bottom: 16px;
+                            }
+                            &.orderdetail-amountrow05 {
+                                padding-bottom: 16px;
+                                border-bottom: 1px solid $bd-color1;
+                            }
+                            &.orderdetail-amountrow06 {
+                                margin-bottom: 5px;
+                            }
+                            &.orderdetail-amountrow07 {
+                                color: #707070;
+                                justify-content: flex-end;
+                                * {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    &-addpoint {
+                        margin-bottom: 27px;
+                        &row {
+                            display: flex;
+                            justify-content: space-between;
+                            &:nth-of-type(-n + 2) {
+                                margin-bottom: 8px;
+                            }
+
+                            &.orderdetail-addpointrow02,
+                            &.orderdetail-addpointrow03 {
+                                color: #707070;
+                            }
+                            &.orderdetail-addpointrow03 {
+                                border-bottom: 1px solid $bd-color1;
+                                margin-bottom: 17px;
+                                padding-bottom: 21px;
+                            }
+                        }
+
+                    }
+
+                    &-btn {
+                        &checksheet {
+                            width: 100%;
+                            border: 1px solid #ff0000;
+                            color: #ff0000;
+                            height: 48px;
+                            font-size: 12px;
+                            font-weight: 500;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        button {
+                            width: 100%;
+                            height: 48px;
+                            color: #fff;
+                            background: #235192;
+                            border-radius: 4px;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+
+                    }
+                    .tax {
+                        font-size: 10px;
+                        line-height: 1.2;
+                    }
+                }
+
+                &.cartblock-sidebar {
+                    &.cartblock-sidebar1 {
+                        @include media-sp {
+                            &.sidebar-item01 { order: 6 }
+                            &.sidebar-item02 { order: 1 }
+                            &.sidebar-item03 { order: 2 }
+                            &.sidebar-item04 { order: 3 }
+                            &.sidebar-item05 { order: 4 }
+                            &.sidebar-item06 { order: 5 }
+                        }
+                    }
+                    &.cartblock-sidebar2 {
+                        @include media-sp {
+                            // &.sidebar-item01 { order: 1 }
+                            // &.sidebar-item02 { order: 1 }
+                            // &.sidebar-item03 { order: 2 }
+                            // &.sidebar-item04 { order: 3 }
+                            // &.sidebar-item05 { order: 4 }
+                            // &.sidebar-item06 { order: 5 }
+                            // &.sidebar-item07 { order: 2 }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .emptybtn {
+        @include media-is-pc {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        @include media-sp {
+            margin-bottom: 34px;
+        }
+        button {
+            width: 190px;
+            height: 30px;
+            border-radius: 4px;
+            border: 1px solid #e6e6e6;
+            font-size: 12px;
+            font-weight: 500;
+            @include media-sp {
+                width: calc(380 / 690 * 100%);
+            }
+        }
+    }
+
+    // SPサイズ ボーダー拡張
+    // &.cart {
+    .coupon-row {
+        >.coupon-ttl,
+        >.coupon-link,
+        >.giftcard-wrap,
+        >.row-desc,
+        >.coupon-value,
+        >.coupon-receive,
+        >.coupon-rowrow {
+            @include media-sp {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+
+    .sidebar-item {
+        >.sidebar-itemttl ,
+        >.coupon-link,
+        >.sidebar-itemdesc,
+        >.sidebar-itemlink,
+        >.sidebar-itemtotalpoint,
+        >.sidebar-itemlist {
+            @include media-sp {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+    // SPサイズ ボーダー拡張
+    // }
+}
+// ------------------------------
+// No23.ショッピングカート End
+// ------------------------------
+
+// ------------------------------
+// ショッピングカート_空の状態 Start
+// ------------------------------
+#cart.cartempty {
+    .cartempty-content {
+        margin-bottom: 46px;
+        padding-top: 36px;
+        border-top: 1px solid $bd-color1;
+        @include media-sp {
+            margin-bottom: 40px;
+            padding-top: 21px;
+        }
+        &inner {
+            font-size: 15px;
+            font-weight: 500;
+            padding: 18px 0 21px 16px;
+            background: #fff5f5;
+            border: 1px solid #ea3c3c;
+            color: #ea3c3c;
+            @include media-sp {
+                padding: 9px 0 11px 12px;
+            }
+        }
+    }
+}
+
+// ------------------------------
+// ショッピングカート_空の状態 End
+// ------------------------------
+
+// ------------------------------
+// No24.ラッピング設定 Start
+// ------------------------------
+#cartwrapping {
+    // 商品セクション
+    .product {
+        &-sec {
+            margin-bottom: 30px;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            @include media-sp {
+                justify-content: space-between;
+            }
+
+        }
+        &-img {
+            @include media-is-pc {
+                width: 120px;
+                margin-right: 30px;
+            }
+            @include media-sp {
+                width: calc(266 / 610 * 100% );
+
+            }
+        }
+        &-text {
+            font-weight: 500 !important;
+            @include media-sp {
+                width: 52.45%;
+            }
+            ul {
+                li {
+                    line-height: 1.46;
+                    @include media-sp {
+                        line-height: 1.71;
+                    }
+                }
+            }
+        }
+
+        &-name {
+        }
+        &-brand, &-type {
+            display: block;
+        }
+        &-brand {
+        }
+        &-type {
+            color: #707070;
+        }
+        &-price {
+            color: #f00;
+        }
+    }
+
+    // 種類選択
+    .kind {
+        &-sec {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            @include media-sp {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+        }
+        &-ttl {
+            @include media-is-pc {
+                margin-bottom: 16px;
+            }
+        }
+        &-notelist {
+            margin-bottom: 30px;
+            @include media-sp {
+                margin-bottom: 20px;
+            }
+            li {
+                @include media-sp {
+                    line-height: 2 !important;
+                }
+            }
+        }
+    }
+
+    .card {
+        &-sec {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-item {
+            margin-bottom: 20px;
+            @include media-sp {
+                width: 47.215%;
+            }
+            .check-label {
+                width: 160px;
+                padding: 13px;
+                @include media-sp {
+                    width: 100%;
+                    margin-bottom: 0;
+                    padding: 13px 13px 18px 13px;
+                }
+            }
+
+            input[type="checkbox"]:not(:checked) + .check-label {
+                border: 1px solid #e5e5e5;
+            }
+
+            input[type="checkbox"]:checked + .check-label {
+                border: 1px solid #235191;
+            }
+
+
+            @include media-is-pc {
+                &:not(:nth-child(4n)) {
+                    margin-right: calc( 20 / 700 * 100% );
+                }
+            }
+            @include media-sp {
+                &:not(:nth-child(2n)) {
+                    margin-right: 5.573%;
+                }
+
+            }
+            &:nth-last-child(-n+2) {
+                margin-bottom: 0;
+            }
+        }
+        &-img {
+            margin-bottom: 16px;
+            @include media-sp {
+                margin-bottom: 13px;
+            }
+        }
+        &-desc {
+            line-height: 1.53;
+            text-align: left;
+            @include media-sp {
+                font-size: 13px;
+            }
+
+        }
+    }
+
+    // のし選択
+    .noshi {
+        &-sec {
+            h4 {
+                margin-bottom: 4px;
+                font-weight: 400;
+            }
+            .select-wrap {
+                position: relative;
+                width: 100%;
+                height: 36px;
+                appearance: none;
+                border: 1px solid $bd-color1;
+                border-radius: 3px;
+                text-align: left;
+                display: flex;
+
+                select {
+                    width: 100%;
+                    padding-left: 1em;
+                    appearance: none;
+                }
+                &:after {
+                    display: block;
+                    position: absolute;
+                    top: 15px;
+                    right: 10px;
+                    border: 4px solid transparent;
+                    border-top: 6px solid black;
+                    content: "";
+                }
+            }
+            textarea {
+                width: 100%;
+                border: 1px solid $bd-color1;
+                border-radius: 2px;
+                resize: none;
+                padding: 4px 0 4px 1em;
+                &::placeholder {
+                    color: $grey-color;
+                }
+            }
+
+            .radio-wrap {
+                &.ptn01 {
+                    .radio-label {
+                        &:not(:last-child) {
+                            margin-right: 30px;
+                        }
+                    }
+
+                }
+                &.ptn02 {
+                    padding: 16px;
+                    border: 1px solid $grey-color;
+                    background: #f7f7f7;
+                    @include media-sp {
+                        padding: 18px 20px 20px 20px;
+                        margin-bottom: 20px;
+                    }
+                    .radio-label {
+                        line-height: 1;
+                        &:not(:last-child) {
+                            margin-right: 17px;
+                            margin-bottom: 12px;
+                            @include media-sp {
+                                margin-right: 24px;
+                                margin-bottom: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-ttl {
+            margin-bottom: 16px;
+        }
+        &-desc {
+            margin-bottom: 20px;
+            @include media-sp {
+                line-height: 2;
+            }
+        }
+        &-subsec {
+            &.ptn03 {
+                @include media-sp {
+                    margin-bottom: 0;
+                }
+                .l-item {
+                    width: 340px;
+                    margin-right: 88px;
+                    @include media-sp {
+                        width: 100%;
+                        margin-right: 0;
+
+                    }
+                    &01 {
+                        margin-bottom: 20px;
+                    }
+                    &02 {
+                        margin-bottom: 14px;
+                    }
+                }
+                .r-item {
+                    margin-top: 30px;
+                    @include media-sp {
+                        margin-top: 0;
+                    }
+                }
+
+            }
+        }
+
+        &-selectitem {
+            &:not(:last-child) {
+                margin-right: calc( 20 / 700 * 100% );
+                @include media-sp {
+                    margin-right: 5.573%;
+                }
+            }
+
+
+            &.ptn01 {
+                .check-label {
+                    height: 60px;
+                    align-items: center;
+                    justify-content: center;
+                    @include media-sp {
+                        height: 40px;
+
+                    }
+                }
+            }
+
+            &.ptn02 {
+                @include media-sp {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                    &:nth-child(odd) {
+                        margin-right: 5.573%;
+                    }
+                    &:nth-child(even) {
+                        margin-right: 0;
+                    }
+                }
+
+                .check-label {
+                    height: 116px;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 0 0 15px;
+                    @include media-sp {
+                        height: 90px;
+                    }
+                    img {
+                        @include media-sp {
+                            max-width: 42%;
+                        }
+                    }
+                }
+                p {
+                    margin: auto;
+                }
+            }
+            &.active {
+                border-color: #235192;
+            }
+            p {
+                @include media-sp {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.row01 {
+    margin-left: -20px;
+    margin-right: -20px;
+
+    &.no-gutter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    display: flex;
+
+    .col-3 {
+        width: 25%;
+        .check-label {
+            width: 340px;
+            @include media-sp {
+                width: 100%;
+            }
+        }
+    }
+
+    .col-4 {
+        width: 33.33333%;
+        .check-label {
+            width: 220px;
+            @include media-sp {
+                width: 100%;
+            }
+        }
+    }
+
+    .col-6 {
+        width: 50%;
+        @include media-sp {
+            width: 47.215%;
+        }
+
+        .check-label {
+            width: 340px;
+            @include media-sp {
+                width: 100%;
+            }
+        }
+    }
+
+    .col-pc-4 {
+        @include media-is-pc {
+            width: 33.33333%;
+            .check-label {
+                width: 220px;
+            }
+        }
+    }
+}
+
+// -----------------------------------------------
+// No24.ラッピング設定 End
+// -----------------------------------------------
+
+// -----------------------------------------------
+// No25.01 ショッピングカート – ポイント設定 Start
+// -----------------------------------------------
+#cartpoint {
+    .cartpoint-desc {
+        margin-bottom: 49px;
+        text-align: center;
+        @include media-sp {
+            margin-bottom: 25px;
+        }
+
+        &desc {
+            &:first-of-type {
+                @include media-is-pc {
+                    font-size: 13px;
+                    line-height: calc(36/13);
+                }
+            }
+            &:nth-of-type(2) {
+                @include media-is-pc {
+                    font-size: 15px;
+                    line-height: calc(36/15);
+                    span {
+                        font-size: 15px;
+                        line-height: calc(36/15);
+                    }
+                }
+            }
+
+            &:last-of-type {
+                @include media-is-pc {
+                    font-size: 15px;
+                    line-height: calc(36/15);
+                }
+            }
+
+            @include media-sp {
+                line-height: calc(60/28);
+            }
+            span {
+                @include media-sp {
+                    line-height: calc(60/28);
+                }
+            }
+        }
+        &emphasis {
+            font-weight: 700;
+            @include media-sp {
+                font-size: 18px;
+                line-height: calc(60/36) !important;
+            }
+        }
+    }
+
+    .input-point {
+        border: 1px solid $bd-color1;
+        border-radius: 4px;
+        @include media-sp {
+            padding: 20px 17px 24px 23px;
+        }
+        &row {
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include media-sp {
+                padding: 0;
+                flex-direction: column;
+                align-items:flex-start;
+            }
+        }
+        &col {
+            display: flex;
+            align-items: center;
+            @include media-sp {
+                margin-bottom: 28px;
+                flex-direction: column;
+                align-items:flex-start;
+            }
+        }
+
+        &label {
+            margin-right: 8px;
+
+            @include media-sp {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            label {
+                margin-bottom: 0;
+                font-weight: 500;
+                @include media-sp {
+                    font-weight: 400;
+
+                }
+            }
+        }
+        &input {
+            display: flex;
+            align-items: center;
+
+            > input {
+                @include _inputtext($width: 168px, $sp-width: 49.18032786885246%);
+                padding: 0;
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+                margin-right: 8px;;
+                @include media-sp {
+                    font-size: 20px;
+                }
+            }
+        }
+        &link {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            font-size: 12px;
+            text-decoration: underline;
+            @include media-sp {
+                text-align: left;
+            }
+            a {
+                line-height: calc(17/12);
+                @include media-sp {
+                    font-size: 12px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 9px;
+                    @include media-sp {
+
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .caution {
+        ul {
+            li {
+                @include media-sp {
+                    line-height: 2;
+                }
+            }
+        }
+    }
+
+    .another-point {
+        padding: 19px 0;
+        display: flex;
+        align-items: center;
+        border: 1px solid $bd-color1;
+        @include media-sp {
+            padding: 22px 20px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &pic {
+            width: 200px;
+            @include media-sp {
+                width: 100%;
+                margin-bottom: 12px;
+            }
+            picture {
+                margin: auto;
+                width: 110px;
+                display: flex;
+                @include media-sp {
+                    margin: initial;
+                    width: calc(220/530 * 100%);
+                }
+            }
+        }
+        &txt {
+            span {
+                font-size: 13px;
+                @include media-sp {
+                    line-height: 2;
+                    margin-bottom: 12px;
+                }
+            }
+            a {
+                font-size: 12px;
+                text-decoration: underline;
+            }
+
+        }
+    }
+
+    .d-point {
+        picture {
+            @include media-sp {
+                width: calc(174/530 * 100%);
+            }
+        }
+    }
+
+    .modalbtn-wrap {
+        margin-top: 57px;
+        @include media-sp {
+            margin-top: 44px;
+        }
+    }
+}
+
+// -----------------------------------------------
+// No25.01 ショッピングカート – ポイント設定 End
+// -----------------------------------------------
+
+// -----------------------------------------------
+// No25.02  Tポイント、Dポイント連携後の表示 Start
+// -----------------------------------------------
+#cartpoint.cartpoint02 {
+    .input-point {
+        margin-bottom: 24px;
+        padding: 23px 20px 28px 20px;
+        &row {
+            padding: 0;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+                @include media-sp {
+                    margin-bottom: 30px;
+
+                }
+            }
+        }
+
+        &col {
+            @include media-sp {
+                margin-bottom: 16px;
+                flex-direction: column;
+                align-items:flex-start;
+            }
+        }
+        &input {
+            input {
+                @include _inputtext($width: 120px, $sp-width: 49.18032786885246%);
+                padding: 0;
+                font-size: 20px;
+                font-weight: 700;
+                text-align: center;
+                margin-right: 8px;;
+                @include media-sp {
+                    font-size: 20px;
+                }
+            }
+
+        }
+        &label {
+            width: 270px;
+            @include media-sp {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        .point-logo {
+            display: flex;
+            width: 89px;
+            margin-top: -4px;
+            margin-right: 10px;
+        }
+    }
+    .radio-text {
+        &:before {
+            margin-right: 12px;
+        }
+    }
+
+    .modalbtn-wrap {
+        margin-top: 46px;
+        @include media-sp {
+            margin-top: 35px;
+        }
+    }
+}
+// -----------------------------------------------
+// No25.02  Tポイント、Dポイント連携後の表示 End
+// -----------------------------------------------
+// -----------------------------------------------
+// ショッピングカート – ポイント付与先の選択 Start
+// -----------------------------------------------
+#cartaddpoint {
+    .modal-block-inner-content {
+        @include media-is-pc {
+            margin-bottom: 49px;
+        }
+    }
+
+    .modal-block-desc {
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 40px;
+        @include media-sp {
+            margin-bottom: 28px;
+        }
+    }
+
+    .radio-label {
+        margin-bottom: 0;
+    }
+    .radio-text {
+        line-height: 2.4;
+    }
+
+    .cartaddpoint {
+        &-point {
+            margin-bottom: 44px;
+            &row {
+                display: flex;
+                @include media-sp {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                &:not(:last-child) {
+                  margin-bottom: 32px;
+                }
+                @include media-sp {
+                    &:first-of-type {
+                        margin-bottom: 28px;
+                    }
+                    &:nth-of-type(2) {
+                        margin-bottom: 30px;
+                    }
+                }
+                .point-rowitem {
+                    margin-right: 4px;
+                    @include media-sp {
+                        display: flex;
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .radio-text {
+                    font-weight: 500;
+                    &:before {
+                        margin-right: 12px;
+                        @include media-sp {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+                .point-text {
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-right: 6px;
+                    line-height: 1.4;
+                }
+                .point-plus {
+                    margin-right: 8px;
+                    @include media-sp {
+                        margin-right: 8px;
+                    }
+                }
+
+
+                .point-rowvalue {
+                    display: flex;
+                    align-items: center;
+                    @include media-sp {
+                        margin-left: 18px;
+                    }
+
+                    span {
+                        vertical-align: text-bottom;
+                    }
+                    .point-imgwrap {
+                        display: inline-block;
+
+                        @include media-sp {
+                            width: 110px;
+                        }
+                        img {
+                            @include media-is-pc {
+                                width: 89px;
+                            }
+                        }
+                        &.tpoint {
+                            img {
+                                vertical-align: top;
+                                @include media-sp {
+                                }
+                            }
+                        }
+                        &.dpoint {
+                            img {
+                                vertical-align: text-bottom;
+                                @include media-sp {
+                                    width: calc(178/220 * 100%);
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .point-rowvalueitemfirst {
+                    @include media-sp {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                .point-rowvalueitemlast {
+                    @include media-sp {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                .point-unit {
+                    font-size: 13px;
+                    font-weight: 500;
+                    margin-right: 8px;
+                }
+                .point-colon {
+                    margin-right: 6px;
+                    @include media-sp {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &-checkbtn {
+            margin-bottom: 44px;
+            @include media-sp {
+                margin-bottom: 32px;
+            }
+            .check-labeltext {
+                line-height: calc(40/28);
+            }
+        }
+    }
+    .check-label02 {
+        span {
+            margin-left: 10px;
+        }
+        &:before {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+}
+// -----------------------------------------------
+// ショッピングカート – ポイント付与先の選択 End
+// -----------------------------------------------
+
+// ------------------------------
+// No. 26 お届け先の設定 Start
+// ------------------------------
+#cartdeliveryaddress {
+    .deliverydesc {
+        margin-bottom: 23px;
+        padding: 26px 25px 25px 25px;
+        border: 1px solid $bd-color1;
+        &-ttl, &-desc {
+            font-size: 13px;
+            line-height: calc(26/13);
+            @include media-sp {
+                font-size: 14px;
+                line-height: calc(56 / 28);
+            }
+        }
+
+        &-ttl {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            &:before {
+                display: inline-block;
+                content: '';
+                background-image: url(../img/cart/icon-truck.png);
+                background-repeat: no-repeat;
+                width: 24px;
+                height: 18px;
+                background-size: 100%;
+            }
+        }
+    }
+
+    .deliveryselect {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        &-item {
+            width: calc(220 / 700 * 100%);
+            label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 60px;
+                line-height: calc(20/13);
+                @include media-sp {
+                    height: 40px;
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+            }
+        }
+        @include media-sp {
+            padding-bottom: 20px;
+            border-bottom: 1px solid $bd-color1;
+        }
+    }
+    .deliveryinfo {
+        margin-bottom: 48px;
+        @include media-is-pc {
+            padding: 18px 0 24px 25px;
+            border: 1px solid $bd-color1;
+        }
+
+        &-detail {
+            margin-bottom: 20px;
+            * {
+                line-height: calc(19/13);
+                @include media-sp {
+                    font-size: 12.5px;
+                    line-height: calc(56/25);
+                }
+            }
+            &item {
+                &:not(:last-child) {
+                    @include media-is-pc {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &.multiple {
+                    line-height: calc(19/13);
+                    display: flex;
+                    .item {
+                        min-width: 104px;
+                        @include media-sp {
+                            min-width: calc(200 / 610 * 100%);
+                        }
+                    }
+                    .value {
+                        @include media-sp {
+                            min-width: calc(410 / 610 * 100%);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &-desc {
+            margin-bottom: 20px;
+            font-size: 13px;
+            @include media-sp {
+                margin-bottom: 24px;
+            }
+
+            p {
+                @include media-sp {
+                    font-size: 12.5px;
+                }
+                &:first-of-type {
+                    margin-bottom: 8px;
+                    @include media-sp {
+                        font-weight: 700;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+
+            &link {
+                margin-left: 15px;
+                text-decoration: underline;
+            }
+        }
+        &-shippingmethod {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            &item {
+                width: calc(190 / 700 * 100%);
+                @include media-is-pc {
+                    &:nth-of-type(-n + 2) {
+                        margin-right: 20px;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 26px;
+                    }
+                }
+                @include media-sp {
+                    width: calc(380 / 610 * 100%);
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            &link {
+                width: 100%;
+                padding: 2px 0;
+
+                border: 1px solid $bd-color1;
+                border-radius: 4px;
+
+                font-size: 12px;
+                font-weight: 500;
+                text-align: center;
+                display: block;
+                background: #F7F7F7;
+
+
+                @include media-sp {
+                    line-height: 2;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    .deliverygroup {
+        margin-bottom: 48px;
+        padding: 24px 20px 26px 25px;
+        border: 1px solid $bd-color1;
+        @include media-sp {
+            padding: 12px 10px 16px 13px;
+        }
+        &-select {
+            margin-bottom: 27px;
+            display: flex;
+            align-items: center;
+            @include media-sp {
+                margin-bottom: 13px;
+            }
+
+            .form-block-select {
+                display: flex;
+                appearance: none;
+                position: relative;
+                border: 1px solid #e6e6e6;
+                select {
+                    min-width: 80px;
+                    height: 28px;
+                    padding: 0 28px 0 8px;
+                }
+            }
+        }
+
+        @include _scrollblock();
+        .scrollblock-desc {
+            height: 312px;
+            margin-bottom: 0;
+        }
+
+        &-list {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-item {
+            padding: 20px 19px 20px 33px;
+            border: 1px solid $bd-color1;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            @include media-sp {
+                padding: 14px 13px 16px 14px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &group {
+                font-size: 12px;
+                font-weight: 700;
+                align-self: center;
+                @include media-is-pc {
+                    width: calc(56 / 578 * 100%);
+                    margin-right: calc(32 / 578 * 100%);
+                }
+                @include media-sp {
+                    margin-bottom: 8px;
+                    align-self: flex-start;
+                }
+            }
+
+            &detail {
+                @include media-is-pc {
+                    width: calc(341 / 578 * 100%);
+                    margin-right: calc(18 / 578 * 100%);
+                }
+                @include media-sp {
+                    margin-bottom: 26px;
+                }
+                * {
+                    line-height: calc(19/13);
+                    @include media-sp {
+                        font-size: 12.5px;
+                        line-height: calc(56/25);
+                    }
+                }
+                &item {
+                    &:not(:last-child) {
+                        @include media-is-pc {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    .item {
+                        min-width: 104px;
+                        @include media-sp {
+                            min-width: 45%;
+                        }
+                    }
+                    .value {
+                        @include media-sp {
+                            min-width: 50%;
+                            word-wrap: break-word;
+                        }
+                    }
+                }
+            }
+
+            &btn {
+                width: calc(131 / 578 * 100%);
+                align-self: flex-end;
+                @include media-sp {
+                    width: 100%;
+                }
+                button  {
+                    width: 131px;
+                    height: 36px;
+                    background: #707070;
+                    color: #fff;
+                    border-radius: 2px;
+                    @include media-sp {
+                        height: 27px;
+                        font-size: 10px;
+                        width: 100%;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            .multiple {
+                display: flex;
+            }
+        }
+    }
+
+    .deliveryinput {
+        @include media-is-pc {
+            padding: 21px 35px 43px 25px;
+            border: 1px solid $bd-color1;
+        }
+        @include media-sp {
+        }
+        &-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include media-sp {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &:not(:last-child) {
+                margin-bottom: 44px;
+                @include media-sp {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .inputlabel-label {
+                margin-right: 8px;
+                margin-bottom: 0;
+                font-size: 12px;
+                font-weight: 400;
+                width: calc(24 / 438 * 100%);
+                &.inputlabel02 {
+                    @include media-is-pc {
+                        margin-left: 19px
+                    }
+                }
+            }
+        }
+
+
+        &-ttl {
+            width: calc(167 / 638 * 100%);
+            @include media-sp {
+                font-size: 14px;
+                margin-bottom: 5px;
+                width: 100%;
+            }
+        }
+
+        &-input {
+            width: calc(471 / 638 * 100%);
+            display: flex;
+            align-items: center;
+            @include media-sp {
+                width: 100%;
+            }
+
+            .inputlabel-input, select {
+                @include media-sp {
+                    height: 40px;
+                }
+            }
+        }
+
+
+
+
+        .input-row01 ,
+        .input-row02 {
+            .inputlabel-input {
+                width: calc(195 / 473 * 100%);
+                @include media-sp {
+                    width: calc(297 /610 * 100%) ;
+                }
+                &.input02 {
+                    margin-left: calc(16 /610 * 100%) ;
+                }
+                &::placeholder {
+                    color: #fff;
+                    @include media-sp {
+                        color: $grey-color;
+                    }
+                }
+            }
+
+        }
+
+        .input-row03 {
+            .deliveryinput-input {
+                display: flex;
+                justify-content: flex-start;
+            }
+            .inputlabel-input {
+                width: calc(120 / 473 * 100%);
+                @include media-sp {
+                    width: calc(231 / 610 * 100%);
+                }
+            }
+
+            button {
+                margin-left: 15px;
+                width: 80px;
+                height: 36px;
+                border-radius: 0;
+                @include media-sp {
+                    margin-left: 10px;
+                    padding: 0;
+                    font-size: 13px;
+                    font-weight: 500;
+                    height: 40px;
+                }
+            }
+
+            .deliveryinput-inputhyphen {
+                margin: 0 3px;
+            }
+
+        }
+        .input-row04 {
+            .form-block-select {
+                display: flex;
+                appearance: none;
+                position: relative;
+                width: calc(120 / 473 * 100%);
+                border: 1px solid #e6e6e6;
+                border-radius: 2px;
+                @include media-sp {
+                    width: calc(297 /610 * 100%) ;
+                }
+
+                select {
+                    height: 36px;
+                    padding: 0 36px 0 8px;
+                }
+            }
+        }
+
+        .input-row06 ,
+        .input-row07 {
+            .deliveryinput-input {
+                position: relative;
+                @include media-sp {
+                    display: initial;
+                }
+                .deliveryinput-inputnote {
+                    font-size: 10px;
+                    @include media-is-pc {
+                        width: calc(473px / 0.8 * 1);
+                        transform: scale(0.8);
+                        transform-origin: left top;
+                        position: absolute;
+                        top: calc(100% + 7px);
+                        left: 0;
+                        line-height: calc(12/8);
+                    }
+                    @include media-sp {
+                        display: block;
+                        line-height: calc(36/20);
+                    }
+                }
+            }
+        }
+    }
+
+}
+// ------------------------------
+// No. 26 お届け先の設定 End
+// ------------------------------
+
+// ------------------------------
+// No. 27 お届け日時の設定 Start
+// ------------------------------
+#cartdeliverydate {
+    .deliveryinfo {
+        margin-bottom: 32px;
+        padding: 20px 16px 19px 32px;
+        border: 1px solid $bd-color1;
+        border-radius: 4px;
+        @include media-is-pc {
+            display: flex;
+            justify-content: space-between;
+        }
+        @include media-sp {
+            padding: 16px 15px 19px 15px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-group {
+            font-size: 12px;
+            font-weight: 700;
+            align-self: center;
+            @include media-sp {
+                font-size: 12.5px;
+                margin-bottom: 9px;
+                align-self: flex-start;
+            }
+        }
+
+        &-detail {
+            width: calc(341/650 *100%);
+            @include media-sp {
+                margin-bottom: 13px;
+                width: 100%;
+            }
+            &item {
+                font-size: 13px;
+                line-height: calc(19/13);
+
+                > * {
+                    @include media-sp {
+                        line-height: calc(48/25);
+                        font-size: 12.5px;
+                    }
+                }
+
+                &:not(:last-child) {
+                    @include media-is-pc {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &.multiple {
+                    display: flex;
+                    > div {
+                        @include media-sp {
+                            font-size: 12.5px;
+                        }
+                    }
+                    .item {
+                        @include media-is-pc {
+                            width: calc(105 / 341 * 100%);
+                        }
+                    }
+                    .value {
+                        word-wrap: break-word;
+                        min-width: calc(380 / 610 * 100%);
+                    }
+                }
+
+            }
+        }
+
+        &-btn {
+            align-self: flex-end;
+            width: calc(131 / 650 * 100%);
+
+            @include media-sp {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+                display: block;
+                height: 36px;
+                background: #707070;
+                border: 1px solid #707070;
+                border-radius: 2px;
+                color: #fff;
+                @include media-sp {
+                    width: 100%;
+                    border-radius: 4px;
+                    height: 30px;
+                }
+            }
+        }
+
+    }
+    .isdeliverydate {
+        margin-bottom: 47px;
+        @include media-sp {
+            margin-bottom: 20px;
+        }
+
+    }
+    .deliverydate {
+        margin-bottom: 42px;
+        display: flex;
+        justify-content: space-between;
+        @include media-sp {
+            margin-bottom: 22px;
+            flex-direction: column;
+        }
+
+        &-ttl {
+            text-align: center;
+            @include media-sp {
+                text-align: left;
+            }
+        }
+
+        &-calender {
+            width: calc(360 / 700 * 100%);
+            border: 1px solid $bd-color1;
+            border-radius: 4px;
+            @include media-sp {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+        }
+        &-time {
+            width: calc(320 / 700 * 100%);
+            padding: 23px 0 94px 0;
+            border: 1px solid $bd-color1;
+            border-radius: 4px;
+            @include media-sp {
+                padding: 25px 0 25px calc(17 / 305 * 100%);
+                width: 100%;
+            }
+            &list {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                height: 100px;
+                padding-left: 28px;
+                @include media-sp {
+                    padding-left: 0;
+                    height: auto;
+                    max-height: 120px;
+                }
+            }
+
+            &item {
+                width: 54.5%;
+                font-size: 13px;
+                line-height: calc(30/13);
+                &:nth-last-of-type(-n + 3) {
+                    width: 45.5%;
+                }
+            }
+        }
+
+    }
+
+    .addcomment {
+        font-size: 13px;
+        line-height: calc(26/13);
+        @include media-sp {
+            font-size: 14px;
+            line-height: calc(48/28);
+        }
+    }
+
+    .radio-text {
+        @include media-sp {
+            line-height: 2;
+            font-size: 13px;
+        }
+    }
+}
+// ------------------------------
+// No. 27 お届け日時の設定 End
+// ------------------------------
+
+// ------------------------------
+// No. 28 複数お届け先の設定（追加）Start
+// ------------------------------
+#cart.cartdeliveryaddress {
+    .item-wrap {
+        margin-bottom: 0px;
+        border-radius: 4px;
+
+        @include media-sp {
+            margin-bottom: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .numofitems {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 0;
+        // margin-bottom: 42px;
+        &:first-of-type {
+            @include media-is-pc {
+                border-top: 2px solid $bd-color1;
+            }
+        }
+        &:not(&:first-of-type) {
+            @include media-is-pc {
+                padding: 20px 0 17px 0;
+                border-bottom: 2px solid $bd-color1;
+                margin-bottom: 39px;
+            }
+        }
+        @include media-sp {
+            padding: 0;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-ttl {
+            h3 {
+                font-size: 15px;
+                font-weight: 500;
+                @include media-sp {
+                    font-weight: 700;
+                }
+            }
+        }
+        &-link {
+
+            margin-right: 4px;
+            @include media-sp {
+                margin-right: 4px;
+            }
+            a {
+                font-size: 15px;
+                color: #007185;
+                font-weight: 500;
+                margin-right: 2px;
+                &:after {
+                    display: block;
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-right: 2px solid #007185;
+                    border-top: 2px solid #007185;
+                    display: inline-block;
+                    transform: rotate(45deg);
+                }
+
+                @include media-sp {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+
+    .numofitems-ttl h3 {
+        @include media-sp {
+            margin: 0;
+        }
+    }
+    .item {
+        border-radius: 4px;
+        &:not(:last-child) {
+            border-bottom: none;
+        }
+
+    }
+
+    .addition {
+        width: 100%;
+        @include media-is-pc {
+            margin-top: 40px;
+        }
+
+        @include media-sp {
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            margin-top: 10px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            padding: 0 0 25px 0;
+        }
+
+        &-inner {
+            border-radius: 4px;
+            @include media-is-pc {
+                border: 1px solid $bd-color1;
+            }
+            @include media-sp {
+
+            }
+        }
+        &-row {
+            width: 100%;
+            display: flex;
+            @include media-sp {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &.addition-row01 {
+                margin-bottom: 24px;
+            }
+            &.addition-row02 {
+                justify-content: space-between;
+            }
+        }
+
+
+        // Top
+        &-ttl {
+            @include media-is-pc {
+                margin-right: 30px;
+            }
+            @include media-sp {
+                margin-bottom: 10px;
+            }
+            h3  {
+                font-size: 14px;
+                font-weight: 500;
+                color: red;
+                @include media-sp {
+                    font-weight: 400;
+                    line-height: calc(50/28);
+                }
+            }
+        }
+
+        // Bottom
+        .accountdetail {
+            @include media-sp {
+                margin-bottom: 30px;
+            }
+            &-row {
+                &:not(:last-child) {
+                    @include media-is-pc {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            .accountdetail-row {
+                display: flex;
+                justify-content: space-between;
+                * {
+                    @include media-sp {
+                        line-height: calc(56/24);
+                    }
+                }
+
+                &.accountdetail-row02,
+                &.accountdetail-row03,
+                &.accountdetail-row04 {
+                    .accountdetail-item {
+                        min-width: 96px;
+                        @include media-sp {
+                            min-width: calc(210 / 690 * 100%);
+                        }
+                    }
+                    .accountdetail-value {
+                        @include media-sp {
+                            min-width: calc(480 / 690 * 100%);
+                        }
+                    }
+                }
+            }
+        }
+
+        &-link {
+            text-align: right;
+            &row {
+                @include media-sp {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                &:first-of-type {
+                    @include media-is-pc {
+                        margin-bottom: 17px;
+                    }
+                }
+            }
+            a {
+                text-decoration: underline;
+                &:after {
+                    margin-left: 10px;
+                    display: inline-block;
+                    content: '';
+                    background-image: url('../img/common/icon-plus.svg');
+                    width: 15px;
+                    height: 15px;
+                    background-size: 100%;
+                    vertical-align: middle;
+                    margin-bottom: 2px;
+                }
+
+                &.addition-linkitem {
+                    @include media-sp {
+                        margin-bottom: 13px;
+                    }
+                }
+                &.addition-linkitem01 {
+                    margin-right: 33px;
+                }
+                &.addition-linkitem03 {
+                    @include media-sp {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+        .small {
+            *  {
+                font-size: 12px;
+                line-height: 1;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .item-emptybtn {
+        @include media-is-pc {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        @include media-sp {
+            margin-bottom: 34px;
+        }
+        button {
+            width: 190px;
+            height: 30px;
+            border-radius: 4px;
+            border: 1px solid #e6e6e6;
+            font-size: 12px;
+            font-weight: 500;
+            @include media-sp {
+                width: calc(380 / 690 * 100%);
+            }
+        }
+    }
+
+    .addition {
+        // border-bottom: 1px solid $bd-color1;
+    }
+}
+
+// ------------------------------
+// No. 28 複数お届け先の設定（追加）End
+// ------------------------------
+
+// ------------------------------
+// No. 28 複数お届け先の設定（追加）Start
+// ------------------------------
+#cartdeliveryaddress02 {
+    .deliveryaddress {
+        &-item {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid $bd-color1;
+            @include media-sp {
+                &:first-of-type {
+                    padding-top: 13px;
+                    border-top: 1px solid $bd-color1;
+                }
+                &:not(:last-of-type) {
+                    margin-bottom: 13px;
+                    padding-bottom: 24px;
+                    border-bottom: 1px solid $bd-color1;
+                }
+            }
+        }
+        &-detail {
+            margin-bottom: 19px;
+            display: flex;
+            justify-content: space-between;
+            @include media-sp {
+                margin-bottom: 24px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+        &-prod {
+            display: flex;
+            justify-content: space-between;
+            width: calc(350 / 700 * 100%);
+            @include media-sp {
+                width: 100%;
+                margin-bottom: 18px;
+            }
+        }
+
+        .detailblock {
+            @include media-is-pc {
+            }
+            &-img {
+                @include media-is-pc {
+                    max-width: 120px;
+                    margin-right: 33px;
+                }
+                @include media-sp {
+                    width: calc(266 / 610 * 100%);
+                }
+            }
+            &-text {
+                @include media-is-pc {
+                    margin-top: 15px;
+                }
+
+                @include media-sp {
+                    width: calc(310 / 610 * 100%);
+                }
+                * {
+                    font-size: 13px;
+                    font-weight: 500;
+                    line-height: calc(19/13);
+                    @include media-sp {
+                        font-size: 14px;
+                        line-height: calc(48/28);
+                    }
+                }
+            }
+            &-item {
+                &.type {
+                    color: #707070;
+                }
+                &.price {
+                    color: #f00;
+                }
+            }
+        }
+
+        &-input {
+            @include media-is-pc {
+                margin-top: 12px;
+            }
+            width: calc(310 / 700 * 100%);
+            @include media-sp {
+                width: 100%;
+            }
+            &ttl {
+                margin-bottom: 6px;
+                font-weight: 700;
+            }
+            &input {
+                margin-bottom: 4px;
+                display: flex;
+                justify-content: space-between;
+                @include media-sp {
+                    margin-bottom: 14px;
+                }
+
+                &block {
+                    &.num {
+                        border: 1px solid #e6e6e6;
+                        border-radius: 4px;
+                        width: 70px;
+                        @include media-sp {
+                            width: calc(139 / 610 * 100%);
+                            margin-right: calc(8 / 610 * 100%);
+                        }
+                        select {
+                            height: 36px;
+                            padding: 0 36px 0 12px;
+                            min-width: 100%;
+                            @include media-sp {
+                                padding: 0 12px 0 12px;
+                                height: 100%;
+                                font-size: 12.5px;
+                            }
+                        }
+                    }
+                    &.addr {
+                        border: 1px solid #e6e6e6;
+                        border-radius: 4px;
+                        width: 180px;
+                        @include media-sp {
+                            width: calc(359 / 610 * 100%);
+                            margin-right: calc(8 / 610 * 100%);
+                        }
+                        select {
+                            // min-width: 100%;
+                            max-width: 170px;
+                            height: 36px;
+                            padding: 0 12px 0 12px;
+                            font-weight: 400;
+                            @include media-sp {
+                                max-width: 92%;
+                                height: 100%;
+                                font-size: 12.5px;
+                            }
+                        }
+                    }
+
+                    &.trash {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 4px;
+                        background: #e6e6e6;
+                        @include media-sp {
+                            width: 40px;
+                            height: 40px;
+                        }
+                        button {
+                            background: none;
+                            display: block;
+                            width: calc(14 / 36 * 100%);
+                            margin: auto;
+                            @include media-sp {
+                                width: calc(32 / 80 * 100%);
+                                margin: 9px auto;
+                                font-size: 12.5px;
+                            }
+                        }
+                    }
+                }
+            }
+            &link {
+                text-align: right;
+                a {
+                    text-decoration: underline;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+        &-textarea {
+            textarea {
+                margin: 0 0 0 auto;
+                padding: 13px 0 0 13px;
+                width: calc(547 / 700 * 100%);
+                height: 100px;
+                background: #f7f7f7;
+                border-radius: 4px;
+                resize: none;
+                @include media-sp {
+                    width: 100%;
+                    height: 34.666vw;
+                }
+                &::placeholder {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+
+
+    .deliveryselect {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        &-ttl {
+            margin-bottom: 12px;
+            @include media-sp {
+                margin-bottom: 20px;
+            }
+        }
+        &-item {
+            width: calc(220 / 700 * 100%);
+            &:first-of-type {
+                margin-right: 20px;
+                @include media-sp {
+                    margin-right: calc(20 / 610 *100%);
+                }
+            }
+            label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 60px;
+                font-size: 12px;
+                line-height: calc(20/13);
+                margin-bottom: 0;
+                @include media-sp {
+                    height: 40px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .deliveryselect-wrap {
+        &.first {
+            .deliveryselect {
+                @include media-sp {
+                    margin-bottom: 12px;
+                    padding-bottom: 13px;
+                    border-bottom: 1px solid $bd-color1;
+                }
+            }
+        }
+    }
+
+    .deliveryinfo {
+        @include media-is-pc {
+            // margin-bottom: 48px;
+            padding: 18px 0 24px 25px;
+            border: 1px solid $bd-color1;
+            border-radius: 4px;
+        }
+        @include media-sp {
+            padding-top: 23px;
+            padding-bottom: 30px;
+            border-top: 1px solid $bd-color1;
+            border-bottom: 1px solid $bd-color1;
+        }
+        &-detail {
+            * {
+                line-height: calc(19/13);
+                @include media-sp {
+                    font-size: 12.5px;
+                    line-height: calc(56/25);
+                }
+            }
+            &item {
+                &:not(:last-child) {
+                    @include media-is-pc {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &.multiple {
+                    display: flex;
+                    .item {
+                        min-width: 104px;
+                        @include media-sp {
+                            min-width: calc(200 / 610 * 100%);
+                        }
+                    }
+                    .value {
+                        @include media-sp {
+                            min-width: calc(410 / 610 * 100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ------------------------------
+// No. 28 複数お届け先の設定（追加） End
+// ------------------------------
+
+// ------------------------------
+// No. 29 お支払い方法の設定 Start
+// ------------------------------
+#cartpayment {
+    .modal-block-inner-content {
+        @include media-sp {
+            height: calc(100vh - 356px);
+        }
+    }
+
+    .methodselect {
+        margin-bottom: 28px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid $bd-color1;
+        &-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            @include media-sp {
+                justify-content: flex-start;
+            }
+        }
+        &-item {
+            width: calc(220 / 700 * 100%);
+            @include media-is-pc {
+                &:first-of-type,
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    margin-right: calc(20 / 700 * 100%);
+                }
+                &:nth-of-type(-n + 3) {
+                    margin-bottom: 20px;
+                }
+            }
+            @include media-sp {
+                width: calc(295 / 610 * 100%);
+                &:nth-of-type(odd) {
+                    margin-right: calc(20 / 610 * 100%);
+                }
+                &:nth-of-type(-n + 4) {
+                    margin-bottom: 8px;
+                }
+            }
+
+            .check-label {
+                width: 100%;
+                height: 60px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 0;
+                @include media-sp {
+                    height: 40px;
+                }
+                span {
+                    @include media-sp {
+                        font-size: 13px;
+                        line-height: calc(30/26);
+                    }
+                }
+            }
+            &:first-of-type {
+                .check-label {
+                    color: #F00;
+                }
+            }
+        }
+    }
+
+    // 01-05
+    .methoditem {
+
+        &-ttl {
+            font-weight: 400;
+            @include media-sp {
+                margin-bottom: 4px;
+
+            }
+        }
+        .radio-label {
+            &:not(:last-child) {
+                @include media-is-pc {
+                    // margin-bottom: 8px;
+                }
+            }
+            margin-bottom: 0;
+        }
+
+        // 共通
+        &-cardselect {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 40px;
+            @include media-sp {
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 18px;
+            }
+            &item {
+                @include media-is-pc {
+                    width: calc(220 / 700 * 100%);
+                    &:not(:last-child) {
+                        margin-right: calc(20 / 700 * 100%);
+                    }
+                }
+                @include media-sp {
+                    width: calc(287 / 610 * 100%);
+                }
+
+
+                .check-label {
+                    display: flex;
+                    align-items: center;
+                    @include media-is-pc {
+                        padding: 13px 0 13px 12px;
+                        height: 70px;
+                    }
+                    @include media-sp {
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 120px;
+                        padding-top: 6px;
+                    }
+                    img {
+                        @include media-is-pc {
+                            max-width: calc(69 / 220 * 100%);
+                            margin-right: calc(17 / 220 * 100%);
+                        }
+                        @include media-sp {
+                            max-width: calc(233 / 287 * 100%);
+                            margin-bottom: 4px;
+                        }
+                    }
+                    span {
+                        text-align: center;
+                        @include media-is-pc {
+                            max-width: calc(137 / 220 * 100%);
+                        }
+                        @include media-sp {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                &.cardselectitem01,
+                &.cardselectitem02 {
+                    @include media-sp {
+                        margin-bottom: 18px;
+
+                    }
+
+                }
+            }
+
+        }
+
+        &-lastcardselect {
+            margin-bottom: 40px;
+            @include media-sp {
+                margin-bottom: 12px;
+                width: 100%;
+                * {
+                    font-size: 13px;
+                }
+            }
+            .radio-label {
+                &:first-of-type {
+                    .radio-text {
+                        @include media-sp {
+                            align-items: flex-start;
+                            &:before {
+                                width: 18px;
+                                margin-top: 3px;
+                            }
+
+                        }
+                    }
+                }
+            }
+            .readbtnwrap {
+                margin-top: 30px;
+                input {
+                    width: 100%;
+                    background: #707070;
+                    color: #fff;
+                    height: 50px;
+                    border-radius: 4px;
+                    @include media-sp {
+                        font-size: 14px;
+                    }
+                }
+            }
+            &item {
+                @include media-is-pc {
+                    font-size: 13px;
+                    line-height: calc(19/13);
+                }
+
+                @include media-sp {
+                    line-height: calc(48/25);
+                    font-size: 12.5px;
+                }
+
+            }
+        }
+        &-inputblock {
+            margin-bottom: 40px;
+            @include media-sp {
+                margin-bottom: 35px;
+            }
+            &row {
+                display: flex;
+                align-items: center;
+                @include media-sp {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                &:not(:last-child) {
+                    @include media-is-pc {
+                        margin-bottom: 40px;
+                    }
+                    @include media-sp {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                &.multiple {
+                    display: flex;
+                    * {
+                        @include media-sp {
+                            line-height: calc(48/25);
+                            font-size: 12.5px;
+                        }
+                    }
+                    > div {
+                        @include media-sp {
+                            font-size: 12.5px;
+                        }
+                    }
+                }
+
+                // カード番号：
+                &.inputblockrow01 {
+                    .inputlabel-input {
+                        @include media-is-pc {
+                            width: calc(400 / 570 * 100%);
+                        }
+                    }
+                }
+
+                // カード名義人
+                &.inputblockrow02 {
+                    margin-bottom: 53px;
+                    @include media-sp {
+                        margin-bottom: 40px;
+                    }
+                    .inputlabel-input {
+                        @include media-is-pc {
+                            width: calc(400 / 570 * 100%);
+                        }
+                        @include media-sp {
+                            max-width: calc(78 / 548 * 100%);
+                        }
+                    }
+                    .methoditem-inputblockinput {
+                        position: relative;
+                        &note {
+                            position:absolute;
+                            bottom: -24px;
+                            left: 0;
+                            font-size: 13px;
+                            @include media-sp {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .value {
+                        word-wrap: break-word;
+                        min-width: calc(380 / 610 * 100%);
+                        @include media-sp {
+                            max-width: calc(470 / 548 * 100%);
+                        }
+                    }
+
+                    &:last-of-type {
+                      .item {
+                          @include media-sp {
+                              max-width: calc(210 / 548 * 100%);
+                          }
+                      }
+                      .value {
+                          @include media-sp {
+                              max-width: calc(338 / 548 * 100%);
+                          }
+                      }
+                    }
+                }
+
+                // セキュリティコード：
+                &.inputblockrow03 {
+                    .inputlabel-input {
+                        @include media-is-pc {
+                            width: calc(200 / 570 * 100%);
+                        }
+                    }
+                }
+
+                // 有効期限
+                &.inputblockrow04 {
+
+                    .inputlabel-input {
+                        @include media-is-pc {
+                            width: calc(100 / 570 * 100%);
+                            &:not(:last-child) {
+                                margin-right: 8px;
+                            }
+                        }
+                        @include media-sp {
+                            width: calc(297 / 610 * 100%);
+                            &:first-of-type {
+                                margin-right: 8px;
+                            }
+                        }
+                        &::placeholder {
+                            color: #fff;
+
+                            @include media-sp {
+                                color: #e6e6e6;
+                            }
+                        }
+                    }
+
+                    .inputlabel-label {
+                        font-weight: 400;
+                        @include media-is-pc {
+                            &:not(:last-child) {
+                                margin-right:20px;
+                            }
+                        }
+                    }
+                }
+
+                // 支払方法：
+                &.inputblockrow05 {
+                    .form-block-select {
+                        border:1px solid $bd-color1;
+                        border-radius: 2px;
+                        @include media-sp {
+                            width: calc(297 / 610 * 100%);
+                        }
+                        select {
+                            height: 36px;
+                            padding: 0 36px 0 12px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &ttl {
+                font-weight: 500;
+                width: calc(130 / 700 * 100%);
+                @include media-sp {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    font-weight: 400;
+                }
+            }
+
+            &input {
+                display: flex;
+                align-items: center;
+                width: calc(570 / 700 * 100%);
+                @include media-sp {
+                    width: 100%;
+                }
+                .inputlabel-label {
+                    margin-bottom: 0;
+                }
+            }
+            .radio-label {
+            }
+        }
+
+        &-note {
+            &item {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+                &ttl {
+                    margin-bottom: 0;
+                }
+                .indent {
+                    text-indent: 1em;
+                    display: inline-block;
+                }
+            }
+        }
+
+        &-checkbox {
+            border: 1px solid $bd-color1;
+            padding: 26px 25px 18px;
+            margin-bottom: 20px;
+            @include media-sp {
+                padding: 17px 20px 16px;
+            }
+            .check-label02 {
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &-personalinfo {
+            border: 1px solid $bd-color1;
+            padding: 26px 25px 18px 25px;
+
+            @include media-sp {
+                padding: 16px 20px 18px;
+            }
+            .methoditem-noteitemttl {
+                margin-bottom: 20px;
+                font-weight: 700;
+            }
+            .methoditem-noteitemitem  {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        // 共通
+
+
+        // method01
+        &-numofpayment {
+            border: 1px solid $bd-color1;
+            padding: 26px 25px 29px 25px;
+            margin-bottom: 36px;
+            @include media-sp {
+                margin-bottom: 20px;
+                padding: 16px 20px 18px;
+                * {
+                    font-size: 14px;
+                    line-height: calc(46/28);
+                }
+                .sp-indent {
+                    display: inline-block;
+                    text-indent: 1em;
+                }
+
+            }
+
+            &row {
+                @include media-is-pc {
+                    &:first-of-type { margin-bottom: 20px; }
+                    &:nth-of-type(2) { margin-bottom: 30px; }
+                }
+                @include media-sp {
+                    &:first-of-type {
+                        margin-bottom: 20px;
+                        font-weight: 500;
+                    }
+                    &:nth-of-type(2) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .row {
+                    display: flex;
+                    @include media-sp {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    .item {
+                        @include media-is-pc {
+                            width: calc(150 / 650 * 100%);
+                        }
+                    }
+                    .value {
+                        @include media-is-pc {
+                            width: calc(500 / 650 * 100%);
+                        }
+                    }
+                }
+            }
+        }
+        &-agreenotice {
+            text-align: center;
+            @include media-sp {
+                width: calc(530/610 *100%);
+                margin: auto;
+                text-align: left;
+            }
+
+        }
+        // method01
+
+        // method03
+        &-brandlogo {
+            width: calc(514 / 700 * 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include media-sp {
+                width: calc(570 / 610 * 100%);
+                margin-bottom: 4px;
+                width: 100%;
+            }
+            &item {
+                cursor: pointer;
+                &:hover {
+                    opacity: .8;
+                }
+                position: relative;
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    content: '';
+                    display: block;
+                    border-style: solid;
+                    border-width: 4px 0 4px 6px;
+                    border-color: transparent transparent transparent #333;
+                    transform: translate(-12px, -4px);
+                    @include media-sp {
+                        border-width: 4px 0 4px 6px;
+                    }
+                }
+            }
+
+            img { display: block; }
+
+            .brandlogoitem01 {
+                @include media-is-pc {
+                    margin-right: 40px;
+                }
+                @include media-sp {
+                    margin-right: calc(49 / 610 * 100%);
+                    width: calc(170 / 610 * 100%);
+                }
+                img {
+                    @include media-is-pc {
+                        width: 106px;
+                    }
+                }
+                &:before {
+                    @include media-sp {
+                        transform: translate(-10px, -4px);
+                    }
+                }
+            }
+            .brandlogoitem02 {
+                @include media-is-pc {
+                    margin-right: 49px;
+                }
+                @include media-sp {
+                    margin-right: calc(43 / 610 * 100%);
+                    width: calc(144 / 610 * 100%);
+                }
+                img {
+                    @include media-is-pc {
+                        width: 88px;
+                    }
+                }
+                &:before {
+                    @include media-sp {
+                        transform: translate(-12px, -4px);
+                    }
+                }
+            }
+            .brandlogoitem03 {
+                @include media-sp {
+                    width: calc(148 / 610 * 100%);
+                }
+                img {
+                    @include media-is-pc {
+                        width: 123px;
+                    }
+                }
+                &:before {
+                    @include media-sp {
+                        transform: translate(-9px, -4px);
+                    }
+                }
+            }
+
+        }
+        // method03
+
+
+
+        &.methoditem01 {
+            .methoditem-lastcardselect {
+                .readbtnwrap {
+                    margin-top: 0;
+                }
+            }
+            .methoditem-note {
+                margin-bottom: 40px;
+            }
+        }
+
+        &.methoditem02 {
+            .methoditem-inputblock {
+                margin-bottom: 64px;
+                @include media-sp {
+                    margin-bottom: 20px;
+                    // padding-bottom: 20px;
+                    // border-bottom: 1px solid $bd-color1;
+                }
+            }
+
+            .methoditem-lastcardselect {
+                .radio-label {
+                    margin-bottom: 8px;
+                }
+            }
+            .methoditem-note01 {
+                @include media-sp {
+                    padding-top: 20px;
+                    border-top: 1px solid $bd-color1;
+                }
+            }
+
+
+            .inputblockrow04 {
+                margin-bottom: 32px;
+            }
+            .inputblockrow05 {
+                .methoditem-inputblockinput {
+
+                    justify-content: space-between;
+                    @include media-sp {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    .radio-label {
+                        @include media-sp {
+                            span {
+                                font-size: 13px;
+                                line-height: 2;
+                            }
+                        }
+                        &:not(:last-of-type) {
+                            @include media-is-pc {
+                                margin-right: 30px;
+                            }
+                            @include media-sp {
+                                margin-bottom: 16px;
+                            }
+                        }
+                        &:last-of-type {
+                            width: calc(120 / 560 * 100%);
+                            @include media-sp {
+                                width: 100%;
+
+                            }
+                        }
+                    }
+                }
+            }
+            .form-block-select {
+                width: 100%;
+            }
+            .methoditem-note {
+                margin-bottom: 23px;
+                @include media-sp {
+                    margin-bottom: 20px;
+                }
+            }
+            .methoditem-personalinfo {
+                @include media-sp {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        &.methoditem03 {
+            .methoditem-note {
+                &item {
+
+                    &.noteitem02 {
+                        .methoditem-noteitemttl {
+                            margin-bottom: 30px;
+                        }
+                        .list01 {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        &.methoditem04 {
+            .methoditem-note {
+                &item {
+                    &.noteitem02 {
+                        .methoditem-noteitemitem {
+                            font-size: 12px;
+                            @include media-sp {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.methoditem05 {
+
+        }
+    }
+}
+// ------------------------------
+// no. 29 お支払い方法の設定 end
+// ------------------------------
+
+// ------------------------------
+// No. 30 ギフトカード設定 Start
+// ------------------------------
+#cartgiftcard {
+    .modal-block-desc {
+        margin-bottom: 25px;
+        font-size: 13px;
+        @include media-sp {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+    }
+
+    .modal-block-inner-content {
+        @include media-sp {
+            max-height: calc(100vh - 356px - 29px);
+        }
+    }
+
+    .giftcard-content {
+        padding: 21px 22px 38px 20px;
+        border: 1px solid $bd-color1;
+        border-radius: 4px;
+
+        input[type="text"] {
+            @include _inputtext($width: 400px);
+        }
+
+        .inputlabel {
+            &-pair {
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                @include media-sp {
+                    flex-wrap: wrap;
+                }
+                &:first-of-type {
+                    margin-bottom: 40px;
+                    @include media-sp {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            &-label {
+                width: 78px;
+                font-weight: 500;
+                margin-right: 6px;
+                display: block;
+                @include media-sp {
+                    width: 100%;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+
+        .addcard {
+            margin-left: 84px;
+            margin-bottom: 46px;
+            @include media-sp {
+                margin-left: initial;
+                margin-bottom: 26px;
+            }
+            &-desc {
+                font-size: 10px;
+                margin-bottom: 28px;
+                @include media-sp {
+                    margin-bottom: 20px;
+                    font-size: 11px !important;
+                    line-height: 1.63;
+                }
+            }
+            &-submit {
+                @include _btn($type: low, $width: 120px, $sp-width: 46.87%);
+                border-radius: 2px;
+                @include media-sp {
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        .card-type {
+            &list {
+            }
+        }
+        .card {
+            &-offront,
+            &-ofback {
+                p {
+                    margin-left: -.6em;
+                }
+            }
+            &-offront {
+                margin-bottom: 34px;
+                @include media-sp {
+                    margin-bottom: 30px;
+                }
+                p {
+                    margin-bottom: 9px;
+                }
+                &list {
+                    display: flex;
+                    justify-content: space-between;
+                    @include media-sp {
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                    }
+
+                }
+                &item {
+                    width: 31.428%;
+                    &:not(:last-child) {
+                        margin-right: 11px;
+                        @include media-sp {
+                            margin-right: 0px;
+                        }
+                    }
+                    @include media-sp {
+                        &:not(:nth-child(3n)) {
+                            // opacity: .2;
+                            margin-right: 2.85714%;
+                        }
+
+                        &:nth-last-of-type(n+3) {
+                            margin-bottom: 8px;
+                        }
+
+                    }
+
+                }
+            }
+            &-ofback {
+                p {
+                    margin-bottom: 13px;
+                    @include media-sp {
+                        margin-bottom: 8px;
+                    }
+                }
+                picture {
+                    display: block;
+                    width: 405px;
+                    @include media-sp {
+                        width: 96.4%;
+                    }
+                }
+            }
+        }
+    }
+}
+// ------------------------------
+// No. 30 ギフトカード設定 End
+// ------------------------------
+
+// ------------------------------
+// no. 31 注文内容確認 start
+// ------------------------------
+.option-br {
+    display: block;
+}
+#cart.cartconfirm {
+    @include _flowIconSec();
+    .flow-itemicon:after {
+        display: none;
+    }
+
+
+    .cartblock {
+        padding-bottom: 0;
+        &:last-of-type {
+            @include media-sp {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .modal-block .modal-block-inner01 {
+        padding: 66px 9.333333% 94px;
+
+        .modal-block-inner-content {
+            @include media-sp {
+                max-height: calc(100vh - 226px);
+            }
+            * {
+                font-size: 13px;
+                line-height: calc(26/13);
+                font-weight: 400;
+                @include media-sp {
+
+                }
+            }
+        }
+    }
+
+    section .inner {
+        @include media-sp {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .cartblock-contentleft  {
+        @include media-sp {
+            order: 2
+        }
+    }
+
+    .item-wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .cartblock-contentright  {
+        @include media-sp {
+            order: 1;
+        }
+        .sidebar-item {
+             @include media-sp {
+                 border: 1px solid $bd-color1;
+                 margin-bottom: 20px;
+             }
+        }
+
+
+        // 個人情報
+        .sidebar-item02 {
+
+            margin-bottom: 41px;
+            @include media-sp {
+                margin-bottom: 30px;
+            }
+            * {
+                font-size: 13px;
+            }
+
+            padding: 0;
+            border: none;
+            .sidebar-itemdesc {
+                padding: 0 24px;
+                margin-bottom: 20px;
+                font-size: 13px;
+                line-height: calc(27/13);
+                a {
+                    color: #235192;
+                    line-height: calc(27/13);
+                }
+            }
+            .sidebar-iteminput {
+                margin-bottom: 17px;
+            }
+
+            .coupon-link {
+                &:first-of-type {
+                    margin-bottom: 13px;
+                }
+            }
+
+            .sidebar-itembtn {
+                @include media-sp {
+                    margin: auto;
+                    width: calc(610 / 690 * 100%);
+                }
+                button {
+                    width: 100%;
+                    border-radius: 4px;
+                    height: 48px;
+                }
+                .sidebar-itembtnconfirm {
+                    margin-bottom: 20px;
+                    background: red;
+                    color: #fff;
+                }
+                .sidebar-itembtnreturn {
+                    background: #fff;
+                    border: 1px solid $bd-color1;
+                }
+            }
+        }
+
+        // クーポン適応なし
+        .sidebar-item03 ,
+        .sidebar-item04 ,
+        .sidebar-item06 {
+            .sidebar-itemttl {
+                margin-bottom: 20px;
+            }
+            .sidebar-itemtotalpoint {
+                margin-bottom: 14px;
+            }
+            .sidebar-itemlist {
+                padding-top: 18px;
+                margin-bottom: 22px;
+                border-top: 1px solid $bd-color1;
+                * {
+                    font-size: 12px;
+                }
+                .sidebar-itemrow {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+
+            }
+        }
+
+        .sidebar-item05 {
+            .sidebar-itemttl {
+                margin-bottom: 20px;
+            }
+            .sidebar-itemtotalpoint {
+                margin-bottom: 14px;
+            }
+            .sidebar-itemlist {
+                padding-top: 18px;
+                margin-bottom: 22px;
+                border-top: 1px solid $bd-color1;
+                * {
+                    font-size: 12px;
+                }
+                .sidebar-itemrow {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+
+            }
+
+        }
+        .sidebar-item06 {
+            .coupon-link {
+                &.coupon-link01  {
+                    border-bottom: 1px solid $bd-color1;
+                    padding-bottom: 14px;
+                    margin-bottom: 14px;
+                }
+            }
+        }
+
+        .sidebar-item01 {
+            @include media-sp {
+                margin: 0 15px;
+                padding: 20px 15px 22px 15px;
+                border: 1px solid $bd-color1;
+            }
+        }
+
+        .sidebar-item01 {
+            @include media-sp {
+                margin: 0 0 20px 0;
+                padding: 20px 15px 22px 15px;
+            }
+        }
+    }
+
+    .cartblock {
+        &:first-of-type {
+            border: none;
+        }
+        &-content {
+            &left {
+                .small {
+                    *  {
+                        font-size: 12px;
+                        line-height: 1;
+                        font-weight: 500;
+                    }
+                }
+                &desc {
+                    border-top: 1px solid $bd-color1;
+                    border-bottom: 1px solid $bd-color1;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 20px 0;
+                    margin-bottom: 25px;
+                    @include media-sp {
+                        display: none;
+                    }
+                }
+                &input {
+                    margin-bottom: 20px;
+                    @include media-sp {
+                        margin-bottom: 36px;
+                    }
+                    .select-wrap {
+                        position: relative;
+                        width: 100%;
+                        height: 60px;
+                        border: 1px solid $bd-color1;
+                        border-radius: 4px;
+                        text-align: left;
+                        display: flex;
+                        padding-left: 2rem;
+                        @include media-sp {
+                            height: 70px;
+                        }
+
+                        select {
+                            width: 100%;
+                            padding-left: 2em;
+                            appearance: none;
+                            line-height: calc(48/28);
+                            box-sizing: border-box;
+                            white-space: normal;
+                            @include media-sp {
+                                max-width: 200px;
+                            }
+                        }
+                        &:before {
+                            display: block;
+                            position: absolute;
+                            content: '';
+                            top: 50%;
+                            left: 23px;
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                            transform: translate(0%, -50%);
+                        }
+                        &:after {
+                            position: absolute;
+                            top: 27px;
+                            right: 23px;
+                            border: 4px solid transparent;
+                            border-top: 6px solid black;
+                            content: "";
+                        }
+                        &:first-of-type {
+                            margin-bottom: 20px;
+                            &:before {
+                                background-image: url('../img/cart/icon-check_black.png');
+                                @include media-is-pc {
+                                    width: 20px;
+                                    height: 18px;
+                                }
+                                @include media-sp {
+                                    width: 21px;
+                                    height: 19px;
+                                }
+                            }
+                        }
+                        &:last-of-type {
+                            &:before {
+                                background-image: url('../img/cart/icon-mail.png');
+                                @include media-is-pc {
+                                    width: 24px;
+                                    height: 18px;
+                                }
+                                @include media-sp {
+                                    width: 21px;
+                                    height: 16px;
+                                }
+                            }
+                        }
+
+
+                        &:first-of-type {
+                        }
+                    }
+                }
+
+                .confirm {
+                    margin-bottom: 20px;
+                    padding: 22px 24px 35px 24px;
+                    border: 1px solid $bd-color1;
+                    border-radius: 4px;
+                    @include media-sp {
+                        padding: 22px 15px 30px 15px;
+                    }
+                    * {
+                        font-size: 13px;
+                        line-height: calc(19/13);
+                        @include media-sp {
+                            font-size: 14px;
+                            line-height: calc(56/28);
+                        }
+                    }
+                    p, .confirm-listitemttl {
+                        margin-bottom: 16px;
+                    }
+
+                    &-ttl {
+                        margin-bottom: 24px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        @include media-sp {
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    p {
+                        @include media-sp {
+                            margin-bottom: 38px;
+                        }
+                    }
+
+                    &-list {
+                        margin-bottom: 16px;
+                        &item {
+                            margin-bottom: 35px;
+                            @include media-sp {
+                                margin-bottom: 30px;
+                            }
+                            &ttl {
+                                @include media-sp {
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                        }
+                    }
+
+                    &-agree {
+                        p {
+                            margin-bottom: 40px;
+                            @include media-sp {
+                                font-weight: 700;
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+
+                    .check-label02 {
+                        width: 78px;
+                        @include media-sp {
+                            width: 86px;
+                        }
+                        &:before {
+                            width: 16px;
+                            height: 16px;
+                        }
+                        span {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+
+                .option {
+                    @include media-is-pc {
+                        margin-bottom: 80px;
+                    }
+                    @include media-sp {
+                        margin-bottom: 31px;
+                    }
+                    .coupon-row {
+                        border: 1px solid $bd-color1;
+                        border-radius: 4px;
+                        &:not(:last-child) {
+                          margin-bottom: 20px
+                        }
+
+                        &.coupon-row02 {
+                            .coupon-ttl {
+                                margin-bottom: 24px;
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+                            .giftcard-wrap  {
+                                margin-bottom: 24px;
+                                padding-left: 14px;
+                            }
+                            .coupon-link.flex-end {
+                                margin-top: initial;
+                            }
+                        }
+                    }
+                }
+
+                .cartblock-contentleftitem {
+                    &:first-of-type {
+                        border-bottom: 1px solid $bd-color1;
+                        margin-bottom: 42px;
+                    }
+
+                    .numofitems  {
+                        &-ttl {
+                            padding-bottom: 26px;
+                            border-bottom: 2px solid $bd-color1;
+                            margin-bottom: 25px;
+                            h3 {
+                                font-size: 15px;
+                                font-weight: 500;
+                                @include media-sp {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                        &-subttl {
+                            margin-bottom: 17px;
+                            p  {
+                                font-size: 15px;
+                                font-weight: 500;
+                                @include media-sp {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .item-wrap {
+                    .item {
+                        background: none;
+                        border-top: 1px solid $bd-color1;
+                        padding: 40px 0 23px 0;
+                        .item-left {
+                            @include media-is-pc {
+                                width: calc(260 / 928 * 100%);
+                                margin-right: calc(42 / 928 * 100%);
+                            }
+                        }
+                        .item-right {
+                            @include media-is-pc {
+                                width: calc(621 / 928 * 100%);
+                            }
+                        }
+                    }
+                    .item-2 {
+
+                    }
+                    .item-5 {
+                        margin-bottom: 20px;
+
+                        .item-right {
+                            .price {
+                                &-stock {
+                                    font-size: 14px;
+                                    color: #333;
+                                    margin-right: 23px;
+                                }
+
+                                &-price {
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+
+
+                    .coupon-row.coupon-row06 {
+                        border: 1px solid $bd-color1;
+                        border-radius: 4px;
+                        margin-bottom: 20px;
+                        padding: 22px 28px 36px 23px;
+                        @include media-sp {
+                            padding: 25px 0 30px 0;
+                        }
+
+                        .accountdetail-row {
+                            @include media-is-pc {
+                                line-height: 1;
+                            }
+
+                        }
+                        .accountdetail {
+                            &-row {
+                                &.accountdetail-row02,
+                                &.accountdetail-row03,
+                                &.accountdetail-row04 {
+                                    display: flex;
+                                    .accountdetail-item {
+                                        min-width: 96px;
+                                        @include media-sp {
+                                            min-width: calc(196 / 610 * 100%);
+                                        }
+                                    }
+                                    .accountdetail-value {
+                                        @include media-sp {
+                                            min-width: calc(412 / 610 * 100%);
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                        .coupon-item {
+                            margin-bottom: 24px;
+                            display: flex;
+                            align-items: center;
+                            @include media-sp {
+                                justify-content: space-between;
+                                padding-left: 15px;
+                                padding-right: 15px;
+                                text-align: right;
+                            }
+                            .coupon-ttl {
+                                margin-right: 30px;
+                                margin-bottom: 0;
+                                h4 {
+                                    // color: red;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                }
+                                @include media-sp {
+                                    margin-top: -12px;
+                                }
+                            }
+                            .coupon-date {
+                                @include media-sp {
+                                    line-height: calc(36/24);
+                                    margin-right: calc(74 / 610 * 100%);
+                                }
+                            }
+                        }
+                        .coupon-value {
+                            margin-bottom: 0;
+                            .value-detail {
+                                @include media-sp {
+                                    margin-bottom:  25px;
+                                }
+                            }
+                        }
+
+                        .value-link {
+                            line-height: calc(17/12);
+                            @include media-is-pc {
+                                text-align: right;
+                                width: calc(331 / 869 * 100%);
+                            }
+
+
+                            a {
+                                display: inline-block;
+                                @include media-sp {
+                                    display: block;
+                                }
+
+                                &:not(:last-child) {
+                                    margin-right: initial !important;
+                                    margin-bottom: 17px !important;
+                                }
+
+                                &:nth-of-type(2) {
+                                    @include media-is-pc {
+                                        margin-left: 30px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &right {
+                .orderdetail-addpoint {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+        // SPサイズ ボーダー拡張
+    // &.cart {
+    // .coupon-row {
+    //     >.coupon-ttl,
+    //     >.coupon-link,
+    //     >.giftcard-wrap,
+    //     >.row-desc,
+    //     >.coupon-value,
+    //     >.coupon-receive,
+    //     >.coupon-rowrow {
+    //         @include media-sp {
+    //             padding-left: 15px;
+    //             padding-right: 15px;
+    //         }
+    //     }
+    // }
+    //
+    .sidebar-item {
+        >.sidebar-itemttl ,
+        >.coupon-link,
+        >.sidebar-itemdesc,
+        >.sidebar-itemlink,
+        >.sidebar-itemtotalpoint,
+        >.sidebar-itemlist {
+            @include media-sp {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+    // SPサイズ ボーダー拡張
+    // }
+
+
+}
+// ------------------------------
+// No. 31 注文内容確認 End
+// ------------------------------
+
+
+
+
+// -----------------------------------------------
+// No33. 注文完了 Start
+// -----------------------------------------------
+#cartcomplete {
+
+    .cart-btmborder {
+        @include media-sp {
+            border-bottom: 20px solid #f5f5f5 !important;
+            margin-bottom: 35px;
+        }
+    }
+    .cart-complete {
+        width: 100%;
+        @include media-is-pc {
+            margin: -24px auto 98px;
+            padding-bottom: 0;
+        }
+    }
+    #header {
+        @include media-is-pc {
+            margin-bottom: 0;
+        }
+    }
+    @include _flowIconSec();
+    // .flow-wrap, .linkbtn-wrap {
+    //     @include media-sp {
+    //         padding: 0 5.8%;
+    //     }
+    // }
+    //
+    // // フローアイコン
+    // .flow {
+    //     &-wrap {
+    //         margin-bottom: 70px;
+    //         text-align: center;
+    //         @include media-sp {
+    //             margin-bottom: 40px;
+    //         }
+    //     }
+    //
+    //     &-list {
+    //         width: 432px;
+    //         display: flex;
+    //         justify-content: space-between;
+    //         margin: auto;
+    //         @include media-sp {
+    //             width: 100%;
+    //         }
+    //     }
+    //
+    //     &-item {
+    //         color: $cart-blue;
+    //         width: 22.286%;
+    //         &:not(:last-child) {
+    //             .flow-itemicon {
+    //                 &:after {
+    //                     position: absolute;
+    //                     top: 50%;
+    //                     right: -50%;
+    //                     width: 15px;
+    //                     height: 15px;
+    //                     transform: translate(-50%, -50%) rotate(45deg);
+    //                     border-top: 3px solid $cart-blue;
+    //                     border-right: 3px solid $cart-blue;
+    //                     content: "";
+    //                     @include media-sp {
+    //                         right: -50%;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //
+    //     &-itemicon {
+    //         width: 96px;
+    //         position: relative;
+    //         margin-bottom: 20px;
+    //         @include media-sp {
+    //             width: 100%;
+    //             margin-bottom: 16px;
+    //         }
+    //     }
+    //     &-itemtext {
+    //         font-size: 14px;
+    //         font-weight: 700;
+    //         @include media-sp {
+    //             font-size: 13px;
+    //         }
+    //     }
+    // }
+
+    .link-item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+
+
+    // サンクスメッセージ
+
+    .thankstext {
+        margin-bottom: 40px;
+        text-align: center;
+        @include media-sp {
+            margin-bottom: 35px;
+        }
+
+        &-message, &-order {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.45;
+        }
+
+        &-message {
+            margin-bottom: 40px;
+            @include media-sp {
+                margin-bottom: 35px;
+            }
+        }
+
+        &-order {
+            margin-bottom: 40px;
+            @include media-sp {
+                margin-bottom: 25px;
+            }
+        }
+
+        &-senddesc {
+            line-height: 1.55;
+            font-size: 14px;
+            @include media-sp {
+                line-height: 2;
+                font-size: 12px;
+            }
+        }
+    }
+
+    // 銀行口座詳細 cart-complete02のみ
+    .account {
+        width: 600px;
+        margin: 0 auto 70px;
+        padding-top: 10px;
+        @include media-sp {
+            margin: 0 auto 48px;
+            width: 100%;
+        }
+
+        &-detail {
+            margin-bottom: 30px;
+            @include media-sp {
+                margin-bottom: 20px;
+            }
+            table {
+                border: 1px solid $grey-color;
+            }
+            th, td {
+                height: 40px;
+                padding: 12px 0 12px 0;
+                text-align: left;
+                border-bottom: 1px solid $grey-color;
+                @include media-sp {
+                    padding: 18px 0 18px 15px;
+                }
+            }
+            th {
+                width: 200px;
+                padding-left: 16px;
+                font-weight: 400;
+                background: #f7f7f7;
+                @include media-sp {
+                    width: 122px;;
+                }
+            }
+            td {
+                padding-left: 22px;
+            }
+        }
+
+        &-caution {
+            margin-bottom: 30px;
+            color: red;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.785;
+            @include media-sp {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-note {
+            &item {
+                font-size: 12px;
+                text-indent: -1em;
+                margin-left: 1em;
+                @include media-sp {
+                    line-height: 1.66;
+                    letter-spacing: -.001em;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                    @include media-sp {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// 各種リンク
+.linkbtn {
+    &-wrap {
+        @include media-sp {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+    &-top {
+        margin-bottom: 30px;
+        a {
+            margin:auto;
+        }
+    }
+    &-bottom {
+        display: flex;
+        justify-content: center;
+
+        @include media-sp {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        a {
+            &:not(:last-child) {
+                margin-right: 20px;
+                @include media-sp {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    &.blue-btn {
+        width: 296px;
+        padding: 15.5px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    &.outline-btn {
+        width: 180px;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid $bd-color1;
+    }
+
+    &.blue-btn, &.outline-btn, &.black-btn  {
+        @include media-sp {
+            font-size: 14px;
+            width: 100%;
+            padding: 13px;
+            font-weight: 500;
+            border-radius: 4px;
+        }
+    }
+}
+
+
+// -----------------------------------------------
+// No34. 設置チェックシート Start
+// -----------------------------------------------
+
+// -----------------------------------------------
+// No34. 設置チェックシート End
+// -----------------------------------------------
+
+// -----------------------------------------------
+// No35. 設置チェックシート Start
+// -----------------------------------------------
+// -----------------------------------------------
+// No35. 設置チェックシート End
+// -----------------------------------------------
+
+// -----------------------------------------------
+// No36. 設置チェックシート Start
+// -----------------------------------------------
+#checksheet {
+    .indent {
+        text-indent: 1em;
+        display: inline-block;
+    }
+    .modal-block-inner-content {
+        &ttl {
+            margin-bottom: 23px;
+            font-size: 13px;
+            padding: 8px 0 9px 33px;
+            border: 1px solid $bd-color1;
+            @include media-sp {
+                padding: 11px 12px;
+                margin-bottom: 20px;
+            }
+            h3 {
+                margin-bottom: 0;
+                font-weight: 500;
+                @include media-sp {
+                    line-height: calc(48 / 28);
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            }
+        }
+        &desc {
+            margin-bottom: 34px;
+            &item {
+                @include media-sp {
+                    line-height: calc(56/28);
+                }
+                &:not(:last-child) {
+                  margin-bottom: 35px;
+                  @include media-sp {
+                      margin-bottom: 0;
+                  }
+                }
+            }
+        }
+    }
+    .check-sec {
+        .radio-label {
+            margin-bottom: 0;
+            &:not(:last-child) {
+                @include media-sp {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        padding-top: 25px;
+        border-top: 1px solid #707070;
+        &ttl {
+            margin-bottom: 24px;
+            font-size: 14px;
+            @include media-sp {
+                margin-bottom: 15px;
+            }
+            &:before {
+                margin-right: 6px;
+                margin-bottom: -6px;
+                display: inline-block;
+                content: '';
+                background-image: url('../img/cart/icon-check_2.png');
+                background-repeat: no-repeat;
+                width: 22px;
+                height: 22px;
+                background-size: 100%;
+            }
+        }
+
+        &input {
+            margin-bottom: 20px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid $bd-color1;
+             &ttl {
+                 margin-bottom: 16px;
+                 font-weight: 500;
+                 @include media-sp {
+                    font-size: 13px;
+                 }
+             }
+             &input {
+                 display: flex;
+                 @include media-sp {
+                     flex-direction: column;
+                     align-items: flex-start;
+                 }
+
+                 .radio-label {
+                     &:not(:last-child) {
+                         @include media-is-pc {
+                             margin-right: 30px;
+                         }
+                     }
+                     .radio-text {
+                         @include media-sp {
+                             font-size: 13px;
+                         }
+                         span {
+                             line-height: calc(20/13);
+                             margin-left: 15px;
+                             @include media-is-pc {
+                                 max-width: 231px;
+                             }
+
+                             @include media-sp {
+                                 margin-left: 14px;
+                                 max-width: calc(200 /305 * 100%);
+                                 font-size: 13px;
+                             }
+                         }
+                         &.multiple {
+                             &:before {
+                                 // width: 20.3px;
+                             }
+                         }
+                     }
+                 }
+             }
+             .check-secinputnote {
+                 @include media-sp {
+                     line-height: calc(56/28);
+                 }
+
+             }
+        }
+
+        &.check-sec01 {
+            @include media-sp {
+                margin-bottom: 20px;
+            }
+            .check-secinput03 {
+                @include media-sp {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        &.check-sec02 {
+            .check-secinput01 {
+                @include media-sp {
+                    padding-top: 20px;
+                    border-top: 1px solid $bd-color1;
+                }
+                .check-secinputinput {
+                    .input-wrap {
+                        width: 242px;
+                        @include media-sp {
+                            width: 100%;
+                        }
+                        input {
+                            width: 100%;
+                            height: 30px;
+                            border: 1px solid $bd-color1;
+                            @include media-sp {
+                                height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+            .check-secinput02 {
+                .check-secinputnote {
+                    margin-top: 18px;
+                    @include media-sp {
+                        margin-top: 12px;
+                    }
+                }
+            }
+            .check-secinput03 {
+                .check-secinputinput {
+                    flex-wrap: wrap;
+                    .fs-sp11 {
+                        margin: 0;
+                        max-width: initial;
+                    }
+                }
+
+                .radio-label{
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            .check-secinput04 {
+                border-bottom: none;
+                @include media-sp {
+                    margin-bottom: 24px;
+                    padding-bottom: 0;
+                }
+                .radio-label{
+                    width: 50%;
+                    margin-right: 0;
+                    @include media-sp {
+                        width: 100%;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                        @include media-sp {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .radio-text {
+                        img {
+                            max-width: 60px;
+                        }
+                    }
+                }
+                .check-secinputinput {
+                    flex-wrap: wrap;
+                }
+                .check-secinputnote {
+                    margin-top: 32px;
+                    @include media-sp {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .radio-sec {
+        padding: 25px;
+        border: 1px solid $bd-color1;
+        &desc {
+            margin-bottom: 22px;
+            @include media-sp {
+                line-height: calc(56/28);
+            }
+            span {
+                font-size: 11px;
+                @include media-sp {
+                    font-size:14px;
+                    line-height: calc(56/28);
+                }
+            }
+        }
+        &input {
+            .check-label02 {
+                &:before {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+
+    .modal-block-btnwrap {
+        #submit {
+            &:disabled {
+                opacity: .5;
+            }
+
+        }
+    }
+}
+// -----------------------------------------------
+// No36. 設置チェックシート End
+// -----------------------------------------------
+
+// -----------------------------------------------
+// No37. クーポン設定 Start
+// -----------------------------------------------
+#cartcoupon {
+    .modal-block-inner01 {
+        .coupon-listtxt {
+            @include media-sp {
+                font-weight: 700;
+            }
+        }
+
+    /*  .slider-wrap {
+            position: relative;
+            .owl-prev, .owl-next {
+                font-size: 0;
+                line-height: 0;
+                position: absolute;
+                top: 50%;
+                display: block;
+                width: 20px;
+                height: 20px;
+                padding: 0;
+                -webkit-transform: translate(0, -50%);
+                -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                cursor: pointer;
+                color: transparent;
+                border: none;
+                outline: none;
+            }
+
+            .owl-prev {
+                position: absolute;
+                top: 50%;
+                left: -15px;
+                transform: translate(0, -50%);
+            }
+            .owl-next {
+                position: absolute;
+                top: 50%;
+                right: -15px;
+                transform: translate(0, -50%);
+            }
+            button {
+                height: 13px;
+            }
+        } */
+
+        .slider {
+            margin-bottom: 35px;
+            &-item {
+                width: 220px;
+                @include media-sp {
+                    width: 100%;
+                    /* width: calc(560 / 610 * 100%); */
+                }
+                label {
+                    padding: 13px 15px 16px 15px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+                h3 {
+                    font-size: 13px;
+                    font-weight: 500;
+                    text-align: center;
+                    margin: 0;
+                }
+                p {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 1.666;
+                }
+            }
+        }
+
+        .another-coupon {
+            margin-bottom: 50px;
+            @include media-sp {
+                margin-bottom: 30px;
+
+            }
+            .radio-sec {
+                label {
+                    @include media-sp {
+                        font-size: 13px;
+                    }
+                }
+
+            }
+            .coupon-sec {
+                display: flex;
+                align-items: center;
+                @include media-sp {
+                    flex-direction: column;
+                    align-items: initial;
+                }
+                &.normal-coupon {
+                    @include media-sp {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+
+            .input-desc {
+                margin: 0 8px 0 0;
+                @include media-sp {
+                    display: block;
+                    margin: 0 0 11px 0;
+                }
+            }
+            .input-input {
+                margin-right: 8px;
+                @include media-sp {
+                    margin-right: initial;
+                    border-radius:  2px 0 0 2px;
+                }
+                @include _inputtext($width: 309px, $sp-width: 78.19%);
+            }
+            .input-summit {
+                @include _btn($type: "low",$width: 60px, $sp-width: 21.8%);
+                border-radius: 2px;
+                @include media-sp {
+                    border-radius: 0 2px 2px 0;
+                }
+            }
+
+        }
+
+        .coupon-cautionsec {
+            padding: 24px 25px 25px 25px;
+            @include media-sp {
+                padding: 17px 0 20px 0;
+
+            }
+
+            .sec-ttlwrap {
+                margin-bottom: 25px;
+                @include media-sp {
+                    margin-bottom: 10px;
+
+                }
+            }
+
+            h3 {
+                margin-bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                font-weight: 700;
+                &:before {
+                    margin-right: 10px;
+                    display: inline-block;
+                    content: '';
+                    background-image: url('/assets/img/common/caution-sign.png');
+                    width: 24px;
+                    height: 24px;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+            }
+            .caution-span {
+                @include media-sp {
+                    margin-bottom: 21px;
+                    display: block;
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 13px;
+                }
+            }
+            p {
+                @include media-sp {
+                    padding: 0 17px 0 23px;
+                    line-height: 2;
+                }
+            }
+
+        }
+    }
+}
+// -----------------------------------------------
+// No37. クーポン設定 End
+// -----------------------------------------------
+
+
+
+// コンポーネント化後の余白調整
+// - 関連/消耗品
+// - 一緒にご購入はいかがでしょうか
+// - お気に入り一覧
+// .c-sec01 {
+//     padding: 0;
+//     @include media-sp {
+//         padding-top: 22px;
+//         border-bottom: none;
+//         border-top: 20px solid $bd-color1 !important;
+//     }
+//
+//     &.c-relation {
+//         @include media-is-pc {
+//             margin-bottom: 34px;
+//             .submit-btn {
+//                 border-bottom: 1px solid $bd-color1 !important;
+//                 padding-bottom: 40px;
+//             }
+//         }
+//     }
+//     &.c-recommend {
+//         @include media-is-pc {
+//             margin-bottom: 52px;
+//         }
+//     }
+//     &.c-favoritelist {
+//         @include media-is-pc {
+//
+//         }
+//     }
+//
+//     &.c-relation {
+//         @include media-sp {
+//             margin-bottom: 34px;
+//         }
+//     }
+//     &.c-recommend {
+//         @include media-sp {
+//             margin-bottom: 34px;
+//         }
+//     }
+//     &.c-favoritelist {
+//         @include media-sp {
+//             padding-bottom: 0;
+//         }
+//     }
+    // }

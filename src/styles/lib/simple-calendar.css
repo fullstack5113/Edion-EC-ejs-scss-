@@ -1,0 +1,355 @@
+.calendar-container {
+    position: relative;
+    width: 360px;
+    background: white;
+    padding: 11px 15px 25px 15px;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+}
+
+.calendar-container * {
+    font-family: 'Noto Sans JP', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.calendar {
+    position: relative;
+    overflow: hidden;
+    text-transform: capitalize;
+    text-align: center;
+    font: 15px/1em inherit;
+    color: #545A5C;
+}
+
+.calendar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.calendar header .simple-calendar-btn {
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #333333;
+}
+
+.calendar header .simple-calendar-btn:hover {
+    opacity: 0.8;
+}
+
+.calendar header .simple-calendar-btn:before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+
+.calendar header .btn-prev {
+    top: 125px;
+    left: -10px;
+    transform: rotate(-180deg);
+}
+
+.calendar header .btn-next {
+    top: 125px;
+    right: -10px;
+}
+
+.calendar header .btn-next:before {
+    transform: rotate(45deg);
+}
+
+.calendar header .month {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.calendar header .month .year {
+    font-size: 0.6em;
+    font-weight: 100;
+}
+
+.calendar table {
+    width: 90%;
+    margin: 0px auto;
+    border-spacing: 0px;
+}
+
+.calendar table tbody td {
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.calendar .day {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 21px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.calendar .day:hover {
+    border: solid 2px #333333;
+}
+
+.calendar .day.disabled {
+    color: #333333;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.calendar .day.disabled {
+    cursor: default;
+}
+
+.calendar .day.disabled:hover {
+    border: none;
+    cursor: default;
+}
+
+.calendar .day.none {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.calendar .day.none {
+    cursor: default;
+}
+
+.calendar .day.none:hover {
+    border: none;
+    cursor: default;
+}
+
+.calendar .day.select {
+    background-color: #333333;
+    color: white;
+}
+
+.calendar .event-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 70px;
+    background: #545A5C;
+    box-sizing: border-box;
+}
+
+.calendar .event-container .event-wrapper {
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.calendar .event-container .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.calendar .event-container .close:before,
+.calendar .event-container .close:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #CBD1D2;
+}
+
+.calendar .event-container .close:before {
+    transform: rotate(45deg);
+}
+
+.calendar .event-container .close:after {
+    transform: rotate(-45deg);
+}
+
+.calendar .event-container .event {
+    position: relative;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    background: #6691CC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+    text-align: left;
+    color: white;
+}
+
+.calendar .event-container .event-date {
+    margin-bottom: 1em;
+}
+
+.calendar .event-container .event-hour {
+    float: right;
+}
+
+.calendar .event-container .event-summary {
+    font-weight: 600;
+}
+
+.calendar .filler {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #545A5C;
+    transform: translate(-50%, -50%);
+}
+
+.calendar .year_and_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2;
+    color: #333333;
+    margin-bottom: 19px;
+}
+
+@media(max-width: 767px) {
+    .calendar .year_and_month {
+        font-size: 17px;
+        margin-bottom: 17.5px;
+    }
+}
+
+.calendar table thead td {
+    font-size: 10px;
+    font-weight: bold;
+    color: #333333;
+    padding-bottom: 10px;
+}
+
+.calendar-container .time-content {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-container .schedule {
+    border: solid 2px #73B650;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    height: 50px;
+    align-items: center;
+    position: relative;
+    margin: 10px 20px;
+    padding-left: 20px;
+}
+
+.calendar-container .schedule::before {
+    content: "";
+    position: absolute;
+    right: -2px;
+    background: #73B650;
+    height: 100%;
+    width: 30%;
+    border-radius: 0 8px 8px 0;
+    z-index: 0;
+}
+
+.calendar-container .time-content input {
+    border: none;
+    width: 40px;
+    margin: 0 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.calendar-container .time-content input:focus {
+    outline: none;
+}
+
+.calendar-container .schedule a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.calendar-container .schedule a:hover {
+    cursor: pointer;
+}
+
+.calendar-container .schedule .option {
+    z-index: 1;
+    width: 92px;
+    text-align: center;
+}
+
+.calendar-container hr {
+    width: 90%;
+    border-color: #cccccc;
+    border-top: 3px;
+    margin-bottom: 15px;
+}
+
+.calendar table td:first-child {
+    color: #ea3c3c;
+}
+
+.calendar table td:last-child {
+    color: #707070;
+}
+
+p.empty-schedule {
+    color: #FF6262;
+    font-weight: bold;
+    font-size: 12px;
+    border: solid #FF6262 2px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px 30px;
+    line-height: 3;
+}
+
+.current-click-style {
+    background: rgb(115, 182, 80);
+    color: white;
+}
+
+@media(max-width: 767px) {
+    .calendar-container {
+        padding: 10px 15px;
+        width: 100%;
+    }
+    .calendar table thead td {
+        font-size: 9px;
+    }
+    .calendar table tbody td {
+        font-size: 12px;
+        line-height: 25px;
+    }
+    .calendar header .btn-prev {
+        top: 110px;
+        left: -8px;
+        transform: rotate(-180deg);
+    }
+    .calendar header .btn-next {
+        top: 110px;
+        right: -8px;
+    }
+}

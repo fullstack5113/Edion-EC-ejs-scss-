@@ -1,0 +1,224 @@
+@import '../reset';
+@import '../mixins/media';
+
+.breadcrumb{
+    font-size: 13px;
+    padding: 0 18px;
+    max-width: 1280px;
+    margin: 0 auto 24px;
+    box-sizing: border-box;
+    @include media-sp {
+        font-size: 11px;
+        padding: 0 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+基本グリッド
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+.basicgrid{
+    display: flex;
+    flex-wrap: wrap;
+    &-two{
+        margin-left: -10px;
+        margin-right: -10px;
+        .item{
+            width: 50%;
+            padding: 0 10px;
+            margin: 0 0 20px;
+            @include media-sp {
+                width: 100%;
+            }
+        }
+    }
+    &-three{
+        margin-left: -10px;
+        margin-right: -10px;
+        .item{
+            width: 33.33%;
+            padding: 0 10px;
+            margin: 0 0 20px;
+            @include media-pc-sm {
+                .container-right &{
+                    width: 50%;
+                }    
+            }
+            @include media-sp {
+                width: 100%;
+                .container-right &{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-four{
+        margin-left: -10px;
+        margin-right: -10px;
+        .item{
+            width: 25%;
+            padding: 0 10px;
+            margin: 0 0 20px;
+            @include media-pc-sm {
+                .container-right &{
+                    width: 33.33%;
+                }    
+            }
+            @include media-sp {
+                width: 100%;
+                .container-right &{
+                    width: 100%;
+                } 
+            }
+            
+        }
+    }
+    &-six{
+        margin-left: -11px;
+        margin-right: -11px;
+        @include media-sp {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        .item{
+            width: 16.66%;
+            padding: 0 11px;
+            margin: 0 0 20px;
+            @include media-sp {
+                width: 33.33%;
+                padding: 0 5px;
+                margin: 0 0 10px;
+            }
+        }
+    }
+    &-eight{
+            margin-left: -10px;
+            margin-right: -10px;
+        .item{
+            width: 12.5%;
+            padding: 0 11px;
+            margin: 0 0 20px;
+        }
+    }
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+スライダー
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.customslider.owl-theme{
+    .owl-dots {
+        margin-top: -26px;
+        .owl-dot{
+            span{
+                border-radius: 0;
+                width: 28px;
+                height: 4px;
+                border-radius: 2px;
+                margin: 0px 4px;
+                background-color: #E6E6E6;
+            }
+            &.active{
+                span{
+                    background-color: #333333;
+                }
+            }
+        }
+    }
+    .owl-nav{
+        @include media-is-pc {
+            position: absolute;
+            height: 40px;
+            top: 60px;
+            left: 0;
+            right: 0;
+            padding: 0;
+            margin: auto -16px;
+        }
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+        padding: 0 20px;
+        .owl-next, .owl-prev, .owl-next:hover, .owl-prev:hover{
+            @include media-is-pc {
+                background-color: rgba(255, 255, 255, 0.6);
+                width: 40px;
+                height: 40px;
+            }
+            background-color: #F5F5F5;
+            width: 30px;
+            height: 30px;
+            border-radius: 0;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            span{
+                font-size: 0;
+            }
+        }
+        .owl-prev, .owl-prev:hover{
+            background-image: url(../img/common/slider-arrow-left.svg);
+        }
+        .owl-next, .owl-next:hover{
+            background-image: url(../img/common/slider-arrow-right.svg);
+        }
+        .owl-next:hover, .owl-prev:hover{
+            @include media-pc {
+                opacity: 0.7;
+            }
+        }
+    }
+    &.compare-list-slider{
+        .owl-nav{
+            padding: 0;
+            position: absolute;
+            width: calc(100% + 36px);
+            height: 40px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto -18px;
+            @include media-sp {
+                width: calc(100% + 30px);
+                margin: auto -15px;
+                height: 30px;
+            }
+            
+            .owl-next, .owl-prev, .owl-next:hover, .owl-prev:hover{
+                width: 40px;
+                height: 40px;
+                @include media-is-pc {
+                    background-color: rgba(255, 255, 255, 0.6);
+                }
+                @include media-sp {
+                    width: 30px;
+                    height: 30px;
+                }
+                
+                &.disabled{
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+
+.sliderhistory-six, .sliderhistory-eight{
+    @include media-sp {
+        .item{
+           width: 150px; 
+        }
+    }
+    &.customslider.owl-theme{
+        .owl-dots {
+            @include media-sp {
+                padding: 0 60px;
+            }
+        }
+    }
+}
+
+

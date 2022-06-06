@@ -1,0 +1,161 @@
+@import '../mixins/**';
+@import '../config';
+
+$table-head-bg: #f7f7f7;
+$table-border: $grey-color;
+
+
+#main-content {
+    @include media-sp {
+        padding-bottom: 90px;
+    }
+}
+
+#family {
+    .section-heading {
+        font-size: 20px;
+        margin-bottom: 18px;
+        @include media-sp {
+            margin-bottom: 10px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid $grey-color;
+        }
+    }
+
+    .section-desc {
+        margin-bottom: 20px;
+        @include media-sp {
+            margin-bottom: 22px;
+
+        }
+    }
+
+    .section-submit {
+        padding: 20px 20px 23px 20px;
+        margin-bottom: 40px;
+        border: 1px solid $grey-color;
+        border-radius: 4px;
+        p {
+            margin-bottom: 24px;
+            font-size: 14px;
+            line-height: 1.857;
+        }
+        .submit-btn {
+            cursor: pointer;
+            width: 250px;
+            height: 48px;
+            padding: 8px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            background: $default-color;
+            border: 1px solid $default-color;
+            border-radius: 4px;
+            @include media-sp {
+                width: 100%;
+                height: 50px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+         }
+    }
+
+    .account-info {
+        table {
+            border: 1px solid $table-border;
+            table-layout: fixed;
+        }
+
+        th, td {
+            text-align: center;
+            word-wrap: break-word;
+            @include media-sp {
+                text-align: left;
+            }
+            &.account-infotype,
+            &.account-id  {
+                width: calc( 300 / 930 * 100%)
+            }
+            &.account-familyinfo {
+                width: calc( 330 / 930 * 100%)
+            }
+        }
+
+        th {
+            font-size: 14px;
+            border-bottom: 1px solid $table-border;
+            background: $table-head-bg;
+            font-weight: 400;
+            padding: 13px;
+            &:not(:last-child) {
+                border-right: 1px solid $table-border;
+            }
+            @include media-sp {
+                width: calc(220 / 670 * 100%) !important;
+                padding: 0 0 0 15px;
+            }
+        }
+
+        td {
+            height: 100px;
+            padding: 10px;
+            line-height: 1.85;
+            @include media-sp {
+                height: 50px;
+            }
+            &:not(:last-child) {
+                border-right: 1px solid $table-border;
+            }
+            &.account-infotype,
+            &.account-id  {
+                font-size: 13px;
+                @include media-sp {
+                    font-size: 14px;
+                }
+            }
+            &.account-familyinfo {
+                font-size: 14px;
+                @include media-sp {
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+
+            @include media-sp {
+                width: calc(450 / 670 * 100%) !important;
+                padding: 14px 17px;
+                line-height: 1.42;
+                border-bottom: 1px solid $table-border;
+            }
+        }
+
+
+    }
+}
+
+.account-link {
+    &item {
+        border-top: 1px solid $grey-color;
+        &:last-child {
+            border-bottom: 1px solid $grey-color;
+        }
+        a {
+            padding: 0 15px;
+            position: relative;
+            display: block;
+            line-height: calc( 80 / 28 );
+            &:after {
+                position: absolute;
+                display: block;
+                width: 12px;
+                height: 12px;
+                right: 5%;
+                top: 37.5%;
+                content: "";
+                border-top: 1px solid $default-color;
+                border-right: 1px solid $default-color;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

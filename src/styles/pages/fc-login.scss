@@ -1,0 +1,33 @@
+@import '../config';
+@import '../mixins/**';
+
+.fc-login{
+    &-title{
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: #235192;
+        margin-top: 64px;
+        margin-bottom: 6px;
+        @include media-sp {
+            margin-top: 35px;
+        }
+    }
+    .page-title{
+        @include media-sp {
+            font-size: 20px;
+            padding-bottom: 22px;
+        }
+    }
+    
+    .form-block.general input[type=email]{
+        margin-bottom: 32px;
+    }
+    .form-block.general input[type=text]{
+        margin-bottom: 16px;
+    }
+    .login-btn{
+        margin-top: 32px;
+    }
+}

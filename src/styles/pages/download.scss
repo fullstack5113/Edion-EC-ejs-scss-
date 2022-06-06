@@ -1,0 +1,187 @@
+@import '../mixins/**';
+@import '../config';
+
+@mixin _img( $width){
+    width: $width;
+    img {
+        max-width: 100%;
+    }
+}
+
+$initType: 'normal';
+// normal => height: 40px
+// high => height: 48px
+@mixin _btn($type: $initType, $width){
+
+    @if( $type == 'normal'){
+        width: $width;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        @include media-sp {
+            width: 100%;
+        }
+    }
+
+    //サイト共通ボタンのスタイル　2
+    @else if( $type == 'high' ){
+        width: $width;
+        padding: 15.5px;
+        font-size: 12px;
+        font-weight: 700;
+        @include media-sp {
+            width: 100%;
+        }
+    }
+}
+
+
+section {
+    padding: 0;
+    @include media-sp {
+        padding: 0;
+    }
+}
+
+
+#main-content {
+    padding: 0 0 70px 0;
+    @include media-sp {
+        padding: 0 0 80px 0;
+    }
+}
+
+.section-heading {
+    margin: 0 0 25px;
+}
+
+.linkbtn-wrap {
+    .btn {
+        @include _btn($width: 100px)
+    }
+}
+
+.border-top {
+    border-top: 1px solid $bd-color1;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $bd-color1;
+}
+
+.download-content {
+    padding: 42px 0;
+    margin-bottom: 40px;
+    @include media-sp {
+        margin-bottom: 30px;
+        padding: 19px 0 30px;
+    }
+}
+
+
+.topitem {
+    @include media-sp {
+        margin-bottom: 10px;
+    }
+    &-img {
+        margin-right: 30px;
+        @include _img($width: 160px);
+        @include media-sp {
+            width: 50%;
+            margin-right: 0;
+        }
+    }
+    &-ttl {
+        @include media-sp {
+            width: 50%;
+        }
+    }
+    &-order {
+        line-height: 1.66;
+        @include media-sp {
+            margin-bottom: 6px;
+            font-size: 11.5px;
+        }
+    }
+    &-name {
+        margin-bottom: 18px;
+        line-height: 1.66;
+        font-size: 18px;
+        font-weight: 700;
+        @include media-sp {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+.bottomitem {
+    &-detail {
+        margin-bottom: 35px;
+        @include media-sp {
+            margin-bottom: 20px;
+        }
+        table {
+            max-width: 600px;
+            border: 1px solid #e6e6e6;
+        }
+
+        th, td {
+            width: 300px;
+            padding: 6px 0 6px 10px;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: left;
+            border-right: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            @include media-sp {
+                width: 50%;
+                padding: 0;
+                height: 50px;
+                text-align: center;
+            }
+        }
+
+        th {
+            background: #f7f7f7;
+            @include media-sp {
+                width: unset;
+            }
+        }
+    }
+
+    .caution {
+        margin-bottom: 40px;
+        color: red;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.71;
+        @include media-sp {
+            margin-bottom: 32px;
+        }
+    }
+
+    .downloadbtn-wrap {
+        @include media-sp {
+            padding-left: 5.8%;
+            padding-right: 5.8%;
+        }
+        .btn {
+            @include _btn($width: 180px);
+        }
+    }
+}
+
+.mypagebtn-wrap {
+    @include media-sp {
+        padding-left: 5.8%;
+        padding-right: 5.8%;
+    }
+    .btn {
+        margin: auto;
+        @include _btn($width: 180px);
+    }
+}

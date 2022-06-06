@@ -1,0 +1,32 @@
+<div class="item<% if(locals.delivery) {%> add-numofitems<% } %><% if(locals.pos) { %> item-<%= pos%><% } %><% if(locals.item) { %> item-<%= item%><% } %>">
+
+    <% if(locals.delivery){ %>
+        <div class="numofitems">
+            <div class="numofitems-ttl">
+                <h3>お届け先【xx件目】</h3>
+            </div>
+            <div class="numofitems-link">
+                <a href="#">xx件目へ</a>
+            </div>
+        </div>
+    <% } %>
+
+    <% if(locals.item == 1 ){ %>
+        <%- include('../components/_c-cart-item01', {delivery: delivery}); %>
+    <% } else if(item == 2 ){ %>
+        <%- include('../components/_c-cart-item02', {delivery: delivery}); %>
+    <% } else if(item == 3 ){ %>
+        <%- include('../components/_c-cart-item03', {delivery: delivery}); %>
+    <% } else if(item == 4 ){ %>
+        <%- include('../components/_c-cart-item04', {delivery: delivery}); %>
+    <% } else if(item == 5 ){ %>
+        <%- include('../components/_c-cart-item05', {delivery: delivery}); %>
+    <% } %>
+
+    <% if(locals.delivery){ %>
+        <%- include('../components/_c-cart-item-add-option'); %>
+        <div class="item-emptybtn">
+            <button type="submit" name="button">カード内を空にする</button>
+        </div>
+    <% } %>
+</div>

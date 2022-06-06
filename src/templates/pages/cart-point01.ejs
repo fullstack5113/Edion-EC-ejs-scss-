@@ -1,0 +1,100 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    <a href="javascript:void(0);" class="js-modal-order01 btn black-btn large-btn" modal-id="modal">Open Modal</a>
+
+    <div class="container" id="cartpoint">
+        <section>
+            <div id="modal" class="modal-block wide" style="display: block">
+                <div class="modal-block-inner01">
+                    <div class="is-pc">
+                        <span class="close-btn js-close"></span>
+                    </div>
+                    <div class="is-sp modal-block-return">
+                        <span class="modal-block-returnbtn js-close">戻る</span>
+                    </div>
+
+                    <h2 class="modal-block-ttl">ポイントの設定</h2>
+                    <div class="form-sec">
+                        <form action="###" method="post">
+                            <div class="modal-block-inner-content cartpoint01-content">
+                                <div class="cartpoint-desc txt-center">
+                                    <p class="cartpoint-descdesc">ポイント残高<br class="is-sp">（山田太郎様のご利用可能ポイント）</p>
+                                    <p class="cartpoint-descdesc">エディオン・100満ボルトポイント<span class="is-pc-inline">：</span><br class="is-sp"><span class="cartpoint-descemphasis font-bold">1000ポイント</span></p>
+                                    <p class="cartpoint-descdesc">（内、期間限定：0ポイント）</p>
+                                </div>
+
+                                <div class="howtouse">
+                                    <p class="mb20 font-medium">利用方法</p>
+                                    <div class="input-point mb20">
+                                        <div class="input-pointrow">
+                                            <div class="input-pointcol">
+                                                <div class="input-pointlabel">
+                                                    <label for="check01">エディオン・100満ボルトポイント：</label>
+                                                </div>
+                                                <div class="input-pointinput">
+                                                    <input type="num" name="" value="0">
+                                                    <span>ポイント</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-pointlink">
+                                                <a href="#">全てのポイントを使う</a>
+                                                <a href="#">全ての期間限定ポイントを使う</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb40 mb-sp20 caution">
+                                        <ul>
+                                            <li>※一部利用対象外の商品やサービスがございます。<br class="is-pc">（修理・部品・出張費、サービス契約・代引き手数料など）</li>
+                                            <li>※エディオンギフトカード・株主様ご優待ギフトカードを利用する場合、ｄポイント・Ｔポイントは利用できません。</li>
+                                            <li>※全額ポイントでご精算の場合はお支払い方法の指定は不要です。</li>
+                                        </ul>
+                                    </div>
+                                    <div class="another-point mb20">
+                                        <div class="another-pointpic t-point">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="./assets/img/cart/cartpoint-item01.png">
+                                                <img src="./assets/img/cart/sp-cartpoint-item01.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="d-flex flex-col another-pointtxt">
+                                            <span>Tポイント利用手続きをすると、<br class="is-sp">Tポイントがご利用いただけます。</span>
+                                            <a href="xxx">Tポイント利用手続きはこちら</a>
+                                        </div>
+                                    </div>
+                                    <div class="another-point d-point">
+                                        <div class="another-pointpic">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="./assets/img/cart/cartpoint-item02.png">
+                                                <img src="./assets/img/cart/sp-cartpoint-item02.png" alt="">
+                                            </picture>
+                                        </div>
+                                        <div class="d-flex flex-col another-pointtxt">
+                                            <span>Ｄポイント利用手続きをすると、<br class="is-sp">ｄポイントがご利用いただけます。</span>
+                                            <a href="xxx">dポイント利用手続きはこちら</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-block-btnwrap">
+                                <span class="modal-block-firstbtn js-close btn outline-btn radius-btn">閉じる</span>
+                                <button class="modal-block-lastbtn btn black-btn radius-btn" type="submit">更新</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<%- include('../includes/_footer'); %>

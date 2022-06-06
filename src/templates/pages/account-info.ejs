@@ -1,0 +1,131 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'account';
+_%>
+<%- include('../includes/_header-login') %>
+
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; 会員情報
+</div>
+
+<main id="main-content" class="main-content">
+    
+    <div class="container container-account-info">
+        
+        <%- include('../includes/_sidebar-account-info'); %>
+    
+        <div class="container-right">
+            
+            <section class="account account-info">
+                <div class="inner inner-large">
+                    <h2 class="section-heading">会員情報</h2>
+                    
+                    <h3 class="account-info-heading">お客様情報</h3>
+                    <table class="account-info-table">
+                        <tr><th>会員種別</th>
+                        <td>あんしん保証会員</td></tr>
+                        <tr><th>会員入会日</th>
+                        <td>44363</td></tr>
+                        <tr><th>お客様番号</th>
+                        <td>E10026951932</td></tr>
+                        <tr><th>お名前</th>
+                        <td>山田太郎</td></tr>
+                        <tr><th>お名前（フリガナ）</th>
+                        <td>ヤマダタロウ</td></tr>
+                        <tr><th>生年月日</th>
+                        <td>32208</td></tr>
+                        <tr><th>性別</th>
+                        <td>男性</td></tr>
+                    </table>
+                    
+                    <h3 class="account-info-heading">ご住所</h3>
+                    <table class="account-info-table">
+                        <tr><th>郵便番号</th>
+                        <td>〒xxx-xxxx</td></tr>
+                        <tr><th>都道府県</th>
+                        <td>東京都</td></tr>
+                        <tr><th>市区町村</th>
+                        <td>◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</td></tr>
+                        <tr><th>番地</th>
+                        <td>XXXXXXX</td></tr>
+                        <tr><th>建物名・部屋番号</th>
+                        <td>&nbsp;</td></tr>
+                    </table>
+                    
+                    <h3 class="account-info-heading">電話番号</h3>
+                    <table class="account-info-table">
+                        <tr><th>電話番号1</th>
+                        <td>携帯電話 ：080XXXXXXXX</td></tr>
+                        <tr><th>電話番号2</th>
+                        <td>&nbsp;</td></tr>
+                    </table>
+                    
+                    <h3 class="account-info-heading">ログイン情報</h3>
+                    <table class="account-info-table">
+                        <tr><th>電話番号でのログイン認証</th>
+                        <td>ON</td></tr>
+                        <tr><th>ログイン認証用お電話番号</th>
+                        <td>080XXXXXXXX</td></tr>
+                        <tr><th>メールアドレス／ログインID</th>
+                        <td>XXXXXXXXXX@XXXXXXXXX</td></tr>
+                        <tr><th>パスワード</th>
+                        <td>*********</td></tr>
+                    </table>
+                    
+                    <h3 class="account-info-heading">よく利用する店舗</h3>
+                    <table class="account-info-table shop">
+                        <tr><th rowspan="2">ご登録済みの店舗</th>
+                        <td>JR尼崎駅店</td></tr>
+                        <tr><td>なんば本店</td></tr>
+                    </table>
+                    
+                    <h3 class="account-info-heading">無料メールマガジン受信設定</h3>
+                    <table class="account-info-table">
+                        <tr><th>店舗情報メールマガジン</th>
+                        <td>希望する</td></tr>
+                        <tr><th>ネットショップ情報メールマガジン</th>
+                        <td>家電製品：希望しない<br>おもちゃ・ゲーム：希望しない</td></tr>
+                    </table>
+
+                    <h3 class="account-info-heading">Tポイント</h3>
+                    <table class="account-info-table">
+                        <tr><th>ご利用手続き</th>
+                        <td>Tポイントご利用手続きを行うと、Tポイントがご利用いただけます。<br>ご利用手続きは<a href="" class="link">こちら</a></td></tr>
+                    </table>
+
+                    <h3 class="account-info-heading">dポイント</h3>
+                    <table class="account-info-table">
+                        <tr><th>ご利用手続き</th>
+                        <td>dポイントは利用手続き済みです。<br class="is-sp">再手続きは<a href="" class="link">こちら</a></td></tr>
+                    </table>
+                    
+                    <h3 class="account-info-heading">前回のお買い物で利用したクレジットカード</h3>
+                    <table class="account-info-table">
+                        <tr><th>カード番号</th>
+                        <td>1111※※※※※※※※22</td></tr>
+                    </table>
+
+                    
+                    <div class="account-info-btns">
+                        <a href="" class="btn blue-btn account-btn wide">登録内容を変更する</a>
+                    </div>
+
+                </div>
+            </section>
+            
+
+            
+        
+        
+        </div>
+    
+    </div>
+</main>
+
+
+
+<%- include('../includes/_footer'); %>

@@ -1,0 +1,23 @@
+@import '../config';
+@import '../mixins/**';
+@import '../layouts/l-fc';
+
+
+.fc-category-list{
+    .section-heading{
+        margin: 20px 0 48px;
+        @include media-sp {
+            margin: 12px 0 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-right: -15px;
+        }
+        &-2{
+            margin-bottom: 44px;
+            @include media-sp {
+                display: none;
+            }
+        }
+    }
+}
+

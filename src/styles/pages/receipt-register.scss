@@ -1,0 +1,603 @@
+@import '../mixins/**';
+@import '../config';
+
+$cart-blue: #235192;
+$radiobtn: #0776b1;
+
+// ------------------------------
+// 共通 Start
+// ------------------------------
+
+.container-sm {
+    width: 736px;
+    padding: 0 18px;
+    margin: auto;
+    @include media-sp {
+        width: 100%;
+        display: block;
+        padding: 0 15px;
+    }
+}
+
+#receiptregister,
+#receiptregister-confirm,
+#receiptregister-done {
+    @include _flowIconSec($col: 3);
+
+    .registerdesc {
+        text-align: center;
+        &-ttl {
+            margin-bottom: 40px;
+            line-height: 1.5;
+            font-size: 16px;
+            @include media-sp {
+                margin-bottom: 20px;
+                line-height: 1.45;
+                font-size: 20px;
+            }
+        }
+        &-desc {
+            font-size: 14px;
+            line-height: 1.85;
+            @include media-sp {
+                line-height: calc(48/28);
+                text-align: left;
+            }
+            span {
+                vertical-align: baseline;
+                font-weight: 700;
+            }
+        }
+        &-item {
+            font-size: 12px;
+            line-height: calc(24/12);
+            text-align: left;
+            @include media-sp {
+                line-height: calc(48/28);
+                text-align: left;
+            }
+        }
+    }
+}
+// ------------------------------
+// 共通 Start
+// ------------------------------
+
+// ------------------------------
+// No65. 領収書発行 _入力 Start
+// ------------------------------
+#receiptregister {
+    .registerdesc-container {
+        margin: 0 auto 44px;
+        @include media-sp {
+            margin: 0 auto 46px;
+            width: 100%;
+            display: block;
+            padding: 0 15px;
+        }
+    }
+
+
+    .registerdesc-descwrap {
+        margin-bottom: 23px;
+        @include media-sp {
+            margin-bottom: 25px;
+        }
+    }
+    .registerdesc {
+        &-desc {
+            margin-bottom: 30px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            @include media-sp {
+                margin-bottom: 25px;
+            }
+        }
+        &-list {
+            width: 276px;
+            margin: 0 auto;
+            @include media-sp {
+                width: 100%;
+                margin: 0;
+            }
+        }
+        &-item {
+            @include media-sp {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .receiptinput {
+        width: calc(659 / 700 * 100%);
+        margin: 0 auto 66px;
+        @include media-sp {
+            width: 100%;
+            margin-bottom: 47px;
+        }
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include media-sp {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &-item01 { &:after { content: "（30文字以内）"; } }
+        &-item02 { &:after { content: "（50文字以内）"; } }
+
+        &-item03 {
+            justify-content:flex-start;
+            .receiptinput-ttl {
+                margin-right: 50px;
+                &:after {
+                    display: none;
+                }
+                @include media-sp {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &-item01, &-item02 {
+            position: relative;
+            margin-bottom: 40px;
+            @include media-sp {
+                margin-bottom: 25px;
+            }
+            input {
+                width: calc(581 /659 * 100%);
+                @include media-sp {
+                    width: 100%;
+                    height: 40px;
+                }
+            }
+            &:after {
+                position: absolute;
+                top: -15px;
+                right: 0;
+                font-size: 10px;
+                @include media-sp {
+                    top: 6px;
+                }
+            }
+        }
+
+
+        &-ttl {
+            font-size: 13px;
+            line-height: 1.5;
+
+            @include media-sp {
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+            }
+
+            &:after {
+                font-size: 10px;
+                display: block;
+                content: "（必須）";
+                color: #ff0000;
+                margin-left: -5px;
+                @include media-sp {
+                    display: inline-block;
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    .sendbtn {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &-send {
+            cursor: pointer;
+            margin-bottom: 28px;
+            height: 48px;
+            background: #ea3c3c;
+            color: #fff;
+            padding: 14px 0;
+            display: block;
+            width: 324px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 4px;
+            @include media-sp {
+                width: calc( 610 / 690 * 100%);
+                margin-bottom: 20px;
+            }
+        }
+        &-close {
+            padding: 9px 0;
+            display: block;
+            background: #999999;
+            color: #fff;
+            width: 200px;
+            height: 32px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 2px;
+            @include media-sp {
+                width: calc( 400 / 690 * 100%)
+            }
+        }
+    }
+}
+// ------------------------------
+// No65. 領収書発行 _入力 End
+// ------------------------------
+// ------------------------------
+// No66. 領収書発行 _確認 Start
+// ------------------------------
+#receiptregister-confirm {
+    @include _tableblock();
+    .registerdesc {
+        margin-bottom: 40px;
+        @include media-sp {
+            margin-bottom: 20px;
+        }
+    }
+
+    .accountinfo {
+        margin-bottom: 80px;
+        @include media-sp {
+            margin-bottom: 40px;
+        }
+        &-table {
+            margin-bottom: 18px;
+            @include media-sp {
+                margin-bottom: 15px;
+            }
+            
+            th {
+                @include media-sp {
+                    width: calc(215/ 690 * 100%);
+                }
+            }
+
+            td {
+                @include media-sp {
+                    width: calc( 475/ 690 * 100%);
+                    padding: 16px 0 16px 14px;
+                }
+            }
+
+        }
+        &-note {
+            font-size: 14px;
+        }
+
+    }
+    .sendbtn {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &-send {
+            cursor: pointer;
+            margin-bottom: 28px;
+            height: 48px;
+            background: #ea3c3c;
+            color: #fff;
+            padding: 14px 0;
+            display: block;
+            width: 324px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 4px;
+            @include media-sp {
+                width: calc( 610 / 690 * 100%);
+                margin-bottom: 20px;
+            }
+        }
+        &-close {
+            padding: 9px 0;
+            display: block;
+            background: #999999;
+            color: #fff;
+            width: 200px;
+            height: 32px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 2px;
+            @include media-sp {
+                width: calc( 400 / 690 * 100%)
+            }
+        }
+    }
+
+}
+// ------------------------------
+// No66. 領収書発行 _確認 End: ;
+// ------------------------------
+// ------------------------------
+// No67. 領収書発行 _完了 Start
+// ------------------------------
+#receiptregister-done {
+    .print{
+        max-width: 612px;
+        width: 100%;
+        box-shadow: 0px 3px 6px #00000029;
+        background-color: white;
+        padding: 36px 32px 45px 42px;
+        margin: 0 auto;
+        @include media-sp{
+            padding: 0 20px 20px 20px;
+        }
+        figure{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flex-inner{
+            &-01{
+                display: flex;
+                width: 100%;
+                @include media-sp{
+                    flex-wrap: wrap-reverse;
+                }
+                &-first{
+                    width: 328px;
+                    margin-right: 3px;
+                }
+                .price-inner{
+                    display: flex;
+                    padding-bottom: 5px;
+                    border-bottom: solid 1px $grey-color;
+                }
+            }
+            &-02{
+                display: flex;
+                @include media-sp{
+                    flex-wrap: wrap;
+                }
+                &-first{
+                    width: max-content;
+                    @include media-sp{
+                        width: 100%;
+                    }
+                    table{
+                        width: 189px;
+                        @include media-sp{
+                            width: 100%;
+                        }
+                        tr{
+                            border: solid 1px $grey-color;
+                            td{
+                                &:first-child{
+                                    width: 108px;
+                                    background-color:#f7f7f7;
+                                    padding: 7px 0 7px 10px;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                    line-height: calc(17 / 12);
+                                    color: $default-color;
+                                    @include media-sp{
+                                        width: 107px;
+                                        padding: 16px 14px;
+                                        font-size: 13px;
+                                    }
+                                }
+                                &:last-child{
+                                    width: 80px;
+                                    padding: 7px 12px;
+                                    text-align: right;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                    color: $default-color;
+                                    @include media-sp{
+                                        width: calc(100% - 215px);
+                                        padding: 16px;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &-second{
+                    width: max-content;
+                    margin-left: 26px;
+                    @include media-sp{
+                        width: 100%;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        p{
+            &.name{
+                display: flex;
+                width: max-content;
+                font-size: 16px;
+                font-weight: bold;
+                color: $default-color;
+                line-height: 2;
+                border-bottom: solid 1px $grey-color;
+                margin-bottom: 20px;
+                @include media-sp{
+                    font-size: 14px;
+                    font-weight: normal;
+                    line-height: 2;
+                    padding-bottom: 5px;
+                    margin-bottom: 3px;
+                }
+            }
+            &.des_01{
+                font-size: 12px;
+                font-weight: normal;
+                color: $default-color;
+                margin-top: 6px;
+                min-width: max-content;
+                @include media-sp{
+                    font-size: 14px;
+                    min-width: max-content;
+                }
+            }
+            &.des_02{
+                font-size: 16px;
+                font-weight: bold;
+                color: $default-color;
+                margin-bottom: 3px;
+                line-height: 1.4;
+                @include media-sp{
+                    font-size: 20px;
+                    font-weight: bold;
+                    
+                }
+            }
+            &.des_03{
+                font-size: 12px;
+                font-weight: normal;
+                line-height: calc(20 / 12);
+                color: $default-color;
+                @include media-sp{
+                    line-height: calc(15 / 12);
+                }
+            }
+            &.des_04{
+                font-size: 12px;
+                font-weight: normal;
+                line-height: calc(18 / 12);
+                color: $default-color;
+                @include media-sp{
+                    font-size: 14px;
+                    line-height: calc(45 / 28);
+                }
+                &.reset{
+                    @include media-sp{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    .purchase-detail{
+        width: 700px;
+        margin: 53px auto 0 auto;
+        padding-top: 40px;
+        position: relative;
+        @include media-sp{
+            display: none;
+        }
+        &::before{
+            content: "";
+            max-width: 612px;
+            width: 100%;
+            height: 1px;
+            background-color: $grey-color;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &-ttl{
+            font-size: 16px;
+            font-weight: bold;
+            color: $default-color;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        table{
+            width: 100%;
+            tr{
+                th{
+                    background-color: #F7F7F7;
+                    border: solid 1px $grey-color;
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: $default-color;
+                    &:first-child{
+                        width: 400px;
+                    }
+                }
+                td{
+                    border: solid 1px $grey-color;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: normal;
+                    padding: 10px;
+                    color: $default-color;
+                    &:first-child{
+                        padding: 11.5px;
+                        text-align: left;
+                        font-size: 12px;
+                        line-height: 1.6;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .btn-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-print{
+            width: 270px;
+            height: 48px;
+            border-radius: 4px;
+            background-color: #EA3C3C;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: $body-font;
+            color: white;
+            margin-bottom: 28px;
+            @include media-sp{
+                display: none;
+            }
+        }
+        &-back{
+            width: 200px;
+            height: 32px;
+            border-radius: 4px;
+            background-color: #999999;
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: $body-font;
+        }
+    }
+
+    p.refer{
+        font-size: 14px;
+        font-weight: normal;
+        line-height: calc(26 / 14);
+        color: $default-color;
+        text-align: center;
+        margin-top: 47px;
+        @include media-sp{
+            margin-top: 43px;
+            text-align: left;
+            line-height: calc(24 / 14);
+        }
+    }
+}
+
+.noprint{
+    display: none;
+}
+// ------------------------------
+// No67. 領収書発行 _完了 End
+// ------------------------------

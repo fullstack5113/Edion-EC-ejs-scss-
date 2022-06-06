@@ -1,0 +1,373 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'point-inquiry';
+_%>
+    <%- include('../includes/_header') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; エディオンカード会員登録申込み
+        </div>
+
+        <main id="main-content" class="main-content inquiry">
+
+            <div class="container container-sidebar_show">
+
+                <%- include('../includes/_sidebar-account-info'); %>
+
+                <div class="container-right">
+                    <div class="point-inquiry">
+                        <div class="point-inquiry-ttl">
+                            <h4>ポイント照会</h4>
+                            <p class="des_01">
+                                店舗及びネットショップの取得ポイントを表示しております。
+                            </p>
+                        </div>
+                        <dvi class="point-inquiry-ctn">
+                            <h5>エディオン・100満ボルトポイント</h5>
+                            <div class="table-wrap">
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">ご利用可能ポイント</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03"><span>0</span>ポイント 　（内、期間限定：0ポイント）</p>
+                                    </div>
+                                </div>
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">期間限定ボーナスポイント付与予定（ご利用可能期間前）</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03">0ポイント</p>
+                                    </div>
+                                </div>
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">2024/03/31までの有効ポイント</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03">0ポイント 　（内、期間限定：0ポイント）</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="btn lined-btn grey-btn3 radius-btn mt20 mb-pc15 mb-sp25" href="">内訳を見る</a>
+                            <div class="table-wrap">
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">2022/03/31までの有効ポイント</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03"><span>0</span>ポイント</p>
+                                    </div>
+                                </div>
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">2023/03/31までの有効ポイント</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03"><span>0</span>ポイント</p>
+                                    </div>
+                                </div>
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">2023/03/31までの有効ポイント</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03"><span>0</span>ポイント</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="mt-pc40 mt-sp25">期間限定ボーナスポイント（利用可能店舗限定）</h5>
+                            <button class="btn lined-btn grey-btn3 radius-btn mb-pc15 mb-sp20 js-modal" modal-id="modal" href="">詳細を見る</button>
+                            <div class="table-wrap">
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">ご利用可能ポイント</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03"><span>0</span>ポイント</p>
+                                    </div>
+                                </div>
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">期間限定ボーナスポイント付与予定（ご利用可能期間前）</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03">0ポイント</p>
+                                    </div>
+                                </div>
+                                <div class="table-inner">
+                                    <div class="table-inner-first">
+                                        <p class="des_02">未確定ポイント（入金前）</p>
+                                    </div>
+                                    <div class="table-inner-second">
+                                        <p class="des_03">0ポイント</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="des_04">利用可能店舗指定ありの期間限定ボーナスポイントはございません。<br>
+                                <span>※お支払いがお済みでない場合などは未確定ポイントとさせていただいております。</span></p>
+                            <a class="btn lined-btn grey-btn3 radius-btn" href="">対象店舗はこちら</a>
+                            <div class="filter-wrap-01">
+                                <div class="filter-wrap-01-left">
+                                    <button class="h6 mr-pc25 mr-sp10">絞り込みなし</button>
+                                    <button class="des_05 mr-pc25 mr-sp10">よく利用する店舗で絞り込む</button>
+                                    <button class="des_05">ネットショップで絞り込む</button>
+                                </div>
+                                <div class="filter-wrap-01-right">
+                                    <a class="btn lined-btn grey-btn3 radius-btn mr25" href="">その他店舗で絞り込む</a>
+                                    <div class="filter-inner">
+                                        <label>表示件数：</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="10">10件</option>
+                                                <option value="15">15件</option>
+                                                <option value="20">20件</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-wrap-02">
+                                <div class="filter-wrap-02-left">
+                                    <div class="select-inner">
+                                        <label>都道府県：</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="大阪府">大阪府</option>
+                                                <option value="大阪府">大阪府</option>
+                                                <option value="大阪府">大阪府</option>
+                                                <option value="大阪府">大阪府</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="select-inner">
+                                        <label>市区町村：</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="市区町村を入力">市区町村を入力</option>
+                                                <option value="市区町村を入力">市区町村を入力</option>
+                                                <option value="市区町村を入力">市区町村を入力</option>
+                                                <option value="市区町村を入力">市区町村を入力</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="select-inner">
+                                        <label>店舗名：</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="◯◯◯◯店">◯◯◯◯店</option>
+                                                <option value="◯◯◯◯店">◯◯◯◯店</option>
+                                                <option value="◯◯◯◯店">◯◯◯◯店</option>
+                                                <option value="◯◯◯◯店">◯◯◯◯店</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-wrap-02-right">
+                                    <a class="btn radius-btn black-btn" href="">絞り込む</a>
+                                </div>
+                            </div>
+                            <div class="is-sp mt20 mb20">
+                                <div class="filter-inner">
+                                    <label>表示件数：</label>
+                                    <div class="form-block-select">
+                                        <select name="" id="">
+                                            <option value="10">10件</option>
+                                            <option value="15">15件</option>
+                                            <option value="20">20件</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-table-01">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>利用可能期間</td>
+                                            <td>利用可能ポイント</td>
+                                            <td>対象店舗</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2022/01/01 - 2022/03/31</td>
+                                            <td>1000ポイント</td>
+                                            <td>
+                                                <a class="btn lined-btn grey-btn3 radius-btn" href="">対象店舗はこちら</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="sp-table">
+                                <table>
+                                    <tr>
+                                        <td>利用可能期間</td>
+                                        <td>2022/01/01 - 2022/03/31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>利用可能ポイント</td>
+                                        <td><span>1000</span>ポイント</td>
+                                    </tr>
+                                    <tr>
+                                        <td>対象店舗</td>
+                                        <td><a class="btn lined-btn grey-btn3 radius-btn" href="">対象店舗はこちら</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="pager-wrapper">
+                                <a href="" class="pager-wrapper-link prev">前へ</a>
+                                <a href="" class="pager-wrapper-link next">次へ</a>
+                            </div>
+                            <div class="filter-wrap-03">
+                                <div class="filter-wrap-03-left">
+                                    <h6>ポイント履歴</h6>
+                                </div>
+                                <div class="filter-wrap-03-right">
+                                    <div class="filter-inner">
+                                        <label>表示時期：</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="2022">2022</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2022">2022</option>
+                                            </select>
+                                        </div>
+                                        <label class="ml-pc10 mr-pc18 ml-sp5 mr-sp15">年</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="2">2</option>
+                                                <option value="2">2</option>
+                                                <option value="2">2</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <label class="ml-pc10 ml-sp5 mr-0">月</label>
+                                    </div>
+                                    <div class="filter-inner ml-pc40 mt-sp25">
+                                        <label>表示件数：</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="10">10件</option>
+                                                <option value="15">15件</option>
+                                                <option value="20">20件</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-table-02">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>日付</td>
+                                            <td>内容</td>
+                                            <td>店舗</td>
+                                            <td>付与ポイント</td>
+                                            <td>利用ポイント</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2022/03/31</td>
+                                            <td>テキストテキスト</td>
+                                            <td>◯◯◯◯店</td>
+                                            <td>1000ポイント</td>
+                                            <td>1000ポイント</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="sp-table">
+                                <table>
+                                    <tr>
+                                        <td>日付</td>
+                                        <td>2022/03/31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>内容</td>
+                                        <td>テキストテキスト</td>
+                                    </tr>
+                                    <tr>
+                                        <td>店舗</td>
+                                        <td>◯◯◯◯店</td>
+                                    </tr>
+                                    <tr>
+                                        <td>付与ポイント</td>
+                                        <td><span>1000</span>ポイント</td>
+                                    </tr>
+                                    <tr>
+                                        <td>利用ポイント</td>
+                                        <td><span>1000</span>ポイント</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="pager-wrapper">
+                                <a href="" class="pager-wrapper-link prev">前へ</a>
+                                <a href="" class="pager-wrapper-link next">次へ</a>
+                            </div>
+                            <p class="des_06">
+                                ※エディオンカード・ＩＤカード会員と、あんしん保証会員ではポイントの有効期限が異なります。<br>
+                                エディオンカード・ＩＤカード会員のポイント有効期限　あんしん保証会員のポイント有効期限 <br>
+                                ※有効期限を過ぎますとポイントは自動的に失効します。<br>
+                                ※ポイントは有効期限の短いものから使用します。
+                            </p>
+                            <div class="pc-table-03 mb-pc25 mb-sp10">
+                                <table>
+                                    <tr>
+                                        <td>Tポイント</td>
+                                        <td>
+                                            <div>
+                                                <p><span>0</span>ポイント</p>
+                                                <a class="btn lined-btn grey-btn3 radius-btn" href="">ポイント詳細履歴</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>dポイント</td>
+                                        <td>
+                                            <div>
+                                                <p><span>0</span>ポイント</p>
+                                                <a class="btn lined-btn grey-btn3 radius-btn" href="">ポイント詳細履歴</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <a class="link_01" href="">※ポイント詳細履歴は Tサイト[Tポイント/Tカード]でご確認ください。</a><br>
+                            <a class="link_01" href="">※ポイント詳細履歴は [dポイントクラブサイト]でご確認ください。</a>
+                            <button class="return-btn mb-pc30">戻る</button>
+                        </dvi>
+                    </div>
+                </div>
+                <div id="modal" class="modal-block wide">
+                    <div class="modal-block-inner01">
+                        <span class="close-btn js-close"></span>
+    
+                        <h2 class="modal-block-ttl">期間限定ボーナスポイント利用店舗</h2>
+    
+                        <div class="modal-block-ctn">
+                            <p class="des_01">
+                                利用可能期間　：　20xx/xx/xx〜20xx/xx/xx<br>
+                                利用可能ポイント　：　<span>200</span>ポイント<br>
+                                期間限定ボーナスポイントを利用可能な店舗は以下の通りとなります
+                            </p>
+                        </div>
+                        <div class="modal-block-ft">
+                            <p class="des_02">利用店舗</p>
+                            <p class="des_03">なんば本店</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+    <%- include('../includes/_footer'); %>

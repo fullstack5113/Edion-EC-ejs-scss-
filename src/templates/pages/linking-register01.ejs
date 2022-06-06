@@ -1,0 +1,29 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'linking-register';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+
+    <div id="linkingregister">
+        <a href="javascript:void(0);" class="js-modal btn black-btn large-btn" modal-id="modal01">Open Modal</a>
+        <div id="modal01" class="modal-block wide">
+            <div class="modal-block-inner01">
+                <span class="close-btn js-close"></span>
+                <div class="modal-block-inner-content">
+                    <div class="modal-block-descwrap descwrap01">
+                        <p class="modal-block-desc">入力されたお客様番号は既にご登録済みです。<br> 入力内容をご確認ください。 </p>
+                    </div>
+                    <button class="modal-block-closebtn js-close" type="button" name="button">閉じる</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<%- include('../includes/_footer'); %>

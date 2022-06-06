@@ -1,0 +1,60 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'fc-category-list';
+_%>
+<%- include('../includes/_header-fc-login') %>
+    
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; <a href="">すべてのカテゴリー</a> &gt; <a href="">すべてのカテゴリー</a> &gt; カテゴリー名
+</div>
+  
+<main id="main-content" class="main-content">
+    
+    <div class="container">
+        <%- include('../includes/_sidebar-fc-category-list', { hierarchy: '2' }); %>
+        
+        <div class="container-right">
+        
+        <section class="fc-category-list">
+            <div class="inner inner-large">
+                <h2 class="section-heading">エアコン</h2>
+                
+                <h3 class="section-heading section-heading-2">カテゴリー一覧</h3>
+                
+                <div class="basicgrid basicgrid-four cotegorylist">
+                    <% for (var i = 0; i < 10; i++){ %>
+                    <div class="item">
+                        <div class="cotegorylist-inner">
+                            <div class="cotegorylist-btn js-accordion-btn">
+                                <img class="cotegorylist-img" src="./assets/img/category/catecory-list-img11.jpg" alt="">
+                                <h3 class="cotegorylist-heading">冷暖房おもに6畳(2.2kw)</h3>
+                            </div>
+                            <ul class="cotegorylist-ul">
+                                <% for (var n = 0; n < 5; n++){ %>
+                                <li><a href="">第4階層カテゴリー名</a></li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+        
+    
+    
+        <%- include('../includes/_history', { maxitem: 'six', page: 'fc' }); %>
+
+        <%- include('../includes/_history', { maxitem: 'six', page: 'fc', title: 'この商品を見た人は、こんな商品もチェックしています。', item: '12' }); %>
+    
+    </div>
+    </div>
+    
+</main>
+
+
+<%- include('../includes/_footer-fc'); %>

@@ -1,0 +1,418 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'register';
+_%>
+<%- include('../includes/_header-nomenu') %>
+<main id="main-content" class="main-content">
+    
+    
+    <section class="register register-primary">
+        <div class="inner inner-small">
+            <div class="register-step-num is-sp">STEP 3/5</div>
+            <h1 class="page-title">お客様情報入力</h1>
+            
+            <div class="register-step s03">
+                <ul>
+                    <li>新規ご利用登録</li>
+                    <li>認証コード入力</li>
+                    <li class="current">お客様情報入力</li>
+                    <li>登録情報確認</li>
+                    <li>登録完了</li>
+                </ul>
+            </div>
+            
+            <div class="page-title-lead">
+                以下の項目に必要事項を入力後<br class="is-sp">「確認画面へ」をクリックしてください。
+            </div>
+            
+            <!-- ##########
+                前ページで「会員カードをお持ちでない方」を選択した際は以下を表示
+            ########## -->
+            <!-- <div class="register-primary-box">
+                以下のカードをお持ちではありませんか？
+                <div class="register-primary-box-img"><img src="./assets/img/card-select/card-select-img.png" alt=""></div>
+                
+                <a href="" class="btn orange-btn account-btn">既にカードをお持ちの方はこちら</a>
+            </div> -->
+
+            
+            <div class="linebox linebox-blue">
+                
+                <form action="">
+                    <div class="register-heading">会員情報</div>
+                    <div class="register-block">
+                        <div class="form-block general">
+                            <label class="require">メールアドレス<span class="small-font">（半角）</span></label>
+                            <input type="email" placeholder="email@sample.com">
+                            <div class="register-block-subtext">・メールアドレスがログインIDとなります。</div>
+                            
+                            <label class="require">メールアドレス確認</label>
+                            <input type="email" placeholder="">
+                        </div>
+                        
+                        <div class="form-block general">
+                            <label class="require">パスワード<span class="small-font">（半角英数字8文字以上12文字まで）</span></label>
+                            <input type="text" placeholder="password0123">
+                            <div class="register-block-subtext">
+                                ・パスワードは他人に推測されないよう十分に注意してご設定ください。<br>
+                                ・英字のみ、数字のみのパスワードは設定できません。<br>
+                                ・IDと同じパスワードは設定できません。
+                            </div>
+                            
+                            <label class="require">パスワード再入力</label>
+                            <input type="text">
+                        </div>
+                            
+                        <div class="form-block form-block-check general show_passwd">
+                            <input type="checkbox" id="show_passwd">
+                            <label for="show_passwd"><small>パスワードの文字を表示する</small></label>
+                        </div>
+                    </div>
+                    
+                    <div class="register-heading">お客様情報</div>
+                    
+                    <div class="register-block">
+                        <div class="form-block general">
+                            <label class="require">お名前</label>
+                            <div class="form-block-name">
+                                <div class="familyname-kanji"><input type="text" name="family-name" placeholder="山田"></div>
+                                <div class="firstname-kanji"><input type="text" name="given-name" placeholder="太郎"></div>
+                            </div>
+    
+                            <label class="require">フリガナ<span class="small-font">（全角カタカナ）</span></label>
+                            <div class="form-block-name">
+                                <div class="familyname-kana"><input type="text" name="family-name-kana" placeholder="ヤマダ"></div>
+                                <div class="firstname-kana"><input type="text" name="given-name-kana" placeholder="タロウ"></div>
+                            </div>
+                            
+                            <label class="optional">生年月日</label>
+                            <div class="form-block-birthday mb-32">
+                                <div class="year">
+                                    <div class="form-block-select">
+                                        <select name="" id="">
+                                            <option value=""></option>
+                                            <% for (var i = 2020; i > 1929; i--){ %>
+                                            <option value="<%- i %>"><%- i %></option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="month">
+                                    <div class="form-block-select">
+                                        <select name="" id="">
+                                            <option value=""></option>
+                                            <% for (var i = 1; i < 13; i++){ %>
+                                            <option value="<%- i %>"><%- i %></option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="day">
+                                    <div class="form-block-select">
+                                        <select name="" id="">
+                                            <option value=""></option>
+                                            <% for (var i = 1; i < 32; i++){ %>
+                                            <option value="<%- i %>"><%- i %></option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="form-block general">
+                            <label class="optional">性別</label>
+                            <div class="register-block-sex">
+                                <input type="radio" name="sex" id="sex01">
+                                <label for="sex01">男性</label>
+                                <input type="radio" name="sex" id="sex02">
+                                <label for="sex02">女性</label>
+                                <input type="radio" name="sex" id="sex03">
+                                <label for="sex03">選択しない</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="register-heading">ご住所</div>
+                    
+                    <div class="register-block">
+                        <div class="form-block general">
+                            <label class="require">郵便番号</label>
+                            <div class="form-block-zip mb-32">
+                                <div class="primary"><input type="number" name="" placeholder="000"></div>
+                                <span class="zip-line"></span>
+                                <div class=""><input type="number" name="" placeholder="0000"></div>
+                                <button class="btn blue-btn account-btn medium inline zip-search-btn">検索</button>
+                            </div>
+                            
+                            <label>都道府県</label>
+                            <div class="register-block-text mb-32">
+                                東京都
+                            </div>
+                            
+                            <label>市区町村</label>
+                            <div class="register-block-text mb-32">
+                                ◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯
+                            </div>
+                            
+                            <label class="require">番地<span class="small-font">（半角20文字以内）</span></label>
+                            <input type="text" name="">
+                            <div class="register-block-subtext">・番地なしの方は入力欄に半角ハイフン（-）を入力してください。</div>
+                            
+                            <label class="optional">建物名・部屋番号<span class="small-font">（全角15文字以内）</span></label>
+                            <input type="text" name="">
+                            <div class="register-block-subtext">
+                            ・マンション・アパート・ビルのお客様は建物名と部屋番号をご記入ください。<br>
+                            ・建物名が長い方は部屋番号のみご記入ください。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="register-heading">電話番号</div>
+                    
+                    <div class="register-block">
+                        <div class="form-block general">
+                            <label class="require">電話番号1<span class="small-font">（半角数字）</span></label>
+                            <div class="register-block-tel">
+                                <input type="radio" name="tel01" id="tel01_1">
+                                <label for="tel01_1">ご自宅</label>
+                                <input type="radio" name="tel01" id="tel01_2">
+                                <label for="tel01_2">携帯電話</label>
+                                <input type="text" name="" placeholder="08012345678">
+                            </div>
+                            
+                            <label class="optional">電話番号2<span class="small-font">（半角数字）</span></label>
+                            <div class="register-block-tel">
+                                <input type="radio" name="tel02" id="tel02_1">
+                                <label for="tel02_1">ご自宅</label>
+                                <input type="radio" name="tel02" id="tel02_2">
+                                <label for="tel02_2">携帯電話</label>
+                                <input type="text" name="" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="register-heading">メールマガジン</div>
+                    
+                    <div class="register-block mb-0">
+                        <div class="form-block general">
+                            <label>店舗情報メールマガジン</label>
+                            <div class="register-block-mailmaga">
+                                <input type="radio" name="mailmaga01" id="mailmaga01_1" checked="">
+                                <label for="mailmaga01_1">希望する</label>
+                                <input type="radio" name="mailmaga01" id="mailmaga01_2">
+                                <label for="mailmaga01_2">希望しない</label>
+                                <div class="register-block-subtext">- お店のキャンペーン・クーポンなどお得情報配信</div>
+                            </div>
+                            
+                            <label class="is-pc">ネットショップ情報メールマガジン</label>
+                            <div class="register-block-mailmaga">
+                                <div class="label-small">
+                                    <span class="is-pc">家電製品情報</span>
+                                    <span class="is-sp">ネットショップ「家電製品」情報メールマガジン</span>
+                                </div>
+                                <div class="register-block-mailmaga">
+                                    <input type="radio" name="mailmaga02" id="mailmaga02_1" checked="">
+                                    <label for="mailmaga02_1">希望する</label>
+                                    <input type="radio" name="mailmaga02" id="mailmaga02_2">
+                                    <label for="mailmaga02_2">希望しない</label>
+                                    <div class="register-block-subtext subtext01">- 最新家電・ネット限定シークレットSALE情報配信</div>
+                                </div>
+                                
+                                <div class="label-small">
+                                    <span class="is-pc">おもちゃ・ゲーム情報</span>
+                                    <span class="is-sp">ネットショップ「おもちゃ・ゲーム」<br>情報メールマガジン</span>
+                                </div>
+                                <div class="register-block-mailmaga">
+                                    <input type="radio" name="mailmaga03" id="mailmaga03_1" checked="">
+                                    <label for="mailmaga03_1">希望する</label>
+                                    <input type="radio" name="mailmaga03" id="mailmaga03_2">
+                                    <label for="mailmaga03_2">希望しない</label>
+                                    <div class="register-block-subtext subtext02">- 最新家電・ネット限定シークレットSALE情報配信</div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                    <div class="register-block-subbox">
+                        エディオンのメールマガジンは、HTML版となります。<br>
+                        また、メールマガジンの内容によりましては、テキスト版を配信する場合もございます。
+                    </div>
+
+
+                </form>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="register register-secondary">
+        <div class="inner inner-small">
+            <div class="register-secondary-box">
+                <div class="register-secondary-box-head">
+                    <div class="register-secondary-box-head-text01">新規ご利用登録にあたり、<br class="is-sp">ご確認をお願いします。</div>
+                    <div class="register-secondary-box-head-text02">新規ご利用登録で「あんしん保証カード」が自動でセットされます。</div>
+                </div>
+                <img src="./assets/img/register/register-img01.jpg" alt="">
+                
+                <div class="register-secondary-box-heading">【あんしん保証カードの有効期限について】</div>
+                <div class="register-secondary-box-text01">エディオン各店舗で最終のご購入から3年間ご購入がなく、且つポイント及び保証対象商品が無い場合、会員資格が無くなります。</div>
+                
+<div class="register-terms">
+<div class="register-terms-inner">会員は、既にお持ちのエディオンカード、IDカード、あんしん保証カード（以下「会員カード」といいます）がある場合は、当該会員カードを本サービスに登録することができます。ただし、第9条第4項、第5項にもとづきあんしん保証カード会員に加入された、デジタル会員証をお持ちの会員は除きます。
+会員カードを本サービスに登録すると、当社店舗と本サイトのポイントが合算され、当社店舗と本サイトにてエディオンポイントを共通利用することができます。
+但し、本サービスに登録できる会員カードは1枚のみであり、複数の会員カードをお持ちの場合でも 1枚のカードしか登録できません。また、登録済みの会員カードを変更する場合は、当社所定の手続きに従い、登録の変更を行ってください。</div>
+</div>
+
+                <div class="register-secondary-box-text02">
+                    上記の「ご利用規約」にある「あんしん保証カード規約」をご確認いただき「同意する」にチェックを入れて「確認画面へ」ボタンをクリックしてください。
+                </div>
+                
+                <div class="form-block form-block-check general register-secondary-box-agree">
+                    <input type="checkbox" id="agree">
+                    <label for="agree">同意する</label>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="register register-tertiary">
+        <!-- ##########
+                公開時点では非表示
+            ########## -->
+        <div class="inner inner-small">
+            <div class="linebox linebox-black">
+                <div class="register-tertiary-heading">ポイント移行</div>
+                
+                <div class="wrap">
+                    <div class="register-tertiary-text01">
+                        店舗でゲスト購入した購入分の引継ぎ・ポイント・保証付与が可能<br>
+                        ゲスト購入の後から会員登録に使えるレシートの有効期限は一か月以内のレシートなどの制限が必要（説明テキストをご用意ください。）
+                    </div>
+                    
+                    <div class="form-block general">
+                        <label>伝票番号</label>
+                        <div class="form-block-slip">
+                            <input type="text" placeholder="">
+                            <button class="add-btn minus"></button>
+                        </div>
+                        <div class="form-block-slip">
+                            <input type="text" placeholder="">
+                            <button class="add-btn plus"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="register-terms bg-grey">
+                    <div class="register-terms-inner">会員は、既にお持ちのエディオンカード、IDカード、あんしん保証カード（以下「会員カード」といいます）がある場合は、当該会員カードを本サービスに登録することができます。ただし、第9条第4項、第5項にもとづきあんしん保証カード会員に加入された、デジタル会員証をお持ちの会員は除きます。
+会員カードを本サービスに登録すると、当社店舗と本サイトのポイントが合算され、当社店舗と本サイトにてエディオンポイントを共通利用することができます。
+但し、本サービスに登録できる会員カードは1枚のみであり、複数の会員カードをお持ちの場合でも 1枚のカードしか登録できません。また、登録済みの会員カードを変更する場合は、当社所定の手続きに従い、登録の変更を行ってください。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner inner-small">
+            <div class="linebox linebox-black">
+                <div class="register-tertiary-heading">会員カード登録</div>
+                
+                <div class="wrap">
+                    <div class="register-tertiary-text01 mb-pc25 mb-sp30">
+                        お手持ちのカードをご登録いただくとポイント特典長期修理保証サービスがお店でも本サイトでもご利用いただけます。
+                    </div>
+                    <p class="register-tertiary-text02">
+                        お手持ちのカードのお客様番号(eeナンバー)<br class="is-sp"><span>（半角数字）</span>
+                    </p>
+                    <div class="register-tertiary-form">
+                        <div class="form-inner mr-sp5">
+                            <div class="form-block-select">
+                                <select name="" id="">
+                                    <option value="">A</option>
+                                </select>
+                            </div>
+                            <figure class="mt5">
+                                <img src="./assets/img/register/arrow_top_grey.svg" alt="">
+                            </figure>
+                            <p>先頭のアルファ<br>ベットを選択</p>
+                        </div>
+                        
+                        <div class="form-inner">
+                            <div class="form-block-select">
+                                <select name="" id="">
+                                    <option value="">A</option>
+                                </select>
+                                
+                            </div>
+                            <figure class="mt5">
+                                <img src="./assets/img/register/arrow_top_grey.svg" alt="">
+                            </figure>
+                            <p>アルファベット<br class="is-pc">
+                                も<br class="is-sp">しくは数字を選択</p>
+                        </div>
+                        <div class="form-inner mt-sp15">
+                            <div class="form-block-input">
+                                <input type="number" maxlength="10">
+                                
+                            </div>
+                            <figure class="mt5">
+                                <img src="./assets/img/register/arrow_top_grey.svg" alt="">
+                            </figure>
+                            <p class="text-center">残りの数字、10桁を入力</p>
+                        </div>
+                    </div>
+                    <p class="register-tertiary-text03 mb15 text-center mt40">
+                        ご登録するカードのお客様番号について
+                    </p>
+                    <p class="register-tertiary-text04">
+                        <color>ご登録することができるカードのお客様番号は、本サイト・アプリにご登録の会員様名義のカードに限ります。</color><br>
+                        ポイントについてをご確認いただき、同意するにチェックを入れて「入力内容を確認する」ボタンをクリックしてください。
+                    </p>
+                </div>
+                <div class="register-terms bg-grey mt-pc40 mt-sp30">
+                    <div class="register-terms-inner">【ポイントについて】
+会員は、既にお持ちのエディオンカード、IDカード、あんしん保証カード（以下「会員カード」といいます）がある場合は、当該会員カードを本サービスに登録することができます。ただし、第9条第4項、第5項にもとづきあんしん保証カード会員に加入された、デジタル会員証をお持ちの会員は除きます。
+会員カードを本サービスに登録すると、当社店舗と本サイトのポイントが合算され、当社店舗と本サイトにてエディオンポイントを共通利用することができます。
+但し、本サービスに登録できる会員カードは1枚のみであり、複数の会員カードをお持ちの場合でも 1枚のカードしか登録できません。また、登録済みの会員カードを変更する場合は、当社所定の手続きに従い、登録の変更を行ってください。</div>
+                </div>
+                <div class="form-block form-block-check general register-secondary-box-agree">
+                    <input type="checkbox" id="agree1">
+                    <label for="agree1">同意する</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner inner-small">
+            <div class="linebox linebox-black">
+                <div class="register-tertiary-heading">ご利用規約</div>
+                
+                <div class="wrap">
+                    <div class="register-tertiary-text01">
+                        以下「ご利用規約」をご確認いただき「同意する」にチェックを入れて「入力内容を確認する」ボタンをクリックしてください。
+                    </div>
+                </div>
+                <div class="register-terms bg-grey">
+                    <div class="register-terms-inner">会員は、既にお持ちのエディオンカード、IDカード、あんしん保証カード（以下「会員カード」といいます）がある場合は、当該会員カードを本サービスに登録することができます。ただし、第9条第4項、第5項にもとづきあんしん保証カード会員に加入された、デジタル会員証をお持ちの会員は除きます。
+会員カードを本サービスに登録すると、当社店舗と本サイトのポイントが合算され、当社店舗と本サイトにてエディオンポイントを共通利用することができます。
+但し、本サービスに登録できる会員カードは1枚のみであり、複数の会員カードをお持ちの場合でも 1枚のカードしか登録できません。また、登録済みの会員カードを変更する場合は、当社所定の手続きに従い、登録の変更を行ってください。</div>
+                </div>
+                <div class="form-block form-block-check general register-secondary-box-agree">
+                    <input type="checkbox" id="agree2">
+                    <label for="agree2">同意する</label>
+                </div>
+            </div>
+        </div>
+        
+        <a href="" class="btn red-btn2 account-btn wide">入力内容を確認する</a>
+
+    </section>
+    
+
+    
+</main>
+<%- include('../includes/_footer'); %>

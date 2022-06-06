@@ -1,0 +1,21 @@
+<aside class="sidebar sidebar-account sidebar-account-info">
+<%- include('../components/_c-sidebar-account-info') _%>
+
+<% if(locals.status == 'login'){ %>
+    <div class="is-pc">
+        <div class="sidebar-account-box logout">
+            <div class="head">
+                <div class="date">前回ログイン日時<br>
+                2022/01/06 13:30:50</div>
+                <a href="" class="link">ログイン履歴はこちら</a>
+            </div>
+            <a href="" class="btn black-btn account-btn medium">ログアウト</a>
+        </div>
+        
+        <div class="text-center">
+            <a href="" class="link">認証デバイス一覧はこちら</a>
+        </div>
+
+    </div>
+<% } %>
+</aside>

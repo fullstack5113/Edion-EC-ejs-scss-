@@ -1,0 +1,21 @@
+.breadcrumb{
+    margin: 27px auto 28px;
+    @include media-sp {
+        margin: 0 0 17px;
+        padding-top: 12px;
+    }
+}
+
+.includes_history{
+    padding-bottom: 50px;
+    @include media-sp {
+        padding-bottom: 76px;
+    }
+    .section-heading{
+        @include media-sp {
+            line-height: 1.5;
+            margin: 20px 0 16px;
+        }
+        
+    }
+}

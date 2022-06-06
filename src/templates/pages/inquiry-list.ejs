@@ -1,0 +1,54 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'inquiry';
+_%>
+    <%- include('../includes/_header-login') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a> &gt; お問い合わせ
+        </div>
+
+        <main id="main-content" class="main-content inquiry">
+
+            <div class="container container-sidebar_show">
+
+                <%- include('../includes/_sidebar-account-info'); %>
+
+                    <div class="container-right">
+                        <div class="inquiry-tit">
+                            <h4>お問い合わせ</h4>
+                            <p class="refer">各種お問い合わせはご用件のボタンをクリックしてください。</p>
+
+                        </div>
+                        <div class="inquiry-btn">
+                            <a href="" class="btn-inner">
+                                <img src="./assets/img/inquiry/cart.svg" alt="">
+                                <p class="mt5">ネットショップ・アプリに関する<br> お問い合わせ</p>
+                            </a>
+                            <a href="" class="btn-inner">
+                                <img src="./assets/img/inquiry/card.svg" alt="">
+                                <p class="mt5">会員カード・保証・ポイント<br>に関するお問い合わせ</p>
+                            </a>
+                            <a href="" class="btn-inner">
+                                <img src="./assets/img/inquiry/edion.svg" alt="">
+                                <p class="mt15">店舗へのお問い合わせ</p>
+                            </a>
+                        </div>
+                        <div class="inquiry-slide is-sp">
+                            <%- include('../includes/_relation', { title: '最近見た商品' }); %>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="inquiry-slide is-pc">
+                <%- include('../includes/_relation', { title: '最近見た商品' }); %>
+            </div>
+        </main>
+
+
+
+        <%- include('../includes/_footer'); %>

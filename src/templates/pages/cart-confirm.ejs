@@ -1,0 +1,373 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+
+    <div id="cart" class="cartconfirm">
+        <div class="container-sm">
+            <div class="flow-wrap">
+                <div class="flow-list">
+                    <div class="flow-item">
+                        <div class="flow-itemicon">
+                            <img src="./assets/img/cart/icon-cart.png" alt="カート">
+                        </div>
+                        <div class="flow-itemtext">
+                            カート
+                        </div>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-itemicon">
+                            <img src="./assets/img/cart/icon-confirm.png" alt="確認">
+                        </div>
+                        <div class="flow-itemtext">
+                            確認
+                        </div>
+                    </div>
+                    <div class="flow-item off complete">
+                        <div class="flow-itemicon">
+                            <img src="./assets/img/cart/icon-complete-off.png" alt="完了">
+                        </div>
+                        <div class="flow-itemtext">
+                            完了
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-container">
+            <div class="main-contentttl">
+                <h2 class="">注文内容の確認</h2>
+            </div>
+            <form class="form-block" action="index.html" method="post">
+                <!-- 店舗アイテム  -->
+                <div class="cartblock js-cartblock">
+                    <div class="cartblock-content">
+                        <!-- メインコンテンツ -->
+                        <div class="cartblock-contentleft cartblock-maincontent">
+                            <section>
+                                <div class="inner inner-large">
+                                    <div class="cartblock-contentleftdesc">
+                                        【お支払方法】が未設定となっております。ご設定の上、「注文を確定する」ボタンをクリックしてください。
+                                    </div>
+                                    <div id="js-cartblock-contentleftinput" class="cartblock-contentleftinput">
+                                        <div class="select-wrap">
+                                            <select class="" name="">
+                                                <option value="1">ご注文後の情報変更について</option>
+                                                <option value="2">ご注文後の情報変更について</option>
+                                                <option value="3">ご注文後の情報変更について</option>
+                                            </select>
+                                        </div>
+                                        <div class="select-wrap">
+                                            <select class="" name="">
+                                                <option value="1">Gmailの「メールソフト」をご利用のお客様へ</option>
+                                                <option value="1">Gmailの「メールソフト」をご利用のお客様へ</option>
+                                                <option value="1">Gmailの「メールソフト」をご利用のお客様へ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="cartblock-contentleftconfirm confirm">
+                                        <h4 class="confirm-ttl">ご購入前の確認</h4>
+                                        <div class="confirm-desc confirm-desc01">
+                                            <p>「ゲーム機・ゲーム機関連品・ゲームソフト」のご購入について、以下をご確認いただき、ご注文をお願い致します。</p>
+                                            <div class="confirm-list">
+                                                <div class="confirm-listitem">
+                                                    <div class="confirm-listitemttl">
+                                                        １．エディオンネットショップの取り扱い商品の保証内容は、全てメーカー保証書の内容に準拠した対応となります。
+                                                    </div>
+                                                    <div class="confirm-listitemdesc">
+                                                        ・メーカー保証書への販売店印の押印は省略させていただいております。納品書とメーカー保証書を一緒に大切に保管してください。修理を依頼される際に必要となります。
+                                                    </div>
+                                                </div>
+                                                <div class="confirm-listitem">
+                                                    <div class="confirm-listitemttl">
+                                                        ２．ゲーム機本体・関連品・ソフトの故障・不具合については、全てメーカー対応となります。
+                                                    </div>
+                                                    <div class="confirm-listitemdesc">
+                                                        ・メーカーからの要請により当社での修理対応ができかねる為、お客様より直接各メーカーのサービス窓口までお問い合わせいただくようお願い致します。
+                                                    </div>
+                                                </div>
+                                                <div class="confirm-listitem">
+                                                    <div class="confirm-listitemttl">
+                                                        ３．予約商品について
+                                                    </div>
+                                                    <div class="confirm-listitemdesc">
+                                                        ・発売日３日前までのご注文分は、発売日前日の出荷予定となります。<br>
+                                                        但し、北海道、青森県、秋田県、福岡県、佐賀県、長崎県、大分県、熊本県、宮崎県、鹿児島県、沖縄県や離島など発売日に届かない地域があります。予めご了承ください。
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="confirm-agree confirm-agree01">
+                                            <!-- <p class="mb10">以下ダウンロード商品使用許諾契約をご確認いただき、同意いただければチェックボックスにチェックを入れて「注文を確定する」ボタンをクリックしてください。</p>
+                                            <div class="coupon-link mb40">
+                                                <a href="javascript:void(0);" class="js-modal-order01" modal-id="modal">ダウンロード商品使用許諾契約</a>
+                                            </div> -->
+                                            <p>以上の内容に同意いただければ、チェックボックスにチェックを入れて「注文を確定する」ボタンをクリックしてください。</p>
+                                            <input type="checkbox" name="check01" value="1" id="check01" checked>
+                                            <label class="check-label02" for="check01">
+                                                <span class="">同意する</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="cartblock-contentleftoption option coupon">
+                                        <div class="coupon-row coupon-row01">
+                                            <div class="coupon-ttl">
+                                                電子ギフトカード・エディオン株主様ご優待ギフトカードの利用
+                                            </div>
+                                            <div class="coupon-link small">
+                                                <a href="">ギフトカードを利用する</a>
+                                            </div>
+                                        </div>
+                                        <div class="coupon-row coupon-row02">
+                                            <div class="coupon-ttl">
+                                                電子ギフトカード・エディオン株主様ご優待ギフトカードの利用
+                                            </div>
+                                            <div class="giftcard-wrap small">
+                                                <div class="coupon-giftcard giftcard">
+                                                    <div class="giftcardnum"><span class="is-pc-inline">・</span>カード番号：************4608</div>
+                                                    <div class="giftcardprice"><span class="is-sp-inline">残高：</span>￥3,000</div>
+                                                    <div class="giftcarddate"><span class="is-sp-inline">有効期限：</span>2022/06/30</div>
+                                                    <div class="giftcardinput">
+                                                        <span class="is-sp-inline">ご利用可能額：</span>
+                                                        ¥
+                                                        <input type="text" name="" value="" placeholder="1,000">
+                                                    </div>
+                                                    <div class="giftcardremove">
+                                                        <a href="">削除する</a>
+                                                    </div>
+                                                </div>
+                                                <div class="coupon-giftcard giftcard">
+                                                    <div class="giftcardnum"><span class="is-pc-inline">・</span>カード番号：************4608</div>
+                                                    <div class="giftcardprice"><span class="is-sp-inline">残高：</span>￥3,000</div>
+                                                    <div class="giftcarddate"><span class="is-sp-inline">有効期限：</span>2022/06/30</div>
+                                                    <div class="giftcardinput">
+                                                        <span class="is-sp-inline">ご利用可能額：</span>
+                                                        ¥
+                                                        <input type="text" name="" value="" placeholder="1,000">
+                                                    </div>
+                                                    <div class="giftcardremove">
+                                                        <a href="">削除する</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="coupon-link small flex-end">
+                                                <a href="">ギフトカードを追加する</a>
+                                            </div>
+                                        </div>
+                                        <div class="coupon-row coupon-row03">
+                                            <div class="coupon-ttl">
+                                                お支払い方法の設定
+                                            </div>
+                                            <div class="coupon-link small">
+                                                <a href="">お支払い方法を設定する</a>
+                                            </div>
+                                        </div>
+                                        <div class="coupon-row coupon-row04">
+                                            <div class="coupon-ttl">
+                                                お支払い方法の設定
+                                            </div>
+                                            <div class="coupon-rowrow small">
+                                                <div class="row-desc mb0">
+                                                    <div class="row-descttl">
+                                                        クレジットカード決済   一括払い
+                                                    </div>
+                                                    <div class="row-link coupon-link">
+                                                        <a href="">お支払い方法を変更する</a>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="row-desc">
+                                                    カード番号：************4608
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cartblock-contentleftitemwrap">
+                                        <div class="cartblock-contentleftitem">
+                                            <div class="numofitems">
+                                                <div class="numofitems-ttl">
+                                                    <h3>お届け先【1件目】</h3>
+                                                </div>
+                                                <div class="numofitems-subttl">
+                                                    <p>注文商品</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-wrap">
+                                                <!-- 商品アイテム Ver05 -->
+                                                <%- include('../includes/_cart-item', {item: 5, delivery: false}); %>
+                                                <div class="coupon-row coupon-row06">
+                                                    <div class="coupon-item">
+                                                        <div class="coupon-ttl">
+                                                            <h4>お届け先の設定</h4>
+                                                        </div>
+                                                        <div class="coupon-date small">
+                                                            <span>お届け日時：20YY/MM/DD <br class="is-sp">9:00〜12:00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="coupon-value">
+                                                        <div class="value-detail small">
+                                                            <div class="accountdetail">
+                                                                <div class="accountdetail-row accountdetail-row01">
+                                                                    <span>山田太郎</span>
+                                                                </div>
+                                                                <div class="accountdetail-row accountdetail-row02">
+                                                                    <span class="accountdetail-item">住所　　　　　：</span>
+                                                                    <span class="accountdetail-value">〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX</span>
+                                                                </div>
+                                                                <div class="accountdetail-row accountdetail-row03">
+                                                                    <span class="accountdetail-item">電話　　　　　：</span>
+                                                                    <span class="accountdetail-value">080XXXXXXXX</span>
+                                                                </div>
+                                                                <div class="accountdetail-row accountdetail-row04">
+                                                                    <span class="accountdetail-item">メールアドレス：</span>
+                                                                    <span class="accountdetail-value">XXXXXXXXXX@gmail.com</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="coupon-link value-link small">
+                                                            <a href="">お届け先を変更する</a>
+                                                            <a href="">複数のお届け先を指定する</a>
+                                                            <div class="spacer"></div>
+                                                            <a href="">お届け日時を変更する</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 商品アイテム Ver05 -->
+                                                <!-- 商品アイテム Ver02 -->
+                                                <%- include('../includes/_cart-item', {item: 2, delivery: false}); %>
+                                                <!-- 商品アイテム Ver02 -->
+                                            </div>
+                                        </div>
+                                        <div class="cartblock-contentleftitem">
+                                            <div class="numofitems">
+                                                <div class="numofitems-ttl">
+                                                    <h3>お届け先【2件目】</h3>
+                                                </div>
+                                                <div class="numofitems-subttl">
+                                                    <p>注文商品</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="item-wrap">
+                                                <!-- 商品アイテム Ver05 -->
+                                                <%- include('../includes/_cart-item', {item: 5, delivery: false}); %>
+                                                <div class="coupon-row coupon-row06 mb0">
+                                                    <div class="coupon-item">
+                                                        <div class="coupon-ttl">
+                                                            <h4>お届け先の設定</h4>
+                                                        </div>
+                                                        <div class="coupon-date small">
+                                                            <span>お届け日時：20YY/MM/DD <br class="is-sp">9:00〜12:00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="coupon-value">
+                                                        <div class="value-detail small">
+                                                            <div class="accountdetail">
+                                                                <div class="accountdetail-row accountdetail-row01">
+                                                                    <span>山田太郎</span>
+                                                                </div>
+                                                                <div class="accountdetail-row accountdetail-row02">
+                                                                    <span class="accountdetail-item">住所　　　　　：</span>
+                                                                    <span class="accountdetail-value">〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX</span>
+                                                                </div>
+                                                                <div class="accountdetail-row accountdetail-row03">
+                                                                    <span class="accountdetail-item">電話　　　　　：</span>
+                                                                    <span class="accountdetail-value">080XXXXXXXX</span>
+                                                                </div>
+                                                                <div class="accountdetail-row accountdetail-row04">
+                                                                    <span class="accountdetail-item">メールアドレス：</span>
+                                                                    <span class="accountdetail-value">XXXXXXXXXX@gmail.com</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="coupon-link value-link small">
+                                                            <a href="">お届け先を変更する</a>
+                                                            <a href="">複数のお届け先を指定する</a>
+                                                            <div class="spacer"></div>
+                                                            <a href="">お届け日時を変更する</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 商品アイテム Ver05 -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- メインコンテンツ -->
+                        <!-- サイドバー -->
+                        <%- include('../includes/_sidebar-cart', {ver: 2}); %>
+                        <!-- サイドバー -->
+                    </div>
+                    <!-- cartblock-content -->
+                </div>
+                <!-- 店舗アイテム  -->
+            </form>
+        </div>
+        <!-- モーダル -->
+        <div id="modal" class="modal-block wide">
+            <div class="modal-block-inner01">
+                <div class="is-pc">
+                    <span class="close-btn js-close"></span>
+                </div>
+                <div class="is-sp modal-block-return">
+                    <span class="modal-block-returnbtn js-close">戻る</span>
+                </div>
+
+                <h2 class="modal-block-ttl">ダウンロード商品使用許諾契約</h2>
+                <div class="modal-block-inner-content">
+                    <h3>【ダウンロード版商品のご注文にあたり】</h3>
+                    <div class="text-section">
+                        <h4>（ご注文について）</h4>
+                        <p>・ご利用にあたっては、利用者が本サービスを利用した場合、本サイトの利用規約に承諾したものとみなします。<br>
+                        ・ダウンロード版商品の注文は、本サイト、オンラインからのみの受付となります。<br>
+                        但し、本サービスは、すべてのインターネット接続環境、利用環境においてご利用可能なことを保証するものではありません。 <br>
+                        ご利用の推奨環境は、各商品の仕様などを必ずご確認ください。<br>
+                        ・ダウンロード版商品の代金のお支払い方法は、クレジットカードおよび、ポイントによる決済のみとなります。</p>
+                    </div>
+                    <div class="text-section">
+                        <h4>（契約の成立）</h4>
+                        <p>・ダウンロード版商品の売買契約は、ユーザが注文完了した時点および、弊社が注文の内容およびダウンロード版の専用ページを通知するメールを発信した時点で、成立するものとします。</p>
+                    </div>
+                    <div class="text-section">
+                        <h4>（本商品のダウンロード）</h4>
+                        <p>・本サイトが指定する専用のダウンロードページより、ご注文された本商品のダウンロードを行っていただきます。</p>
+                    </div>
+                    <div class="text-section">
+                        <h4>（ライセンス・キーの発行）</h4>
+                        <p>・キー発行後は、ライセンス・キーの管理や保管は、ユーザの責任で行うものとし、ユーザ以外の第三者に利用させたり、貸与、譲渡、名義変更、売買、質入、担保設定等いかなる処分および行為もできないものとします。</p>
+                    </div>
+                    <div class="text-section">
+                        <h4>（キャンセル）</h4>
+                        <p>・商品の性質上、ご注文（契約の成立）後のキャンセルは承る事が出来ません。対応のオペレーションソフト及びソフトの仕様内容をよくご確認の上、ご注文ください。</p>
+                    </div>
+                    <div class="text-section mb50">
+                        <h4>【ダウンロードソフトのご利用に関する注意】</h4>
+                        <p>・ダウンロードソフトご購入の場合、パッケージ及びメディア等の送付はございません。ダウンロード後にインストールプログラムのバックアップをお願いいたします。<br>
+                        ・インターネット上からブログラムをダウンロードしていただく為、ブロードバンド回線（光回線・ADSL等）のご利用を推奨いたします。</p>
+                    </div>
+                    <div class="text-section">
+                        <h4>（お支払について）</h4>
+                        <p>・ダウンロード販売のクレジット支払いにつきましては、クレジットカード会社への「本人認証登録」が完了したクレジットカードにてお支払ください。 「本人認証登録」のお手続きが完了されていないお客様は、クレジットカード会社への本人認証登録をお済ませいただきますよう、お願いいたします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- モーダル -->
+    </div>
+
+</main>
+
+<%- include('../includes/_footer'); %>

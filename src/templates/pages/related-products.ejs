@@ -1,0 +1,132 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'related-products';
+_%>
+    <%- include('../includes/_header-login') %>
+
+        <div class="breadcrumb mb-pc40 mb-sp10">
+            <a href="">トップ</a> &gt; <a href=""> マイページ</a> &gt; <a href="">  関連商品検索</a> &gt; 検索結果
+        </div>
+
+        <main id="main-content" class="main-content">
+
+            <div class="container mb-sp65">
+                <div class="related-products">
+                    <div class="related-products-ttl">
+                        <h3>関連商品検索</h3>
+                        <p class="des_01">以下の検索機能により、検索した商品の関連商品ご覧いただけます。</p>
+                    </div>
+                    <div class="related-products-search">
+                        <p>商品型番または、<br class="is-sp">JANコードを入力してください。</p>
+                        <div class="related-products-search-inner">
+                            <input type="text">
+                            <button class="btn">検索</button>
+                        </div>
+                    </div>
+                    <div class="related-products-ctn">
+                        <div class="filter-wrap">
+                            <h4>検索結果</h4>
+                            <div class="filter-inner">
+                                <div class="d-flex items-center">
+                                    <label>表示件数</label>
+                                    <div class="form-block-select">
+                                        <select name="" id="">
+                                            <option value="5"><p>5件</p></option>
+                                            <option value="10">10件</option>
+                                            <option value="15">15件</option>
+                                            <option value="20">20件</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <p>検索結果：該当5件</p>
+                            </div>
+                        </div>
+                        <% for (var i=0; i< 5; i++){ %>
+                            <div class="product-inner">
+                                <div class="product-inner-img">
+                                    <img src="./assets/img/related-products/product.jpg" alt="">
+                                </div>
+                                <div class="product-inner-txt">
+                                    <p class="name">パナソニック</p>
+                                    <p class="ttl">パナソニック 「標準工事費サービス」 18畳向け 自動お掃除付き</p>
+                                    <p class="ttl code">RASWM56K2E8WS</p>
+                                    <p class="price is-sp">￥12,980(税込)</p>
+                                    <div class="postreviewitem-star"><span class="review-star star5"></span>(6)</div>
+                                    <p class="price is-pc">￥12,980(税込)</p>
+                                    <p class="refer refer_01">当社クレジット会員：951ポイント進呈<br>あんしん保証会員：129ポイント進呈</p>
+                                    <p class="refer refer_02">在庫あり</p>
+                                    <p class="refer refer_03">翌日出荷（大型品は別途ご案内）</p>
+                                </div>
+                                <div class="product-inner-btn">
+                                    <a href="" class="purchase-btn btn mb-pc20 mb-sp25">
+                                        <img src="./assets/img/common/icon-cart.png" alt="">
+                                        <p>カートに入れる</p>
+                                    </a>
+                                    <a href="" class="purchase-btn yellow btn mb-pc20 mb-sp25">
+                                        <p>今すぐ購入する</p>
+                                    </a>
+                                    <a href="" class="purchase-btn grey btn">
+                                        <img src="./assets/img/common/favorite-link.png" alt="">
+                                        <p>お気に入り商品に追加する</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <% } %>
+                    </div>
+                    <%- include('../components/_c-pager'); %>
+
+                        <div class="return">
+                            <a class="return-btn lined-btn-grey" href="#">戻る</a>
+                        </div>
+                </div>
+            </div>
+            <div class="is-sp">
+                <aside class="sidebar sidebar-account-info">
+                    <div class="sidebar-inner">
+                        <div class="sidebar-ttl js-sidebar-ttl">各種照会・登録・変更</div>
+                        <ul class="sidebar-category-list sidebar-category-list-4 js-sidebar-category-list">
+                            <li><span class="sidebar-category-list-link"><a href="">購入履歴</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">再び購入</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">工事見積書反映</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">ポイント照会</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">会員情報・メルマガ設定</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">友達/家族紹介</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">お届け先情報</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">家族登録一覧</a></span></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-inner">
+                        <div class="sidebar-ttl js-sidebar-ttl">セール・商品・店舗</div>
+                        <ul class="sidebar-category-list sidebar-category-list-4 js-sidebar-category-list">
+                            <li><span class="sidebar-category-list-link"><a href="">クーポン</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">メーカーキャンペーン</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">シークレットセール</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">お気に入り商品</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">商品レビュー</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">生活雑貨・くすり・お酒</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">よく利用する店舗</a></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-inner">
+                        <div class="sidebar-ttl js-sidebar-ttl">サービス関連</div>
+                        <ul class="sidebar-category-list sidebar-category-list-4 js-sidebar-category-list">
+                            <li><span class="sidebar-category-list-link"><a href="">保証対象商品</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">修理状況</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">訪問修理</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">各種依頼</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">オンライン修理見積</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">小型家電修理品引き取り</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">家電トータルサポート</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">メモ帳</a></span></li>
+                            <li><span class="sidebar-category-list-link"><a href="">接客予約</a></span></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <%- include('../includes/_footer'); %>

@@ -1,0 +1,435 @@
+/**
+* @file _form.scss
+**/
+
+
+/* ボタン 共通 */
+
+.btn {
+    display: block;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+    @include media-sp {
+        font-size: 14px;
+    }
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    @include media-sp {
+        margin-top: 24px;
+    }
+}
+
+.btn-wrap-bottom {
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid #E6E6E6;
+    @include media-sp {
+        border-top: none;
+        margin-top: 27px;
+        padding-top: 0;
+    }
+}
+
+button {
+    font-family: $body-font;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+
+/* ボタン デザイン関連 */
+
+.black-btn {
+    color: #fff !important;
+    background: $default-color;
+    border: 1px solid $default-color;
+}
+
+.white-btn {
+    color: #333 !important;
+    background: #fff;
+}
+
+.grey-btn {
+    color: $default-color;
+    background: #E6E6E6;
+}
+
+.grey-btn2 {
+    color: #fff !important;
+    background: #999999;
+}
+
+
+
+.grey-btn3{
+    color: $default-color !important;
+    background-color: #F7F7F7;
+}
+
+.grey-btn4 {
+    color: #fff !important;
+    background: #707070;
+}
+
+.border-btn {
+    background: #fff;
+    border: 1px solid $default-color;
+}
+
+.red-btn {
+    color: #fff !important;
+    background: #FF0000;
+    border: 1px solid #FF0000;
+}
+
+.red-btn2 {
+    color: #fff !important;
+    background: #EA3C3C;
+}
+
+.orange-btn {
+    background: $accent-color2;
+    color: #fff !important;
+}
+
+.add-cart-btn {
+    background: #EA3C3C;
+    color: #fff !important;
+    font-size: 12px;
+    padding: 0 16px;
+    line-height: 1 !important;
+    border-radius: 4px;
+    min-width: 270px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 48px;
+    @include media-sp {
+        height: 40px;
+        font-size: 14px;
+        min-width: 172px;
+        background-color: #FF0000;
+    }
+    .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url(../img/common/icon-cart.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        margin-right: 10px;
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.blue-btn {
+    color: #fff !important;
+    background: #235192;
+}
+
+.lined-btn {
+    border: 1px solid #E6E6E6;
+    &-grey {
+        border: 1px solid #707070;
+    }
+}
+
+.large-btn {
+    border-radius: 4px;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.medium-btn {
+    border-radius: 4px;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.inline-btn {
+    display: inline-block;
+    margin: 0;
+}
+
+
+/* ボタン 固有 */
+
+.search-btn {
+    min-width: 80px;
+    margin-left: 16px;
+    padding: 6px 0;
+    box-sizing: border-box;
+    @include media-sp {
+        padding: 6px 0 7px;
+    }
+}
+
+.re-search-btn {
+    min-width: 200px;
+    margin-right: 8px;
+    padding: 8px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    @include media-sp {
+        min-width: inherit;
+        width: 50%;
+        @include media-sp {
+            padding: 12px 0 13px;
+        }
+    }
+}
+
+.select-btn {
+    min-width: 180px;
+    margin-left: 8px;
+    padding: 8px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    @include media-sp {
+        min-width: inherit;
+        width: 50%;
+        @include media-sp {
+            padding: 12px 0 13px;
+        }
+    }
+}
+
+.login-register-btn {
+    width: 100%;
+    margin-top: 32px;
+    padding: 12px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    @include media-sp {
+        padding: 12px 0 13px;
+    }
+}
+
+.login-btn {
+    .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background-image: url(../img/common/icon-unlock.svg);
+        background-position: left top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+}
+
+.register-btn {
+    .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background-image: url(../img/common/icon-register.svg);
+        background-position: left top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+}
+
+.contact-btn {
+    .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background-image: url(../img/common/icon-contact-white.svg);
+        background-position: left top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+}
+
+.account-btn {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    min-width: 80px;
+    height: 48px;
+    margin: 0 auto;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.46;
+    &.inline {
+        display: inline-block;
+    }
+    &.medium2 {
+        height: 40px;
+    }
+    &.medium {
+        height: 32px;
+    }
+    &.lined-blue {
+        border: 2px solid #235192;
+        background-color: #fff;
+        color: #235192;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+    }
+    &.lined-black {
+        border: 1px solid #707070;
+        background-color: #fff;
+        color: #333;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    &.wide {
+        @include media-is-pc {
+            max-width: 400px;
+        }
+    }
+    &.tpoint {
+        border: 2px solid #004098;
+        background-color: #fff;
+        color: #004098;
+        img {
+            width: 32px;
+            margin-right: 8px;
+        }
+    }
+    &.dpoint {
+        border: 2px solid #D00F31;
+        background-color: #fff;
+        color: #D00F31;
+        img {
+            width: 32px;
+            margin-right: 8px;
+        }
+    }
+}
+
+.close-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    @include media-sp {
+        top: 16px;
+        right: 16px;
+        width: 30px;
+        height: 30px;
+    }
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 24px;
+        background: #333;
+        @include media-sp {
+            height: 30px;
+        }
+    }
+    &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+.purchase-btn {
+    background: #EA3C3C;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 270px;
+    height: 48px;
+    max-width: 100%;
+    @include media-sp {
+        width: 100%;
+    }
+    p {
+        font-weight: bold;
+        font-size: 12px;
+        color: white;
+        padding-left: 12px;
+    }
+    &.yellow {
+        background: #EA8D3C;
+    }
+    &.grey {
+        background: $grey-color;
+        width: 100%;
+        p {
+            color: $default-color;
+        }
+    }
+    &.blue {
+        background: #235192;
+    }
+}
+
+.checkbox-inner {
+    label {
+        position: relative;
+        cursor: pointer;
+    }
+    label:before {
+        -webkit-appearance: none;
+        display: inline-block;
+        position: relative;
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #707070;
+        background-color: white;
+        content: "";
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    input:checked+label:after {
+        content: url(../img/common/checkbox-.svg);
+        display: block;
+        position: absolute;
+        top: 2.5px;
+        left: 2.5px;
+        width: 15px;
+    }
+}
+
+.outline-btn {
+    border: 1px solid $default-color;
+}
+
+.radius-btn {
+    border-radius: 4px;
+}
+
+.shadow-btn {
+    box-shadow: 0px 1px 3px #00000033;
+}

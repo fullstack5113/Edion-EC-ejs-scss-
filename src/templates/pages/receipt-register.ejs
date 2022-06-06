@@ -1,0 +1,92 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'receipt-register';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+
+    <div id="receiptregister">
+        <form class="form-block" action="xxx" method="post">
+            <div class="container-sm">
+                <div class="flow-wrap">
+                    <div class="flow-list">
+                        <div class="flow-item">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/receipt-register/icon-input-on.png" alt="領収書発行入力">
+                            </div>
+                            <div class="flow-itemtext">
+                                領収書発行入力
+                            </div>
+                        </div>
+                        <div class="flow-item off">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/receipt-register/icon-confirm-off.png" alt="確認">
+                            </div>
+                            <div class="flow-itemtext">
+                                確認
+                            </div>
+                        </div>
+                        <div class="flow-item off complete">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/receipt-register/icon-complete-off.png" alt="完了">
+                            </div>
+                            <div class="flow-itemtext">
+                                完了
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="registerdesc-container">
+                <div class="registerdesc">
+                    <h3 class="registerdesc-ttl">領収書発行入力</h3>
+                    <div class="registerdesc-descwrap">
+                        <p class="registerdesc-desc"><span class="font-bold">＜WEB領収書発行期間＞</span> 商品出荷日の翌日から30日間発行可能です。</p>
+                        <p class="registerdesc-desc"> 領収書に記載する宛名および但しをご入力ください。<br class="is-pc">
+                            また、購入商品の明細を領収書に含めたい場合は、「購入商品明細を領収書に表示する」にチェックしてください。</p>
+                    </div>
+                    <ul class="registerdesc-list">
+                        <li class="registerdesc-item">※宛名を「上」では発行出来ません。</li>
+                        <li class="registerdesc-item">※お宛名末尾の「様」の入力は必要ございません。</li>
+                        <li class="registerdesc-item">※【必須】は必須項目です。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-sm">
+                <div class="receiptinput">
+                    <div class="receiptinput-item receiptinput-item01">
+                        <span class="receiptinput-ttl">宛名</span>
+                        <input type="text" name="input01" value="" maxlength="30">
+                    </div>
+                    <div class="receiptinput-item receiptinput-item02">
+                        <span class="receiptinput-ttl">但し書き</span>
+                        <input type="text" name="input02" value="" maxlength="50">
+                    </div>
+                    <div class="receiptinput-item receiptinput-item03">
+                        <span class="receiptinput-ttl">購入商品明細</span>
+                        <div class="check-labelwrap">
+                            <input type="checkbox" name="check01" value="1" id="check01" >
+                            <label class="check-label02" for="check01">
+                                <span class="">購入商品明細を領収書に表示する</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sendbtn-wrap">
+                    <button class="sendbtn-send btn" type="submit" name="button">確認画面へ</button>
+                    <a class="sendbtn-close" href="xxx">戻る</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+<%- include('../includes/_footer'); %>

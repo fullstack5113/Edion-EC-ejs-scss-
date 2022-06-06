@@ -1,0 +1,72 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'addressee';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    
+    <a href="javascript:void(0);" class="js-modal btn black-btn large-btn" modal-id="addressee-group-modal">Open Modal</a>
+
+    <div id="addressee-group-modal" class="modal-block addressee-group-modal">
+        <div class="modal-block-inner">
+            <span class="close-btn js-close"></span>
+            <div class="modal-block-inner-head">
+                <h5 class="modal-block-inner-head-heading">グループを編集する</h5>
+                <div class="modal-block-inner-head-subtext">
+                    お届け先グループは最大10件まで設定することができます。<br class="is-pc">
+                    グループを新たに追加する場合は、グループ名を入力し「追加する」をクリックしてください。<br class="is-pc">
+                    内容をご確認の上よろしければ「登録する」をクリックすると登録できます。
+                </div>
+            </div>
+            
+            <div class="modal-block-inner-content">
+
+                <div class="modal-block-inner-content-heading01">グループ追加</div>
+                <div class="modal-block-inner-content-text01">（全角・半角カナ英数字10文字以内）</div>
+                <div class="form-block general add-group">
+                    <input type="number" name="" placeholder="">
+                    <button class="btn blue-btn account-btn medium add-btn">追加する</button>
+                </div>
+                
+                <div class="modal-block-inner-content-heading01">登録済みグループ</div>
+                <div class="modal-block-inner-content-group">
+                    <% for (var i = 1; i < 4; i++){ %>
+                    <div class="item">
+                        <div>
+                            <div class="name">グループ名グループ名</div>
+                            <button class="btn grey-btn2 account-btn medium delete-btn">削除</button>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                
+                <div class="modal-block-inner-content-heading01">初期設定グループ</div>
+                <div class="modal-block-inner-content-group">
+                    <% for (var i = 1; i < 8; i++){ %>
+                    <div class="item">
+                        <div>
+                            <div class="name">ギフト１</div>
+                            <button class="btn grey-btn2 account-btn medium delete-btn">削除</button>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                           
+
+            </div>
+            
+            <div class="modal-block-inner-foot">
+                <div class="modal-block-inner-foot-btns">
+                    <a href="" class="btn red-btn2 account-btn">登録する</a>
+                    <a href="" class="btn lined-blue account-btn medium2">キャンセル</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<%- include('../includes/_footer'); %>

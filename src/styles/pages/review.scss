@@ -1,0 +1,1307 @@
+@import '../config';
+@import '../mixins/media';
+@import '../mixins/others';
+
+
+// ===========================
+// review Start
+// ===========================
+
+.product {
+    // 商品
+    // 画像・テキスト・総合評価・スター
+    &-details  {
+        vertical-align: baseline !important;
+        border-top: 1px solid $bd-color1;
+        border-bottom: 1px solid $bd-color1;
+        padding: 50px 0;
+        margin-bottom: 40px;
+        // display: flex;
+        @include media-sp {
+            padding: 20px 0 25px 0;
+            margin-bottom: 25px;
+        }
+    }
+
+
+    // 左アイテム
+    &-desc {
+        display: flex;
+        align-items: center;
+        @include media-sp {
+            padding-bottom: 25px !important;
+        }
+    }
+
+    &-img {
+        @include media-is-pc {
+            width: 160px;
+        }
+        @include media-sp {
+            width: 50%;
+        }
+    }
+
+    &-text {
+        font-weight: 500;
+        font-size: 15px;
+        @include media-is-pc {
+            padding: 0 0 0 2em;
+        }
+        @include media-sp {
+            width: 50%;
+            font-size: 12px;
+        }
+        ul {
+            li {
+                line-height: 1.4;
+                span {
+                    vertical-align: baseline;
+                }
+            }
+        }
+    }
+
+    &-name {
+        &brand {
+            display: block;
+            @include media-sp {
+                margin-right: .5em;
+                display: initial;
+            }
+        }
+    }
+
+    &-price {
+        color: #ff0000;
+        margin-bottom: 30px;
+    }
+    &-stock {
+        font-size: 12px;
+        color: #707070;
+        @include media-sp {
+            color: $default-color;
+        }
+
+        &stat {
+            font-weight: 700;
+            @include media-is-pc {
+                font-size: 15px;
+            }
+        }
+    }
+
+
+    // 右アイテム
+    &-eval {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media-is-pc {
+            padding-left: 3.2% !important;
+            padding-right: 1.9% !important;
+        }
+        @include media-sp {
+            flex-direction: column;
+        }
+
+        // 左アイテム
+        &total {
+            display: flex;
+            text-align: center;
+
+            @include media-sp {
+                margin-bottom: 17px;
+                padding-top: 25px;
+                text-align: left;
+                border-top: 1px solid $bd-color1;
+            }
+            &list {
+                padding-top: 4px;
+                @include media-sp {
+                    padding-top: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+                >:nth-child(1) { order: 1; }
+                >:nth-child(2) { order: 3; }
+                >:nth-child(3) { order: 2; }
+                >:nth-child(4) { order: 4; }
+                >:nth-child(5) { order: 5; }
+            }
+
+            &ttl, &score, &star {
+                @include media-sp {
+                    vertical-align: baseline;
+                    margin-bottom: 10px;
+                }
+
+            }
+            &ttl {
+                font-weight: 700;
+                margin-bottom: 14px;
+                @include media-sp {
+                    margin-top: 4px;
+                    margin-right: 20px;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+            }
+
+            &score {
+                margin-bottom: 10px;
+                font-weight: 500;
+                @include media-is-pc {
+                    font-size: 20px;
+                }
+
+                @include media-sp {
+                    font-size: 20px;
+                }
+
+            }
+            &star {
+                @include media-is-pc {
+                    margin-bottom: 24px;
+                }
+                @include media-sp {
+                    margin-right: 10px;
+                    font-size: 16px;
+                }
+            }
+            &cnt {
+                color: #707070;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+
+        // 右アイテム
+        &star {
+            margin-left: 1.6077%;
+            @include media-sp {
+                margin-left: 0;
+                width: 100%;
+            }
+
+        }
+        &bar{
+            height: 16px;
+            width: 200px;
+            font-size: 16px;
+            color: white;
+            margin: 0 5px 10px 15px;
+            position: relative;
+            @include media-sp {
+                margin: 0 0 10px 0;
+                width: 57%;
+            }
+            &wrap {
+                display: flex;
+                @include media-sp {
+                    justify-content: space-between;
+                }
+            }
+            &:before{
+                content:'';
+                width: 100%;
+                position: absolute;
+                left: 0;
+                height: 16px;
+                top: 0;
+                z-index: 0;
+                background: #e6e6e6;
+            }
+            &:after{
+                content: '';
+                background: #FFC400;
+                height: 16px;
+                transition: 0.7s;
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            &.bar1::after {
+                max-width: 10%;
+            }
+            &.bar2::after {
+                max-width: 32%;
+            }
+            &.bar3::after {
+                max-width: 50%;
+            }
+            &.bar4::after {
+                max-width: 70%;
+            }
+
+        }
+
+
+        &person {
+            color: #707070;
+            font-size: 13px;
+            font-weight: 500;
+            min-width: 70px;
+            padding-left: 0.5rem;
+            @include media-sp {
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+
+//  棒グラフ
+.graph-cont{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+// Only SP
+.writereview {
+    &-link {
+        display: block;
+        text-align: center;
+        padding: 18px 0;
+        width: 100%;
+        border: 1px solid $bd-color1;
+        border-radius: 3px;
+    }
+
+}
+
+// ソート
+.sort {
+    display: flex;
+    justify-content: flex-end;
+    @include media-sp {
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+
+    &-search {
+        &wrap {
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
+            @include media-sp {
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+        }
+        &ttl {
+            margin-right: 15px;
+        }
+    }
+
+    &-selectwrap {
+        position: relative;
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 4px solid transparent;
+            border-top: 6px solid black;
+            @include media-sp {
+                top: 18px;
+            }
+        }
+        &.selectwrap1 {
+            margin-right: 10px;
+
+        }
+        select {
+            text-align: left;
+            height: 24px;
+            appearance: none;
+            border: 1px solid #E6E6E6;
+            padding: 0 60px 0 15px;
+            border-radius: 3px;
+            @include media-sp {
+                height: 40px;
+            }
+        }
+    }
+
+    &-sort {
+        &wrap {
+            display: flex;
+            align-items: center;
+
+        }
+        &ttl {
+            margin-right: 15px;
+        }
+
+    }
+
+    &-commonttl {
+        font-size: 12px;
+        font-weight: 500;
+        @include media-sp {
+            font-size: 13px;
+        }
+    }
+
+}
+// ソート /
+
+
+
+// お客様別商品レビュー
+.searchuser {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+        border-bottom: 1px solid $bd-color1;
+        @include media-sp {
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 5px;
+            padding-bottom: 24px;
+        }
+    }
+
+    &-textlist, &-form {
+        display: flex;
+        align-items: center;
+        @include media-sp {
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &-text {
+        margin-bottom: 30px;
+        @include media-sp {
+            margin-bottom: 25px;
+        }
+    }
+
+    &-name {
+        margin-right: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        @include media-sp {
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+    &-cnt {
+        font-size: 12px;
+        font-weight: 500;
+        color: #707070;
+        @include media-sp {
+            font-size: 14px;
+        }
+    }
+    &-form {
+        position: relative;
+        margin-bottom: 26px;
+        @include media-sp {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        &ttl {
+            margin-right: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            @include media-sp {
+                margin-bottom: 10px;
+                font-size: 11px;
+            }
+        }
+        form {
+            width: 300px;
+            @include media-sp {
+                width: 100%;
+            }
+        }
+        input {
+            display: block;
+            width: 100%;
+            height: 35px;
+            padding: 0 45px 0 16px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 13px;
+            border: 1px solid $bd-color1;
+            @include media-sp {
+                height: 44px;
+            }
+        }
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(-50%, 15%);
+            background: inherit;
+            @include media-sp {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+// お客様別商品レビュー /
+// ===========================
+// review End
+// ===========================
+
+
+// ===========================
+// 商品レビュー投稿
+// ===========================
+
+.reviewpost{
+    &-ttl{
+        padding-bottom: 40px;
+        @include media-sp{
+            padding-bottom: 24px;
+        }
+        h4{
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.5;
+            color: $default-color;
+            margin-bottom: 8px;
+            @include media-sp{
+                margin-bottom: 16px;
+            }
+        }
+        p{
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: $default-color;
+            margin-bottom: 16px;
+            @include media-sp{
+                font-weight: bold;
+            }
+        }
+        .link_service{
+            font-size: 12px;
+            font-weight: 500;
+            color: #235192;
+            padding-right: 13px;
+            text-decoration: underline;
+            position: relative;
+            text-align: right;
+            &::after{
+                content: url(../img/common/arrow-right-blue.svg);
+                width: 6px;
+                height: 12px;
+                position: absolute;
+                right: 0;
+                top: 60%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &-user{
+        padding-bottom: 40px;
+        @include media-sp{
+            padding-bottom: 64px;
+        }
+        &-ttl{
+            font-size: 12px;
+            font-weight: bold;
+            color: $default-color;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+        &-nickname{
+            font-size: 16px;
+            font-weight: bold;
+            color: $default-color;
+            padding-bottom: 8px;
+            line-height: 1.5;
+            border-bottom: solid 1px #707070;
+            margin-bottom: 20px;
+            @include media-sp{
+                margin-bottom: 24px;
+            }
+        }
+        &-des{
+            font-size: 13px;
+            font-weight: normal;
+            color: $default-color;
+            line-height: 2;
+            margin-bottom: 32px;
+            @include media-sp{
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+        .btn{
+            max-width: 410px;
+            width: 100%;
+            height: 48px;
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-ctn{
+        padding: 40px;
+        border: solid 1px $grey-color;
+        margin-bottom: 80px;
+        @include media-sp{
+            padding: 20px 15px;
+            margin-bottom: 40px;
+            
+        }
+        &-ttl{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: solid 1px $grey-color;
+            padding-bottom: 20px;
+            @include media-sp{
+                padding-bottom: 3px;
+                border: none;
+            }
+            .img-inner{
+                width: 160px;
+                @include media-sp{
+                    width: 100px;
+                }
+            }
+            .txt-inner{
+                width: calc(100% - 160px - 30px);
+                @include media-sp{
+                    width: calc(100% - 114px);
+                }
+                p{
+                    &.des01{
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: $default-color;
+                        @include media-sp{
+                            font-size: 10px;
+                        }
+                    }
+                    &.ttl{
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $default-color;
+                        line-height: 1.6;
+                        margin-bottom: 14px;
+                        @include media-sp{
+                            font-size: 14px;
+                            margin-bottom: 8px;
+                        }
+                    }
+                    &.des02{
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: #707070;
+                        @include media-sp{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
+        &-input{
+            margin-top: 40px;
+            @include media-sp{
+                padding: 0 15px;
+            }
+            .star{
+                margin-bottom: 32px;
+                &-ttl{
+                    h6{
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: $default-color;
+                        letter-spacing: 0.08em;
+                        margin-bottom: 24px;
+                        @include media-sp{
+                            font-size: 14px;
+                        }
+                    }
+                    p{
+                        font-weight: bold;
+                        font-size: 14px;
+                        letter-spacing: 0.08em;
+                        color: $default-color;
+                        line-height: 1.6;
+                        position: relative;
+                        display: flex;
+                        margin-bottom: 14px;
+                        @include media-sp{
+                            justify-content: space-between;
+                            font-size: 12px;
+                            margin-bottom: 12px;
+                        }
+                        &.require::after{
+                            content: "必須";
+                            background: $accent-color2;
+                            border-radius: 4px;
+                            min-width: 40px;
+                            height: 16px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: normal;
+                            font-size: 10px;
+                            letter-spacing: 0.1em;
+                            color: white;
+                            margin-left: 14px;
+                            margin-top: 3px;
+                        }
+                    }
+                }
+                &-wrap{
+                    display: flex;
+                    align-items: center;
+                    p{
+                        font-weight: normal;
+                        font-size: 14px;
+                        letter-spacing: 0.08em;
+                        color: $default-color;
+                    }
+                    &-input{
+                        display: inline-block;
+                        position: relative;
+                        font-size: 20px;
+                        line-height: 26px;
+                        margin: 0 12px;
+                        @include media-sp{
+                            margin: 0 20px;
+                            font-size: 30px;
+                            line-height: 40px;
+                        }
+                        label{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            cursor: pointer;
+                            &:last-child{
+                                position: static;
+                                .icon{
+                                    color: transparent;
+                                    -webkit-text-stroke: 1px #707070;
+                                }
+                            }
+                            &:nth-child(1){
+                                z-index: 5;
+                            }
+                            &:nth-child(2){
+                                z-index: 4;
+                            }
+                            &:nth-child(3){
+                                z-index: 3;
+                            }
+                            &:nth-child(4){
+                                z-index: 2;
+                            }
+                            &:last-child{
+                                z-index: 1;
+                            }
+                            input{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                opacity: 0;
+                            }
+                            .icon{
+                                float: left;
+                                color: transparent;
+                                margin: 0 2px;
+                            }
+                        }
+                        &:not(:hover){
+                            label{
+                                input{
+                                    &:checked ~ {
+                                        .icon{
+                                            color: #FFC400;
+                                            -webkit-text-stroke: 1px #FFC400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            label{
+                                &:hover{
+                                    input ~ {
+                                        .icon{
+                                            color: #FFC400;
+                                            -webkit-text-stroke: 1px #FFC400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .review{
+                &-ttl{
+                    font-weight: bold;
+                    font-size: 14px;
+                    letter-spacing: 0.08em;
+                    color: $default-color;
+                    line-height: 1.6;
+                    position: relative;
+                    display: flex;
+                    margin-bottom: 12px;
+                    @include media-sp{
+                        justify-content: space-between;
+                        font-size: 12px;
+                    }
+                    &_select::after{
+                        content: "任意";
+                        background: #999999;
+                        border-radius: 4px;
+                        min-width: 40px;
+                        height: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: normal;
+                        font-size: 10px;
+                        letter-spacing: 0.1em;
+                        color: white;
+                        margin-left: 14px;
+                        margin-top: 3px;
+                    }
+                }
+                &-input{
+                    width: 100%;
+                    max-width: 688px;
+                    height: 240px;
+                    border: solid 1px #999999;
+                    border-radius: 4px;
+                    padding: 15px 10px;
+                    line-height: 1.4;
+                }
+                &-refer{
+                    font-weight: normal;
+                    font-size: 11px;
+                    color: $default-color;
+                    line-height: 2;
+                    margin-top: 12px;
+                    @include media-sp{
+                        font-size: 10px;
+                    }
+                }
+            }
+            
+        }
+        .btn-group{
+            display: flex;
+            @include media-sp{
+                flex-wrap: wrap-reverse;
+                padding: 0 15px;
+            }
+            .btn{
+                width: 324px;
+                height: 48px;
+                font-size: 13px;
+                font-weight: bold;
+                margin-top: 40px;
+                @include media-sp{
+                    width: 100%;
+                    margin-top: 24px;
+                }
+                &:first-child{
+                    margin-right: 40px;
+                    @include media-sp{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    &.return-btn{
+        width: 270px;
+        height: 48px;
+        border: solid 1px #707070;
+        border-radius: 4px;
+        background-color: #FEFEFE;
+        margin-top: 80px;
+        @include media-sp{
+            width: 345px;
+            margin-top: 64px;
+        }
+    }
+}
+
+
+
+// ===========================
+// 商品レビュー履歴
+// ===========================
+.reviewhistory{
+    &-ttl{
+        padding-bottom: 24px;
+        h4{
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.5;
+            color: $default-color;
+            margin-bottom: 8px;
+            @include media-sp{
+                margin-bottom: 16px;
+            }
+        }
+        p{
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: $default-color;
+            @include media-sp{
+                font-weight: bold;
+            }
+        }
+    }
+    &-user{
+        padding-bottom: 80px;
+        @include media-sp{
+            padding-bottom: 64px;
+        }
+        &-ttl{
+            font-size: 12px;
+            font-weight: bold;
+            color: $default-color;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+        &-nickname{
+            font-size: 16px;
+            font-weight: bold;
+            color: $default-color;
+            padding-bottom: 8px;
+            line-height: 1.5;
+            border-bottom: solid 1px #707070;
+            margin-bottom: 20px;
+            @include media-sp{
+                margin-bottom: 24px;
+            }
+        }
+        &-des{
+            font-size: 13px;
+            font-weight: normal;
+            color: $default-color;
+            line-height: 2;
+            margin-bottom: 32px;
+            @include media-sp{
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+        .btn{
+            max-width: 410px;
+            width: 100%;
+            height: 48px;
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-ctn{
+        .tabs{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+            .tab{
+                width: 232px;
+                height: 60px;
+                border: solid 1px $grey-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                @include media-sp{
+                    width: 50%;
+                    height: 48px;
+                }
+                &.active{
+                    background: $grey-color;
+                }
+                p{
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: $default-color;
+                    @include media-sp{
+                        font-size: 14px;
+                    }
+                }
+            }
+            ._publish{
+                width: calc(100% - 464px);
+                font-size: 12px;
+                font-weight: 500;
+                color: #235192;
+                padding-right: 13px;
+                text-decoration: underline;
+                position: relative;
+                text-align: right;
+                @include media-sp{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                &::after{
+                    content: url(../img/common/arrow-right-blue.svg);
+                    width: 6px;
+                    height: 12px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            &-content{
+                border: solid 1px $grey-color;
+                padding: 40px;
+                margin-bottom: 80px;
+                @include media-sp{
+                    padding: 24px 15px 20px 15px;
+                    margin-bottom: 40px;
+                }
+                .filter{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    @include media-sp{
+                        display: block;
+                    }
+                    &-inner{
+                        display: flex;
+                        align-items: center;
+                        @include media-sp{
+                            justify-content: flex-end;
+                            margin-bottom: 8px;
+                        }
+                        label{
+                            font-size: 12px;
+                            font-weight: 500;
+                            color: $default-color;
+                            margin: 0 12px 0 24px;
+                            @include media-sp{
+                                margin: 0 8px 0;
+                            }
+                        }
+                        .form-block-select{
+                            width: 166px;
+                            height: 24px;
+                            border-radius: 2px;
+                            @include media-sp{
+                                width: 124px;
+                            }
+                            select{
+                                width: 100%;
+                                font-size: 13px;
+                                font-weight: 500;
+                                color: $default-color;
+                                border: solid 1px $grey-color;
+                                
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                .review-wrap{
+                    padding: 40px 0;
+                    border-bottom: solid 1px $grey-color;
+                    @include media-sp{
+                        padding: 24px 0;
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                        border: none;
+                    }
+                    &-ttl{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 14px;
+                        @include media-sp{
+                            margin-bottom: 16px;
+                        }
+                        .img-inner{
+                            width: 160px;
+                            @include media-sp{
+                                width: 100px;
+                            }
+                        }
+                        .txt-inner{
+                            width: calc(100% - 160px - 30px);
+                            @include media-sp{
+                                width: calc(100% - 114px);
+                            }
+                            p{
+                                &.des01{
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                    color: $default-color;
+                                    @include media-sp{
+                                        font-size: 10px;
+                                    }
+                                }
+                                &.ttl{
+                                    font-size: 15px;
+                                    font-weight: 500;
+                                    color: $default-color;
+                                    line-height: 1.6;
+                                    margin-bottom: 14px;
+                                    @include media-sp{
+                                        font-size: 14px;
+                                        margin-bottom: 8px;
+                                    }
+                                }
+                                &.des02{
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    color: #707070;
+                                    @include media-sp{
+                                        font-size: 11px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &-ctn{
+                        background: #F5F5F5;
+                        padding: 20px;
+                        &-star{
+                            font-size: 15px;
+                            font-weight: 500;
+                            margin-bottom: 20px;
+                            @include media-sp{
+                                margin-bottom: 8px;
+                            }
+                        }
+                        &-poster{
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: $default-color;
+                            margin-bottom: 15px;
+                            @include media-sp{
+                                font-size: 11px;
+                            }
+                        }
+                        &-date{
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: #707070;
+                            margin-bottom: 24px;
+                            @include media-sp{
+                                font-size: 11px;
+                                margin-bottom: 20px;
+                            }
+                        }
+                        .btn{
+                            width: 80px;
+                            height: 36px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                            font-weight: bold;
+                            color: #fefefe !important;
+                            @include media-sp{
+                                width: calc((100% - 17px) / 2);
+                            }
+                        }
+                        &-ttl{
+                            font-size: 15px;
+                            font-weight: bold;
+                            margin-bottom: 15px;
+                            color: $default-color;
+                            @include media-sp{
+                                font-size: 14px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                        &-des{
+                            font-size: 13px;
+                            font-weight: normal;
+                            line-height: 1.6;
+                            color: $default-color;
+                            @include media-sp{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    &-concern{
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: #707070;
+                        margin-top: 14px;
+                        text-align: right;
+                        @include media-sp{
+                            margin-top: 24px;
+                            text-align: center;
+                        }
+                    }
+                    &-noctn{
+                        background: #F5F5F5;
+                        padding: 20px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        &-ttl{
+                            font-size: 15px;
+                            font-weight: bold;
+                            color: $default-color;
+                            margin-bottom: 15px;
+                            @include media-sp{
+                                font-size: 14px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                        &-des{
+                            font-size: 13px;
+                            font-weight: normal;
+                            color: $default-color;
+                            @include media-sp{
+                                font-size: 12px;
+                            }
+                        }
+                        .btn{
+                            width: 296px;
+                            height: 48px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: solid 1px $grey-color;
+                            font-size: 12px;
+                            font-weight: bold;
+                            @include media-sp{
+                                width: 100%;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.return{
+        &::before{
+            @include media-sp{
+                padding-top: 24px;
+                margin-top: 24px;
+                border-top: solid 1px #E6E6E6;
+                width: 100%;
+            }
+        }
+        .return-btn{
+            border-color: #707070;
+        }
+    }
+    &.pager-wrapper{
+        @include media-sp{
+            padding: 0;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        .pager-wrapper-num{
+            @include media-sp{
+                display: flex;
+                font-size: 7px;
+                align-items: center;
+            }
+            .is-pc{
+                @include media-sp{
+                    display: none;
+                }
+            }
+            span, a{
+                @include media-sp{
+                    min-width: 30px;
+                    height: 30px;
+                    margin: 0 5px;
+                    padding: 0 3px;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        .pager-wrapper-link{
+            @include media-sp{
+                width: 75px;
+                height: 30px;
+                text-align: left;
+            }
+            &.prev{
+                @include media-sp{
+                    padding-left: 31px;
+                    background-position: left 8px center;
+                }
+            }
+            &.next{
+                @include media-sp{
+                    padding-left: 21px;
+                    background-position: right 8px center;
+                }
+            }
+        }
+    }
+}
+
+// ===========================
+// 投稿者 レビューリスト設定
+// ===========================
+
+.review-history-list-modal{
+    .modal-block{
+        &-inner{
+            &-head-lead{
+                @include media-sp {
+                    margin-top: 44px;
+                }
+            }
+            &-foot{
+                padding-top: 42px;
+                @include media-sp {
+                    padding-top: 38px;
+                }
+            }
+        }
+    }
+}
+
+.review-history-profile-modal{
+    .modal-block{
+        &-inner{
+            &-body{
+                padding: 8px 0 16px;
+                max-width: 400px;
+                margin: 0 auto;
+                @include media-sp {
+                    padding-top: 38px;
+                }
+            }
+        }
+    }
+}
+

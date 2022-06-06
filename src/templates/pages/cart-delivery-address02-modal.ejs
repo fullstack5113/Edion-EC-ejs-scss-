@@ -1,0 +1,211 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    <a href="javascript:void(0);" class="js-modal-order01 btn black-btn large-btn" modal-id="modal">Open Modal</a>
+
+    <div class="container" id="cartdeliveryaddress02">
+        <section>
+            <div id="modal" class="modal-block wide" style="display: block">
+                <div class="modal-block-inner01">
+                    <div class="is-pc">
+                        <span class="close-btn js-close"></span>
+                    </div>
+                    <div class="is-sp modal-block-return">
+                        <span class="modal-block-returnbtn js-close">戻る</span>
+                    </div>
+
+                    <h2 class="modal-block-ttl">複数お届け先の設定</h2>
+                    <div class="form-sec">
+                        <form action="###" method="post" class="form-block">
+                            <div class="modal-block-inner-content">
+                                <div class="deliveryaddress">
+                                    <!-- アイテム01 -->
+                                    <div class="js-deliveryaddress-item deliveryaddress-item">
+                                        <div class="js-deliveryaddress-detail deliveryaddress-detail">
+                                            <!-- spTarget -->
+                                            <div class="js-deliveryaddress-prod deliveryaddress-detailblock deliveryaddress-prod detailblock">
+                                                <div class="detailblock-img">
+                                                    <img src="./assets/img/cart/item-120x120.png" alt="">
+                                                </div>
+                                                <div class="detailblock-text">
+                                                    <ul class="detailblock-list">
+                                                        <li class="detailblock-item brand">パナソニック</li>
+                                                        <li class="detailblock-item name">セラミックファンヒーター オリジナル グレー</li>
+                                                        <li class="detailblock-item type">DSFTS12E1H</li>
+                                                        <li class="detailblock-item price">合計：￥12,980(税込)</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- pcTarget -->
+                                            <div class="js-deliveryaddress-input deliveryaddress-detailblock deliveryaddress-input">
+                                                <h3 class="js-deliveryaddress-inputttl deliveryaddress-inputttl">お届け先1</h3>
+                                                <div class="deliveryaddress-inputinput">
+                                                    <div class="deliveryaddress-inputinputblock form-block-select num">
+                                                        <select class="" name="">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="deliveryaddress-inputinputblock form-block-select addr">
+                                                        <select class="" name="">
+                                                            <option value="1">山田 太郎 大阪府XXXX市</option>
+                                                            <option value="2">山田 太郎 大阪府XXXX市</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="deliveryaddress-inputinputblock trash">
+                                                        <button type="submit" name="button">
+                                                            <img src="./assets/img/cart/icon-trash.png" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="deliveryaddress-inputlink">
+                                                    <a href="#">この商品を別の住所に発送</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deliveryaddress-textarea">
+                                            <textarea name="name" rows="7" cols="80" placeholder="配送希望等はこちらにご入力ください。"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- アイテム01 -->
+                                    <!-- アイテム02 -->
+                                    <div class="js-deliveryaddress-item deliveryaddress-item">
+                                        <div class="js-deliveryaddress-detail deliveryaddress-detail">
+                                            <!-- spTarget -->
+                                            <div class="js-deliveryaddress-prod deliveryaddress-detailblock deliveryaddress-prod detailblock">
+                                                <div class="detailblock-img">
+                                                    <img src="./assets/img/cart/item-120x120.png" alt="">
+                                                </div>
+                                                <div class="detailblock-text">
+                                                    <ul class="detailblock-list">
+                                                        <li class="detailblock-item brand">パナソニック</li>
+                                                        <li class="detailblock-item name">セラミックファンヒーター オリジナル グレー</li>
+                                                        <li class="detailblock-item type">DSFTS12E1H</li>
+                                                        <li class="detailblock-item price">合計：￥12,980(税込)</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- pcTarget -->
+                                            <div class="js-deliveryaddress-input deliveryaddress-detailblock deliveryaddress-input">
+                                                <h3 class="js-deliveryaddress-inputttl deliveryaddress-inputttl">お届け先2</h3>
+                                                <div class="deliveryaddress-inputinput">
+                                                    <div class="deliveryaddress-inputinputblock form-block-select num">
+                                                        <select class="" name="">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="deliveryaddress-inputinputblock form-block-select addr">
+                                                        <select class="" name="">
+                                                            <option value="1">山田 太郎 大阪府XXXX市</option>
+                                                            <option value="2">山田 太郎 大阪府XXXX市</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="deliveryaddress-inputinputblock trash">
+                                                        <button type="submit" name="button">
+                                                            <img src="./assets/img/cart/icon-trash.png" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="deliveryaddress-inputlink">
+                                                    <a href="#">この商品を別の住所に発送</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deliveryaddress-textarea">
+                                            <textarea name="name" rows="7" cols="80" placeholder="配送希望等はこちらにご入力ください。"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- アイテム02 -->
+                                </div>
+                                <div class="deliveryselect-wrap first">
+                                    <h3 class="deliveryselect-ttl">送り主の設定</h3>
+                                    <div id="js-deliveryselect" class="deliveryselect">
+                                        <div class="deliveryselect-item">
+                                            <input type="checkbox" name="check01" value="1" id="check01-01">
+                                            <label for="check01-01" class="check-label">
+                                                個別で送り主を<br class="is-sp">設定する
+                                            </label>
+                                        </div>
+                                        <div class="deliveryselect-item">
+                                            <input type="checkbox" name="check01" value="2" id="check01-02">
+                                            <label for="check01-02" class="check-label">
+                                                まとめて送り主<br class="is-sp">を設定する
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="deliveryselect-wrap">
+                                    <div id="js-deliveryselect" class="deliveryselect">
+                                        <div class="deliveryselect-item">
+                                            <input type="checkbox" name="check02" value="1" id="check02-01">
+                                            <label for="check02-01" class="check-label">
+                                                ご注文者を<br class="is-sp">指定する
+                                            </label>
+                                        </div>
+                                        <div class="deliveryselect-item">
+                                            <input type="checkbox" name="check02" value="2" id="check02-02">
+                                            <label for="check02-02" class="check-label">
+                                                ご注文者以外を<br class="is-sp">指定する
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="js-deliveryinfo" class="deliveryinfo">
+                                    <div class="deliveryinfo-detail">
+                                        <ul class="deliveryinfo-detaillist">
+                                            <li class="deliveryinfo-detailitem">山田太郎</li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    住所：
+                                                </div>
+                                                <div class="value">
+                                                    〒XXX-XXXX  大阪府XXXX市XXXX区XXXXX
+                                                </div>
+                                            </li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    電話：
+                                                </div>
+                                                <div class="value">
+                                                    080XXXXXXXX
+                                                </div>
+                                            </li>
+                                            <li class="deliveryinfo-detailitem multiple">
+                                                <div class="item">
+                                                    メールアドレス：
+                                                </div>
+                                                <div class="value">
+                                                    XXXXXXXXXX@gmail.com
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-block-btnwrap">
+                                <span class="modal-block-firstbtn js-close btn outline-btn radius-btn">閉じる</span>
+                                <button class="modal-block-lastbtn btn black-btn radius-btn" type="submit">更新</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<%- include('../includes/_footer'); %>

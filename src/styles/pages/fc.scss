@@ -1,0 +1,49 @@
+@import '../config';
+@import '../mixins/**';
+
+.fc-top{
+    padding-top: 27px;
+    padding-bottom: 45px;
+    .inner{
+        @include media-is-pc {
+            padding-bottom: 38px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+    }
+    
+    .category-list-all{
+        @include media-sp {
+            display: block;
+        }
+        .item{ 
+            @include media-sp {
+                width: 100%;
+                margin-bottom: 19px;
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 2px;
+                    background: #fff;
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+                    height: 80px;
+                    height: 60px;
+                    text-align: left;
+                    padding: 0 15px;
+                    @include has-arrow-right;
+                    img{
+                        display: none;
+                    }
+                }
+                h3{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.4;
+                    margin-top: 0px !important;
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+
+}

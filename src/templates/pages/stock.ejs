@@ -1,0 +1,342 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'stock';
+_%>
+<%- include('../includes/_header') %>
+    
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; 商品名
+</div>
+
+<main id="main-content" class="main-content">
+    
+    <section class="stock-primary">
+        <div class="inner inner-large">
+            <h2 class="section-heading mt-sm">店舗在庫確認</h2>
+            
+            <div class="stock-primary-block">
+                <p class="stock-primary-block-txt">エディオン店舗で商品をお受け取りいただけます。<br>
+                    店舗在庫は商品誤差の可能性もありますので、現時点で在庫ありや在庫数が1台の場合は取り置き品の可能性があります。<br>
+                    ・100満ボルト店舗は在庫確認のみご利用いただけます。（2021年2月18以降）<br>
+                    ・「よく利用する店舗」にご登録いただくと、お店在庫がすぐに確認できます。</p>
+                <a href="" class="btn lined-btn large-btn inline-btn" >さらに詳しく</a>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="stock-secondary">
+        <div class="inner inner-large">
+            
+            <div class="stock-secondary-block">
+                <a href="" class="stock-secondary-block-img"><img src="./assets/img/review/item.png" alt=""></a>
+                <div>
+                    <div class="stock-secondary-block-company">パナソニック</div>
+                    <div class="stock-secondary-block-title">セラミックファンヒーター オリジナル グレー DSFTS12E1H</div>
+                    <div class="stock-secondary-block-price">￥12,980(税込)</div>
+                    <div class="stock-secondary-block-stock">在庫状況：<span>在庫あり</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stock-tertiary">
+        <div class="inner inner-large">
+            
+            <div class="stock-tertiary-block">
+                <h2 class="section-heading">My店舗</h2>
+                <table class="stock">
+                    <thead>
+                        <tr>
+                            <th colspan="2">ご利用店舗</th>
+                            <th>在庫</th>
+                            <th>店舗展示</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="area">
+                                <div>
+                                    ＡＫＩＢＡ<br>
+                                    東京都千代田区外神田１丁目<br class="is-sp">
+                                    <span class="is-sp">◎ 在庫あり　店舗展示 ◯</span>
+                                </div>
+                                <p>店舗までの距離00km</p>
+                            </td>
+                            <td class="adrress pb-sp10">
+                                <div class="box">
+                                    <div>
+                                        営業時間<br>
+                                        （平日）9:30～19:30<br class="is-pc">
+                                        （土・日・祝）9:30～19:30
+                                    </div>
+                                    <div class="is-pc">
+                                        <a href="" class="btn inline-btn lined-btn">店舗情報</a>
+                                    </div>
+                                </div>
+                                <div class="is-sp mt-sp10" style="width: 100%;">
+                                    <div class="box">
+                                        <a href="" class="btn inline-btn lined-btn">店舗情報</a>
+                                        <div>
+                                            数量：
+                                            <div class="form-block-select">
+                                                <select name="" id="" class="form-block-select-lined">
+                                                    <% for (var n = 1; n < 11; n++){ %>
+                                                        <option value=""><%- n %></option>
+                                                    <% } %>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="stock">◎ 在庫あり</td>
+                            <td class="shop">○</td>
+                            <td class="num pt-sp0 pb-sp20">
+                                <div class="box">
+                                    <div class="is-pc">
+                                        数量：
+                                        <div class="form-block-select">
+                                            <select name="" id="" class="form-block-select-lined">
+                                                <% for (var n = 1; n < 11; n++){ %>
+                                                    <option value=""><%- n %></option>
+                                                <% } %>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="btn add-cart-btn"><span class="icon"></span>カートに入れる</button>
+                                    <div class="is-sp">
+                                        <button class="btn grey-btn">よく利用する店舗から<br>削除する</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2 class="section-heading">よく利用する店舗</h2>
+                <table class="stock">
+                    <thead>
+                        <tr>
+                            <th colspan="2">ご利用店舗</th>
+                            <th>在庫</th>
+                            <th>店舗展示</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (var i = 0; i < 4; i++){ %>
+                            <tr>
+                                <td class="area">
+                                    <div>
+                                        ＡＫＩＢＡ<br>
+                                        東京都千代田区外神田１丁目<br class="is-sp">
+                                        <span class="is-sp">◎ 在庫あり　店舗展示 ◯</span>
+                                    </div>
+                                    <p>店舗までの距離00km</p>
+                                </td>
+                                <td class="adrress pb-sp10">
+                                    <div class="box">
+                                        <div>
+                                            営業時間<br>
+                                            （平日）9:30～19:30<br class="is-pc">
+                                            （土・日・祝）9:30～19:30
+                                        </div>
+                                        <div class="is-pc">
+                                            <a href="" class="btn inline-btn lined-btn">店舗情報</a>
+                                        </div>
+                                    </div>
+                                    <div class="is-sp mt-sp10" style="width: 100%;">
+                                        <div class="box">
+                                            <a href="" class="btn inline-btn lined-btn">店舗情報</a>
+                                            <div>
+                                                数量：
+                                                <div class="form-block-select">
+                                                    <select name="" id="" class="form-block-select-lined">
+                                                        <% for (var n = 1; n < 11; n++){ %>
+                                                            <option value=""><%- n %></option>
+                                                        <% } %>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="stock">◎ 在庫あり</td>
+                                <td class="shop">○</td>
+                                <td class="num pt-sp0 pb-sp20">
+                                    <div class="box">
+                                        <div class="is-pc">
+                                            数量：
+                                            <div class="form-block-select">
+                                                <select name="" id="" class="form-block-select-lined">
+                                                    <% for (var n = 1; n < 11; n++){ %>
+                                                        <option value=""><%- n %></option>
+                                                    <% } %>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class="btn add-cart-btn cart_02"><span class="icon"></span>カートに入れる</button>
+                                        <button class="btn grey-btn">よく利用する店舗から<br>削除する</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+                
+                <h2 class="section-heading">その他のお店を探す</h2>
+                
+                <div class="shop-search">
+                    <div class="area">
+                        <span class="label">都道府県：</span>
+                        <div class="form-block-select">
+                            <select name="" id="" class="form-block-select-lined">
+                                <option value="">大阪府</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <span class="label">市区町村：</span>
+                        <input type="text" placeholder="大阪市">
+                    </div>
+                    <div class="shop">
+                        <span class="label">店舗名：</span>
+                        <input type="text" placeholder="◯◯◯◯店">
+                    </div>
+                    
+                    <div class="stock">
+                        <span class="label">在庫：</span>
+                        <div class="form-block-select">
+                            <select name="" id="" class="form-block-select-lined">
+                                <option value="">○</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="display">
+                        <span class="label">展示：</span>
+                        <div class="form-block-select">
+                            <select name="" id="" class="form-block-select-lined">
+                                <option value="">○</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <button class="btn black-btn large-btn">検索</button>
+                    </div>
+                    
+                </div>
+                
+                <div class="shop-search-sort">
+                    <div class="form-block-select">
+                        <select name="" id="" class="form-block-select-lined small">
+                            <option value="">在庫数順</option>
+                        </select>
+                    </div>
+                    検索結果：該当店舗5件
+                </div>
+                
+                <table class="stock">
+                    <thead>
+                        <tr>
+                            <th colspan="2">ご利用店舗</th>
+                            <th>在庫</th>
+                            <th>店舗展示</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (var i = 0; i < 4; i++){ %>
+                        <tr>
+                            <td class="area">
+                                <div>
+                                    ＡＫＩＢＡ<br>
+                                    東京都千代田区外神田１丁目<br class="is-sp">
+                                    <span class="is-sp">◎ 在庫あり　店舗展示 ◯</span>
+                                </div>
+                                <p>店舗までの距離00km</p>
+                            </td>
+                            <td class="adrress pb-sp10">
+                                <div class="box">
+                                    <div>
+                                        営業時間<br>
+                                        （平日）9:30～19:30<br class="is-pc">
+                                        （土・日・祝）9:30～19:30
+                                    </div>
+                                    <div class="is-pc">
+                                        <a href="" class="btn inline-btn lined-btn">店舗情報</a>
+                                    </div>
+                                </div>
+                                <div class="is-sp mt-sp10" style="width: 100%;">
+                                    <div class="box">
+                                        <a href="" class="btn inline-btn lined-btn">店舗情報</a>
+                                        <div>
+                                            数量：
+                                            <div class="form-block-select">
+                                                <select name="" id="" class="form-block-select-lined">
+                                                    <% for (var n = 1; n < 11; n++){ %>
+                                                        <option value=""><%- n %></option>
+                                                    <% } %>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="stock">◎ 在庫あり</td>
+                            <td class="shop">○</td>
+                            <td class="num pt-sp0 pb-sp20">
+                                <div class="box">
+                                    <div class="is-pc">
+                                        数量：
+                                        <div class="form-block-select">
+                                            <select name="" id="" class="form-block-select-lined">
+                                                <% for (var n = 1; n < 11; n++){ %>
+                                                    <option value=""><%- n %></option>
+                                                <% } %>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="btn add-cart-btn cart_02"><span class="icon"></span>カートに入れる</button>
+                                    <button class="btn grey-btn4">よく利用する店舗から<br>削除する</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="pager-wrapper stock">
+                <a href="" class="pager-wrapper-link prev">前へ</a>
+                <div class="pager-wrapper-num">
+                    <span>1</span>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a class="is-pc" href="">4</a>
+                    <a class="is-pc" href="">5</a>
+                    ・・・
+                    <a href="">20</a>
+                </div>
+                <a href="" class="pager-wrapper-link next">次へ</a>
+            </div>
+            
+            <div class="btn-wrap-bottom">
+                <a href="" class="btn lined-btn-grey large-btn" >戻る</a>
+            </div>
+            
+        </div>
+    </section>
+        
+    
+    
+    
+</main>
+
+
+<%- include('../includes/_footer'); %>

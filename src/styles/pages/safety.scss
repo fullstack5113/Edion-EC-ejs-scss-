@@ -1,0 +1,275 @@
+@import '../mixins/**';
+@import '../config';
+
+$cart-blue: #235192;
+$radiobtn: #0776b1;
+
+.container-sm {
+    width: 736px;
+    padding: 0 18px;
+    margin: auto;
+    @include media-sp {
+        width: 100%;
+        display: block;
+        padding: 0 15px;
+    }
+}
+
+
+
+// ------------------------------
+// 共通 Start
+// ------------------------------
+
+#safety-confirm, #safety-done {
+
+    @include _flowIconSec($col: 2);
+    .registerdesc {
+        margin-bottom: 40px;
+        text-align: center;
+        &-ttl {
+            margin-bottom: 40px;
+            line-height: 1.5;
+            font-size: 16px;
+            @include media-sp {
+                line-height: 1.45;
+                font-size: 20px;
+            }
+        }
+        &-desc {
+            @include media-sp {
+                line-height: 1.71;
+                text-align: left;
+            }
+        }
+    }
+}
+// ------------------------------
+// 共通 End
+// ------------------------------
+
+
+// ------------------------------
+// No57. あんしん保証会員登録_確認 Start
+// ------------------------------
+#safety-confirm {
+
+    @include _tableblock();
+
+    .registerdesc {
+        margin-bottom: 70px;
+        @include media-sp {
+            margin-bottom: 40px;
+        }
+        &-ttl {
+            margin-bottom: 0;
+        }
+    }
+
+
+    .advertisement {
+        width: 603px;
+        margin: 0 auto 48px;
+        @include media-sp {
+            width: 100%;
+        }
+    }
+
+    .scrollblock {
+        border: 1px solid $bd-color1;
+        padding: 28px 42px 31px 40px;
+        @include media-sp {
+            padding: 16px 17px;
+        }
+        &-ttl {
+            font-size: 14px;
+            margin-bottom: 24px;
+            @include media-sp {
+                margin-bottom: 15px;
+                font-size: 13px;
+                font-weight: 400;
+            }
+        }
+
+
+        @include _scrollblock();
+        &-descfirst {
+            font-size: 13px;
+            line-height: 2;
+            margin-bottom: 38px;
+            @include media-sp {
+                font-size: 14px;
+                margin-bottom: 26px;
+                line-height: 1.71;
+            }
+        }
+
+        &:first-of-type {
+            margin-bottom: 60px;
+        }
+        &:last-of-type {
+          margin-bottom: 52px;
+        }
+    }
+
+    .tableblock {
+        &.lastblock {
+            margin-bottom: 50px;
+        }
+    }
+
+    .agree {
+        margin-bottom: 32px;
+        &-desc {
+            line-height: 1.71;
+        }
+    }
+
+    .sendbtn {
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &-send {
+            cursor: pointer;
+            margin-bottom: 28px;
+            height: 48px;
+            background: #ea3c3c;
+            color: #fff;
+            padding: 14px 0;
+            display: block;
+            width: 270px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 4px;
+            @include media-sp {
+                width: calc( 610 / 690 * 100%);
+                margin-bottom: 20px;
+            }
+        }
+        &-close {
+            padding: 9px 0;
+            display: block;
+            background: #999999;
+            color: #fff;
+            width: 200px;
+            height: 32px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 2px;
+            @include media-sp {
+                width: calc( 400 / 690 * 100%)
+            }
+        }
+    }
+}
+
+
+// ------------------------------
+// No57. あんしん保証会員登録_確認 End
+// ------------------------------
+
+// ------------------------------
+// No58. あんしん保証会員登録_完了 Start
+// ------------------------------
+#safety-done {
+    .registerdesc {
+        &-rcpt {
+            width: 300px;
+            margin: 0 auto 40px;
+            border: 1px solid $grey-color;
+            border-radius: 2px;
+            padding: 9px 0;
+            @include media-sp {
+                padding: 13px 0;
+            }
+            @include media-sp {
+                width: 100%;
+                margin: 0 0 35px 0;
+            }
+
+            &tag {
+                font-size: 13px;
+                vertical-align: middle;
+                @include media-sp {
+                    font-size: 14px;
+                }
+            }
+            &num {
+                font-size: 20px;
+                font-weight: 700;
+                vertical-align: middle;
+            }
+        }
+        &-desclist {
+            margin-bottom: 60px;
+            @include media-sp {
+                margin-bottom: 50px;
+            }
+        }
+        &-desc {
+            line-height: 2;
+            font-size: 14px;
+            @include media-sp {
+                line-height: 1.71;
+            }
+            &:nth-of-type(2) {
+                margin-bottom: 40px;
+            }
+            &:not(:last-child) {
+                @include media-sp {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .sendbtn {
+        &-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            @include media-sp {
+                flex-direction: column-reverse;
+            }
+            a {
+                width: 270px;
+                height: 48px;
+                padding: 17px 0;
+                font-size: 14px;
+                font-weight: 700;
+                color: #fff;
+                border-radius: 4px;
+                text-align: center;
+                @include media-sp {
+                    margin: auto;
+                    width: calc(610 / 690 * 100%);
+                    font-weight: 500;
+                }
+
+                &.sendbtn-mypage {
+                    background: $cart-blue;
+                    margin-right: 20px;
+                    @include media-sp {
+                        margin-right: auto;
+
+                    }
+                }
+                &.sendbtn-continue {
+                    background: #ea3c3c;
+                    @include media-sp {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+// ------------------------------
+// No58. あんしん保証会員登録_完了 End
+// ------------------------------

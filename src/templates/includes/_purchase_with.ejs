@@ -1,0 +1,51 @@
+<section class="purchase-wrap" style="overflow:hidden">
+    <div class="inner inner-large">
+        <h2 class="section-heading">一緒にご購入はいかがでしょうか</h2>
+        <div class="is-pc">
+            <div class="owl-carousel owl-theme sliderhistory-eight customslider">
+                <% for (var i=0; i < 8; i++){ %> 
+                    <div class="item">
+                        <div class="itemcard-virtical">
+                            <a href="" class="itemcard-virtical-img"><img src="./assets/img/detail/detail-0<%- i+1 %>.jpg" alt=""></a>
+                            <h3 class="itemcard-virtical-heading"><a href="">パナソニック セラミックファンヒーター オリジナル グレー DSFTS12E1H</a></h3>
+                            <div class="itemcard-virtical-price">￥12,980(税込)</div>
+                            <div class="itemcard-virtical-review">
+                                <p class="review-star star5"></p>
+                                <p class="-count">(6)</p>
+                            </div>
+                        </div>
+                        <div class="checkbox-inner">
+                            <input type="checkbox" id="check-<%- i %>">
+                            <label for="check-<%- i %>"></label>
+                        </div>
+                    </div>
+                <% } %> 
+            </div>
+        </div>
+        <div class="is-sp">
+            <% for (var i=0; i < 8; i++){ %> 
+                <div class="item-inner">
+                    <div class="itemcard-virtical">
+                        <a href="" class="itemcard-virtical-img"><img src="./assets/img/detail/detail-0<%- i+1 %>.jpg" alt=""></a>
+                        <div class="itemcard-virtical-right">
+                            <h3 class="itemcard-virtical-heading"><a href="">パナソニック セラミックファンヒーター オリジナル グレー DSFTS12E1H</a></h3>
+                            <div class="itemcard-virtical-price">￥12,980(税込)</div>
+                            <div class="itemcard-virtical-review">
+                                <p class="review-star star5"></p>
+                                <p class="-count">(6)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-inner">
+                        <input type="checkbox" id="check-<%- i+10 %>">
+                        <label for="check-<%- i+10 %>"></label>
+                    </div>
+                </div>
+            <% } %> 
+        </div>
+        <a href="" class="purchase-btn">
+            <img src="./assets/img/common/icon-cart.png" alt="">
+            <p>選択した商品をカートに入れる</p>
+        </a>
+    </div>
+</section>

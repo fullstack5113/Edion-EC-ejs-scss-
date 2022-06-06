@@ -1,0 +1,415 @@
+@import '../config';
+@import '../mixins/media';
+@import '../mixins/others';
+@import '../layouts/l-fc';
+
+
+// ===========================
+// review Start
+// ===========================
+
+.fc-review{
+    padding-bottom: 68px;
+    @include media-sp {
+        padding-bottom: 64px;
+    }
+    .postreviewitem{
+        @include media-sp {
+            border-bottom: 1px solid #F5F5F5;
+            padding-bottom: 34px;
+            margin-bottom: 26px;
+        }
+        &-helpfullink{
+            @include media-sp {
+                border-color: #707070;
+                border-radius: 8px;
+            }
+        }
+        &-cmtttl{
+            @include media-sp {
+                font-size: 14px;
+            }
+        }
+    }
+    .sort-selectwrap select{
+        @include media-sp {
+            border-color: #707070;
+            border-radius: 0px;
+        }
+    }
+}
+
+.product {
+    // 商品
+    // 画像・テキスト・総合評価・スター
+    &-details  {
+        vertical-align: baseline !important;
+        border-top: 1px solid $bd-color1;
+        border-bottom: 1px solid $bd-color1;
+        padding: 50px 0;
+        margin-bottom: 40px;
+        // display: flex;
+        @include media-sp {
+            padding: 8px 0 12px 0;
+            margin-bottom: 25px;
+            border-top: none;
+        }
+    }
+
+
+    // 左アイテム
+    &-desc {
+        display: flex;
+        align-items: center;
+        @include media-sp {
+            margin-bottom: 25px !important;
+        }
+    }
+
+    &-img {
+        @include media-is-pc {
+            width: 160px;
+        }
+        @include media-sp {
+            width: 50%;
+        }
+    }
+
+    &-text {
+        font-weight: 500;
+        font-size: 15px;
+        @include media-is-pc {
+            padding: 0 0 0 2em;
+        }
+        @include media-sp {
+            width: 50%;
+            font-size: 12px;
+        }
+        ul {
+            li {
+                line-height: 1.4;
+                span {
+                    vertical-align: baseline;
+                }
+            }
+        }
+    }
+
+    &-name {
+        &brand {
+            display: block;
+            @include media-sp {
+                margin-right: .5em;
+                display: initial;
+            }
+        }
+    }
+
+    &-price {
+        color: #ff0000;
+        margin-bottom: 30px;
+    }
+    &-stock {
+        font-size: 12px;
+        color: #707070;
+        @include media-sp {
+            color: $default-color;
+        }
+
+        &stat {
+            font-weight: 700;
+            @include media-is-pc {
+                font-size: 15px;
+            }
+        }
+    }
+
+
+    // 右アイテム
+    &-eval {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media-is-pc {
+            padding-left: 3.2% !important;
+            padding-right: 1.9% !important;
+        }
+        @include media-sp {
+            flex-direction: column;
+        }
+
+        // 左アイテム
+        &total {
+            display: flex;
+            text-align: center;
+
+            @include media-sp {
+                margin-bottom: 17px;
+                padding-top: 25px;
+                text-align: left;
+                border-top: 1px solid $bd-color1;
+            }
+            &list {
+                padding-top: 4px;
+                @include media-sp {
+                    padding-top: 0px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+                >:nth-child(1) { order: 1; }
+                >:nth-child(2) { order: 3; }
+                >:nth-child(3) { order: 2; }
+                >:nth-child(4) { order: 4; }
+                >:nth-child(5) { order: 5; }
+            }
+
+            &ttl, &score, &star {
+                @include media-sp {
+                    vertical-align: baseline;
+                    margin-bottom: 10px;
+                }
+
+            }
+            &ttl {
+                font-weight: 700;
+                margin-bottom: 14px;
+                @include media-sp {
+                    margin-top: 4px;
+                    margin-right: 20px;
+                    font-weight: 500;
+                    font-size: 13px;
+                }
+            }
+
+            &score {
+                margin-bottom: 10px;
+                font-weight: 500;
+                @include media-is-pc {
+                    font-size: 20px;
+                }
+
+                @include media-sp {
+                    font-size: 20px;
+                }
+
+            }
+            &star {
+                @include media-is-pc {
+                    margin-bottom: 24px;
+                }
+                @include media-sp {
+                    margin-right: 10px;
+                    font-size: 16px;
+                }
+            }
+            &cnt {
+                color: #707070;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+
+        // 右アイテム
+        &star {
+            margin-left: 1.6077%;
+            @include media-sp {
+                margin-left: 0;
+                width: 100%;
+            }
+
+        }
+        &bar{
+            height: 16px;
+            width: 200px;
+            font-size: 16px;
+            color: white;
+            margin: 0 5px 10px 15px;
+            position: relative;
+            @include media-sp {
+                margin: 0 0 10px 0;
+                width: 57%;
+            }
+            &wrap {
+                display: flex;
+                @include media-sp {
+                    justify-content: space-between;
+                }
+            }
+            &:before{
+                content:'';
+                width: 100%;
+                position: absolute;
+                left: 0;
+                height: 16px;
+                top: 0;
+                z-index: 0;
+                background: #e6e6e6;
+            }
+            &:after{
+                content: '';
+                background: #FFC400;
+                height: 16px;
+                transition: 0.7s;
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            &.bar1::after {
+                max-width: 10%;
+            }
+            &.bar2::after {
+                max-width: 32%;
+            }
+            &.bar3::after {
+                max-width: 50%;
+            }
+            &.bar4::after {
+                max-width: 70%;
+            }
+
+        }
+
+
+        &person {
+            color: #707070;
+            font-size: 13px;
+            font-weight: 500;
+            min-width: 70px;
+            padding-left: 0.5rem;
+            @include media-sp {
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+
+//  棒グラフ
+.graph-cont{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+// Only SP
+.writereview {
+    &-link {
+        display: block;
+        text-align: center;
+        padding: 18px 0;
+        width: 100%;
+        border: 1px solid $bd-color1;
+        border-radius: 3px;
+    }
+
+}
+
+// ソート
+.sort {
+    display: flex;
+    justify-content: flex-end;
+    @include media-sp {
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+
+    &-search {
+        &wrap {
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
+            @include media-sp {
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+        }
+        &ttl {
+            margin-right: 15px;
+        }
+    }
+
+    &-selectwrap {
+        position: relative;
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 4px solid transparent;
+            border-top: 6px solid black;
+            @include media-sp {
+                top: 18px;
+            }
+        }
+        &.selectwrap1 {
+            margin-right: 10px;
+
+        }
+        select {
+            text-align: left;
+            height: 24px;
+            appearance: none;
+            border: 1px solid #E6E6E6;
+            padding: 0 60px 0 15px;
+            border-radius: 3px;
+            @include media-sp {
+                height: 40px;
+            }
+        }
+    }
+
+    &-sort {
+        &wrap {
+            display: flex;
+            align-items: center;
+
+        }
+        &ttl {
+            margin-right: 15px;
+        }
+
+    }
+
+    &-commonttl {
+        font-size: 12px;
+        font-weight: 500;
+        @include media-sp {
+            font-size: 13px;
+        }
+    }
+
+}
+
+
+.return{
+    @include media-sp {
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid #E6E6E6;
+        &:before{
+            content: none;
+        }
+    }
+    
+    &-btn{
+        border: 1px solid #707070;
+        @include media-sp {
+            max-width: 100%;
+        }
+        
+    }
+}
+
+
+.pager-wrapper{
+    @include media-sp {
+        padding: 0;
+    }
+}

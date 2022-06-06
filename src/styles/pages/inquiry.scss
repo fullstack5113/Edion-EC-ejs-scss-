@@ -1,0 +1,507 @@
+@import '../config';
+@import '../mixins/media';
+@import '../mixins/others';
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+お問合せ（選択）
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+.inquiry {
+    &-slide {
+        padding-top: 120px;
+        @include media-sp {
+            padding-top: 60px;
+        }
+        .itemcard-virtical {
+            &-review {
+                display: flex;
+                align-items: center;
+                p.-count {
+                    font-weight: normal;
+                    font-size: 13px;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    &-tit {
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+            color: $default-color;
+            margin-bottom: 8px;
+            @include media-sp {
+                margin-bottom: 16px;
+            }
+        }
+        p.refer {
+            font-size: 12px;
+            font-weight: 500;
+            color: $default-color;
+            line-height: 1.5;
+            @include media-sp {
+                font-weight: bold;
+            }
+        }
+    }
+    &-btn {
+        margin-top: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include media-pc{
+            margin-top: 16px;
+        }
+        .btn-inner {
+            border: solid 2px #235192;
+            border-radius: 4px;
+            height: 137px;
+            width: calc((100% - 40px) / 3);
+            text-align: center;
+            padding-top: 24px;
+            @include media-pc{
+                width: 100%;
+                margin-top: 24px;
+            }
+            img {
+                height: 45px;
+            }
+            p{
+                font-size: 13px;
+                font-weight: bold;
+                color: #235192;
+                line-height: 1.5;
+            }
+        }
+    }
+    // &-faq {
+    //     padding-top: 24px;
+    //     @include media-sp {
+    //         padding-top: 20px;
+    //     }
+    //     h6 {
+    //         font-size: 16px;
+    //         font-weight: bold;
+    //         color: $default-color;
+    //         border-bottom: solid 1px #707070;
+    //         padding-bottom: 8px;
+    //     }
+    //     &-wrap {
+    //         display: flex;
+    //         justify-content: space-between;
+    //         flex-wrap: wrap;
+    //         margin-top: -5px;
+    //         @include media-sp {
+    //             margin-top: 7px;
+    //         }
+    //         .btn {
+    //             width: calc((100% - 40px) / 3);
+    //             height: 48px;
+    //             border-radius: 2px;
+    //             background-color: white;
+    //             display: flex;
+    //             align-items: center;
+    //             justify-content: center;
+    //             font-weight: 500;
+    //             font-size: 15px;
+    //             color: #333333cc;
+    //             margin-top: 29px;
+    //             @include media-pc {
+    //                 width: calc((100% - 20px) / 2);
+    //             }
+    //             @include media-sp {
+    //                 width: 100%;
+    //                 height: 44px;
+    //                 margin-top: 17px;
+    //                 font-size: 13px;
+    //             }
+    //         }
+    //     }
+    // }
+    // &-service {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     flex-wrap: wrap;
+    //     padding-top: 63px;
+    //     @include media-pc-sm {
+    //         padding-top: 28px;
+    //     }
+    //     .btn {
+    //         width: calc((100% - 40px) / 3);
+    //         margin-top: 24px;
+    //         height: 66px;
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //         font-size: 13px;
+    //         font-weight: bold;
+    //         line-height: 1.5;
+    //         @include media-pc-sm {
+    //             width: calc((100% - 20px) / 2);
+    //         }
+    //         @include media-sp {
+    //             width: 100%
+    //         }
+    //     }
+    // }
+    &-green {
+        width: 100%;
+        height: 64px;
+        margin-top: 40px;
+        border: solid 1px #0CB473;
+        font-size: 13px;
+        font-weight: bold;
+        color: #0CB473 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.5;
+        text-align: center;
+        @include media-sp {
+            height: 66px;
+            margin-top: 24px;
+        }
+    }
+    &-form {
+        @include media-sp {
+            border-bottom: none;
+            padding-bottom: 32px;
+        }
+        &-block {
+            margin-bottom: 48px;
+            @include media-sp {
+                margin-bottom: 42px;
+            }
+            &-subtext {
+                font-size: 11px;
+                font-weight: 400;
+                line-height: 1.9;
+                letter-spacing: 0;
+                margin-bottom: 32px;
+                .indent {
+                    text-indent: -1em;
+                    padding-left: 1em;
+                    line-height: inherit;
+                }
+                a {
+                    text-decoration: underline;
+                    line-height: inherit;
+                    color: #235192;
+                }
+                .text-link {
+                    @include media-sp {
+                        font-size: 10px;
+                    }
+                }
+            }
+            input+.inquiry-form-block-subtext,
+            textarea+.inquiry-form-block-subtext {
+                margin-top: -24px;
+            }
+            .form-block-select+.inquiry-form-block-subtext {
+                margin-top: 8px;
+            }
+            .mb-32 {
+                margin-bottom: 32px;
+            }
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        textarea {
+            margin-bottom: 32px !important;
+        }
+        .familyname-kana {
+            input {
+                @include media-is-pc {
+                    margin-bottom: 0px !important;
+                }
+            }
+        }
+        .firstname-kana {
+            input {
+                margin-bottom: 0px !important;
+            }
+        }
+        &-terms {
+            background-color: #fff;
+            padding: 8px 8px 8px 24px;
+            position: relative;
+            margin: 24px 0;
+            height: 226px;
+            @include media-sp {
+                padding: 20px 8px 20px 20px;
+                height: 250px;
+                margin: 32px 0 24px;
+            }
+            &.bg-grey {
+                background-color: #f5f5f5;
+            }
+            &-inner {
+                @include terms-inner;
+            }
+        }
+        &-heading {
+            margin-bottom: 40px;
+            color: #235192;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            @include media-sp {
+                margin-bottom: 24px;
+            }
+        }
+        &-heading2 {
+            font-size: 14px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 16px;
+            @include media-sp {
+                font-size: 12px;
+                letter-spacing: 0;
+            }
+        }
+        &-text01 {
+            font-size: 11px;
+            line-height: 1.5;
+            letter-spacing: 0;
+            @include media-sp {
+                line-height: 1.8;
+            }
+        }
+        &-box {
+            border: 1px solid #707070;
+            padding: 24px 16px;
+            font-size: 10px;
+            line-height: 1.5;
+            margin-top: 57px;
+            margin-bottom: 40px;
+            letter-spacing: 0;
+            @include media-sp {
+                padding: 21px 14px 19px;
+                margin-top: 48px;
+                margin-bottom: 48px;
+                letter-spacing: 0.02em;
+            }
+            &-heading {
+                font-weight: 600;
+                font-size: 12px;
+                margin-bottom: 12px;
+                @include media-sp {
+                    font-size: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &-btns {
+            padding-bottom: 16px;
+            @include media-sp {
+                padding-bottom: 8px;
+            }
+            .account-btn.wide {
+                margin-bottom: 32px;
+                @include media-is-pc {
+                    max-width: 324px;
+                }
+                @include media-sp {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    &-tel {
+        padding-top: 40px;
+        padding-bottom: 194px;
+        @include media-sp {
+            border-bottom: none;
+            padding-top: 24px;
+            padding-bottom: 32px;
+        }
+        &-box {
+            border: 3px solid #235192;
+            padding: 32px 40px 30px;
+            font-size: 12px;
+            @include media-sp {
+                padding: 32px 12px;
+            }
+            &-head {
+                text-align: center;
+                padding-bottom: 18px;
+                border-bottom: 1px solid #E6E6E6;
+                margin-bottom: 8px;
+            }
+            &-heading {
+                font-size: 16px;
+                color: #235192;
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+            &-text01 {
+                font-weight: 600;
+                margin-bottom: 21px;
+            }
+            &-telnum {
+                font-size: 32px;
+                font-weight: 600;
+                color: #235192;
+                margin-bottom: 6px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                img {
+                    margin-top: 4px;
+                    margin-right: 8px;
+                }
+            }
+            &-text02 {
+                font-weight: 500;
+                font-size: 10px;
+                padding-left: 43px;
+            }
+            &-time {
+                background-color: #F5F5F5;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                padding: 12px 16px;
+                margin-bottom: 13px;
+                @include media-sp {
+                    padding: 16px 16px;
+                    align-items: flex-start;
+                    margin-bottom: 12px;
+                }
+                .left {
+                    color: #235192;
+                    font-weight: 600;
+                    margin-right: 16px;
+                    line-height: 1.5;
+                }
+                .right {
+                    font-weight: 600;
+                    line-height: 1.5;
+                    span {
+                        font-weight: 500;
+                        font-size: 10px;
+                        line-height: 1.5;
+                        margin-left: 8px;
+                        @include media-sp {
+                            display: block;
+                            margin: 0;
+                            margin-top: -2px;
+                            &.primary {
+                                margin-bottom: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-text03 {
+                font-size: 10px;
+                line-height: 1.4;
+                text-indent: -1em;
+                padding-left: 1em;
+                @include media-is-pc {
+                    white-space: nowrap;
+                    transform: scale(0.8);
+                    transform-origin: left;
+                }
+            }
+        }
+    }
+    &-chat {
+        position: fixed;
+        bottom: 132px;
+        right: 18px;
+        width: 296px;
+        text-align: center;
+        background-color: #235192;
+        font-weight: 600;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        z-index: 10;
+        @include media-sp {
+            position: initial;
+            width: 618px;
+            max-width: calc(100% - 30px);
+            margin: 0 auto;
+            margin-bottom: 18px;
+        }
+        a {
+            display: block;
+            padding: 19px 40px 18px;
+            color: #fff;
+        }
+        &-heading {
+            font-size: 14px;
+        }
+        &-text01 {
+            font-size: 16px;
+            margin: 11px 0 11px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            img {
+                margin-top: 4px;
+                margin-right: 3px;
+            }
+        }
+        &-text02 {
+            font-size: 10px;
+            font-weight: 500;
+        }
+    }
+    &-confirm {
+        .linebox {
+            margin-bottom: 64px;
+        }
+        &-block {
+            margin-bottom: 44px;
+            dt {
+                font-weight: 600;
+                margin-bottom: 10px;
+                @include media-sp {
+                    font-weight: 500;
+                }
+            }
+            dd {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 26px;
+                word-break: break-all;
+                @include media-sp {
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-btns {
+            margin-top: 64px;
+            .lined-blue {
+                margin: 24px auto 80px;
+                @include media-sp {
+                    margin-bottom: 64px;
+                }
+            }
+        }
+    }
+    &-done {
+        &-text {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 600;
+            margin: 80px 0 120px;
+            @include media-sp {
+                margin: 40px 0 64px;
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,219 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'review';
+_%>
+    <%- include('../includes/_header-login') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; <a href="">商品レビュー</a> &gt; 商品レビュー投稿
+        </div>
+
+        <main id="main-content" class="main-content">
+
+            <div class="container container-sidebar_show">
+
+                <%- include('../includes/_sidebar-account-info'); %>
+
+                    <div class="container-right">
+                        <div class="reviewpost">
+                            <div class="reviewpost-ttl">
+                                <h4>商品レビュー投稿</h4>
+                                <p>
+                                    ご購入商品のレビューの投稿や削除が行えます。<br><br class="is-sp">
+                                    「商品レビューご利用規約」をご確認、同意の上、商品レビューをご登録ください。<br>
+                                    商品レビューをご登録いただくことで「商品レビューご利用規約」に同意したものとみなされます。<br>
+                                    ※掲載終了商品など、レビューの投稿が出来ない商品がございます。あらかじめご了承ください。
+                                </p>
+                                <a class="link link_service" href="">「商品レビューご利用規約」はこちら</a>
+                            </div>
+                        </div>
+                        <div class="reviewpost-user">
+                            <p class="reviewpost-user-ttl">ニックネーム</p>
+                            <p class="reviewpost-user-nickname">エディオンカスタマー </p>
+                            <p class="reviewpost-user-des">
+                                商品レビュー時のニックネームを設定することが出来ます。<br> 設定せずに利用する場合「エディオンカスタマー」と表示されます。
+                            </p>
+                            <a class="btn blue-btn radius-btn" href="">編集</a>
+                        </div>
+                        <div class="reviewpost-ctn">
+                            <div class="reviewpost-ctn-ttl">
+                                <div class="img-inner">
+                                    <img src="./assets/img/review/item.png" alt="">
+                                </div>
+                                <div class="txt-inner">
+                                    <div class="d-pc-flex mb-pc15 mb-sp10">
+                                        <p class="des01 mr-pc20 mb-sp10">購入日：2020/12/17</p>
+                                        <p class="des01">注文番号：XXXXXXXXXX</p>
+                                    </div>
+                                    <p class="ttl">エプソン　インクカートリッジ　シアン　シアン　<br class="is-sp">ICC50</p>
+                                    <p class="des02">型番：ICC50</p>
+                                </div>
+                            </div>
+                            <div class="reviewpost-ctn-input">
+                                <div class="star">
+                                    <div class="star-ttl">
+                                        <h6>商品レビュー</h6>
+                                        <p class="require">星をクリックして、この商品を評価してください</p>
+                                    </div>
+                                    <div class="star-wrap">
+                                        <p>不満</p>
+                                        <div class="star-wrap-input">
+                                            <label>
+                                                <input type="radio" name="stars" value="1" />
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="2" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="3" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>   
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="4" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="5" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                        </div>
+                                        <p>満足</p>
+                                    </div>
+                                </div>
+                                <div class="review">
+                                    <p class="review-ttl review-ttl_select">レビュー内容</p>
+                                    <textarea class="review-input" name="" id="" cols="30" rows="10" maxlength="500"></textarea>
+                                    <p class="review-refer">レビューの文字数は500字までです。<br>内容によっては公開されない場合がございます。あらかじめご了承ください。</p>
+                                </div>
+                                
+                            </div>
+                            <div class="reviewpost-ctn-input">
+                                <div class="star">
+                                    <div class="star-ttl">
+                                        <h6>サイトについてのレビュー</h6>
+                                        <p class="require">星をクリックして、この商品を評価してください</p>
+                                    </div>
+                                    <div class="star-wrap">
+                                        <p>不満</p>
+                                        <div class="star-wrap-input">
+                                            <label>
+                                                <input type="radio" name="stars" value="1" />
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="2" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="3" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>   
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="4" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="5" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                        </div>
+                                        <p>満足</p>
+                                    </div>
+                                </div>
+                                <div class="review">
+                                    <p class="review-ttl review-ttl_select">レビュー内容</p>
+                                    <textarea class="review-input" name="" id="" cols="30" rows="10" maxlength="500"></textarea>
+                                    <p class="review-refer">レビューの文字数は500字までです。<br>内容によっては公開されない場合がございます。あらかじめご了承ください。</p>
+                                </div>
+                                
+                            </div>
+                            <div class="reviewpost-ctn-input">
+                                <div class="star">
+                                    <div class="star-ttl">
+                                        <h6>店舗についてのレビュー</h6>
+                                        <p class="require">星をクリックして、この商品を評価してください</p>
+                                    </div>
+                                    <div class="star-wrap">
+                                        <p>不満</p>
+                                        <div class="star-wrap-input">
+                                            <label>
+                                                <input type="radio" name="stars" value="1" />
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="2" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="3" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>   
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="4" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="stars" value="5" />
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                                <span class="icon">★</span>
+                                            </label>
+                                        </div>
+                                        <p>満足</p>
+                                    </div>
+                                </div>
+                                <div class="review">
+                                    <p class="review-ttl review-ttl_select">レビュー内容</p>
+                                    <textarea class="review-input" name="" id="" cols="30" rows="10"  maxlength="500"></textarea>
+                                    <p class="review-refer">レビューの文字数は500字までです。<br>内容によっては公開されない場合がございます。あらかじめご了承ください。</p>
+                                </div>
+                                
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn lined-btn-grey white-btn radius-btn">キャンセル</button>
+                                <button class="btn blue-btn radius-btn">登録する</button>
+                            </div>
+                        </div>
+                        <a class="return-btn reviewpost" href="#">戻る</a>
+                    </div>
+
+            </div>
+        </main>
+
+
+
+        <%- include('../includes/_footer'); %>

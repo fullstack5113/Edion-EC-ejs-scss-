@@ -1,0 +1,30 @@
+@import '../config';
+@import '../mixins/media';
+@import '../mixins/others';
+
+.login-history{
+    table.list-table{
+        margin-bottom: 80px;
+        word-break: break-all;
+        @include media-sp {
+            margin-bottom: 32px;
+        }
+        thead{
+            tr{
+                th{
+                    width: 26%;
+                    &:first-child{
+                        width: 48%;
+                    }
+                    @include media-sp {
+                        white-space: nowrap;
+                        width: 28%;
+                        &:first-child{
+                            width: 44%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

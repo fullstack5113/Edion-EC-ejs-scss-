@@ -1,0 +1,43 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'password-setting';
+_%>
+<%- include('../includes/_header-nomenu') %>
+<main id="main-content" class="main-content">
+    
+    <section class="password-setting password-setting02">
+        <div class="inner inner-small">
+            <h1 class="page-title">SMS認証</h1>
+            <div class="page-title-lead">既に登録されている電話番号で本人確認を行います。<br>
+                認証コードを受け取る方法を選択してください。<br>
+                <small>※電話番号を一部非表示で表示しています。</small></div>
+                        
+            <div class="linebox linebox-blue">
+                
+                <div class="tel-number">
+                    <div>登録済み電話番号</div>
+                    <div class="num">***-****-**03</div>
+                </div>
+                
+            
+                <a href="" class="btn orange-btn account-btn">SMSで受け取る</a>
+                                
+                <a href="" class="btn blue-btn account-btn">音声通話で受け取る</a>
+                
+            </div>
+            
+            <div class="password-setting02-text01">
+                <a href="" class="text-link">ログイン認証とは <img src="./assets/img/common/icon-help.svg" alt=""></a>
+            </div>
+
+        </div>
+    </section>
+    
+    <a href="" class="btn grey-btn2 account-btn medium">戻る</a>
+    
+</main>
+<%- include('../includes/_footer'); %>

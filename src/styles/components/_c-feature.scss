@@ -1,0 +1,47 @@
+/**
+* @file _feature.scss
+**/
+
+.feature-area{
+    overflow:hidden;
+    margin-right: -18px;
+    padding: 0;
+    @include media-sp {
+        margin-right: -15px;
+        padding-bottom: 32px;
+    }
+    .container-right &:first-child{
+        .section-heading{
+            margin-top: 24px;
+        }
+    }
+}
+
+.sliderfeature{
+    width: calc(100% + 174px) !important;
+    @include media-sp {
+        width: calc(100% + 28px) !important;
+    }
+    &.customslider.owl-theme{
+        .owl-dots {
+            @include media-sp {
+                padding-right: 28px;
+            }
+        }
+        .owl-nav{
+            @include media-sp {
+                padding-right: calc(20px + 28px);
+            }
+        }
+    }
+    .item{
+        .subtitle{
+            margin: 0 0 12px;
+            font-size: 13px;
+            @include media-sp {
+                margin: 0 0 10px;
+                font-size: 11px;
+            }
+        }
+    }
+}

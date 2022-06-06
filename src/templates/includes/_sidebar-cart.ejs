@@ -1,0 +1,181 @@
+<aside class="cartblock-contentright cartblock-sidebar cartblock-sidebar<% if(locals.ver) {%><%= locals.ver%><% } %>">
+    <section>
+        <div class="inner">
+            <div class="sidebar-item sidebar-item01 orderdetail">
+                <h3 class="orderdetail-ttl">注文内容</h3>
+                <div class="orderdetail-amount">
+                    <div class="orderdetail-amountrow orderdetail-amountrow01">
+                        <div class="orderdetail-amountitem">商品計　　　：</div>
+                        <div class="orderdetail-value">2点    ￥119,600<span class="tax">（税込）</span></div>
+                    </div>
+                    <div class="orderdetail-amountrow orderdetail-amountrow02">
+                        <div class="orderdetail-amountitem">送料　　　　：</div>
+                        <div class="orderdetail-value">￥800</div>
+                    </div>
+                    <div class="orderdetail-amountrow orderdetail-amountrow03">
+                        <div class="orderdetail-amountitem">クーポン　　：</div>
+                        <div class="orderdetail-value">-￥1,000</div>
+                    </div>
+                    <div class="orderdetail-amountrow orderdetail-amountrow04">
+                        <div class="orderdetail-amountitem">ポイント　　：</div>
+                        <div class="orderdetail-value">-1000ポイント</div>
+                    </div>
+                    <div class="orderdetail-amountrow orderdetail-amountrow05">
+                        <div class="orderdetail-amountitem">ギフトカード：</div>
+                        <div class="orderdetail-value">-￥1,000</div>
+                    </div>
+                    <div class="orderdetail-amountrow orderdetail-amountrow06">
+                        <div class="orderdetail-amountitem">合計</div>
+                        <div class="orderdetail-value">￥117,400<span class="tax">（税込）</span></div>
+                    </div>
+                    <div class="orderdetail-amountrow orderdetail-amountrow07">
+                        <div class="">商品計：￥108,727<span class="tax">（税込）</span></div>
+                    </div>
+                </div>
+                <div class="orderdetail-addpoint">
+                    <div class="orderdetail-addpointrow orderdetail-addpointrow01">
+                        <div class="orderdetail-addpointitem">付与ポイント</div>
+                    </div>
+                    <div class="orderdetail-addpointrow orderdetail-addpointrow02">
+                        <div class="orderdetail-addpointitem">エディオンポイント</div>
+                        <div class="orderdetail-addpointvalue">2750pt</div>
+
+                    </div>
+                    <div class="orderdetail-addpointrow orderdetail-addpointrow03">
+                        <div class="orderdetail-addpointitem">期間限定ボーナスポイント</div>
+                        <div class="orderdetail-addpointvalue">25,063pt</div>
+                    </div>
+                    <div class="orderdetail-addpointrow orderdetail-addpointrow04">
+                        <div class="orderdetail-addpointitem">合計</div>
+                        <div class="orderdetail-addpointvalue">27,848pt</div>
+                    </div>
+                </div>
+
+                <% if(locals.ver === 1){ %>
+                    <div class="orderdetail-btn">
+                        <!— TODO: [設置チェックシート未入力時] —>
+                        <div class="orderdetail-btnchecksheet">設置オプションを入力してください</div>
+
+                        <!— TODO: [設置チェックシート入力時] —>
+                        <!-- <button type="submit" name="button">注文手続きに進む</button> -->
+                    </div>
+                <% } %>
+            </div>
+
+            <% if(locals.ver === 1){ %>
+
+            <div class="sidebar-item sidebar-item02">
+                <div class="sidebar-itemttl">クーポンの利用</div>
+                <div class="sidebar-itemdesc">1000円引きクーポン適用済</div>
+                <div class="sidebar-itemlink">
+                    <div class="coupon-link small">
+                        <a href="">クーポンを変更する</a>
+                    </div>
+                    <div class="coupon-link small coupon-linklift">
+                        <a href="">クーポンを解除する</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-item sidebar-item03">
+                <div class="sidebar-itemttl">付与予定ポイント</div>
+                <div class="coupon-link small">
+                    <a href="">ポイント付与先の変更</a>
+                </div>
+            </div>
+            <div class="sidebar-item sidebar-item04">
+                <div class="sidebar-itemttl">付与予定ポイント</div>
+                <div class="sidebar-itemtotalpoint">100ポイント</div>
+                <div class="sidebar-itemlist">
+                    <div class="sidebar-itemrow">エディオンポイント</div>
+                </div>
+                <div class="coupon-link small">
+                    <a href="">ポイント付与先の変更</a>
+                </div>
+
+            </div>
+            <div class="sidebar-item sidebar-item05">
+                <div class="sidebar-itemttl">ポイントの利用</div>
+                <div class="coupon-link small">
+                    <a href="">ポイントを利用する</a>
+                </div>
+            </div>
+            <div class="sidebar-item sidebar-item06">
+                <div class="sidebar-itemttl">ポイントの利用</div>
+                <div class="sidebar-itemtotalpoint">合計利用ポイント：1000ポイント</div>
+                <div class="sidebar-itemlist">
+                    <div class="sidebar-itemrow">エディオン・100満ボルトポイント：</div>
+                    <div class="sidebar-itemrow">1000ポイント</div>
+                    <div class="sidebar-itemrow">Tポイント：0ポイント</div>
+                    <div class="sidebar-itemrow">dポイント：0ポイント</div>
+                </div>
+
+                <div class="coupon-link small">
+                    <a href="">ポイントを変更する</a>
+                </div>
+            </div>
+
+            <% } else { %>
+
+            <div class="sidebar-item sidebar-item02">
+                <div class="sidebar-itemdesc">
+                    <a href="">個人情報保護方針</a>をご確認し同意いただきご注文を確定してください。
+                </div>
+                <div class="sidebar-iteminput">
+                    <label id="js-sidebar-item02-label" class="radio-label d-flex" for="sidebar-item02">
+                        <input type="radio" name="sidebar-item02" value="1" id="sidebar-item02" checked>
+                        <span class="radio-text">出荷メールを受け取る</span>
+                    </label>
+                </div>
+                <div class="sidebar-itembtn">
+                    <button class="sidebar-itembtnconfirm" type="button" name="button">注文を確定する</button>
+                    <button class="sidebar-itembtnreturn" type="button" name="button">戻る</button>
+                </div>
+            </div>
+
+            <div class="sidebar-item sidebar-item03">
+                <div class="sidebar-itemttl">クーポン適応なし</div>
+                <div class="coupon-link small">
+                    <a href="">クーポンを変更する</a>
+                </div>
+            </div>
+            <div class="sidebar-item sidebar-item04">
+                <div class="sidebar-itemttl">ポイントの利用</div>
+                <div class="coupon-link small">
+                    <a href="">ポイントの利用する</a>
+                </div>
+            </div>
+            <div class="sidebar-item sidebar-item05">
+                <div class="sidebar-itemttl">ポイントの利用</div>
+                <div class="sidebar-itemtotalpoint">合計利用ポイント：1000ポイント</div>
+                <div class="sidebar-itemlist">
+                    <div class="sidebar-itemrow">エディオン・100満ボルトポイント：</div>
+                    <div class="sidebar-itemrow">1000ポイント</div>
+                    <div class="sidebar-itemrow">Tポイント：0ポイント</div>
+                    <div class="sidebar-itemrow">dポイント：0ポイント</div>
+                </div>
+                <div class="coupon-link small">
+                    <a href="">ポイントを変更する</a>
+                </div>
+            </div>
+
+            <div class="sidebar-item sidebar-item06">
+                <div class="sidebar-itemttl">付与予定ポイント</div>
+                <div class="coupon-link coupon-link01 small">
+                    <a href="">ポイント付与先の変更</a>
+                </div>
+                <div class="sidebar-itemttl">付与予定ポイント</div>
+                <div class="sidebar-itemtotalpoint">100ポイント</div>
+
+                <div class="sidebar-itemlist">
+                    <div class="sidebar-itemrow">エディオンポイント</div>
+                </div>
+                <div class="coupon-link coupon-link02 small">
+                    <a href="">ポイント付与先の変更</a>
+                </div>
+            </div>
+
+            <% } %>
+        </div>
+    </section>
+
+</aside>

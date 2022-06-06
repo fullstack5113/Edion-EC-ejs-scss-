@@ -1,0 +1,412 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'account';
+_%>
+<%- include('../includes/_header-login') %>
+
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; マイページ
+</div>
+
+<main id="main-content" class="main-content">
+    
+    <div class="container">
+        <h2 class="section-heading is-sp">マイページ</h2>
+        
+        <aside class="sidebar sidebar-account">
+            <div class="sidebar-account-box user">
+                <div class="head01">
+                    <div class="sidebar-account-box-heading">山田太郎様</div>
+                    <div class="text">100満ボルトあんしん保証会員</div>
+                </div>
+                <a href="" class="btn orange-btn account-btn btn-detail"><img src="assets/img/account/icon-user.svg" alt="">会員情報詳細</a>
+            </div>
+            
+            <div class="sidebar-account-box design">
+                <div class="head02">
+                    <div class="sidebar-account-box-heading">デザイン変更</div>
+                    <div class="text">以下より、お好みのデザインへご変更いただけます。</div>
+                </div>
+                
+                
+                <div class="designlist js-designlist">
+                    <% for (var i = 0; i < 3; i++){ %>
+                    <div class="item<% if(i==0){ %> selected<% } %>">
+                        <div class="heading">〇〇のご利用が多い方</div>
+                        <div class="block">
+                            <img src="assets/img/account/account-sidebar-img.png" alt="">
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキ</p>
+                        </div>
+                    </div>
+                    <% } %>
+                    
+                    <a href="" class="btn orange-btn account-btn medium">変更する</a>
+                </div>
+                <div class="designlist-btn js-designlist-btn"></div>
+            </div>
+            
+            <div class="sidebar-account-box logout">
+                <div class="head">
+                    <div class="date">前回ログイン日時<br>
+                    2022/01/06 13:30:50</div>
+                    <a href="" class="link">ログイン履歴はこちら</a>
+                </div>
+                <a href="" class="btn black-btn account-btn medium">ログアウト</a>
+            </div>
+            
+            <div class="text-center">
+                <a href="" class="link">認証デバイス一覧はこちら</a>
+            </div>
+            
+        </aside>
+    
+        <div class="container-right">
+            
+            <section class="account account-news">
+                <div class="inner inner-large">
+                    <h2 class="section-heading is-pc">マイページ</h2>
+                    
+                    <div class="account-news-tab-wrap">
+                        <ul class="account-news-tab">
+                            <li class="js-account-news-tab active" data-id="tab-item01">山田太郎 様へのお知らせ</li>
+                            <li class="js-account-news-tab" data-id="tab-item02">お知らせ</li>
+                            <div class="is-pc"><a href="" class="link-more">お知らせ一覧を見る</a></div>
+                        </ul>
+                        <div class="account-news-tab-content js-account-news-tab-content">
+                            <div class="account-news-tab-content-sort">
+                                10件中 1-5件
+                                <div class="account-news-tab-content-sort-right">
+                                    <div>
+                                        <label>内容を絞り込む</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="" class="form-block-select-lined small sale">
+                                                <option value="">セール</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="is-pc">
+                                        <label>表示件数</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="" class="form-block-select-lined small num">
+                                                <option value="">5件</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item tab-item01">
+                                <dl class="account-news-list">
+                                    <dt>2021.12.20</dt>
+                                    <dd><a href="">ニッキー製　OP電熱ベスト531-254稼働時間についてのご案内</a></dd>
+                                    <dt>2021.12.03</dt>
+                                    <dd><a href="">Pro-Ject社製 　レコードプレーヤ　 12機種のACアダプター不具合と交換について</a></dd>
+                                </dl>
+                            </div>
+                            <div class="tab-item tab-item02" style="display:none">
+                                <dl class="account-news-list">
+                                    <dt>2021.12.20</dt>
+                                    <dd><a href="">テキストテキストテキストテキストテキスト</a></dd>
+                                    <dt>2021.12.03</dt>
+                                    <dd><a href="">テキストテキストテキストテキストテキスト</a></dd>
+                                </dl>
+                            </div>
+                            
+                            <div class="is-sp link-more-wrap"><a href="" class="link-more">お知らせ一覧を見る</a></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+            <section class="account account-secondary">
+                <div class="inner inner-large">
+
+                    <div class="account-secondary-inner">
+                        <div class="has-link">
+                            <h3 class="account-secondary-heading">当年度のご利用金額</h3>
+                            <div class="is-pc"><a href="" class="link-more">計算期間についてはこちら</a></div>
+                        </div>
+                        
+                        <div class="account-secondary-numbox">
+                            <span>200,000</span>円
+                        </div>
+                        <div class="is-sp link-more-wrap"><a href="" class="link-more">計算期間についてはこちら</a></div>
+                        
+                        <div class="account-secondary-box">
+                            <div class="account-secondary-box-heading">エディオンカード・100満ボルトカード<br class="is-sp">の会員サービス利用料について</div>
+                            <div class="account-secondary-box-text01">2022年11月30日までにあと</div>
+                            <div class="account-secondary-box-price"><span>¥10,000</span>(税別)</div>
+                            <div class="account-secondary-box-text02">
+                                以上ご利用で、翌年度会員サービス利用料<span class="style01">¥1,078</span><span class="style02">(税込)</span>が<span class="style03">無料</span>になります。                            
+                            </div>
+                            <div class="account-secondary-box-text03">※エディオンカード・100満ボルト各店またはカード情報登録以降の本サイトでのお買い物が対象です。(一部商品は対象外)</div>
+                            <div class="account-secondary-box-text03">※家族会員様のお買い上げ分も含みます。</div>
+                        </div>
+                        
+                        <div class="account-secondary-block">
+                            <div class="has-link">
+                                <h3 class="account-secondary-heading">ポイント</h3>
+                                <div class="is-pc"><a href="" class="link-more">詳細はこちら</a></div>
+                            </div>
+                            
+                            <div class="account-secondary-box-point">
+                                <div class="left">
+                                    <div class="account-secondary-heading-sm">ご利用可能ポイント</div>
+                                    <div class="account-secondary-numbox"><span>000</span>ポイント</div>
+                                    <div class="text-sm">期間限定：0ポイント</div>
+                                </div>
+                                <div>
+                                    <div class="account-secondary-heading-sm">期間限定ボーナスポイント付与予定</div>
+                                    <div class="account-secondary-numbox"><span>000</span>ポイント</div>
+                                </div>
+                            </div>
+                            
+                            <div class="is-sp link-more-wrap"><a href="" class="link-more">詳細はこちら</a></div>
+                            
+                            <div class="account-secondary-block-btns">
+                                <a href="" class="btn blue-btn account-btn wide point">エディオンカードポイントシミュレーションはこちら</a>
+                            </div>
+                        </div>    
+                    
+                        <div class="account-secondary-block">
+                            <h3 class="account-secondary-heading">お持ちのポイントは、エディオン各店舗または本サイトでご利用いただけます。</h3>
+                            <div class="text01">下記のボタンより利用手続きをすると、各種ポイントがご利用いただけます。</div>
+                            
+                            <div class="account-secondary-block-btns">
+                                <a href="" class="btn account-btn tpoint wide"><img src="assets/img/account/icon-tpoint.png" alt="">ご利用手続きはこちら</a>
+                                <a href="" class="btn account-btn dpoint wide"><img src="assets/img/account/icon-dpoint.png" alt="">ご利用手続きはこちら</a>
+                                <a href="" class="btn orange-btn account-btn wide">カード情報登録はこちら</a>
+                            </div>
+                        </div>
+                        
+                        <div class="account-secondary-block">
+                            <h3 class="account-secondary-heading">優先共通ポイント</h3>
+                            
+                            <div class="text02">優先ポイントとして選択・変更可能なものは、Tポイント・dポイント・Rポイント（店舗のみ）・Sポイント（店舗のみ）となります。</div>
+                            <div class="account-secondary-heading-sm">Tポイント</div>
+                            
+                            <div class="account-secondary-numbox"><span>000</span>ポイント</div>
+                            <div class="account-secondary-block-btns">
+                                <a href="" class="btn blue-btn account-btn wide">優先ポイントの変更はこちら</a>
+                            </div>
+                        </div>
+                        
+                        <h3 class="account-secondary-heading">EDIONカード</h3>
+                        <div class="account-secondary-box2">
+                            <img class="account-secondary-box2-card" src="assets/img/account/card.png" alt="">
+                            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        </div>
+                        
+                        <a href="" class="btn blue-btn account-btn wide">EDIONカードのお申込みはこちら</a>
+                    </div>
+                </div>
+            </section>
+                    
+            <section class="account account-tertiary">
+                <div class="inner inner-large">
+                    
+                    <div class="account-tertiary-block">
+                        <h3 class="account-tertiary-heading">My店舗(アプリ)</h3>
+                        <div class="shop-area">
+                            <a href="" class="shop-link">店舗名店舗名店舗名</a>
+                        </div>
+                        <a href="" class="btn blue-btn account-btn wide">店舗・最新チラシ検索</a>
+                        <div class="is-sp app-btn"><a href="" class="btn orange-btn account-btn wide">アプリ起動</a></div>
+                    </div>
+                    
+                    <div class="account-tertiary-block">
+                        <div class="has-link">
+                            <h3 class="account-tertiary-heading">よく利用する店舗</h3>
+                            <div class="is-pc"><a href="" class="link-more">詳細はこちら</a></div>
+                        </div>
+                        
+                        <div class="shop-area">
+                            <a href="" class="shop-link">店舗名店舗名店舗名</a>／<a href="" class="shop-link">店舗名店舗名店舗名</a>／<a href="" class="shop-link">店舗名店舗名店舗名</a>／<a href="" class="shop-link">店舗名店舗名店舗名</a>／<a href="" class="shop-link">店舗名店舗名店舗名店舗名店舗名店舗名店舗名店舗名店舗名店舗名店舗名店舗名</a>
+                        </div>
+                        <a href="" class="btn blue-btn account-btn wide">店舗検索</a>
+                        
+                        <div class="is-sp link-more-wrap"><a href="" class="link-more">詳細はこちら</a></div>
+                    </div>
+                        
+                    <div class="account-tertiary-block">
+                        <h3 class="account-tertiary-heading">各種照会・登録・変更</h3>
+                        <div class="account-tertiary-btns">
+                            <div class="item">
+                                <a href="">
+                                    <div>購入履歴</div>
+                                    <img src="assets/img/account/account-icon01.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>工事見積書反映</div>
+                                    <img src="assets/img/account/account-icon02.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>ポイント照会</div>
+                                    <img src="assets/img/account/account-icon03.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>会員情報・<br class="is-sp">メルマガ設定</div>
+                                    <img src="assets/img/account/account-icon04.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>友達/家族照会</div>
+                                    <img src="assets/img/account/account-icon05.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>お届け先情報</div>
+                                    <img src="assets/img/account/account-icon06.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>家族登録一覧</div>
+                                    <img src="assets/img/account/account-icon07.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>設置オプション事前登録</div>
+                                    <img src="assets/img/account/account-icon08.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="account-tertiary-block">
+                        <h3 class="account-tertiary-heading">セール・商品・店舗</h3>
+                        <div class="account-tertiary-btns">
+                            <div class="item">
+                                <a href="">
+                                    <div>クーポン</div>
+                                    <img src="assets/img/account/account-icon09.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>メーカーキャンペーン</div>
+                                    <img src="assets/img/account/account-icon10.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>シークレットセール</div>
+                                    <img src="assets/img/account/account-icon11.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>お気に入り商品</div>
+                                    <img src="assets/img/account/account-icon12.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>商品レビュー</div>
+                                    <img src="assets/img/account/account-icon13.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                        
+                        <div class="account-tertiary-block">
+                        <h3 class="account-tertiary-heading">サービス関連</h3>
+                        <div class="account-tertiary-btns">
+                            <div class="item">
+                                <a href="">
+                                    <div>保証対象商品</div>
+                                    <img src="assets/img/account/account-icon14.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>修理状況</div>
+                                    <img src="assets/img/account/account-icon15.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>訪問修理</div>
+                                    <img src="assets/img/account/account-icon16.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>各種依頼</div>
+                                    <img src="assets/img/account/account-icon17.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>オンライン修理見積</div>
+                                    <img src="assets/img/account/account-icon18.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>小型家電<br class="is-sp">修理品引き取り</div>
+                                    <img src="assets/img/account/account-icon19.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>家電トータルサポート</div>
+                                    <img src="assets/img/account/account-icon20.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>メモ帳</div>
+                                    <img src="assets/img/account/account-icon21.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="">
+                                    <div>接客予約</div>
+                                    <img src="assets/img/account/account-icon22.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="account-tertiary-block">
+                        <h3 class="account-tertiary-heading">ヘルプ</h3>
+                        <div class="account-tertiary-btns">
+                            <div class="item">
+                                <a href="">
+                                    <div>お問い合わせ</div>
+                                    <img src="assets/img/account/account-icon23.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+        
+            <%- include('../includes/_history', { maxitem: 'six', page: 'account' }); %>
+        
+        </div>
+    
+    </div>
+</main>
+
+
+
+<%- include('../includes/_footer'); %>

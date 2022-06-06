@@ -1,0 +1,73 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'receipt-register';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+
+    <div id="receiptregister-confirm">
+        <form class="form-block" action="xxx" method="post">
+            <div class="container-sm">
+                <div class="flow-wrap">
+                    <div class="flow-list">
+                        <div class="flow-item">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/receipt-register/icon-input-on.png" alt="領収書発行入力">
+                            </div>
+                            <div class="flow-itemtext">
+                                領収書発行入力
+                            </div>
+                        </div>
+                        <div class="flow-item">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/receipt-register/icon-confirm-on.png" alt="確認">
+                            </div>
+                            <div class="flow-itemtext">
+                                確認
+                            </div>
+                        </div>
+                        <div class="flow-item off complete">
+                            <div class="flow-itemicon">
+                                <img src="./assets/img/receipt-register/icon-complete-off.png" alt="完了">
+                            </div>
+                            <div class="flow-itemtext">
+                                完了
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="registerdesc">
+                    <h3 class="registerdesc-ttl">領収書の確認</h3>
+                    <div class="registerdesc-descwrap">
+                        <p class="registerdesc-desc">入力内容をご確認の上、「領収書を表示する」をクリックしてください。</p>
+                    </div>
+                </div>
+
+                <div class="tableblock accountinfo">
+                    <div class="tableblock-table accountinfo-table">
+                        <table>
+                            <tr><th>宛名</th><td>山田太郎</td></tr>
+                            <tr><th>但し</th><td>商品代として</td></tr>
+                            <tr><th>購入商品明細</th><td>購入商品明細を領収書に表示する</td></tr>
+                        </table>
+                    </div>
+                    <span class="accountinfo-note">※2回目以降の領収書には「再発行」と記載されます。</span>
+                </div>
+
+
+                <div class="sendbtn-wrap">
+                    <button class="sendbtn-send btn" type="submit" name="button">領収書を表示する</button>
+                    <a class="sendbtn-close" href="xxx">戻る</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+<%- include('../includes/_footer'); %>

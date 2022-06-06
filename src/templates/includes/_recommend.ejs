@@ -1,0 +1,39 @@
+<section style="overflow:hidden">
+    <div class="inner inner-large">
+        <h2 class="section-heading">一緒にご購入はいかがでしょうか</h2>
+        <div class="owl-carousel owl-theme sliderhistory-<%- maxitem %> customslider">
+            <%  for (var i = 0; i < 6; i++){ %>
+                <div class="item">
+                    <div class="itemcard-virtical">
+                        <a href="" class="itemcard-virtical-img"><img src="./assets/img/category/history-img01.jpg" alt=""></a>
+                        <h3 class="itemcard-virtical-heading"><a href="">パナソニック セラミックファンヒーター オリジナル グレー DSFTS12E1H</a></h3>
+                        <div class="itemcard-virtical-price">￥12,980(税込)</div>
+                        <div class="itemcard-virtical-info">
+                          <div class="itemcard-virtical-info-star">
+                            <span class="review-star star5"></span>
+                          </div>
+                          <div class="itemcard-virtical-info-cnt">（10000）</div>
+                        </div>
+                    </div>
+                </div>
+            <%  } %>
+            <% if (maxitem == 'eight') { %>
+
+                <%  for (var i = 0; i < 2; i++){ %>
+                <div class="item">
+                    <div class="itemcard-virtical">
+                        <a href="" class="itemcard-virtical-img"><img src="./assets/img/category/history-img01.jpg" alt=""></a>
+                        <h3 class="itemcard-virtical-heading"><a href="">パナソニック セラミックファンヒーター オリジナル グレー DSFTS12E1H</a></h3>
+                        <div class="itemcard-virtical-price">￥12,980(税込)</div>
+                        <div class="itemcard-virtical-info">
+                          <div class="itemcard-virtical-info-star">
+                            <span class="review-star star5"></span>
+                          </div>
+                          <div class="itemcard-virtical-info-cnt">（10000）</div>
+                        </div>
+                    </div>
+                </div>
+                <%  } %>
+            <% } %>
+    </div>
+</section>

@@ -1,0 +1,219 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'warranty-products';
+_%>
+    <%- include('../includes/_header-login') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; エディオンカード会員登録申込み
+        </div>
+
+        <main id="main-content" class="main-content inquiry">
+
+            <div class="container container-sidebar_show">
+
+                <%- include('../includes/_sidebar-account-info'); %>
+
+                <div class="container-right">
+                    <div class="warranty-list">
+                        <div class="warranty-list-ttl">
+                            <h4>長期修理保証対象商品</h4>
+                            <p class="des01">
+                                ご購入いただいた長期修理保証対象商品の一覧を表示しております。
+                            </p>
+                            <p class="des02">
+                                ※ご本人様の対象商品のみ表示しております。<br>
+                                ※修理保証限度額を超えた場合や、保証適用により保証対象から外れた商品も表示しております。<br>
+                                ※有料延長保証は表示されておりません。<br>
+                                ※旧エディオンネットショップご購入分の長期修理保証対象商品の表示はされておりません。
+                            </p>
+                        </div>
+                        <div class="warranty-list-ctn">
+                            <div class="table">
+                                <div class="table-ttl">
+                                    <div class="filter-inner">
+                                        <label>保証状況：</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="all">すべて</option>
+                                                <option value="all">すべて</option>
+                                                <option value="all">すべて</option>
+                                                <option value="all">すべて</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter-inner">
+                                        <label>表示件数：</label>
+                                        <div class="form-block-select">
+                                            <select name="" id="">
+                                                <option value="10">10件</option>
+                                                <option value="15">15件</option>
+                                                <option value="20">20件</option>
+                                                <option value="25">25件</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-ctn">
+                                    <table class="pc-table">
+                                        <thead>
+                                            <tr>
+                                                <th>保証期間</th>
+                                                <th>利用保証種類</th>
+                                                <th>商品名</th>
+                                                <th>メーカー名</th>
+                                                <th>型番</th>
+                                                <th>
+                                                    <a class="btn radius-btn black-btn" href="">修理を申し込む</a>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% for (var i=0; i< 5; i++){ %> 
+                                                <tr>
+                                                    <td>2022/01/01 - 2022/03/31</td>
+                                                    <td>5年</td>
+                                                    <td>エステ</td>
+                                                    <td>パナソニック</td>
+                                                    <td>EH-SA0B-N</td>
+                                                    <td>
+                                                        <a class="btn radius-btn lined-btn grey-btn3" href="">詳細を見る</a>
+                                                    </td>
+                                                </tr>
+                                            <% } %> 
+                                        </tbody>
+                                    </table>
+                                    <% for (var i=0; i<5; i++){ %> 
+                                        <div class="sp-table">
+                                            <table>
+                                                <tr>
+                                                    <td>保証期間</td>
+                                                    <td>2022/01/01 - 2022/03/31</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>保証種類</td>
+                                                    <td>5年</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>商品名</td>
+                                                    <td>エステ</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>メーカー名</td>
+                                                    <td>パナソニック</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>型番</td>
+                                                    <td>EH-SA0B-N</td>
+                                                </tr>
+                                            </table>
+                                            <a class="btn radius-btn black-btn" href="">修理を申し込む</a>
+                                            <a class="btn radius-btn lined-btn-grey white-btn" href="">詳細を見る</a>
+                                        </div>
+                                    <% } %> 
+                                    <div class="pager-wrapper">
+                                        <a href="" class="pager-wrapper-link prev">前へ</a>
+                                        <div class="pager-wrapper-num">
+                                            <span>1</span>
+                                            <a href="">2</a>
+                                            <a href="">3</a>
+                                            <a class="is-pc" href="">4</a>
+                                            <a class="is-pc" href="">5</a>
+                                            ・・・
+                                            <a href="">20</a>
+                                        </div>
+                                        <a href="" class="pager-wrapper-link next">次へ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-inner">
+                                <div class="flex-inner-img">
+                                    <img src="./assets/img/warranty-products/service.svg" alt="">
+                                    
+                                </div>
+                                <div class="flex-inner-txt">
+                                    <h5>お持ち込み修理</h5>
+                                    <p>
+                                        エディオン各店舗でも修理を受け付けております。<br>
+                                        「店舗検索」で最寄の店舗をお探しいただけます。<br>
+                                        エディオン以外のお店でお求めの家電品でも受け付けいたします。
+                                    </p>
+                                </div>
+                                <p class="sp">
+                                    エディオン各店舗でも修理を受け付けております。
+                                    「店舗検索」で最寄の店舗をお探しいただけます。
+                                    エディオン以外のお店でお求めの家電品でも受け付けいたします。
+                                </p>
+                                <div class="flex-inner-btn">
+                                    <a class="btn lined-btn-grey radius-btn white-btn" href="">店舗検索</a>
+                                </div>
+                            </div>
+                            <div class="flex-inner">
+                                <div class="flex-inner-img">
+                                    <img src="./assets/img/warranty-products/tool.svg" alt="">
+                                    
+                                </div>
+                                <div class="flex-inner-txt">
+                                    <h5>出張修理</h5>
+                                    <p>
+                                        大型家電品の訪問修理を承ります。<br>
+                                        エディオン以外のお店でお求めの家電品でもお申し込みいただけます。
+                                    </p>
+                                </div>
+                                <p class="sp">
+                                    大型家電品の訪問修理を承ります。
+                                    エディオン以外のお店でお求めの家電品でもお申し込みいただけます。
+                                </p>
+                                <div class="flex-inner-btn">
+                                    <a class="btn radius-btn black-btn" href="">WEBでお申し込み</a>
+                                </div>
+                            </div>
+                            <div class="flex-inner">
+                                <div class="flex-inner-img">
+                                    <img src="./assets/img/warranty-products/camera.svg" alt="">
+                                    
+                                </div>
+                                <div class="flex-inner-txt">
+                                    <h5>小型家電修理品引き取り</h5>
+                                    <p>
+                                        小型家電修理品のお引き取りを承ります。<br>
+                                        ご希望のお客様には、修理完了後にお届けもいたします。<br>
+                                        エディオン以外のお店でお求めの家電品でもお申し込みいただけます。
+                                    </p>
+                                </div>
+                                <p class="sp">
+                                    小型家電修理品のお引き取りを承ります。
+                                    ご希望のお客様には、修理完了後にお届けもいたします。
+                                    エディオン以外のお店でお求めの家電品でもお申し込みいただけます。
+                                </p>
+                                <div class="flex-inner-btn">
+                                    <a class="btn radius-btn black-btn" href="">WEBでお申し込み</a>
+                                </div>
+                            </div>
+                            <div class="table-inner">
+                                <table>
+                                    <tr>
+                                        <td rowspan="2">小型家電修理品</td>
+                                        <td>お引き取り料金：1,100円（１品・税込）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>お届け料金：550円（１品・税込）</td>
+                                    </tr>
+                                </table>
+                                <a class="btn radius-btn grey-btn2" href="">戻る</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </main>
+
+
+
+    <%- include('../includes/_footer'); %>

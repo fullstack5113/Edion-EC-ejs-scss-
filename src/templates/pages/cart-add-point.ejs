@@ -1,0 +1,112 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'cart';
+_%>
+<%- include('../includes/_header') %>
+<main id="main-content" class="main-content">
+    <a href="javascript:void(0);" class="js-modal-order01 btn black-btn large-btn" modal-id="modal">Open Modal</a>
+
+
+    <div class="container" id="cartaddpoint">
+        <section>
+            <div id="modal" class="modal-block wide" style="display: block">
+                <div class="modal-block-inner01">
+                    <div class="is-pc">
+                        <span class="close-btn js-close"></span>
+                    </div>
+                    <div class="is-sp modal-block-return">
+                        <span class="modal-block-returnbtn js-close">戻る</span>
+                    </div>
+
+                    <h2 class="modal-block-ttl">ポイント付与先の選択</h2>
+                    <div class="form-sec">
+                        <form action="###" method="post">
+                            <div class="modal-block-inner-content">
+                                <p class="modal-block-desc">付与するポイントをいずれかでお選びください。</p>
+                                <div class="cartaddpoint-content">
+
+                                    <div class="cartaddpoint-point">
+                                        <div class="cartaddpoint-pointrow">
+                                            <div class="point-rowitem">
+                                                <label class="radio-label">
+                                                    <input type="radio" name="radio01" value="1">
+                                                    <span class="radio-text">エディオンポイント：</span>
+                                                </label>
+                                            </div>
+                                            <div class="point-rowvalue">
+                                                <div class="js-move-ele point-rowvalueitemfirst">
+                                                    <span class="point-text">117</span><span class="point-unit">ポイント</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cartaddpoint-pointrow">
+                                            <div class="point-rowitem">
+                                                <label class="radio-label">
+                                                    <input type="radio" name="radio01" value="2">
+                                                    <span class="radio-text">エディオンポイント：</span>
+                                                </label>
+                                            </div>
+                                            <div class="point-rowvalue">
+                                                <div class="js-move-ele point-rowvalueitemfirst">
+                                                    <span class="point-text">59</span><span class="point-unit">ポイント</span>
+                                                </div>
+                                                <div class="point-rowvalueitemlast">
+                                                    <span class="point-plus">＋</span>
+                                                    <div class="point-imgwrap tpoint">
+                                                        <img class="img" src="./assets/img/cart/cartpoint-item01.png" alt="">
+                                                    </div>
+                                                    <span class="point-colon">：</span><span class="point-text">59</span><span class="point-unit">ポイント</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cartaddpoint-pointrow">
+                                            <div class="point-rowitem">
+                                                <label class="radio-label">
+                                                    <input type="radio" name="radio01" value="3">
+                                                    <span class="radio-text">エディオンポイント：</span>
+                                                </label>
+                                            </div>
+                                            <div class="point-rowvalue">
+                                                <div class="js-move-ele point-rowvalueitemfirst">
+                                                    <span class="point-text">59</span><span class="point-unit">ポイント</span>
+                                                </div>
+                                                <div class="point-rowvalueitemlast">
+                                                    <span class="point-plus">＋</span>
+                                                    <div class="point-imgwrap dpoint">
+                                                        <img class="img" src="./assets/img/cart/cartpoint-item02.png" alt="">
+                                                    </div>
+                                                    <span class="point-colon">：</span><span class="point-text">59</span><span class="point-unit">ポイント</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cartaddpoint-checkbtn">
+                                        <input type="checkbox" name="check01" value="1" id="check01" checked >
+                                        <label class="check-label02" for="check01">
+                                            <span class="check-labeltext">次回以降のポイントも選択したポイントを付与する</span>
+                                        </label>
+                                    </div>
+                                    <div class="cartaddpoint-caution">
+                                        <span class="fw-medium">【店舗でお受取り時のご注意】</span><br>
+                                        ご注文商品を店舗でお受取りの場合、お支払い時のTポイント・dポイントをご利用いただくことができませんので、あらかじめご了承くださいますようにお願いいたします。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-block-btnwrap">
+                                <span class="modal-block-firstbtn js-close btn outline-btn radius-btn">閉じる</span>
+                                <button class="modal-block-lastbtn btn black-btn radius-btn" type="submit">更新</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<%- include('../includes/_footer'); %>

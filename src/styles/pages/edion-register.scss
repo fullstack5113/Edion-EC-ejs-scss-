@@ -1,0 +1,153 @@
+@import '../mixins/**';
+@import '../config';
+
+
+#edionregister {
+    .section-heading {
+        font-size: 20px;
+        margin-bottom: 18px;
+        @include media-sp {
+            margin-bottom: 10px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid $grey-color;
+        }
+    }
+
+    .advertisement {
+        margin-bottom: 40px;
+    }
+
+
+    .textblock-wrap {
+        margin-bottom: 48px;
+        @include media-sp {
+            margin-bottom: 24px;
+        }
+
+        .textblock {
+            &:first-of-type {
+              margin-bottom: 48px;
+              @include media-sp {
+                  margin-bottom: 24px;
+              }
+            }
+
+            &-ttl {
+                margin-bottom: 12px;
+                font-size: 16px;
+                font-weight: 700;
+                @include media-sp {
+                    margin-bottom: 11px;
+                    font-size: 13px;
+                }
+            }
+
+            &-list {
+
+            }
+            &-item {
+                font-size: 14px;
+                line-height: 1.85;
+                @include media-sp {
+                    line-height: 1.78;
+                }
+            }
+        }
+    }
+
+
+    .scrollblock {
+        margin-bottom: 40px;
+
+        border: 1px solid $bd-color1;
+        padding: 28px 48px 31px 40px;
+        @include media-sp {
+            margin-bottom: 24px;
+            padding: 16px 17px;
+        }
+        &-ttl {
+            font-size: 14px;
+            margin-bottom: 24px;
+            @include media-sp {
+                margin-bottom: 15px;
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+
+        @include _scrollblock();
+    }
+
+    .subscriptionblock-wrap {
+        display: flex;
+        justify-content: space-between;
+        @include media-sp {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .subscriptionblock {
+            width: 444px;
+            padding: 25px 0 28px 0;
+            border: 1px solid $bd-color1;
+            text-align: center;
+            @include media-sp {
+                width: 100%;
+                padding: 28px 0 25px 0;
+            }
+            &:first-of-type {
+                @include media-is-pc {
+                    margin-right: calc(40 / 928 * 100%);
+                }
+                @include media-sp {
+                    margin-bottom: 24px;
+                }
+            }
+
+            &-ttl {
+                margin-bottom: 25px;
+                font-size: 16px;
+                font-weight: 700;
+                @include media-sp {
+                    margin-bottom: 16px;
+                }
+
+                &.ttl-smbc {
+                    font-size: 14px;
+                    @include media-sp {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            &-imgwrap {
+                margin-bottom: 34px;
+                height: 72px;
+                img {
+                    height: 100%;
+                }
+            }
+            &-link {
+                width: calc( 270 / 442 * 100%);
+                margin: 0 auto 40px;
+                padding: 11px 0;
+                border-radius: 4px;
+                @include media-sp {
+                    width: calc( 560 / 670 * 100%);
+                    margin-bottom: 29px;
+                }
+            }
+            &-desc {
+                font-size: 13px;
+                @include media-sp {
+                    line-height: 1.5;
+                }
+            }
+
+        }
+
+
+
+
+    }
+}

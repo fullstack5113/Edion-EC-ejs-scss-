@@ -1,0 +1,249 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'addressee';
+_%>
+<%- include('../includes/_header-login') %>
+
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; お届け先情報
+</div>
+
+<main id="main-content" class="main-content">
+    
+    <div class="container container-addressee">
+
+        <%- include('../includes/_sidebar-account-info', { status: 'login' }); %>
+    
+        <div class="container-right">
+            
+            <section class="account addressee">
+                <div class="inner inner-large">
+                    <h2 class="section-heading">お届け先情報</h2>
+                    <div class="section-heading-subtext">お勤め先、ご家族など、会員登録時にご登録いただいた住所以外のお届け先を複数登録可能です。</div>
+                    
+                    <div class="addressee-box">
+                        お届け先がエディオンカード、IDカード、あんしん保証会員のご登録情報（お名前・ご住所・お電話番号）以外の場合は、長期修理保証対象外となります。あらかじめご了承ください。
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section class="account addressee">
+                <div class="inner inner-large">
+                    <h3 class="addressee-heading">ご登録住所</h3>
+
+                    <table class="account-info-table addressee-table01">
+                        <tr><th>お名前</th>
+                        <td>山田 太郎</td></tr>
+                        <tr><th>お名前（フリガナ）</th>
+                        <td>ヤマダ タロウ</td></tr>
+                        <tr><th>住所</th>
+                        <td>〒10X-XXXX　東京都◯◯◯◯◯◯◯◯</td></tr>
+                        <tr><th>電話番号1</th>
+                        <td>携帯電話 ：080XXXXXXXX</td></tr>
+                        <tr><th>電話番号2</th>
+                        <td>&nbsp;</td></tr>
+                    </table>
+                    
+                    <a href="" class="btn blue-btn account-btn wide">編集</a>
+
+                </div>
+            </section>
+            
+            <section class="account addressee addressee-last">
+                <div class="inner inner-large">
+                    <h3 class="addressee-heading">ご登録住所以外のお届け先</h3>
+                    
+                    <div class="addressee-heading-subtext">新しいお届け先を追加する場合はこちらからお願いします。</div>
+                    
+                    <a href="" class="btn blue-btn account-btn wide">お届け先を追加する</a>
+
+                    <div class="addressee-sort">
+                        <div class="addressee-sort-group">
+                            
+                            <label>グループ</label>
+                            <div class="form-block-select">
+                                <select name="" id="" class="form-block-select-lined small num">
+                                    <option value="">すべて</option>
+                                </select>
+                            </div>
+                            
+                            <a href="javascript:void(0);" modal-id="addressee-group-modal" class="js-modal link-more">グループを編集する</a>
+                        </div>
+                        
+                        <div class="addressee-sort-num">
+                            1件中 1-1件
+                            <div class="right">
+                                <label>表示件数</label>
+                                <div class="form-block-select">
+                                    <select name="" id="" class="form-block-select-lined small num">
+                                        <option value="">5件</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                    <%
+                        var test_dl ='<div class="name">山田 太郎<span>ヤマダ タロウ</span></div><dl><dt>住所</dt><dd>：〒10X-XXXX　東京都◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯</dd><dt>電話番号</dt><dd>：080XXXXXXXX</dd></dl>';
+                        
+                        var btns = '<buttom class="btn blue-btn account-btn">修正する</buttom><buttom class="btn grey-btn2 account-btn">削除する</buttom>';
+                    %>
+
+                    <table class="account-info-table addressee-table02">
+                        <tr><th>グループA</th>
+                        <td>
+                            <div>
+                                <div class="left">
+                                    <%- test_dl %>
+                                </div>
+                                
+                                <div class="right">
+                                    <%- btns %>
+                                </div>
+                            </div>
+                        </td></tr>
+                    </table>
+                    
+                    <table class="account-info-table addressee-table02">
+                        <tr><th rowspan="2">グループBのタイトルタイトルタイトル</th>
+                        <td>
+                            <div>
+                                <div class="left">
+                                    <%- test_dl %>
+                                </div>
+                                
+                                <div class="right">
+                                    <%- btns %>
+                                </div>
+                            </div>
+                            
+                        </td></tr>
+                        <tr><td>
+                            <div>
+                                <div class="left">
+                                    <%- test_dl %>
+                                </div>
+                                
+                                <div class="right">
+                                    <%- btns %>
+                                </div>
+                            </div>
+                            
+                        </td></tr>
+                    </table>
+
+                    <table class="account-info-table addressee-table02">
+                        <tr><th rowspan="2">グループCのタイトルタイトルタイトル</th>
+                        <td>
+                            <div>
+                                <div class="left">
+                                    <%- test_dl %>
+                                </div>
+                                
+                                <div class="right">
+                                    <%- btns %>
+                                </div>
+                            </div>
+                            
+                        </td></tr>
+                        <tr><td>
+                            <div>
+                                <div class="left">
+                                    <%- test_dl %>
+                                </div>
+                                
+                                <div class="right">
+                                    <%- btns %>
+                                </div>
+                            </div>
+                            
+                            
+                        </td></tr>
+                    </table>
+
+
+                </div>
+
+                <%- include('../components/_c-pager'); %>
+
+            </section>
+            
+            <div id="addressee-group-modal" class="modal-block addressee-group-modal">
+                <div class="modal-block-inner">
+                    <span class="close-btn js-close"></span>
+                    <div class="modal-block-inner-head">
+                        <h5 class="modal-block-inner-head-heading">グループを編集する</h5>
+                        <div class="modal-block-inner-head-subtext">
+                            お届け先グループは最大10件まで設定することができます。<br class="is-pc">
+                            グループを新たに追加する場合は、グループ名を入力し「追加する」をクリックしてください。<br class="is-pc">
+                            内容をご確認の上よろしければ「登録する」をクリックすると登録できます。
+                        </div>
+                    </div>
+                    
+                    <div class="modal-block-inner-content">
+            
+                        <div class="modal-block-inner-content-heading01">グループ追加</div>
+                        <div class="modal-block-inner-content-text01">（全角・半角カナ英数字10文字以内）</div>
+                        <div class="form-block general add-group">
+                            <input type="text" name="" placeholder="">
+                            <button class="btn blue-btn account-btn medium add-btn">追加する</button>
+                        </div>
+                        
+                        <div class="modal-block-inner-content-heading01">登録済みグループ</div>
+                        <div class="modal-block-inner-content-group">
+                            <% for (var i = 1; i < 4; i++){ %>
+                            <div class="item">
+                                <div>
+                                    <div class="name">グループ名グループ名</div>
+                                    <button class="btn grey-btn2 account-btn medium delete-btn">削除</button>
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                        
+                        <div class="modal-block-inner-content-heading01">初期設定グループ</div>
+                        <div class="modal-block-inner-content-group">
+                            <% for (var i = 1; i < 8; i++){ %>
+                            <div class="item">
+                                <div>
+                                    <div class="name">ギフト１</div>
+                                    <button class="btn grey-btn2 account-btn medium delete-btn">削除</button>
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                                   
+            
+                    </div>
+                    
+                    <div class="modal-block-inner-foot">
+                        <div class="modal-block-inner-foot-btns">
+                            <a href="" class="btn red-btn2 account-btn">登録する</a>
+                            <a href="" class="btn lined-blue account-btn medium2">キャンセル</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+            <div class="addressee-foot-btn">
+                <a href="" class="btn grey-btn2 account-btn medium">戻る</a>
+            </div>
+        
+        </div>
+    
+    </div>
+</main>
+
+
+
+<%- include('../includes/_footer'); %>

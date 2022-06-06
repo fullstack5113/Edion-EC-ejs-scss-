@@ -1,0 +1,68 @@
+@import '../mixins/media';
+
+$initType: 'normal';
+// normal => height: 40px
+// high => height: 48px
+
+@mixin _btn($type: $initType, $width){
+    @if( $type == 'normal'){
+        width: $width;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        @include media-sp {
+            width: 100%;
+        }
+    }
+
+    @else if( $type == 'high' ){
+        width: $width;
+        padding: 15.5px;
+        font-size: 12px;
+        font-weight: 700;
+        @include media-sp {
+            width: 100%;
+        }
+    }
+}
+
+.header {
+    @include media-is-pc {
+        margin-bottom: 75px;
+    }
+    @include media-sp {
+        margin-bottom: 44px;
+    }
+}
+
+.main-content {
+    @include media-sp {
+        padding-bottom: 98px;
+    }
+    section {
+        @include media-sp {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.error-content {
+    width: 711px;
+    margin-bottom: 56px;
+    line-height: 1.46;
+    @include media-sp {
+        width: 100%;
+        margin-bottom: 40px;
+        line-height: 1.71;
+    }
+}
+
+.mypagebtn-wrap {
+    @include media-sp {
+        padding-left: 5.8%;
+        padding-right: 5.8%;
+    }
+    .btn {
+        @include _btn($width: 180px);
+    }
+}

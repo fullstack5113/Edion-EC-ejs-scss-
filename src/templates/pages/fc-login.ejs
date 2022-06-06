@@ -1,0 +1,44 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'fc-login';
+_%>
+<%- include('../includes/_header-fc') %>
+<main id="main-content" class="main-content main-content-fc">
+    
+    <section class="fc-login">
+        <div class="inner inner-small">
+            <div class="fc-login-title">エディオンFC専用</div>
+            <h1 class="page-title">デジタルカタログサイト</h1>
+            <div class="page-title-lead">IDとパスワードを入力し、ログインしてください。</div>
+                        
+            <div class="linebox linebox-blue">
+                
+                <form action="">
+                    <div class="form-block general">
+                        <label>ID(メールアドレス)</label>
+                        <input type="email" placeholder="email.test@sample.com">
+
+                        <label>パスワード</label>
+                        <input type="text" placeholder="password0123">
+                        <div class="form-block form-block-check general show_passwd">
+                            <input type="checkbox" id="show_passwd">
+                            <label for="show_passwd"><small>パスワードの文字を表示する</small></label>
+                        </div>
+                    </div>
+                    
+                   
+                    <a href="" class="btn red-btn2 account-btn login-btn"><span class="icon"></span>ログイン</a>
+                
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+</main>
+<%- include('../includes/_footer-fc'); %>

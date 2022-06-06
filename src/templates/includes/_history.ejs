@@ -1,0 +1,87 @@
+<section style="overflow:hidden" class="includes_history">
+    <div class="inner inner-large">
+        <% if(locals.page == 'account'){ %>
+            <div class="includes_history-head">
+                <h2 class="section-heading">再購入する商品一覧</h2>
+                <div class="form-block-select">
+                    <select name="" id="" class="form-block-select-lined small">
+                        <option value="">すべて</option>
+                    </select>
+                </div>
+                
+            </div>
+        <% }else{ %>
+            <h2 class="section-heading">
+                <% if(locals.title){ %>
+                    <%- title  %>
+                <% }else{ %>
+                    最近見た商品
+                <% } %>
+            </h2>
+        <% } %>
+        <div class="owl-carousel owl-theme sliderhistory-<%- maxitem %> customslider">
+            <% 
+                if (maxitem == 'eight') { 
+                    if(locals.item){
+                        num = item;
+                    }else{
+                        num = 8;
+                    } 
+                }else{ 
+                    if(locals.item){
+                        num = item;
+                    }else{
+                        num = 6;
+                    }  
+                }
+            %>
+            <% for (var i = 0; i < num; i++){ %>
+            <div class="item">
+                <div class="itemcard-virtical <% if(locals.page == 'fc'){ %>fc<% } %>">
+                    <% if(locals.checkbox == 'true'){ %>
+                        <div class="form-block-check">
+                            <input type="checkbox" id="check<%- i %>_2">
+                            <label for="check<%- i %>_2"></label>
+                        </div>
+                    <% } %>
+                    <a href="" class="itemcard-virtical-img"><img src="./assets/img/category/history-img01.jpg" alt=""></a>
+                    <h3 class="itemcard-virtical-heading"><a href="">パナソニック セラミックファンヒーター オリジナル グレー DSFTS12E1H</a><% if(locals.type == 'recommend'){ %><br>クーポン<% } %></h3>
+                    <% if(locals.page == 'fc'){ %>
+                        <div class="itemcard-star"><span class="review-star star5"></span>(6)</div>
+                    <% } %>
+                    <div class="itemcard-virtical-price">￥12,980(税込)</div>
+                    <div class="itemcard-virtical-info">
+                    
+                    <% if(locals.page == 'fc'){ %>
+                        <div class="itemcard-virtical-info-discount">
+                            当社クレジットカード会員：951ポイント進呈
+                        </div>  
+                        <div class="itemcard-virtical-info-rank">
+                            商品ランク：E（集客商品）<br>
+                            物流区分：3（配達日）
+                        </div>
+                    <% }else{ %>
+                        <div class="itemcard-virtical-info-discount">
+                            エディオンカード会員<br>
+                            <% if(locals.type == 'recommend'){ %>
+                                76ポイント進呈
+                            <% }else{ %>
+                                100満ボルトカード会員1％
+                            <% } %>
+                        </div>
+                        <div class="itemcard-virtical-info-stock">在庫数17台</div>
+                    <% } %>
+                    
+                    <% if(locals.type == 'recommend'){ %>
+                         <span class="icon-favorite js-add-favorite sm"></span>
+                    <% } %>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+            
+            
+            
+        </div>
+    </div>
+</section>

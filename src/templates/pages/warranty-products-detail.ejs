@@ -1,0 +1,109 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false;
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'warranty-products';
+_%>
+    <%- include('../includes/_header-login') %>
+
+        <div class="breadcrumb">
+            <a href="">トップ</a> &gt; <a href="">マイページ</a> &gt; エディオンカード会員登録申込み
+        </div>
+
+        <main id="main-content" class="main-content inquiry">
+
+            <div class="container container-sidebar_show">
+
+                <%- include('../includes/_sidebar-account-info'); %>
+
+                <div class="container-right">
+                    <div class="warranty-detail">
+                        <div class="warranty-detail-ttl">
+                            <h4>長期修理保証対象商品の詳細</h4>
+                            <div class="is-pc">
+                                <button class="btn black-btn radius-btn is-pc">修理を申し込む</button>
+                            </div>
+                        </div>
+                        <div class="warranty-detail-ctn">
+                            <div class="tbl-inner">
+                                <div class="tbl-inner-ttl">
+                                    <h5>商品情報</h5>
+                                    <div class="is-sp">
+                                        <button class="btn black-btn radius-btn is-sp">修理を申し込む</button>
+                                    </div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>商品名</td>
+                                        <td>エステ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>メーカー</td>
+                                        <td>パナソニック</td>
+                                    </tr>
+                                    <tr>
+                                        <td>型番</td>
+                                        <td>EH-SA0B-N</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tbl-inner">
+                                <div class="tbl-inner-ttl">
+                                    <h5>保証情報</h5>
+                                    <!-- TODO: [保証期限内の場合] -->
+                                    <button class="btn grey-btn radius-btn" href="">保証期限内</button>
+                                    <!-- TODO: [保証期間間近の場合] -->
+                                    <!-- <button class="btn red-btn2 radius-btn" href="">保証期限間近</button> -->
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>保証種類</td>
+                                        <td>当社クレジットカード長期修理保証5年</td>
+                                    </tr>
+                                    <tr>
+                                        <td>保証期限</td>
+                                        <td>2022/04/20〜2027/04/19</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tbl-inner">
+                                <div class="tbl-inner-ttl mb-pc40 mb-sp35">
+                                    <h5>購入情報</h5>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td>購入日</td>
+                                        <td>2021/09/06</td>
+                                    </tr>
+                                    <tr>
+                                        <td>購入数</td>
+                                        <td>1個</td>
+                                    </tr>
+                                    <tr>
+                                        <td>購入金額</td>
+                                        <td>¥48,600(税別)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>購入店名</td>
+                                        <td>みてじま店</td>
+                                    </tr>
+                                    <tr>
+                                        <td>伝票番号</td>
+                                        <td>10527303823066</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <a class="radius-btn grey-btn2 btn-back" href="">戻る</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </main>
+
+
+
+    <%- include('../includes/_footer'); %>

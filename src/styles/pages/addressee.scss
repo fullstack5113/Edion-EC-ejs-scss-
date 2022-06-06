@@ -1,0 +1,382 @@
+@import '../config';
+@import '../mixins/media';
+@import '../mixins/others';
+@import 'account';
+
+.container{
+    &-addressee{
+        @include media-sp {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+        .sidebar-account-box.logout{
+            margin-top: 32px;
+        }
+    }
+}
+
+.addressee{
+    padding-bottom: 56px;
+    @include media-sp {
+        padding-bottom: 40px;
+    }
+    &-last{
+        padding-bottom: 48px;
+    }
+    @include media-sp {
+        border-bottom: none;
+    }
+    .section-heading-subtext{
+        @include media-sp {
+            margin-bottom: 24px;
+        }
+    }
+    &-heading{
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #707070;
+        font-size: 16px;
+        @include media-sp {
+            margin-bottom: 16px;
+        }
+        &-subtext{
+            margin: -4px 0 40px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 1.3;
+            @include media-sp {
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &-box{
+        background-color: #f5f5f5;
+        padding: 24px;
+        max-width: 647px;
+        margin: 0 auto;
+        font-size: 12px;
+        line-height: 1.4;
+        font-weight: 500;
+        .section-heading-subtext + &{
+            margin-top: -7px;
+        }
+        @include media-sp {
+            line-height: 2;
+            padding: 12px 15px;
+            font-size: 11px;
+        }
+    }
+    &-table01{
+        max-width: 647px;
+        margin-bottom: 40px;
+        @include media-sp {
+            margin-bottom: 24px;
+        }
+        tbody{
+            tr{
+                th, td{
+                    padding-top: 13px;
+                    padding-bottom: 13px;
+                }
+                th{
+                    padding-top: 9px;
+                    padding-bottom: 9px;
+                }
+            }
+        }
+        
+    }
+    &-table02{
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+        tbody{
+            tr{
+                th{
+                    padding: 10px 20px;
+                    font-size: 12px;
+                    width: 160px;
+                    @include media-sp {
+                        width: 100%;
+                        font-size: 14px;
+                    }
+                }
+                td{
+                    padding: 22px 32px 22px 56px;
+                    @include media-sp {
+                        padding: 16px;
+                        margin-bottom: -1px;
+                    }
+                    > div{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        @include media-sp {
+                            display: block;
+                        }
+                        .left{
+                            width: calc(100% - 176px - 24px);
+                            @include media-sp {
+                                width: 100%;
+                                margin-bottom: 16px;
+                            }
+                            .name{
+                                margin-bottom: 10px;
+                                span{
+                                    font-size: 12px;
+                                    margin-left: 16px;
+                                }
+                            }
+                            dl{
+                                dt, dd{
+                                    line-height: 1.5;
+                                }
+                                dt{
+                                    float: left;
+                                    font-size: 12px;
+                                    width: 56px;
+                                    padding-top: 2px;
+                                }
+                                dd{
+                                    margin: 4px 0;
+                                    font-size: 14px;
+                                    padding-left: calc(56px + 1em);
+                                    text-indent: -1em;
+                                    
+                                    &:last-child{
+                                        margin-bottom: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        .right{
+                            width: 176px;
+                            display: flex;
+                            justify-content: space-between;
+                            @include media-sp {
+                                margin: 0 auto;
+                            }
+                            .account-btn{
+                                width: 80px;
+                                height: 36px;
+                                margin: 0;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+    .account-btn.wide{
+        max-width: 410px;
+        margin: 0;
+        @include media-sp {
+            font-size: 12px;
+        }
+    }
+    &-sort{
+        margin: 33px 0 24px;
+        @include media-sp {
+            margin-top: 40px;
+        }
+        label{
+            font-weight: 500;
+            margin: 0;
+            margin-right: 12px;
+            font-size: 12px;
+        }
+        .form-block-select{
+            select{
+                width: 166px;
+            }
+        }
+        &-group{
+            display: flex;
+            align-items: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #CCCCCC;
+            margin-bottom: 16px;
+            @include media-sp {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+            .link-more{
+                margin-left: 27px;
+                font-weight: 500;
+                @include media-sp {
+                    margin: 12px 0 0;
+                    font-size: 12px;
+                }
+            }
+        }
+        &-num{
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .right{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    .pager-wrapper{
+        margin: 80px 0 0;
+        @include media-sp {
+            margin: 40px 0 0;
+        };
+    }
+    &-foot-btn{
+        border-top: 1px solid #E6E6E6;
+        padding-top: 80px;
+        @include media-sp {
+            border: none;
+            padding-top: 0;
+            margin-bottom: 80px;
+        }
+    }
+    
+    &-group-modal{
+        width: 612px;
+        @include media-sp {
+            width: calc(100% - 60px);
+        }
+        .modal-block{
+            &-inner{
+                padding: 36px 24px 24px;
+                display: flex;
+                flex-direction: column;
+                max-height: calc(100vh - 60px);
+                @include media-sp {
+                    padding: 36px 15px 20px;
+                    max-height: calc(100vh - 60px - 60px);
+                }
+                &-head{
+                    &-subtext{
+                        font-size: 12px;
+                        letter-spacing: 0.08em;
+                        font-weight: 500;
+                        line-height: 1.4;
+                        margin-bottom: 16px;
+                        @include media-sp {
+                            text-align: left;
+                        }
+                    }
+                }
+                
+                &-content{
+                    *{
+                        line-height: 1.5;
+                    }
+                    margin: 0 0 0;
+                    padding: 15px 0 3px;
+                    border-top: 1px solid #CCCCCC;
+                    max-height: inherit;
+                    flex: 1;
+                    overflow-x: hidden;
+                    @include media-sp {
+                        padding-bottom: 0px;
+                    }
+                    &-heading01{
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: center;
+                        margin-bottom: 16px;
+                        letter-spacing: 0.08em;
+                    }
+                    &-text01{
+                        font-size: 10px;
+                        font-weight: 500;
+                        text-align: center;
+                        margin-top: -12px;
+                    }
+                    .add-group{
+                        display: flex;
+                        align-items: center;
+                        width: 400px;
+                        margin: 15px auto 23px auto;
+                        @include media-sp {
+                            display: block;
+                            width: 100%;
+                        }
+                        input{
+                            margin-bottom: 0px;
+                            margin-right: 16px;
+                            width: calc(100% - 96px);
+                            @include media-sp {
+                                width: 100%;
+                            }
+                        }
+                        .add-btn{
+                            margin: 0;
+                            width: 80px;
+                            padding: 0;
+                            @include media-sp {
+                                margin: 16px auto 0;
+                                display: block;
+                            }
+                        }
+                    }
+                    
+                    &-group{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-left: -4px;
+                        margin-right: -4px;
+                        margin-bottom: 17px;
+                        @include media-sp {
+                            margin-bottom: 8px;
+                        }
+                        .item{
+                            padding: 0 4px;
+                            margin-bottom: 8px;
+                            width: 50%;
+                            @include media-sp {
+                                width: 100%;
+                                margin-bottom: 16px;
+                            }
+                            > div{
+                                background-color: #f5f5f5;
+                                padding: 12px 8px 12px 16px;
+                                align-items: center;
+                                display: flex;
+                                justify-content: space-between;
+                                letter-spacing: 0.1em;
+                                font-size: 14px;
+                                font-weight: 500;
+                                .name{
+                                    max-width: calc(100% - 88px);
+                                }
+                                .delete-btn{
+                                    margin: 0;
+                                    width: 80px;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+                &-foot{
+                    border-top: 1px solid #CCCCCC;
+                    padding-top: 24px;
+                    &-btns{
+                        .red-btn2{
+                            margin-bottom: 16px;
+                            @include media-sp {
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

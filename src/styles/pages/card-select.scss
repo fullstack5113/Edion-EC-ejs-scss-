@@ -1,0 +1,14 @@
+@import '../config';
+@import '../mixins/media';
+
+.card-select{
+    &-img{
+        margin-bottom: 26px;
+        @include media-sp {
+            margin-top: 8px;
+        }
+    }
+    .orange-btn{
+        margin-bottom: 16px;
+    }
+}

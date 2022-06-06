@@ -1,0 +1,130 @@
+<!-- meta情報は右クリック→ページのソースを表示で出てくるため、各ページに合わせて設定する -->
+<%_
+  TITLE = '家電と暮らしのエディオン -公式通販サイト';
+  IS_INDEX = false; // 下層ページは全てfalseにする
+  DESCRIPTION = '家電と暮らしのエディオン公式通販サイト。安心価格で家電から日用品,食品,雑貨まで幅広い商品を豊富に取り揃え。さらに全国1,200店舗以上の家電ネットワークで購入後のアフターサービスも安心です！';
+  KEYWORDS = 'EDION,edion,エディオン,通販,家電量販店,家電,エアコン,生活家電,デジタルカメラ,パソコン,AV機器,美容,健康,ゲーム,おもちゃ,時計,オフィス用品,カー用品,自転車,スポーツ,雑貨,食品,酒';
+  ORIGINALCSS = 'review';
+_%>
+<%- include('../includes/_header') %>
+
+<div class="breadcrumb">
+    <a href="">トップ</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; <a href="">カテゴリー名</a> &gt; カテゴリー名
+</div>
+
+<main id="main-content" class="main-content">
+    <div class="container">
+
+        <section>
+            <h2 class="section-heading">商品レビュー</h2>
+
+            <div class="product-details">
+                <div class="basicgrid basicgrid-two">
+                    <div class="item product-desc">
+                        <div class="product-img">
+                            <img class="img" src="./assets/img/review/item.png" alt="">
+                        </div>
+                        <div class="product-text">
+                            <ul>
+                                <li class="product-name"><span class="product-namebrand">パナソニック</span>セラミックファンヒーター オリジナル グレー DSFTS12E1H</li>
+                                <li class="product-price">￥12,980(税込)</li>
+                                <li class="product-stock">エディオン公式通販サイト<br class="is-sp">在庫状況：<span class="product-stockstat">在庫あり</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item product-eval">
+                        <div class="product-evaltotal">
+                            <ul class="product-evaltotallist">
+                                <li class="product-evaltotalttl">この商品の総合評価</li>
+                                <li class="product-evaltotalscore">5</li>
+                                <li class="product-evaltotalstar"><span class="review-star star0"></span></li>
+                                <div class="spacer"></div>
+                                <li class="product-evaltotalcnt">レビュー件数：100件</li>
+
+                            </ul>
+                        </div>
+                        <div class="product-evalstar">
+                            <div class="bar-graph bar-graph-horizontal bar-graph-one">
+                                <div class="product-evalbarwrap">
+                                    <span class="review-star star5"></span>
+                                    <div class="product-evalbar bar1"></div>
+                                    <span class="product-evalperson">0人</span>
+                                </div>
+                                <div class="product-evalbarwrap">
+                                    <span class="review-star star4"></span>
+                                    <div class="product-evalbar bar2"></div>
+                                    <span class="product-evalperson">10人</span>
+                                </div>
+                                <div class="product-evalbarwrap">
+                                    <span class="review-star star3"></span>
+                                    <div class="product-evalbar bar3"></div>
+                                    <span class="product-evalperson">100人</span>
+                                </div>
+                                <div class="product-evalbarwrap">
+                                    <span class="review-star star2"></span>
+                                    <div class="product-evalbar bar4"></div>
+                                    <span class="product-evalperson">1000人</span>
+                                </div>
+                                <div class="product-evalbarwrap">
+                                    <span class="review-star star1"></span>
+                                    <div class="product-evalbar bar5"></div>
+                                    <span class="product-evalperson">10000人</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="writereview is-sp">
+                    <div class="">
+                        <a class="writereview-link" href="###">商品レビューを書く</a>
+                    </div>
+                </div>
+            </div>
+            <div class="basicgrid sort">
+                <div class="sort-searchwrap">
+                    <span class="sort-searchttl sort-commonttl">絞り込み</span>
+                    <div class="sort-selectwrap selectwrap1">
+                        <select class="sort-searchselect" name="star">
+                            <option value="">★1</option>
+                            <option value="">★2</option>
+                            <option value="">★3</option>
+                            <option value="">★4</option>
+                            <option value="">★5</option>
+                        </select>
+                    </div>
+                    <div class="sort-selectwrap">
+                        <select class="sort-searchselect" name="about">
+                            <option value="">商品について</option>
+                            <option value="">商品について</option>
+                            <option value="">商品について</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sort-sortwrap">
+                    <span class="sort-sortttl sort-commonttl">並び替え</span>
+                    <div class="sort-selectwrap">
+                        <select class="sort-sortselect" name="sort">
+                            <option value="">投稿日時の新しい順</option>
+                            <option value="">投稿日時の新しい順</option>
+                            <option value="">投稿日時の新しい順</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="postreviewitem-wrap">
+                <%  for (var i = 0; i < 10; i++){ %>
+                <%- include('../components/_c-post-review-item'); %>
+                <%  } %>
+            </div>
+
+            <%- include('../components/_c-pager'); %>
+
+            <div class="return">
+                <a class="return-btn" href="#">戻る</a>
+            </div>
+        </section>
+    </div>
+    <%- include('../includes/_history', { maxitem: 'eight' }); %>
+
+</main>
+<%- include('../includes/_footer'); %>

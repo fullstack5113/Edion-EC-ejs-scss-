@@ -1,0 +1,119 @@
+$defaultColNum: 3;
+
+// 注文02 > コンテンツ上部 フルーアイコンセクション
+@mixin _flowIconSec($col: $defaultColNum) {
+    .flow {
+        &-wrap {
+            margin-top: 64px;
+            margin-bottom: 70px;
+            text-align: center;
+            @include media-sp {
+                margin-bottom: 40px;
+            }
+        }
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+
+            @if $col == 3 {
+                width: 504px;
+            } @else {
+                width: 336px;
+                justify-content: center;
+            }
+
+
+            @include media-sp {
+                width: 100%;
+            }
+        }
+
+        &-item {
+            color: $cart-blue;
+            position: relative;
+
+            @if $col == 3 {
+                width: 33.3%;
+            } @else {
+                width: 50%;
+                @include media-sp {
+                    width: 33.3%;
+                }
+            }
+
+
+            &:not(:last-child) {
+                &:after {
+                    position: absolute;
+                    top: 40%;
+                    right: -7.5%;
+                    width: 15px;
+                    height: 15px;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    border-top: 3px solid $cart-blue;
+                    border-right: 3px solid $cart-blue;
+                    content: "";
+                    @include media-sp {
+                        width: 11px;
+                        height: 11px;
+                        border-top: 1.5px solid $cart-blue;
+                        border-right: 1.5px solid $cart-blue;
+
+                        @if $col == 3 {
+                            right: -6.5%;
+                        } @else {
+                            right: -10%;
+                        }
+                    }
+                }
+            }
+
+
+            &.off {
+                color: $grey-color;
+                &:after {
+                    border-top-color: $grey-color;
+                    border-right-color: $grey-color;
+                }
+            }
+
+            &.off.complete {
+                color: $grey-color;
+            }
+
+            @if $col == 3 {
+                //  Pass
+            } @else {
+                @include media-sp {
+                    &:first-of-type {
+                        margin-right: calc( 3 / 345 * 100%);
+                    }
+                    &:last-of-type {
+                        margin-left: calc( 3 / 345 * 100%);
+                    }
+                }
+            }
+        }
+
+        &-itemicon {
+            width: 96px;
+            position: relative;
+            margin: 0 auto 20px;
+
+            @include media-sp {
+                width: calc( 138 / 230 * 100%);
+                margin: 0 auto 16px;
+            }
+        }
+
+        &-itemtext {
+            font-size: 14px;
+            font-weight: 700;
+            @include media-sp {
+                font-size: 13px;
+            }
+        }
+    }
+}
